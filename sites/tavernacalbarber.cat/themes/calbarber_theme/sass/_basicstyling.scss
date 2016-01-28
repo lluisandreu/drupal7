@@ -1,0 +1,286 @@
+// Global Styling
+html, body {
+    @include tablet {
+        height: 100%;
+        height: 100vh;
+    }
+}
+
+body {
+    font-family: $font_sanserif;
+    font-size: $font_base_size;
+    font-weight: $font_base_weight;
+    line-height: $font_line_height;
+}
+
+div {
+    color: $white;
+}
+
+h1 {
+    @include font_handwritting;
+
+    margin: 1rem 0;
+}
+
+h2 {
+    @include font_handwritting;
+
+    margin: 0.8rem 0;
+}
+
+h1, h2, h3, h4 {
+    color: $white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input[type=submit], button {
+    padding: 6px;
+    background: $color_secondary;
+    color: $white;
+    border: 1px solid lighten($color_secondary, 20%);
+    cursor: pointer;
+    font-size: $font_base_size;
+
+    &:hover {
+        background: darken($color_secondary, 10%);
+    }
+}
+
+input[type=text], input[type=email], input[type=password] {
+    padding: 8px;
+    border: none;
+    margin: 10px 0;
+    background: lighten($color_primary, 15%);
+    border-bottom: 1px solid $white;
+    font-size: $font_base_size;
+    font-family: $font_sanserif;
+    color: $white;
+    max-width: 100%;
+}
+
+label {
+    color: $white;
+    padding: 5px 0;
+}
+
+p {
+    font-size: $p_size;
+    font-weight: $p_weight;
+    margin: $p_vertical_margin;
+    color: lighten($color_primary, 50%);
+}
+
+small {
+    font-family: $font_sanserif;
+}
+
+strong {
+    font-weight: $font_bold;
+}
+
+// Scrollbar
+
+@include scrollbars(0.6em, 0.2em, $white, transparent);
+
+// Main Section
+
+.main-section {
+    position: relative;
+    overflow-y: auto;
+    background-image: none;
+
+    @include tablet {
+        background-image: url("../images/defaultbg.jpg");
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+// Aside
+.main-aside {
+    background: rgba($color_primary, 0.7);
+
+    .logo {
+        text-align: center;
+        margin: 20px auto 0 auto;
+        width: 110px;
+
+        @include tablet {
+            margin-top: 60px;
+            width: 100%;
+        }
+    }
+}
+
+// Navidation
+
+.main-nav.closed {
+    margin-top: 20px;
+
+    .menu li {
+        @include font_handwritting;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu li ul {
+        margin-left: 6%;
+        margin-bottom: 5px;
+    }
+
+    .menu a {
+        padding: 5px 0 5px 20%;
+        display: block;
+        color: $white;
+        text-decoration: none;
+
+        &:hover, &.active, &:focus {
+            color: $color_secondary;
+        }
+    }
+}
+
+// Toogle
+.nav-toggle {
+    margin-top: 5px;
+    font-size: $p_mobile_size;
+    text-align: center;
+    background: darken($color_primary, 10%);
+    color: $white;
+    padding: 8px 0;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+}
+
+nav.nav-collapse.opened {
+    text-align: center;
+    background: lighten($color_primary, 5%);
+
+    li {
+        text-align: center;
+        font-family: $font_sanserif;
+        margin: 0;
+        padding: 0;
+        font-size: $p_mobile_size;
+    }
+
+    li ul {
+        background: lighten($color_primary, 10%);
+    }
+
+    a {
+        color: $white;
+        padding: 10px 0;
+        text-decoration: none;
+        display: block;
+
+        &:hover, &:focus {
+            background: darken($color_primary, 10%);
+        }
+    }
+}
+
+// Main Content
+.main-content {}
+
+.main-content-box {
+    background: $color_primary;
+
+    @include tablet {
+        margin: 80px;
+    }
+
+
+    @include desktop {
+        margin: 100px 80px;
+        max-height: 560px;
+        max-width: 900px;
+    }
+}
+
+.main-content-box-inner {
+    padding: 15px;
+}
+
+// Nodes
+
+.node-type-page {
+    .node-content-left {
+        .field-name-body {
+            padding-right: 20px;
+
+            a {
+                color: $white;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            @include desktop {
+                max-height: 400px;
+                overflow-y: auto;
+            }
+        }
+    }
+
+    .node-content-right {
+        &.body {
+            @include desktop {
+                padding: 0 15px;
+            }
+        }
+
+        .field-name-field-page-images {
+            margin-top: 20px;
+
+            @include desktop {
+                margin-top: 0;
+                max-height: 437px;
+                overflow-y: auto;
+            }
+        }
+    }
+}
+
+// Instagram Block
+
+#block-instagram-block-instagram-block {
+    @include tablet {
+        overflow-y: auto;
+        max-height: 400px;
+    }
+
+
+    .content img {
+        padding: 5px;
+        max-width: 100%;
+
+        @media (max-width: 650px) {
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+}
+
+.small-print {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    text-align: right;
+
+    small {
+        a {
+            color: $white;
+        }
+    }
+}

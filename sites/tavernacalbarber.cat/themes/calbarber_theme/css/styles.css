@@ -1,0 +1,737 @@
+/**
+ * Reset CSS styles.
+ *
+ * Based on Eric Meyer's "Reset CSS 1.0" tool from
+ * http://meyerweb.com/eric/tools/css/reset
+ */
+/* line 8, ../sass/_reset.scss */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+input,
+select,
+textarea,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+td.menu-disabled,
+ul.links,
+ul.links.inline,
+ul.links li,
+.block ul,
+div.admin,
+tr.even,
+tr.odd,
+tr.drag,
+tbody,
+tbody th,
+thead th,
+.breadcrumb,
+.item-list .icon,
+.item-list .title,
+.item-list ul,
+.item-list ul li,
+ol.task-list li.active,
+.form-item,
+tr.odd .form-item,
+tr.even .form-item,
+.form-item .description,
+.form-item label,
+.form-item label.option,
+.form-checkboxes,
+.form-radios,
+.form-checkboxes .form-item,
+.form-radios .form-item,
+.marker,
+.form-required,
+.more-link,
+.more-help-link,
+.item-list .pager,
+.item-list .pager li,
+.pager-current,
+.tips,
+ul.primary,
+ul.primary li,
+ul.primary li a,
+ul.primary li.active a,
+ul.primary li a:hover,
+ul.secondary,
+ul.secondary li,
+ul.secondary a,
+ul.secondary a.active,
+.resizable-textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* Drupal: system-menus.css */
+/* line 127, ../sass/_reset.scss */
+ul.links,
+ul.links.inline,
+ul.links li,
+.block ul,
+ol,
+ul,
+.item-list ul,
+.item-list ul li {
+  list-style: none;
+}
+
+/* line 138, ../sass/_reset.scss */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* line 143, ../sass/_reset.scss */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* Remember to highlight inserts somehow! */
+/* line 152, ../sass/_reset.scss */
+ins {
+  text-decoration: none;
+}
+
+/* line 156, ../sass/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+/* line 161, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * Font reset.
+ *
+ * Specifically targets form elements which browsers often times give
+ * special treatment.
+ */
+/* line 172, ../sass/_reset.scss */
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 178, ../sass/_reset.scss */
+textarea {
+  font-size: 1em;
+  line-height: 1.538em;
+}
+
+/**
+ * Markup free clearing.
+ *
+ * Consider adding your own selectors to this instead of finding ways
+ * to sneak the clearfix class into Drupal's markup.
+ * From http://perishablepress.com/press/2009/12/06/new-clearfix-hack
+ */
+/* line 190, ../sass/_reset.scss */
+ul.links:after,
+div.admin-panel .body:after,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Exclude inline links from clearfix behavior */
+/* line 201, ../sass/_reset.scss */
+ul.inline:after {
+  content: "";
+  display: none;
+  clear: none;
+}
+
+/* IE6 */
+/* line 208, ../sass/_reset.scss */
+* html .form-item,
+* html ul.links,
+* html div.admin-panel .body,
+* html .clearfix {
+  height: 1%;
+}
+
+/* IE7 */
+/* line 216, ../sass/_reset.scss */
+*:first-child + html .form-item,
+*:first-child + html ul.links,
+*:first-child + html div.admin-panel .body,
+*:first-child + html .clearfix {
+  min-height: 1%;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: normal;
+  src: url("../fonts/Montserrat-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: lighter;
+  src: url("../fonts/Montserrat-Light.otf") format("opentype");
+}
+/* line 2, ../sass/_drupal.scss */
+div.messages {
+  border: none;
+  color: #ffffff;
+  background-image: none;
+  padding: 10px;
+  font-size: 0.8rem;
+}
+
+/* line 10, ../sass/_drupal.scss */
+div.status {
+  background: #64D06E;
+}
+
+/* line 14, ../sass/_drupal.scss */
+div.info {
+  background: #FFFEBB;
+  color: #000000;
+}
+
+/* line 19, ../sass/_drupal.scss */
+div.error {
+  background: #FF7474;
+  color: #000000;
+}
+
+/* line 26, ../sass/_drupal.scss */
+#tabs {
+  padding: 10px 0;
+}
+/* line 29, ../sass/_drupal.scss */
+#tabs li {
+  font-size: 0.8rem;
+}
+/* line 33, ../sass/_drupal.scss */
+#tabs li a {
+  padding: 6px;
+  background: #466bca;
+  color: #bdcaec;
+  border: 1px solid #2b4a98;
+}
+/* line 39, ../sass/_drupal.scss */
+#tabs li a:hover {
+  background: #5a7bd0;
+}
+
+/* line 47, ../sass/_drupal.scss */
+form .form-item {
+  margin: 10px 0;
+}
+
+/* line 1, ../sass/_layout.scss */
+.main-section {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 100%;
+}
+@media (min-width: 650px) {
+  /* line 1, ../sass/_layout.scss */
+  .main-section {
+    flex-wrap: nowrap;
+  }
+}
+
+/* line 14, ../sass/_layout.scss */
+.main-aside {
+  width: 100%;
+}
+@media (min-width: 650px) {
+  /* line 14, ../sass/_layout.scss */
+  .main-aside {
+    width: 30%;
+    max-width: 400px;
+  }
+}
+
+/* line 23, ../sass/_layout.scss */
+.main-content {
+  width: 100%;
+}
+@media (min-width: 650px) {
+  /* line 23, ../sass/_layout.scss */
+  .main-content {
+    width: 70%;
+  }
+}
+
+/* line 36, ../sass/_layout.scss */
+.no-flexbox .main-aside, .no-flexboxlegacy .main-aside, .no-flexwrap .main-aside {
+  width: 100%;
+}
+@media (min-width: 650px) {
+  /* line 36, ../sass/_layout.scss */
+  .no-flexbox .main-aside, .no-flexboxlegacy .main-aside, .no-flexwrap .main-aside {
+    width: 30%;
+    max-width: 400px;
+    float: left;
+  }
+}
+/* line 46, ../sass/_layout.scss */
+.no-flexbox .main-content, .no-flexboxlegacy .main-content, .no-flexwrap .main-content {
+  width: 100%;
+}
+@media (min-width: 650px) {
+  /* line 46, ../sass/_layout.scss */
+  .no-flexbox .main-content, .no-flexboxlegacy .main-content, .no-flexwrap .main-content {
+    width: 70%;
+    float: right;
+  }
+}
+
+/* line 59, ../sass/_layout.scss */
+.node-type-page .node-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 1080px) {
+  /* line 59, ../sass/_layout.scss */
+  .node-type-page .node-content {
+    flex-wrap: nowrap;
+  }
+}
+/* line 68, ../sass/_layout.scss */
+.node-type-page .node-content .node-content-left {
+  width: 100%;
+}
+@media (min-width: 1080px) {
+  /* line 68, ../sass/_layout.scss */
+  .node-type-page .node-content .node-content-left {
+    width: 40%;
+  }
+}
+/* line 76, ../sass/_layout.scss */
+.node-type-page .node-content .node-content-right {
+  width: 100%;
+}
+@media (min-width: 1080px) {
+  /* line 79, ../sass/_layout.scss */
+  .node-type-page .node-content .node-content-right.body {
+    width: 60%;
+  }
+}
+
+@media (min-width: 650px) {
+  /* line 2, ../sass/_basicstyling.scss */
+  html, body {
+    height: 100%;
+    height: 100vh;
+  }
+}
+
+/* line 9, ../sass/_basicstyling.scss */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.3rem;
+}
+
+/* line 16, ../sass/_basicstyling.scss */
+div {
+  color: #ffffff;
+}
+
+/* line 20, ../sass/_basicstyling.scss */
+h1 {
+  font-family: "Just Me Again Down Here", cursive;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  line-height: 2rem;
+  opacity: .85;
+  text-rendering: optimizeLegibility;
+  margin: 1rem 0;
+}
+@media (min-width: 1080px) {
+  /* line 20, ../sass/_basicstyling.scss */
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* line 26, ../sass/_basicstyling.scss */
+h2 {
+  font-family: "Just Me Again Down Here", cursive;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  line-height: 2rem;
+  opacity: .85;
+  text-rendering: optimizeLegibility;
+  margin: 0.8rem 0;
+}
+@media (min-width: 1080px) {
+  /* line 26, ../sass/_basicstyling.scss */
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* line 32, ../sass/_basicstyling.scss */
+h1, h2, h3, h4 {
+  color: #ffffff;
+}
+
+/* line 36, ../sass/_basicstyling.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 41, ../sass/_basicstyling.scss */
+input[type=submit], button {
+  padding: 6px;
+  background: #FFA882;
+  color: #ffffff;
+  border: 1px solid #ffefe8;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+/* line 49, ../sass/_basicstyling.scss */
+input[type=submit]:hover, button:hover {
+  background: #ff854f;
+}
+
+/* line 54, ../sass/_basicstyling.scss */
+input[type=text], input[type=email], input[type=password] {
+  padding: 8px;
+  border: none;
+  margin: 10px 0;
+  background: #5a7bd0;
+  border-bottom: 1px solid #ffffff;
+  font-size: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  max-width: 100%;
+}
+
+/* line 66, ../sass/_basicstyling.scss */
+label {
+  color: #ffffff;
+  padding: 5px 0;
+}
+
+/* line 71, ../sass/_basicstyling.scss */
+p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+  color: #e5eaf7;
+}
+
+/* line 78, ../sass/_basicstyling.scss */
+small {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* line 82, ../sass/_basicstyling.scss */
+strong {
+  font-weight: 700;
+}
+
+/* line 56, ../sass/_mixins.scss */
+::-webkit-scrollbar, scrollbar {
+  width: 0.6em;
+  height: 0.2em;
+}
+
+/* line 61, ../sass/_mixins.scss */
+::-webkit-scrollbar-thumb, thumb {
+  background: #ffffff;
+}
+
+/* line 65, ../sass/_mixins.scss */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* line 70, ../sass/_mixins.scss */
+body {
+  scrollbar-face-color: #ffffff;
+  scrollbar-track-color: transparent;
+}
+
+/* line 92, ../sass/_basicstyling.scss */
+.main-section {
+  position: relative;
+  overflow-y: auto;
+  background-image: none;
+}
+@media (min-width: 650px) {
+  /* line 92, ../sass/_basicstyling.scss */
+  .main-section {
+    background-image: url("../images/defaultbg.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
+
+/* line 106, ../sass/_basicstyling.scss */
+.main-aside {
+  background: rgba(49, 84, 172, 0.7);
+}
+/* line 109, ../sass/_basicstyling.scss */
+.main-aside .logo {
+  text-align: center;
+  margin: 20px auto 0 auto;
+  width: 110px;
+}
+@media (min-width: 650px) {
+  /* line 109, ../sass/_basicstyling.scss */
+  .main-aside .logo {
+    margin-top: 60px;
+    width: 100%;
+  }
+}
+
+/* line 123, ../sass/_basicstyling.scss */
+.main-nav.closed {
+  margin-top: 20px;
+}
+/* line 126, ../sass/_basicstyling.scss */
+.main-nav.closed .menu li {
+  font-family: "Just Me Again Down Here", cursive;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  line-height: 2rem;
+  opacity: .85;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 1080px) {
+  /* line 126, ../sass/_basicstyling.scss */
+  .main-nav.closed .menu li {
+    font-size: 2rem;
+  }
+}
+/* line 133, ../sass/_basicstyling.scss */
+.main-nav.closed .menu li ul {
+  margin-left: 6%;
+  margin-bottom: 5px;
+}
+/* line 138, ../sass/_basicstyling.scss */
+.main-nav.closed .menu a {
+  padding: 5px 0 5px 20%;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+}
+/* line 144, ../sass/_basicstyling.scss */
+.main-nav.closed .menu a:hover, .main-nav.closed .menu a.active, .main-nav.closed .menu a:focus {
+  color: #FFA882;
+}
+
+/* line 151, ../sass/_basicstyling.scss */
+.nav-toggle {
+  margin-top: 5px;
+  font-size: 1rem;
+  text-align: center;
+  background: #264184;
+  color: #ffffff;
+  padding: 8px 0;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+}
+
+/* line 163, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened {
+  text-align: center;
+  background: #375ec0;
+}
+/* line 167, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened li {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+/* line 175, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened li ul {
+  background: #466bca;
+}
+/* line 179, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened a {
+  color: #ffffff;
+  padding: 10px 0;
+  text-decoration: none;
+  display: block;
+}
+/* line 185, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
+  background: #264184;
+}
+
+/* line 194, ../sass/_basicstyling.scss */
+.main-content-box {
+  background: #3154AC;
+}
+@media (min-width: 650px) {
+  /* line 194, ../sass/_basicstyling.scss */
+  .main-content-box {
+    margin: 80px;
+  }
+}
+@media (min-width: 1080px) {
+  /* line 194, ../sass/_basicstyling.scss */
+  .main-content-box {
+    margin: 100px 80px;
+    max-height: 560px;
+    max-width: 900px;
+  }
+}
+
+/* line 209, ../sass/_basicstyling.scss */
+.main-content-box-inner {
+  padding: 15px;
+}
+
+/* line 217, ../sass/_basicstyling.scss */
+.node-type-page .node-content-left .field-name-body {
+  padding-right: 20px;
+}
+/* line 220, ../sass/_basicstyling.scss */
+.node-type-page .node-content-left .field-name-body a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+/* line 224, ../sass/_basicstyling.scss */
+.node-type-page .node-content-left .field-name-body a:hover {
+  text-decoration: none;
+}
+@media (min-width: 1080px) {
+  /* line 217, ../sass/_basicstyling.scss */
+  .node-type-page .node-content-left .field-name-body {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+}
+@media (min-width: 1080px) {
+  /* line 237, ../sass/_basicstyling.scss */
+  .node-type-page .node-content-right.body {
+    padding: 0 15px;
+  }
+}
+/* line 243, ../sass/_basicstyling.scss */
+.node-type-page .node-content-right .field-name-field-page-images {
+  margin-top: 20px;
+}
+@media (min-width: 1080px) {
+  /* line 243, ../sass/_basicstyling.scss */
+  .node-type-page .node-content-right .field-name-field-page-images {
+    margin-top: 0;
+    max-height: 437px;
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 650px) {
+  /* line 257, ../sass/_basicstyling.scss */
+  #block-instagram-block-instagram-block {
+    overflow-y: auto;
+    max-height: 400px;
+  }
+}
+/* line 264, ../sass/_basicstyling.scss */
+#block-instagram-block-instagram-block .content img {
+  padding: 5px;
+  max-width: 100%;
+}
+@media (max-width: 650px) {
+  /* line 264, ../sass/_basicstyling.scss */
+  #block-instagram-block-instagram-block .content img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* line 275, ../sass/_basicstyling.scss */
+.small-print {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  text-align: right;
+}
+/* line 282, ../sass/_basicstyling.scss */
+.small-print small a {
+  color: #ffffff;
+}
