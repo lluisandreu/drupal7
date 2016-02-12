@@ -7,7 +7,7 @@ sites/*/files
 sites/*/private
 sites/*/themes/*/node_modules
 
-.sass-cache
+sites/*/themes/*/.sass-cache
 
 .DS_Store
 .AppleDouble
