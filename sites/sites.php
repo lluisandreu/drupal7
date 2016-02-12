@@ -55,5 +55,6 @@
  */
 
 $sites = array(
-	'calbarber.d7.paam' => 'tavernacalbarber.cat'
+	'calbarber.d7.paam' => 'tavernacalbarber.cat',
+	'jaumegrimalt.d7.paam' => 'jaumegrimalt.com'
 );
