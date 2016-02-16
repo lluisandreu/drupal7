@@ -9510,13 +9510,7 @@ iframe {
   max-width: 100%;
 }
 
-/* line 3, ../scss/layout/_header.scss */
-.section-header {
-  background-image: url("../images/bgimage.jpg");
-  background-size: cover;
-  background-position: left top;
-}
-/* line 8, ../scss/layout/_header.scss */
+/* line 4, ../scss/layout/_header.scss */
 .section-header .gradient {
   padding: 1.5rem 0;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,7db9e8+96&1+0,0.01+58,0.01+100 */
@@ -9529,41 +9523,9 @@ iframe {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#037db9e8',GradientType=0 );
   /* IE6-9 */
 }
-/* line 14, ../scss/layout/_header.scss */
+/* line 10, ../scss/layout/_header.scss */
 .section-header .header-right {
   text-align: right;
-}
-/* line 18, ../scss/layout/_header.scss */
-.section-header .header-right-menu {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: 66.25rem;
-}
-/* line 172, ../../zurb_foundation/scss/foundation/components/_global.scss */
-.section-header .header-right-menu:before, .section-header .header-right-menu:after {
-  content: " ";
-  display: table;
-}
-/* line 173, ../../zurb_foundation/scss/foundation/components/_global.scss */
-.section-header .header-right-menu:after {
-  clear: both;
-}
-/* line 21, ../scss/layout/_header.scss */
-.section-header .header-right-menu .custom-language-switcher {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 16.66667%;
-  float: left;
-}
-/* line 25, ../scss/layout/_header.scss */
-.section-header .header-right-menu #block-grimalt-main-menu {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 83.33333%;
-  float: left;
 }
 
 /* line 3, ../scss/layout/_main.scss */
@@ -9598,7 +9560,7 @@ iframe {
 }
 
 /* line 3, ../scss/modules/_block.scss */
-#block-sitephone-2 h2 {
+.block-block-1 h2 {
   color: #EA3D53;
 }
 

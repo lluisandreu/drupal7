@@ -17,3 +17,19 @@ function STARTER_preprocess_page(&$variables) {
  */
 function STARTER_preprocess_node(&$variables) {
 }
+
+function grimalt_theme_form_alter(&$form, &$form_state, $form_id) {
+	switch ($form_id) {
+		case 'views_exposed_form':
+			$form['search_api_views_fulltext']['#prefix'] = "<div class='small-10 columns'>";
+			$form['search_api_views_fulltext']['#attributes']['placeholder'] = t('Busca un producto o servicio...');
+			$form['search_api_views_fulltext']['#suffix'] = "</div>";
+			$form['submit']['#prefix'] = "<div class='small-2 columns'>";
+			$form['submit']['#suffix'] = "</div>";
+			$form['submit']['#attributes']['class'][] = "postfix";
+			$form['#prefix'] = "<div class='small-10 small-centered column'>";
+			$form['#suffix'] = "</div>";
+			// dpm($form);
+			break;
+	}
+}

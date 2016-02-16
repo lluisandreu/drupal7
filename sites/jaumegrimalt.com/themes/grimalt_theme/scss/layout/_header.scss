@@ -1,10 +1,6 @@
 // Non-modular or client styles for .l-header region.
 
 .section-header {
-    background-image: url("../images/bgimage.jpg");
-    background-size: cover;
-    background-position: left top;
-
     .gradient {
         padding: 1.5rem 0;
 
@@ -13,17 +9,5 @@
 
     .header-right {
         text-align: right;
-    }
-
-    .header-right-menu {
-        @include grid-row;
-
-        .custom-language-switcher {
-            @include grid-column(2);
-        }
-
-        #block-grimalt-main-menu {
-            @include grid-column(10);
-        }
     }
 }

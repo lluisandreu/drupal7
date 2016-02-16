@@ -28,10 +28,8 @@
       </header>
       <?php if($page['search']): ?>
       <section class="section-search">
-        <div class="row">
-          <div class="column">
+        <div class="row collapse">
           <?php print render($page['search']); ?>
-          </div>
         </div>
       </section>
       <?php endif; ?>
