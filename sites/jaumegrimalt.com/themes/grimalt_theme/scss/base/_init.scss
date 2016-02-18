@@ -161,8 +161,9 @@ $body-font-color: $oil;
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $small-breakpoint:  em-calc(640);
-// $medium-breakpoint: em-calc(1024);
+$small-breakpoint: em-calc(640);
+$medium-breakpoint: em-calc(1024);
+
 // $large-breakpoint:  em-calc(1440);
 // $xlarge-breakpoint: em-calc(1920);
 
@@ -428,8 +429,8 @@ $hr-margin: rem-calc(35);
 $crumb-bg: transparent;
 
 // We use these to set the padding around the breadcrumbs.
-// $crumb-padding: rem-calc(9 14 9);
-$crumb-side-padding: 0;
+$crumb-padding: rem-calc(14 0);
+$crumb-side-padding: 5px;
 
 // We use these to control border styles.
 // $crumb-function-factor: -10%;

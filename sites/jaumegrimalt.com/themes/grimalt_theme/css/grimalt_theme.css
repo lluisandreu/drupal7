@@ -2791,7 +2791,7 @@ select {
 /* line 118, ../../zurb_foundation/scss/foundation/components/_breadcrumbs.scss */
 .breadcrumbs {
   display: block;
-  padding: 0.5625rem 0.875rem 0.5625rem;
+  padding: 0.875rem 0;
   overflow: hidden;
   margin-left: 0;
   list-style: none;
@@ -2851,7 +2851,7 @@ select {
 .breadcrumbs > *:before {
   content: "/";
   color: #AAAAAA;
-  margin: 0 0;
+  margin: 0 5px;
   position: relative;
   top: 1px;
 }
@@ -9539,6 +9539,18 @@ iframe {
 .section-header .header-right {
   text-align: right;
 }
+/* line 13, ../scss/layout/_header.scss */
+.section-header .header-right .block-menu {
+  clear: both;
+}
+/* line 17, ../scss/layout/_header.scss */
+.section-header .header-right .block:first-child {
+  margin-left: 10px;
+}
+/* line 21, ../scss/layout/_header.scss */
+.section-header .header-right .block:first-child, .section-header .header-right .block:nth-child(2) {
+  float: right;
+}
 
 /* line 3, ../scss/layout/_main.scss */
 .main-content .section-search {
@@ -9569,6 +9581,14 @@ iframe {
 /* line 13, ../scss/layout/_footer.scss */
 .section-footer iframe {
   max-height: 400px;
+}
+/* line 17, ../scss/layout/_footer.scss */
+.section-footer a {
+  color: #FFFFFF;
+}
+/* line 20, ../scss/layout/_footer.scss */
+.section-footer a:hover {
+  text-decoration: underline;
 }
 
 /* line 3, ../scss/modules/_block.scss */
@@ -9643,4 +9663,24 @@ iframe {
 /* line 9, ../scss/modules/_views.scss */
 .views-exposed-form .views-exposed-widget .form-submit {
   margin: 0;
+}
+
+@media only screen and (min-width: 40.063em) {
+  /* line 3, ../scss/modules/_panels.scss */
+  .node-front-page .group-left {
+    width: 60%;
+    float: left;
+  }
+  /* line 8, ../scss/modules/_panels.scss */
+  .node-front-page .group-right {
+    width: 40%;
+    float: right;
+    text-align: right;
+  }
+}
+
+/* line 17, ../scss/modules/_panels.scss */
+.node-type-producto .pane-node-field-product-price {
+  font-size: 1.375rem;
+  margin: 10px 0;
 }

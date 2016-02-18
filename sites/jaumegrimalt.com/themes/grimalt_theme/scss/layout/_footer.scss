@@ -13,4 +13,12 @@
     iframe {
         max-height: 400px;
     }
+
+    a {
+        color: $white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }

@@ -9,5 +9,17 @@
 
     .header-right {
         text-align: right;
+
+        .block-menu {
+            clear: both;
+        }
+
+        .block:first-child {
+            margin-left: 10px;
+        }
+
+        .block:first-child, .block:nth-child(2) {
+            float: right;
+        }
     }
 }

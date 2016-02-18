@@ -28,6 +28,7 @@ base theme = zurb_foundation
 
 ; For CSS users, load the STARTER.css file:
 stylesheets[all][] = css/grimalt_theme.css
+stylesheets[all][] = css/foundation-icons.css 
 
 ; Block loading of foundation.min.css from the base theme. This file should either
 ; not exist or be blank in your subtheme. See https://drupal.org/node/263967

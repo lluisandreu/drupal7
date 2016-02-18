@@ -55,6 +55,7 @@
  */
 
 $sites = array(
+	'sandbox.d7.paam' => 'sandbox',
 	'calbarber.d7.paam' => 'tavernacalbarber.cat',
 	'jaumegrimalt.d7.paam' => 'jaumegrimalt.com'
 );
