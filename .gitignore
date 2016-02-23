@@ -1,13 +1,14 @@
 # Ignore configuration files that may contain sensitive information.
-sites/*/settings*.php
+sites/*/settings.php
 install.php
+sites.php
 
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
 sites/*/themes/*/node_modules
 
-.sass-cache
+sites/*/themes/*/.sass-cache
 
 .DS_Store
 .AppleDouble
