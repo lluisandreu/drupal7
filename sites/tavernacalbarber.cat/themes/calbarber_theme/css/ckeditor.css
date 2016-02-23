@@ -69,12 +69,17 @@ h1, h2, h3, h4 {
 }
 
 /* line 36, ../sass/_basicstyling.scss */
+iframe {
+  max-width: 100%;
+}
+
+/* line 40, ../sass/_basicstyling.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 41, ../sass/_basicstyling.scss */
+/* line 45, ../sass/_basicstyling.scss */
 input[type=submit], button {
   padding: 6px;
   background: #FFA882;
@@ -83,12 +88,12 @@ input[type=submit], button {
   cursor: pointer;
   font-size: 0.8rem;
 }
-/* line 49, ../sass/_basicstyling.scss */
+/* line 53, ../sass/_basicstyling.scss */
 input[type=submit]:hover, button:hover {
   background: #ff854f;
 }
 
-/* line 54, ../sass/_basicstyling.scss */
+/* line 58, ../sass/_basicstyling.scss */
 input[type=text], input[type=email], input[type=password] {
   padding: 8px;
   border: none;
@@ -101,13 +106,13 @@ input[type=text], input[type=email], input[type=password] {
   max-width: 100%;
 }
 
-/* line 66, ../sass/_basicstyling.scss */
+/* line 70, ../sass/_basicstyling.scss */
 label {
   color: #ffffff;
   padding: 5px 0;
 }
 
-/* line 71, ../sass/_basicstyling.scss */
+/* line 75, ../sass/_basicstyling.scss */
 p {
   font-size: 0.8rem;
   font-weight: 400;
@@ -115,12 +120,12 @@ p {
   color: #e5eaf7;
 }
 
-/* line 78, ../sass/_basicstyling.scss */
+/* line 82, ../sass/_basicstyling.scss */
 small {
   font-family: "Montserrat", sans-serif;
 }
 
-/* line 82, ../sass/_basicstyling.scss */
+/* line 86, ../sass/_basicstyling.scss */
 strong {
   font-weight: 700;
 }
@@ -147,14 +152,14 @@ body {
   scrollbar-track-color: transparent;
 }
 
-/* line 92, ../sass/_basicstyling.scss */
+/* line 96, ../sass/_basicstyling.scss */
 .main-section {
   position: relative;
   overflow-y: auto;
   background-image: none;
 }
 @media (min-width: 650px) {
-  /* line 92, ../sass/_basicstyling.scss */
+  /* line 96, ../sass/_basicstyling.scss */
   .main-section {
     background-image: url("../images/defaultbg.jpg");
     background-position: center center;
@@ -163,29 +168,29 @@ body {
   }
 }
 
-/* line 106, ../sass/_basicstyling.scss */
+/* line 110, ../sass/_basicstyling.scss */
 .main-aside {
   background: rgba(49, 84, 172, 0.7);
 }
-/* line 109, ../sass/_basicstyling.scss */
+/* line 113, ../sass/_basicstyling.scss */
 .main-aside .logo {
   text-align: center;
   margin: 20px auto 0 auto;
   width: 110px;
 }
 @media (min-width: 650px) {
-  /* line 109, ../sass/_basicstyling.scss */
+  /* line 113, ../sass/_basicstyling.scss */
   .main-aside .logo {
     margin-top: 60px;
     width: 100%;
   }
 }
 
-/* line 123, ../sass/_basicstyling.scss */
+/* line 127, ../sass/_basicstyling.scss */
 .main-nav.closed {
   margin-top: 20px;
 }
-/* line 126, ../sass/_basicstyling.scss */
+/* line 130, ../sass/_basicstyling.scss */
 .main-nav.closed .menu li {
   font-family: "Just Me Again Down Here", cursive;
   font-size: 1.5rem;
@@ -197,29 +202,29 @@ body {
   padding: 0;
 }
 @media (min-width: 1080px) {
-  /* line 126, ../sass/_basicstyling.scss */
+  /* line 130, ../sass/_basicstyling.scss */
   .main-nav.closed .menu li {
     font-size: 2rem;
   }
 }
-/* line 133, ../sass/_basicstyling.scss */
+/* line 137, ../sass/_basicstyling.scss */
 .main-nav.closed .menu li ul {
   margin-left: 6%;
   margin-bottom: 5px;
 }
-/* line 138, ../sass/_basicstyling.scss */
+/* line 142, ../sass/_basicstyling.scss */
 .main-nav.closed .menu a {
   padding: 5px 0 5px 20%;
   display: block;
   color: #ffffff;
   text-decoration: none;
 }
-/* line 144, ../sass/_basicstyling.scss */
+/* line 148, ../sass/_basicstyling.scss */
 .main-nav.closed .menu a:hover, .main-nav.closed .menu a.active, .main-nav.closed .menu a:focus {
   color: #FFA882;
 }
 
-/* line 151, ../sass/_basicstyling.scss */
+/* line 155, ../sass/_basicstyling.scss */
 .nav-toggle {
   margin-top: 5px;
   font-size: 1rem;
@@ -232,12 +237,12 @@ body {
   text-decoration: none;
 }
 
-/* line 163, ../sass/_basicstyling.scss */
+/* line 167, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened {
   text-align: center;
   background: #375ec0;
 }
-/* line 167, ../sass/_basicstyling.scss */
+/* line 171, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened li {
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -245,34 +250,34 @@ nav.nav-collapse.opened li {
   padding: 0;
   font-size: 1rem;
 }
-/* line 175, ../sass/_basicstyling.scss */
+/* line 179, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened li ul {
   background: #466bca;
 }
-/* line 179, ../sass/_basicstyling.scss */
+/* line 183, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened a {
   color: #ffffff;
   padding: 10px 0;
   text-decoration: none;
   display: block;
 }
-/* line 185, ../sass/_basicstyling.scss */
+/* line 189, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
   background: #264184;
 }
 
-/* line 194, ../sass/_basicstyling.scss */
+/* line 198, ../sass/_basicstyling.scss */
 .main-content-box {
   background: #3154AC;
 }
 @media (min-width: 650px) {
-  /* line 194, ../sass/_basicstyling.scss */
+  /* line 198, ../sass/_basicstyling.scss */
   .main-content-box {
     margin: 80px;
   }
 }
 @media (min-width: 1080px) {
-  /* line 194, ../sass/_basicstyling.scss */
+  /* line 198, ../sass/_basicstyling.scss */
   .main-content-box {
     margin: 100px 80px;
     max-height: 560px;
@@ -280,43 +285,43 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
   }
 }
 
-/* line 209, ../sass/_basicstyling.scss */
+/* line 213, ../sass/_basicstyling.scss */
 .main-content-box-inner {
   padding: 15px;
 }
 
-/* line 217, ../sass/_basicstyling.scss */
+/* line 221, ../sass/_basicstyling.scss */
 .node-type-page .node-content-left .field-name-body {
   padding-right: 20px;
 }
-/* line 220, ../sass/_basicstyling.scss */
+/* line 224, ../sass/_basicstyling.scss */
 .node-type-page .node-content-left .field-name-body a {
   color: #ffffff;
   text-decoration: underline;
 }
-/* line 224, ../sass/_basicstyling.scss */
+/* line 228, ../sass/_basicstyling.scss */
 .node-type-page .node-content-left .field-name-body a:hover {
   text-decoration: none;
 }
 @media (min-width: 1080px) {
-  /* line 217, ../sass/_basicstyling.scss */
+  /* line 221, ../sass/_basicstyling.scss */
   .node-type-page .node-content-left .field-name-body {
     max-height: 400px;
     overflow-y: auto;
   }
 }
 @media (min-width: 1080px) {
-  /* line 237, ../sass/_basicstyling.scss */
+  /* line 241, ../sass/_basicstyling.scss */
   .node-type-page .node-content-right.body {
     padding: 0 15px;
   }
 }
-/* line 243, ../sass/_basicstyling.scss */
+/* line 247, ../sass/_basicstyling.scss */
 .node-type-page .node-content-right .field-name-field-page-images {
   margin-top: 20px;
 }
 @media (min-width: 1080px) {
-  /* line 243, ../sass/_basicstyling.scss */
+  /* line 247, ../sass/_basicstyling.scss */
   .node-type-page .node-content-right .field-name-field-page-images {
     margin-top: 0;
     max-height: 437px;
@@ -325,33 +330,33 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
 }
 
 @media (min-width: 650px) {
-  /* line 257, ../sass/_basicstyling.scss */
+  /* line 261, ../sass/_basicstyling.scss */
   #block-instagram-block-instagram-block, #block-instagram-block-instagram-block-tag {
     overflow-y: auto;
     max-height: 400px;
   }
 }
-/* line 264, ../sass/_basicstyling.scss */
+/* line 268, ../sass/_basicstyling.scss */
 #block-instagram-block-instagram-block .content img, #block-instagram-block-instagram-block-tag .content img {
   padding: 5px;
   max-width: 100%;
 }
 @media (max-width: 650px) {
-  /* line 264, ../sass/_basicstyling.scss */
+  /* line 268, ../sass/_basicstyling.scss */
   #block-instagram-block-instagram-block .content img, #block-instagram-block-instagram-block-tag .content img {
     width: 100% !important;
     height: auto !important;
   }
 }
 
-/* line 275, ../sass/_basicstyling.scss */
+/* line 279, ../sass/_basicstyling.scss */
 .small-print {
   position: absolute;
   bottom: 10px;
   right: 20px;
   text-align: right;
 }
-/* line 282, ../sass/_basicstyling.scss */
+/* line 286, ../sass/_basicstyling.scss */
 .small-print small a {
   color: #ffffff;
 }

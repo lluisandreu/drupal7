@@ -95,6 +95,7 @@
   </main>
   <div class="small-print">
     <small>&copy; Taverna Cal Barber</small>
-    <small>|&nbsp;<a href="<?php print url('user'); ?>">Login</a></small>
+    <small>|&nbsp;<a href="<?php print url('user'); ?>">Entra</a></small>
+    <small>|&nbsp;<a href="<?php print url('user/password/recover'); ?>">Recupera la contrassenya</a></small>
   </div>
 </section>

@@ -15,12 +15,15 @@
     ?>
   </div>
 <?php endif; ?>
-  <?php if(isset($content['field_page_images'])): ?>
+  <?php if(isset($content['field_page_images']) || isset($content['field_page_right'])): ?>
     <div class="node-content-right <?php if(isset($content['body'])) {print "body";} ?>">
       <?php if(!isset($content['body'])): ?>
           <h1><?php print $title; ?></h1>
       <?php endif; ?>
       <?php print render($content['field_page_images']); ?>
+      <?php if(isset($content['field_page_right'])): ?>
+        <?php print render($content['field_page_right']); ?>
+      <?php endif; ?>
     </div>
   <?php endif; ?>
   </div>
