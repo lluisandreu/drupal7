@@ -1,0 +1,25 @@
+// Site phone
+.block-block-1 {
+    h2 {
+        color: $primary-color;
+    }
+}
+
+.block-block-2 {
+    margin: 2rem auto;
+    background: $primary-color;
+    max-width: 600px;
+    text-transform: uppercase;
+    text-align: center;
+
+    .block-inner {
+        padding: 2rem;
+
+        h2 {
+            font-size: rem-calc(32);
+            color: $white;
+            font-weight: 300;
+            line-height: 3rem;
+        }
+    }
+}
