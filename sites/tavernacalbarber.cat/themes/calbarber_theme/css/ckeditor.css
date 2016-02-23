@@ -326,19 +326,19 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
 
 @media (min-width: 650px) {
   /* line 257, ../sass/_basicstyling.scss */
-  #block-instagram-block-instagram-block {
+  #block-instagram-block-instagram-block, #block-instagram-block-instagram-block-tag {
     overflow-y: auto;
     max-height: 400px;
   }
 }
 /* line 264, ../sass/_basicstyling.scss */
-#block-instagram-block-instagram-block .content img {
+#block-instagram-block-instagram-block .content img, #block-instagram-block-instagram-block-tag .content img {
   padding: 5px;
   max-width: 100%;
 }
 @media (max-width: 650px) {
   /* line 264, ../sass/_basicstyling.scss */
-  #block-instagram-block-instagram-block .content img {
+  #block-instagram-block-instagram-block .content img, #block-instagram-block-instagram-block-tag .content img {
     width: 100% !important;
     height: auto !important;
   }

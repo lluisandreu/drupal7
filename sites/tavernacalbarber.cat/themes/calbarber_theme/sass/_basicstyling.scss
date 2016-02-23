@@ -254,7 +254,7 @@ nav.nav-collapse.opened {
 
 // Instagram Block
 
-#block-instagram-block-instagram-block {
+#block-instagram-block-instagram-block, #block-instagram-block-instagram-block-tag {
     @include tablet {
         overflow-y: auto;
         max-height: 400px;
