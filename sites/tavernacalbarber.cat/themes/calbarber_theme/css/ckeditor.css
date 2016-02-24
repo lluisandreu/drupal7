@@ -1,86 +1,397 @@
-@font-face{font-family:Montserrat;font-weight:400;src:url(../fonts/Montserrat-Regular.otf) format("opentype")}@font-face{font-family:Montserrat;font-weight:lighter;src:url(../fonts/Montserrat-Light.otf) format("opentype")}@font-face{font-family:Chalk;font-weight:lighter;src:url(../fonts/DJBChalkItUp.ttf)}@media (min-width:650px){
-  /* line 2, ../sass/_basicstyling.scss */body,html{height:100%;height:100vh}}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: normal;
+  src: url("../fonts/Montserrat-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: lighter;
+  src: url("../fonts/Montserrat-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Chalk";
+  font-weight: lighter;
+  src: url("../fonts/DJBChalkItUp.ttf");
+}
+@media (min-width: 650px) {
+  /* line 2, ../sass/_basicstyling.scss */
+  html, body {
+    height: 100%;
+    height: 100vh;
+  }
+}
 
-/* line 9, ../sass/_basicstyling.scss */body{font-family:Montserrat,sans-serif;font-size:12.8px;font-size:12px;font-size:0.8rem;font-weight:400;line-height:20.8px;line-height:20px;line-height:1.3rem}
+/* line 9, ../sass/_basicstyling.scss */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.3rem;
+}
 
-/* line 16, ../sass/_basicstyling.scss */div{color:#ffffff}
+/* line 16, ../sass/_basicstyling.scss */
+div {
+  color: #ffffff;
+}
 
-/* line 20, ../sass/_basicstyling.scss */h1{font-family:Chalk,Just Me Again Down Here,cursive;font-size:24px;font-size:1.5rem;line-height:32px;line-height:2rem;text-rendering:optimizeLegibility;margin:16px 0;margin:1rem 0}@media (min-width:1080px){
-  /* line 20, ../sass/_basicstyling.scss */h1{font-size:2rem}}
+/* line 20, ../sass/_basicstyling.scss */
+h1 {
+  font-family: "Chalk", "Just Me Again Down Here", cursive;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-rendering: optimizeLegibility;
+  margin: 1rem 0;
+}
+@media (min-width: 1080px) {
+  /* line 20, ../sass/_basicstyling.scss */
+  h1 {
+    font-size: 2rem;
+  }
+}
 
-/* line 26, ../sass/_basicstyling.scss */h2{font-family:Chalk,Just Me Again Down Here,cursive;font-size:24px;font-size:1.5rem;line-height:32px;line-height:2rem;text-rendering:optimizeLegibility;margin:12.8px 0;margin:12px 0;margin:0.8rem 0}@media (min-width:1080px){
-  /* line 26, ../sass/_basicstyling.scss */h2{font-size:2rem}}
+/* line 26, ../sass/_basicstyling.scss */
+h2 {
+  font-family: "Chalk", "Just Me Again Down Here", cursive;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-rendering: optimizeLegibility;
+  margin: 0.8rem 0;
+}
+@media (min-width: 1080px) {
+  /* line 26, ../sass/_basicstyling.scss */
+  h2 {
+    font-size: 2rem;
+  }
+}
 
-/* line 32, ../sass/_basicstyling.scss */h1,h2,h3,h4{color:#ffffff}
+/* line 32, ../sass/_basicstyling.scss */
+h1, h2, h3, h4 {
+  color: #ffffff;
+}
 
 /* line 36, ../sass/_basicstyling.scss */
+iframe {
+  max-width: 100%;
+}
 
-/* line 40, ../sass/_basicstyling.scss */iframe,img{max-width:100%}img{height:auto}
+/* line 40, ../sass/_basicstyling.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-/* line 45, ../sass/_basicstyling.scss */button,input[type=submit]{padding:6px;background:#D46060;color:#ffffff;border:1px solid #eab0b0;cursor:pointer;font-size:12.8px;font-size:12px;font-size:0.8rem}
-/* line 53, ../sass/_basicstyling.scss */button:hover,input[type=submit]:hover{background:#c93838}
+/* line 45, ../sass/_basicstyling.scss */
+input[type=submit], button {
+  padding: 6px;
+  background: #D46060;
+  color: #ffffff;
+  border: 1px solid #eab0b0;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+/* line 53, ../sass/_basicstyling.scss */
+input[type=submit]:hover, button:hover {
+  background: #c93838;
+}
 
-/* line 58, ../sass/_basicstyling.scss */input[type=email],input[type=password],input[type=text]{padding:8px;border:none;margin:10px 0;background:#5a7bd0;border-bottom:1px solid #ffffff;font-size:12.8px;font-size:12px;font-size:0.8rem;font-family:Montserrat,sans-serif;color:#ffffff;max-width:100%}
+/* line 58, ../sass/_basicstyling.scss */
+input[type=text], input[type=email], input[type=password] {
+  padding: 8px;
+  border: none;
+  margin: 10px 0;
+  background: #5a7bd0;
+  border-bottom: 1px solid #ffffff;
+  font-size: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  max-width: 100%;
+}
 
-/* line 70, ../sass/_basicstyling.scss */label{color:#ffffff;padding:5px 0}
+/* line 70, ../sass/_basicstyling.scss */
+label {
+  color: #ffffff;
+  padding: 5px 0;
+}
 
-/* line 75, ../sass/_basicstyling.scss */p{font-size:12.8px;font-size:12px;font-size:0.8rem;font-weight:400;margin:0 0 16px;margin:0 0 1rem;color:#e5eaf7}
+/* line 75, ../sass/_basicstyling.scss */
+p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+  color: #e5eaf7;
+}
 
-/* line 82, ../sass/_basicstyling.scss */small{font-family:Montserrat,sans-serif}
+/* line 82, ../sass/_basicstyling.scss */
+small {
+  font-family: "Montserrat", sans-serif;
+}
 
-/* line 86, ../sass/_basicstyling.scss */strong{font-weight:700}
+/* line 86, ../sass/_basicstyling.scss */
+strong {
+  font-weight: 700;
+}
 
-/* line 64, ../sass/_mixins.scss */::-webkit-scrollbar,scrollbar{width:0.6em;height:0.2em}
+/* line 64, ../sass/_mixins.scss */
+::-webkit-scrollbar, scrollbar {
+  width: 0.6em;
+  height: 0.2em;
+}
 
-/* line 69, ../sass/_mixins.scss */::-webkit-scrollbar-thumb,thumb{background:#ffffff}
+/* line 69, ../sass/_mixins.scss */
+::-webkit-scrollbar-thumb, thumb {
+  background: #ffffff;
+}
 
-/* line 73, ../sass/_mixins.scss */::-webkit-scrollbar-track{background:transparent}
+/* line 73, ../sass/_mixins.scss */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
 
-/* line 78, ../sass/_mixins.scss */body{scrollbar-face-color:#ffffff;scrollbar-track-color:transparent}
+/* line 78, ../sass/_mixins.scss */
+body {
+  scrollbar-face-color: #ffffff;
+  scrollbar-track-color: transparent;
+}
 
-/* line 96, ../sass/_basicstyling.scss */.main-section{position:relative;overflow-y:auto;background-image:none}@media (min-width:650px){
-  /* line 96, ../sass/_basicstyling.scss */.main-section{background-image:url(../images/defaultbg.jpg);background-position:center center;background-attachment:fixed;background-size:cover}}
+/* line 96, ../sass/_basicstyling.scss */
+.main-section {
+  position: relative;
+  background-image: none;
+}
+@media (min-width: 650px) {
+  /* line 96, ../sass/_basicstyling.scss */
+  .main-section {
+    background-image: url("../images/defaultbg.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-y: auto;
+  }
+}
 
-/* line 110, ../sass/_basicstyling.scss */.main-aside{background:#3154AC;background:rgba(49,84,172,0.7)}
-/* line 113, ../sass/_basicstyling.scss */.main-aside .logo{text-align:center;margin:20px auto 0;width:110px}@media (min-width:650px){
-  /* line 113, ../sass/_basicstyling.scss */.main-aside .logo{margin-top:60px;width:100%}}
+/* line 110, ../sass/_basicstyling.scss */
+.main-aside {
+  background: rgba(49, 84, 172, 0.7);
+}
+/* line 113, ../sass/_basicstyling.scss */
+.main-aside .logo {
+  text-align: center;
+  margin: 20px auto 0 auto;
+  width: 110px;
+}
+@media (min-width: 650px) {
+  /* line 113, ../sass/_basicstyling.scss */
+  .main-aside .logo {
+    margin-top: 60px;
+    width: 100%;
+  }
+}
 
-/* line 127, ../sass/_basicstyling.scss */.main-nav.closed{margin-top:20px}
-/* line 130, ../sass/_basicstyling.scss */.main-nav.closed .menu li{font-family:Chalk,Just Me Again Down Here,cursive;font-size:24px;font-size:1.5rem;line-height:32px;line-height:2rem;text-rendering:optimizeLegibility;margin:0;padding:0}@media (min-width:1080px){
-  /* line 130, ../sass/_basicstyling.scss */.main-nav.closed .menu li{font-size:2rem}}
-/* line 137, ../sass/_basicstyling.scss */.main-nav.closed .menu li ul{margin-left:6%;margin-bottom:5px}
-/* line 142, ../sass/_basicstyling.scss */.main-nav.closed .menu a{padding:5px 0 5px 20%;display:block;color:#ffffff;text-decoration:none}
-/* line 148, ../sass/_basicstyling.scss */.main-nav.closed .menu a.active,.main-nav.closed .menu a:focus,.main-nav.closed .menu a:hover{color:#D46060}
+/* line 127, ../sass/_basicstyling.scss */
+.main-nav.closed {
+  margin-top: 20px;
+}
+/* line 130, ../sass/_basicstyling.scss */
+.main-nav.closed .menu li {
+  font-family: "Chalk", "Just Me Again Down Here", cursive;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 1080px) {
+  /* line 130, ../sass/_basicstyling.scss */
+  .main-nav.closed .menu li {
+    font-size: 2rem;
+  }
+}
+/* line 137, ../sass/_basicstyling.scss */
+.main-nav.closed .menu li ul {
+  margin-left: 6%;
+  margin-bottom: 5px;
+}
+/* line 142, ../sass/_basicstyling.scss */
+.main-nav.closed .menu a {
+  padding: 5px 0 5px 20%;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+}
+/* line 148, ../sass/_basicstyling.scss */
+.main-nav.closed .menu a:hover, .main-nav.closed .menu a.active, .main-nav.closed .menu a:focus {
+  color: #D46060;
+}
 
-/* line 155, ../sass/_basicstyling.scss */.nav-toggle{margin-top:5px;font-size:16px;font-size:1rem;text-align:center;background:#264184;color:#ffffff;padding:8px 0;width:100%;display:block;text-decoration:none}
+/* line 155, ../sass/_basicstyling.scss */
+.nav-toggle {
+  margin-top: 5px;
+  font-size: 1rem;
+  text-align: center;
+  background: #264184;
+  color: #ffffff;
+  padding: 8px 0;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+}
 
-/* line 167, ../sass/_basicstyling.scss */nav.nav-collapse.opened{text-align:center;background:#375ec0}
-/* line 171, ../sass/_basicstyling.scss */nav.nav-collapse.opened li{text-align:center;font-family:Montserrat,sans-serif;margin:0;padding:0;font-size:16px;font-size:1rem}
-/* line 179, ../sass/_basicstyling.scss */nav.nav-collapse.opened li ul{background:#466bca}
-/* line 183, ../sass/_basicstyling.scss */nav.nav-collapse.opened a{color:#ffffff;padding:10px 0;text-decoration:none;display:block}
-/* line 189, ../sass/_basicstyling.scss */nav.nav-collapse.opened a:focus,nav.nav-collapse.opened a:hover{background:#264184}
+/* line 167, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened {
+  text-align: center;
+  background: #375ec0;
+}
+/* line 171, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened li {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+/* line 179, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened li ul {
+  background: #466bca;
+}
+/* line 183, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened a {
+  color: #ffffff;
+  padding: 10px 0;
+  text-decoration: none;
+  display: block;
+}
+/* line 189, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
+  background: #264184;
+}
 
-/* line 198, ../sass/_basicstyling.scss */.main-content-box{background:#3154AC}@media (min-width:650px){
-  /* line 198, ../sass/_basicstyling.scss */.main-content-box{margin:80px;padding:20px}}@media (min-width:1080px){
-  /* line 198, ../sass/_basicstyling.scss */.main-content-box{margin:100px 0 0 80px;height:560px;width:90%;overflow:hidden;padding:30px}}
+/* line 198, ../sass/_basicstyling.scss */
+.main-content-box {
+  background: #3154AC;
+  padding: 20px;
+}
+@media (min-width: 650px) {
+  /* line 198, ../sass/_basicstyling.scss */
+  .main-content-box {
+    margin: 80px;
+    padding: 20px;
+  }
+}
+@media (min-width: 1080px) {
+  /* line 198, ../sass/_basicstyling.scss */
+  .main-content-box {
+    margin: 100px 0 0 80px;
+    height: 560px;
+    width: 90%;
+    overflow: hidden;
+    padding: 30px;
+  }
+}
 
-/* line 216, ../sass/_basicstyling.scss */.main-content-box-inner{position:relative;overflow:auto;width:100%;height:100%}
+/* line 217, ../sass/_basicstyling.scss */
+.main-content-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 1080px) {
+  /* line 217, ../sass/_basicstyling.scss */
+  .main-content-box-inner {
+    overflow: auto;
+  }
+}
 
-/* line 227, ../sass/_basicstyling.scss */.node-type-page .node-content-left .field-name-body{padding-right:40px}
-/* line 230, ../sass/_basicstyling.scss */.node-type-page .node-content-left .field-name-body a{color:#ffffff;text-decoration:underline}
-/* line 234, ../sass/_basicstyling.scss */.node-type-page .node-content-left .field-name-body a:hover{text-decoration:none}@media (min-width:1080px){
-  /* line 227, ../sass/_basicstyling.scss */.node-type-page .node-content-left .field-name-body{overflow-y:auto}}@media (min-width:1080px){
-  /* line 246, ../sass/_basicstyling.scss */.node-type-page .node-content-right.body{padding:0 30px}}
-/* line 252, ../sass/_basicstyling.scss */.node-type-page .node-content-right .field-name-field-page-images{margin-top:20px}@media (min-width:1080px){
-  /* line 252, ../sass/_basicstyling.scss */.node-type-page .node-content-right .field-name-field-page-images{margin-top:0;overflow-y:auto}}@media (min-width:650px){
-  /* line 265, ../sass/_basicstyling.scss */#block-instagram-block-instagram-block,#block-instagram-block-instagram-block-tag{overflow-y:auto;max-height:400px}}
-/* line 272, ../sass/_basicstyling.scss */#block-instagram-block-instagram-block-tag .content img,#block-instagram-block-instagram-block .content img{padding:5px;max-width:100%}@media (max-width:650px){
-  /* line 272, ../sass/_basicstyling.scss */#block-instagram-block-instagram-block-tag .content img,#block-instagram-block-instagram-block .content img{width:100%!important;height:auto!important}}
+/* line 231, ../sass/_basicstyling.scss */
+.node-type-page .node-content-left .field-name-body {
+  padding-right: 40px;
+}
+/* line 234, ../sass/_basicstyling.scss */
+.node-type-page .node-content-left .field-name-body a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+/* line 238, ../sass/_basicstyling.scss */
+.node-type-page .node-content-left .field-name-body a:hover {
+  text-decoration: none;
+}
+@media (min-width: 1080px) {
+  /* line 231, ../sass/_basicstyling.scss */
+  .node-type-page .node-content-left .field-name-body {
+    overflow-y: auto;
+  }
+}
+@media (min-width: 1080px) {
+  /* line 250, ../sass/_basicstyling.scss */
+  .node-type-page .node-content-right.body {
+    padding: 0 30px;
+  }
+}
+/* line 256, ../sass/_basicstyling.scss */
+.node-type-page .node-content-right .field-name-field-page-images {
+  margin-top: 20px;
+}
+@media (min-width: 1080px) {
+  /* line 256, ../sass/_basicstyling.scss */
+  .node-type-page .node-content-right .field-name-field-page-images {
+    margin-top: 0;
+    overflow-y: auto;
+  }
+}
 
-/* line 283, ../sass/_basicstyling.scss */.small-print{position:absolute;bottom:10px;right:20px;text-align:right}
-/* line 290, ../sass/_basicstyling.scss */.small-print small a{color:#ffffff}
+@media (min-width: 650px) {
+  /* line 269, ../sass/_basicstyling.scss */
+  #block-instagram-block-instagram-block, #block-instagram-block-instagram-block-tag {
+    overflow-y: auto;
+    max-height: 400px;
+  }
+}
+/* line 276, ../sass/_basicstyling.scss */
+#block-instagram-block-instagram-block .content img, #block-instagram-block-instagram-block-tag .content img {
+  padding: 5px;
+  max-width: 100%;
+}
+@media (max-width: 650px) {
+  /* line 276, ../sass/_basicstyling.scss */
+  #block-instagram-block-instagram-block .content img, #block-instagram-block-instagram-block-tag .content img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
 
-/* line 298, ../sass/_basicstyling.scss */.ui-icon,.ui-widget-content .ui-icon{background-image:url(../images/ui-icons_ffffff_256x240.png)}
+/* line 287, ../sass/_basicstyling.scss */
+.small-print {
+  text-align: right;
+  width: 100%;
+  margin-right: 10px;
+  color: #3154AC;
+}
+/* line 293, ../sass/_basicstyling.scss */
+.small-print small a {
+  color: #3154AC;
+  text-decoration: none;
+}
+@media (min-width: 650px) {
+  /* line 287, ../sass/_basicstyling.scss */
+  .small-print {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    text-align: right;
+    color: #ffffff;
+  }
+  /* line 306, ../sass/_basicstyling.scss */
+  .small-print small a {
+    color: #ffffff;
+  }
+}
 
-/* line 5, ../sass/ckeditor.scss */body{background:#3154AC;padding:15px}
-/*# sourceMappingURL=../dist/css/maps/ckeditor.css.map */
+/* line 315, ../sass/_basicstyling.scss */
+.ui-icon, .ui-widget-content .ui-icon {
+  background-image: url("../images/ui-icons_ffffff_256x240.png");
+}
+
+/* line 5, ../sass/ckeditor.scss */
+body {
+  background: #3154AC;
+  padding: 15px;
+}

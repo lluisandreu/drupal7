@@ -22,7 +22,7 @@
             maxHeight: 1000,
             minWidth: 600,
             maxWidth: 1100,
-            //containment: ".main-content",
+            containment: "body",
 
         });
       }

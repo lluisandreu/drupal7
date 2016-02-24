@@ -21,6 +21,8 @@ function calbarber_theme_preprocess_page(&$variables) {
 				position: absolute; 
 				height: 1px;
 				width: 1px;
+				top: -990px;
+				left: -999px;
 				overflow: hidden;
 			}", array(
 				'type' => 'inline',
