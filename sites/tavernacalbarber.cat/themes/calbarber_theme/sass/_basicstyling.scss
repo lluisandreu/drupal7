@@ -149,6 +149,12 @@ strong {
             color: $color_secondary;
         }
     }
+
+    @include desktop {
+        li.expanded ul.menu {
+            display: none;
+        }
+    }
 }
 
 // Toogle
