@@ -37,7 +37,7 @@
   </header>
   <!--/.l-header -->
 
-  <?php if (!empty($page['featured'])): ?>
+  <?php if (!empty($page['featured']) && $is_front): ?>
     <!--.l-featured -->
     <section class="l-featured">
       <?php print render($page['featured']); ?>

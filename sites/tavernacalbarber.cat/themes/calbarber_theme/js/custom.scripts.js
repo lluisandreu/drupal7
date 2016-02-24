@@ -15,6 +15,17 @@
         open: function(){}, // Function: Open callback
         close: function(){} // Function: Close callback
       });
+
+      var screenWidth = $(window).width();
+      if(screenWidth > 1024) {
+        $( ".main-content-box").resizable({
+            maxHeight: 1000,
+            minWidth: 600,
+            maxWidth: 1100,
+            //containment: ".main-content",
+
+        });
+      }
   });
 
 }(jQuery));

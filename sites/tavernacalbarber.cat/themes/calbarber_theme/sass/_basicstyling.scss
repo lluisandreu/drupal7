@@ -200,18 +200,24 @@ nav.nav-collapse.opened {
 
     @include tablet {
         margin: 80px;
+        padding: 20px;
     }
 
 
     @include desktop {
-        margin: 100px 80px;
-        max-height: 560px;
-        max-width: 900px;
+        margin: 100px 0 0 80px;
+        height: 560px;
+        width: 90%;
+        overflow: hidden;
+        padding: 30px;
     }
 }
 
 .main-content-box-inner {
-    padding: 15px;
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
 }
 
 // Nodes
@@ -219,7 +225,7 @@ nav.nav-collapse.opened {
 .node-type-page {
     .node-content-left {
         .field-name-body {
-            padding-right: 20px;
+            padding-right: 40px;
 
             a {
                 color: $white;
@@ -231,7 +237,6 @@ nav.nav-collapse.opened {
             }
 
             @include desktop {
-                max-height: 400px;
                 overflow-y: auto;
             }
         }
@@ -240,7 +245,7 @@ nav.nav-collapse.opened {
     .node-content-right {
         &.body {
             @include desktop {
-                padding: 0 15px;
+                padding: 0 30px;
             }
         }
 
@@ -249,7 +254,6 @@ nav.nav-collapse.opened {
 
             @include desktop {
                 margin-top: 0;
-                max-height: 437px;
                 overflow-y: auto;
             }
         }
@@ -287,4 +291,10 @@ nav.nav-collapse.opened {
             color: $white;
         }
     }
+}
+
+/// jQuery UI
+
+.ui-icon, .ui-widget-content .ui-icon {
+    background-image: url("../images/ui-icons_ffffff_256x240.png");
 }

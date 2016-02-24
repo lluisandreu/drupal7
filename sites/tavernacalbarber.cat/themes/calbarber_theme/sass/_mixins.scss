@@ -17,9 +17,11 @@
 @mixin font_handwritting {
     font-family: $font_handwritting;
     font-size: 1.5rem;
-    text-transform: uppercase;
+
+    //text-transform: uppercase;
     line-height: 2rem;
-    opacity: .85;
+
+    //opacity: .85;
     text-rendering: optimizeLegibility;
 
     @include desktop {
@@ -39,6 +41,12 @@
     font-family: "Montserrat";
     font-weight: lighter;
     src: url("../fonts/Montserrat-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Chalk";
+    font-weight: lighter;
+    src: url("../fonts/DJBChalkItUp.ttf");
 }
 
 // Scrollbar

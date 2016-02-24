@@ -76,7 +76,7 @@
 <section class="main-section clearfix">
   <aside class="main-aside">
     <div class="logo">
-      <a href="<?php print $front_page; ?>" title="Home">
+      <a href="<?php print $front_page; ?>" title="Inici">
         <img src="/<?php print drupal_get_path("theme", "calbarber_theme") . "/logo.svg";?>" alt="<?php print $site_name; ?>">
       </a>
     </div>
