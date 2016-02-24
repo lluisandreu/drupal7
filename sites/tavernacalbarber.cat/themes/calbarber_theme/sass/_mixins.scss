@@ -32,21 +32,8 @@
 // Font Face
 
 @font-face {
-    font-family: "Montserrat";
-    font-weight: normal;
-    src: url("../fonts/Montserrat-Regular.otf") format("opentype");
-}
-
-@font-face {
-    font-family: "Montserrat";
-    font-weight: lighter;
-    src: url("../fonts/Montserrat-Light.otf") format("opentype");
-}
-
-@font-face {
     font-family: "Chalk";
-    font-weight: lighter;
-    src: url("../fonts/DJBChalkItUp.ttf");
+    src: url("../fonts/DJBChalkItUp.ttf") format("truetype");
 }
 
 // Scrollbar

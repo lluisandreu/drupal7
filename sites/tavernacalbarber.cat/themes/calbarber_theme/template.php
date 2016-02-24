@@ -33,8 +33,3 @@ function calbarber_theme_preprocess_page(&$variables) {
 		}
 	}
 }
-
-function calbarber_theme_preprocess_html(&$variables) {
-	drupal_add_css("https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here", 
-		array('type' => 'external', 'group' => CSS_DEFAULT, 'every_page' => TRUE));
-}

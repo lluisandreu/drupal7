@@ -1,17 +1,6 @@
 @font-face {
-  font-family: "Montserrat";
-  font-weight: normal;
-  src: url("../fonts/Montserrat-Regular.otf") format("opentype");
-}
-@font-face {
-  font-family: "Montserrat";
-  font-weight: lighter;
-  src: url("../fonts/Montserrat-Light.otf") format("opentype");
-}
-@font-face {
   font-family: "Chalk";
-  font-weight: lighter;
-  src: url("../fonts/DJBChalkItUp.ttf");
+  src: url("../fonts/DJBChalkItUp.ttf") format("truetype");
 }
 @media (min-width: 650px) {
   /* line 2, ../sass/_basicstyling.scss */
@@ -131,23 +120,23 @@ strong {
   font-weight: 700;
 }
 
-/* line 64, ../sass/_mixins.scss */
+/* line 51, ../sass/_mixins.scss */
 ::-webkit-scrollbar, scrollbar {
   width: 0.6em;
   height: 0.2em;
 }
 
-/* line 69, ../sass/_mixins.scss */
+/* line 56, ../sass/_mixins.scss */
 ::-webkit-scrollbar-thumb, thumb {
   background: #ffffff;
 }
 
-/* line 73, ../sass/_mixins.scss */
+/* line 60, ../sass/_mixins.scss */
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* line 78, ../sass/_mixins.scss */
+/* line 65, ../sass/_mixins.scss */
 body {
   scrollbar-face-color: #ffffff;
   scrollbar-track-color: transparent;
