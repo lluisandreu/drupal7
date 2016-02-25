@@ -26,6 +26,10 @@
 
         });
       }
+      if(screenWidth < 650) {
+        $('.menu .expanded > a').attr('href', '#');
+        $('.logo a').attr('href', '#');
+      }
   });
 
 }(jQuery));

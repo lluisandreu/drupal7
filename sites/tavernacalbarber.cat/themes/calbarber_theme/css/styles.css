@@ -593,7 +593,7 @@ body {
 }
 @media (min-width: 1080px) {
   /* line 154, ../sass/_basicstyling.scss */
-  .main-nav.closed li.expanded ul.menu {
+  .main-nav.closed li.expanded:not(.active-trail) ul.menu {
     display: none;
   }
 }
