@@ -44,15 +44,18 @@
  * @ingroup themeable
  */
 ?>
-<div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<?php if ($block->delta != 'main'): ?>
+<div class="caca total <?php print $classes; ?>"<?php print $attributes; ?>>
+  <?php endif; ?>
 
   <?php print render($title_prefix); ?>
-<?php if ($block->subject): ?>
-  <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
-<?php endif;?>
+  <?php if ($block->subject): ?>
+    <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
+  <?php endif; ?>
   <?php print render($title_suffix); ?>
 
-  <div class="content"<?php print $content_attributes; ?>>
-    <?php print $content ?>
-  </div>
-</div>
+  <?php !empty($content_attributes) ? print '<div ' . $content_attributes . '>' : ''; ?>
+  <?php print $content ?>
+  <?php !empty($content_attributes) ? print '</div>' : ''; ?>
+
+  <?php $block->delta != 'main' ? print '</div>' : ''; ?>

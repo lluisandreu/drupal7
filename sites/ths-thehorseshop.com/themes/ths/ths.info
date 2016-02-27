@@ -36,6 +36,8 @@ stylesheets[all][] = css/foundation.min.css
 
 ; Foundation JavaScript.
 
+scripts[] = js/ths.js
+
 ; External libraries used by Foundation (minified). Add more via Gruntfile.js.
 scripts[] = js/libs.min.js
 

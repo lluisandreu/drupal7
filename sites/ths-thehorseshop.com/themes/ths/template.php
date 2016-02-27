@@ -3,7 +3,8 @@
 /**
  * Implements template_preprocess_html().
  */
-function STARTER_preprocess_html(&$variables) {
+function ths_preprocess_html(&$variables) {
+
 }
 
 /**
