@@ -6689,19 +6689,19 @@ dialog[open] {
 table {
   background: #FFFFFF;
   margin-bottom: 1.25rem;
-  border: solid 1px #DDDDDD;
+  border: solid 0 #DDDDDD;
   table-layout: auto;
 }
 /* line 69, ../../zurb_foundation/scss/foundation/components/_tables.scss */
 table caption {
   background: transparent;
-  color: #222222;
+  color: #FFFFFF;
   font-size: 1rem;
   font-weight: bold;
 }
 /* line 78, ../../zurb_foundation/scss/foundation/components/_tables.scss */
 table thead {
-  background: #F5F5F5;
+  background: #EA3D53;
 }
 /* line 82, ../../zurb_foundation/scss/foundation/components/_tables.scss */
 table thead tr th,
@@ -6709,11 +6709,11 @@ table thead tr td {
   padding: 0.5rem 0.625rem 0.625rem;
   font-size: 0.875rem;
   font-weight: bold;
-  color: #222222;
+  color: #FFFFFF;
 }
 /* line 92, ../../zurb_foundation/scss/foundation/components/_tables.scss */
 table tfoot {
-  background: #F5F5F5;
+  background: #EA3D53;
 }
 /* line 96, ../../zurb_foundation/scss/foundation/components/_tables.scss */
 table tfoot tr th,
@@ -6721,7 +6721,7 @@ table tfoot tr td {
   padding: 0.5rem 0.625rem 0.625rem;
   font-size: 0.875rem;
   font-weight: bold;
-  color: #222222;
+  color: #FFFFFF;
 }
 /* line 107, ../../zurb_foundation/scss/foundation/components/_tables.scss */
 table tr th,
@@ -8072,7 +8072,7 @@ h3 {
 
 /* line 272, ../../zurb_foundation/scss/foundation/components/_type.scss */
 h4 {
-  font-size: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 /* line 273, ../../zurb_foundation/scss/foundation/components/_type.scss */
@@ -8322,7 +8322,7 @@ blockquote p {
 
   /* line 459, ../../zurb_foundation/scss/foundation/components/_type.scss */
   h4 {
-    font-size: 1.4375rem;
+    font-size: 1.125rem;
   }
 
   /* line 460, ../../zurb_foundation/scss/foundation/components/_type.scss */
@@ -9508,6 +9508,11 @@ th.hide-for-touch {
 /* line 60, ../scss/base/_elements.scss */
 iframe {
   max-width: 100%;
+}
+
+/* line 64, ../scss/base/_elements.scss */
+table {
+  width: 100%;
 }
 
 /* line 9, ../scss/base/_common.scss */

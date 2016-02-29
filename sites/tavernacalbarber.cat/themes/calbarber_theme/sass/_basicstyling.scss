@@ -320,6 +320,7 @@ nav.nav-collapse.opened {
     small a {
         color: $color_primary;
         text-decoration: none;
+        text-shadow: 1px 1px 1px #000;
 
         &:hover {
             color: $color_secondary;

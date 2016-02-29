@@ -4124,8 +4124,9 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
 .small-print small a {
   color: #3154AC;
   text-decoration: none;
+  text-shadow: 1px 1px 1px #000;
 }
-/* line 324, ../sass/_basicstyling.scss */
+/* line 325, ../sass/_basicstyling.scss */
 .small-print small a:hover {
   color: #D46060;
 }
@@ -4138,13 +4139,13 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
     text-align: right;
     color: #ffffff;
   }
-  /* line 337, ../sass/_basicstyling.scss */
+  /* line 338, ../sass/_basicstyling.scss */
   .small-print small a {
     color: #ffffff;
   }
 }
 
-/* line 346, ../sass/_basicstyling.scss */
+/* line 347, ../sass/_basicstyling.scss */
 .ui-icon, .ui-widget-content .ui-icon {
   background-image: url("../images/ui-icons_ffffff_256x240.png");
 }
