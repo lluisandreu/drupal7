@@ -217,9 +217,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'drupal7_jaumegrimalt',
-      'username' => 'dbo_jaumegrimalt',
-      'password' => 'wildwalk56',
+      'database' => '',
+      'username' => '',
+      'password' => '',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
