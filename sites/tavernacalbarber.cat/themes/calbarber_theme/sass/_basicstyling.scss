@@ -198,6 +198,33 @@ nav.nav-collapse.opened {
     }
 }
 
+.site-social-icons {
+    li {
+        font-size: 0.9rem;
+        font-weight: 100;
+    }
+
+    li a {
+        padding: 5px 0 5px 20%;
+        display: block;
+        color: #FFF;
+        text-decoration: none;
+
+        &:hover {
+            color: $color_secondary;
+        }
+    }
+
+    i {
+        font-size: 1.7rem;
+        margin-right: 5px;
+    }
+
+    @include desktop {
+        margin-top: 30% !important;
+    }
+}
+
 // Main Content
 .main-content {}
 
@@ -253,12 +280,6 @@ nav.nav-collapse.opened {
     }
 
     .node-content-right {
-        &.body {
-            @include desktop {
-                padding: 0 30px;
-            }
-        }
-
         .field-name-field-page-images {
             margin-top: 20px;
 
@@ -299,6 +320,10 @@ nav.nav-collapse.opened {
     small a {
         color: $color_primary;
         text-decoration: none;
+
+        &:hover {
+            color: $color_secondary;
+        }
     }
 
     @include tablet {

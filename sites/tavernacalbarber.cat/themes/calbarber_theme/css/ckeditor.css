@@ -14,7 +14,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 100;
   line-height: 1.3rem;
 }
 
@@ -105,7 +105,7 @@ label {
 /* line 75, ../sass/_basicstyling.scss */
 p {
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 100;
   margin: 0 0 1rem 0;
   color: #e5eaf7;
 }
@@ -260,20 +260,48 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
   background: #264184;
 }
 
-/* line 204, ../sass/_basicstyling.scss */
+/* line 202, ../sass/_basicstyling.scss */
+.site-social-icons li {
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+/* line 207, ../sass/_basicstyling.scss */
+.site-social-icons li a {
+  padding: 5px 0 5px 20%;
+  display: block;
+  color: #FFF;
+  text-decoration: none;
+}
+/* line 213, ../sass/_basicstyling.scss */
+.site-social-icons li a:hover {
+  color: #D46060;
+}
+/* line 218, ../sass/_basicstyling.scss */
+.site-social-icons i {
+  font-size: 1.7rem;
+  margin-right: 5px;
+}
+@media (min-width: 1080px) {
+  /* line 201, ../sass/_basicstyling.scss */
+  .site-social-icons {
+    margin-top: 30% !important;
+  }
+}
+
+/* line 231, ../sass/_basicstyling.scss */
 .main-content-box {
   background: #3154AC;
   padding: 20px;
 }
 @media (min-width: 650px) {
-  /* line 204, ../sass/_basicstyling.scss */
+  /* line 231, ../sass/_basicstyling.scss */
   .main-content-box {
     margin: 80px;
     padding: 20px;
   }
 }
 @media (min-width: 1080px) {
-  /* line 204, ../sass/_basicstyling.scss */
+  /* line 231, ../sass/_basicstyling.scss */
   .main-content-box {
     margin: 100px 0 0 80px;
     height: 560px;
@@ -283,50 +311,44 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
   }
 }
 
-/* line 223, ../sass/_basicstyling.scss */
+/* line 250, ../sass/_basicstyling.scss */
 .main-content-box-inner {
   position: relative;
   width: 100%;
   height: 100%;
 }
 @media (min-width: 1080px) {
-  /* line 223, ../sass/_basicstyling.scss */
+  /* line 250, ../sass/_basicstyling.scss */
   .main-content-box-inner {
     overflow: auto;
   }
 }
 
-/* line 237, ../sass/_basicstyling.scss */
+/* line 264, ../sass/_basicstyling.scss */
 .node-type-page .node-content-left .field-name-body {
   padding-right: 40px;
 }
-/* line 240, ../sass/_basicstyling.scss */
+/* line 267, ../sass/_basicstyling.scss */
 .node-type-page .node-content-left .field-name-body a {
   color: #ffffff;
   text-decoration: underline;
 }
-/* line 244, ../sass/_basicstyling.scss */
+/* line 271, ../sass/_basicstyling.scss */
 .node-type-page .node-content-left .field-name-body a:hover {
   text-decoration: none;
 }
 @media (min-width: 1080px) {
-  /* line 237, ../sass/_basicstyling.scss */
+  /* line 264, ../sass/_basicstyling.scss */
   .node-type-page .node-content-left .field-name-body {
     overflow-y: auto;
   }
 }
-@media (min-width: 1080px) {
-  /* line 256, ../sass/_basicstyling.scss */
-  .node-type-page .node-content-right.body {
-    padding: 0 30px;
-  }
-}
-/* line 262, ../sass/_basicstyling.scss */
+/* line 283, ../sass/_basicstyling.scss */
 .node-type-page .node-content-right .field-name-field-page-images {
   margin-top: 20px;
 }
 @media (min-width: 1080px) {
-  /* line 262, ../sass/_basicstyling.scss */
+  /* line 283, ../sass/_basicstyling.scss */
   .node-type-page .node-content-right .field-name-field-page-images {
     margin-top: 0;
     overflow-y: auto;
@@ -334,39 +356,43 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
 }
 
 @media (min-width: 650px) {
-  /* line 275, ../sass/_basicstyling.scss */
+  /* line 296, ../sass/_basicstyling.scss */
   #block-instagram-block-instagram-block, #block-instagram-block-instagram-block-tag {
     overflow-y: auto;
     max-height: 400px;
   }
 }
-/* line 282, ../sass/_basicstyling.scss */
+/* line 303, ../sass/_basicstyling.scss */
 #block-instagram-block-instagram-block .content img, #block-instagram-block-instagram-block-tag .content img {
   padding: 5px;
   max-width: 100%;
 }
 @media (max-width: 650px) {
-  /* line 282, ../sass/_basicstyling.scss */
+  /* line 303, ../sass/_basicstyling.scss */
   #block-instagram-block-instagram-block .content img, #block-instagram-block-instagram-block-tag .content img {
     width: 100% !important;
     height: auto !important;
   }
 }
 
-/* line 293, ../sass/_basicstyling.scss */
+/* line 314, ../sass/_basicstyling.scss */
 .small-print {
   text-align: right;
   width: 100%;
   margin-right: 10px;
   color: #3154AC;
 }
-/* line 299, ../sass/_basicstyling.scss */
+/* line 320, ../sass/_basicstyling.scss */
 .small-print small a {
   color: #3154AC;
   text-decoration: none;
 }
+/* line 324, ../sass/_basicstyling.scss */
+.small-print small a:hover {
+  color: #D46060;
+}
 @media (min-width: 650px) {
-  /* line 293, ../sass/_basicstyling.scss */
+  /* line 314, ../sass/_basicstyling.scss */
   .small-print {
     position: absolute;
     bottom: 10px;
@@ -374,13 +400,13 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
     text-align: right;
     color: #ffffff;
   }
-  /* line 312, ../sass/_basicstyling.scss */
+  /* line 337, ../sass/_basicstyling.scss */
   .small-print small a {
     color: #ffffff;
   }
 }
 
-/* line 321, ../sass/_basicstyling.scss */
+/* line 346, ../sass/_basicstyling.scss */
 .ui-icon, .ui-widget-content .ui-icon {
   background-image: url("../images/ui-icons_ffffff_256x240.png");
 }

@@ -88,14 +88,15 @@
     <div class="main-content-box">
       <div class="main-content-box-inner">
         <?php print $messages; ?>
-        <?php if ($tabs && $is_admin): ?><div id="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+        <?php if ($tabs): ?><div id="tabs"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print render($page['content']); ?>
       </div>
     </div>
   </main>
   <div class="small-print">
     <small>&copy; Taverna Cal Barber</small>
+    <small>|&nbsp; Disseny per <a href="http://monicafigueras.com/" target="_blank">Mònica Figueras</a></small>
+    <small>|&nbsp; Desenvolupament per <a href="http://lluisandreu.com/" target="_blank">lluisandreu.com</a></small>
     <small>|&nbsp;<a href="<?php print url('user'); ?>">Entra</a></small>
-    <small>|&nbsp;<a href="<?php print url('user/password/recover'); ?>">Recupera la contrassenya</a></small>
   </div>
 </section>
