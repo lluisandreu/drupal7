@@ -21,7 +21,7 @@ $data = array(
       'name' => 'image_scale_and_crop',
       'data' => array(
         'width' => '2000',
-        'height' => '300',
+        'height' => '450',
       ),
       'weight' => '1',
     ),

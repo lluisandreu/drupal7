@@ -18,29 +18,15 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['css_class'] = 'owl-carousel-4-columns';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'full';
-$handler->display->display_options['style_plugin'] = 'slick';
-$handler->display->display_options['style_options']['slide_field_wrapper'] = 0;
-$handler->display->display_options['style_options']['asnavfor_auto'] = 0;
-$handler->display->display_options['style_options']['optionset'] = 'four_columns';
-$handler->display->display_options['style_options']['slide_caption'] = array(
-  'title' => 0,
-);
-$handler->display->display_options['style_options']['slide_overlay'] = '';
-$handler->display->display_options['style_options']['preserve_keys'] = 0;
-$handler->display->display_options['style_options']['override'] = 0;
-$handler->display->display_options['style_options']['overridables'] = array(
-  'arrows' => 0,
-  'autoplay' => 0,
-  'dots' => 0,
-  'draggable' => 0,
-);
-$handler->display->display_options['style_options']['cache'] = '';
+$handler->display->display_options['style_plugin'] = 'owlcarousel';
+$handler->display->display_options['style_options']['instance'] = 'owlcarousel_settings_four-elements';
 $handler->display->display_options['row_plugin'] = 'ds';
 $handler->display->display_options['row_options']['alternating'] = 0;
 $handler->display->display_options['row_options']['grouping'] = 0;

@@ -65,10 +65,22 @@ $data = array(
     'label' => 'Productos y variantes',
     'widget' => array(
       'weight' => '7',
-      'type' => 'options_select',
-      'module' => 'options',
+      'type' => 'inline_entity_form',
+      'module' => 'inline_entity_form',
       'active' => 1,
-      'settings' => array(),
+      'settings' => array(
+        'fields' => array(),
+        'type_settings' => array(
+          'allow_new' => 1,
+          'allow_existing' => 0,
+          'match_operator' => 'CONTAINS',
+          'delete_references' => 1,
+          'override_labels' => 1,
+          'label_singular' => 'Producto',
+          'label_plural' => 'Productos',
+          'autogenerate_title' => 1,
+        ),
+      ),
     ),
     'settings' => array(
       'field_injection' => 1,
@@ -81,6 +93,7 @@ $data = array(
       'default' => array(
         'label' => 'above',
         'type' => 'commerce_cart_add_to_cart_form',
+        'weight' => '4',
         'settings' => array(
           'show_quantity' => FALSE,
           'default_quantity' => 1,
@@ -89,17 +102,36 @@ $data = array(
           'line_item_type' => 'product',
         ),
         'module' => 'commerce_cart',
-        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
-        'type' => 'hidden',
+        'type' => 'commerce_cart_add_to_cart_form',
         'weight' => '14',
-        'settings' => array(),
+        'settings' => array(
+          'show_quantity' => FALSE,
+          'default_quantity' => 1,
+          'combine' => TRUE,
+          'show_single_product_attributes' => FALSE,
+          'line_item_type' => 'product',
+        ),
+        'module' => 'commerce_cart',
+      ),
+      'full' => array(
+        'label' => 'above',
+        'type' => 'commerce_cart_add_to_cart_form',
+        'weight' => '4',
+        'settings' => array(
+          'show_quantity' => 1,
+          'default_quantity' => '1',
+          'combine' => 1,
+          'show_single_product_attributes' => 1,
+          'line_item_type' => 'product',
+        ),
+        'module' => 'commerce_cart',
       ),
     ),
     'required' => 1,
-    'description' => '',
+    'description' => 'Añade aquí los productos con sus respectivos precios y variantes. Por ejemplo unas zapatillas tienen diferentes tallas, 38,40,42,43, etc. En este campo tendrás que añadir cada una talla por producto. ',
     'default_value' => NULL,
     'field_name' => 'field_products',
     'entity_type' => 'node',
@@ -117,5 +149,5 @@ $optional = array();
 $modules = array(
   0 => 'field_sql_storage',
   1 => 'commerce_product_reference',
-  2 => 'options',
+  2 => 'inline_entity_form',
 );

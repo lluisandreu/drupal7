@@ -1,1 +1,11 @@
 // Non-modular or client styles for .l-footer region.
+
+section.l-footer-columns {
+    padding: 20px 0;
+    background: $charcoal;
+    color: $white;
+
+    p, h2, h3, a, li {
+        color: $white;
+    }
+}

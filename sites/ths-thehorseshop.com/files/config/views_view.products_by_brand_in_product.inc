@@ -18,6 +18,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['css_class'] = 'owl-carousel-4-columns';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
@@ -26,9 +27,8 @@ $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'some';
 $handler->display->display_options['pager']['options']['items_per_page'] = '4';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['style_plugin'] = 'list';
-$handler->display->display_options['style_options']['class'] = 'large-block-grid-4 medium-block-grid-3 small-block-grid-2';
-$handler->display->display_options['style_options']['wrapper_class'] = '';
+$handler->display->display_options['style_plugin'] = 'owlcarousel';
+$handler->display->display_options['style_options']['instance'] = 'owlcarousel_settings_four-elements';
 $handler->display->display_options['row_plugin'] = 'ds';
 $handler->display->display_options['row_options']['alternating'] = 0;
 $handler->display->display_options['row_options']['grouping'] = 0;

@@ -1,5 +1,12 @@
 @import "../../zurb_foundation/scss/foundation/functions";
 
+@font-face {
+    font-family: 'GothamHTF-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: local("../fonts/GothamHTF-Book"), url("../fonts/GothamHTF-Book.woff") format("woff");
+}
+
 // Foundation by ZURB
 // foundation.zurb.com
 // Licensed under MIT Open Source
@@ -82,17 +89,20 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
-// $row-width: rem-calc(1000);
+$row-width: rem-calc(1080);
+
 // $total-columns: 12;
-// $column-gutter: rem-calc(30);
+$column-gutter: rem-calc(30);
 
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+$font-family-headings: "GothamHTF-Book", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 
 // We use these to define default font weights
 // $font-weight-normal: normal !default;
@@ -101,19 +111,22 @@ $include-html-global-classes: $include-html-classes;
 $white: #FFFFFF;
 
 // $ghost       : #FAFAFA;
-// $snow        : #F9F9F9;
-// $vapor       : #F6F6F6;
-// $white-smoke : #F5F5F5;
-// $silver      : #EFEFEF;
-// $smoke       : #EEEEEE;
-// $gainsboro   : #DDDDDD;
-// $iron        : #CCCCCC;
-// $base        : #AAAAAA;
+$snow: #F9F9F9;
+$vapor: #F6F6F6;
+$white-smoke: #F5F5F5;
+$silver: #EFEFEF;
+$smoke: #EEEEEE;
+$gainsboro: #DDDDDD;
+$iron: #CCCCCC;
+
+$base: #AAAAAA;
+
 // $aluminum    : #999999;
 // $jumbo       : #888888;
 // $monsoon     : #777777;
-// $steel       : #666666;
-// $charcoal    : #555555;
+$steel: #666666;
+$charcoal: #555555;
+
 // $tuatara     : #444444;
 $oil: #333333;
 $jet: #222222;
@@ -201,20 +214,23 @@ $body-font-color: $oil;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
+$header-font-family: $font-family-headings;
+
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
 // $header-font-color: $jet;
 // $header-line-height: 1.4;
-// $header-top-margin: .2rem;
-// $header-bottom-margin: .5rem;
+$header-top-margin: 0.5rem;
+$header-bottom-margin: 0.5rem;
+
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
+$h1-font-size: rem-calc(36);
+$h2-font-size: rem-calc(28);
+$h3-font-size: rem-calc(22);
+$h4-font-size: rem-calc(18);
+
 // $h5-font-size: rem-calc(18);
 // $h6-font-size: 1rem;
 
@@ -267,8 +283,8 @@ $body-font-color: $oil;
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
 // $hr-border-style: solid;
-// $hr-border-color: $gainsboro;
-// $hr-margin: rem-calc(20);
+$hr-border-color: $gainsboro;
+$hr-margin: rem-calc(30);
 
 // We use these to style lists
 // $list-font-family: $paragraph-font-family;
@@ -396,25 +412,29 @@ $body-font-color: $oil;
 // $include-html-nav-classes: $include-html-classes;
 
 // We use this to set the background color for the breadcrumb container.
-// $crumb-bg: scale-color($secondary-color, $lightness: 55%);
+$crumb-bg: transparent;
 
 // We use these to set the padding around the breadcrumbs.
-// $crumb-padding: rem-calc(9 14 9);
+$crumb-padding: rem-calc(20 0 0);
+
 // $crumb-side-padding: rem-calc(12);
 
 // We use these to control border styles.
 // $crumb-function-factor: -10%;
-// $crumb-border-size: 1px;
+$crumb-border-size: 0;
+
 // $crumb-border-style: solid;
 // $crumb-border-color: scale-color($crumb-bg, $lightness: $crumb-function-factor);
 // $crumb-radius: $global-radius;
 
 // We use these to set various text styles for breadcrumbs.
-// $crumb-font-size: rem-calc(11);
+$crumb-font-size: rem-calc(12);
+
 // $crumb-font-color: $primary-color;
 // $crumb-font-color-current: $oil;
 // $crumb-font-color-unavailable: $aluminum;
-// $crumb-font-transform: uppercase;
+$crumb-font-transform: capitalize;
+
 // $crumb-link-decor: underline;
 
 // We use these to control the slash between breadcrumbs
@@ -427,33 +447,40 @@ $body-font-color: $oil;
 // $include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
-// $button-tny: rem-calc(10);
-// $button-sml: rem-calc(14);
+$button-tny: rem-calc(10);
+
+$button-sml: rem-calc(14);
+
 // $button-med: rem-calc(16);
 // $button-lrg: rem-calc(18);
 
 // We use this to control the display property.
 // $button-display: inline-block;
-// $button-margin-bottom: rem-calc(20);
+$button-margin-bottom: 0;
 
 // We use these to control button text styles.
-// $button-font-family: $body-font-family;
+$button-font-family: $font-family-headings;
+
 // $button-font-color: $white;
-// $button-font-color-alt: $oil;
+$button-font-color-alt: $oil;
+
 // $button-font-tny: rem-calc(11);
 // $button-font-sml: rem-calc(13);
 // $button-font-med: rem-calc(16);
 // $button-font-lrg: rem-calc(20);
-// $button-font-weight: $font-weight-normal;
+$button-font-weight: 100;
+
 // $button-font-align: center;
 
 // We use these to control various hover effects.
 // $button-function-factor: -20%;
 
 // We use these to control button border and hover styles.
-// $button-border-width: 0px;
+$button-border-width: 1px;
+
 // $button-border-style: solid;
-// $button-bg-color: $primary-color;
+$button-bg-color: $white-smoke;
+
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
@@ -464,7 +491,8 @@ $body-font-color: $oil;
 // $alert-button-border-color: $alert-button-bg-hover;
 
 // We use this to set the default radius used throughout the core.
-// $button-radius: $global-radius;
+$button-radius: 3px;
+
 // $button-round: $global-rounded;
 
 // We use this to set default opacity and cursor for disabled buttons.
@@ -1374,7 +1402,7 @@ $topbar-bg-color: $white;
 $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-$topbar-height: rem-calc(100);
+$topbar-height: rem-calc(60);
 
 // $topbar-margin-bottom: 0;
 
@@ -1388,7 +1416,8 @@ $topbar-dropdown-link-color: $oil;
 
 $topbar-dropdown-link-bg: $white;
 
-// $topbar-dropdown-link-bg-hover: $oil;
+$topbar-dropdown-link-bg-hover: $smoke;
+
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
 $topbar-dropdown-toggle-color: $oil;
@@ -1397,7 +1426,7 @@ $topbar-dropdown-toggle-color: $oil;
 
 // Set the link colors and styles for top-level nav
 $topbar-link-color: $oil;
-$topbar-link-color-hover: $white;
+$topbar-link-color-hover: $oil;
 
 // $topbar-link-color-active: $white;
 // $topbar-link-color-active-hover: $white;
@@ -1406,16 +1435,18 @@ $topbar-link-font-size: rem-calc(18);
 
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
-// $topbar-link-bg-color-hover: $charcoal;
-// $topbar-link-bg-hover: $oil;
-// $topbar-link-bg-active: $primary-color;
+$topbar-link-bg-color-hover: $smoke;
+$topbar-link-bg-hover: $smoke;
+
+//$topbar-link-bg-active: $oil;
+
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
 // $topbar-link-text-transform: none;
-$topbar-link-padding: $topbar-height / 5;
+$topbar-link-padding: $topbar-height / 6;
 
 // $topbar-back-link-size: $h5-font-size;
-$topbar-link-dropdown-padding: 10px;
+$topbar-link-dropdown-padding: rem-calc(20);
 
 // $topbar-button-font-size: 0.75rem;
 // $topbar-button-top: 7px;
@@ -1423,7 +1454,8 @@ $topbar-link-dropdown-padding: 10px;
 // $topbar-dropdown-label-color: $monsoon;
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: $font-weight-bold;
-// $topbar-dropdown-label-font-size: rem-calc(10);
+$topbar-dropdown-label-font-size: rem-calc(10);
+
 // $topbar-dropdown-label-bg: $oil;
 
 // Top menu icon styles

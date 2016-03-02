@@ -47,9 +47,11 @@
 
   <?php if (!empty($page['search'])): ?>
     <!--.l-featured -->
-    <section class="l-search row">
-      <div class="columns">
-        <?php print render($page['search']); ?>
+    <section class="l-search">
+      <div class="row">
+        <div class="columns">
+          <?php print render($page['search']); ?>
+        </div>
       </div>
     </section>
     <!--/.l-featured -->
@@ -64,18 +66,19 @@
     </section>
     <!--/.l-messages -->
   <?php endif; ?>
-
+  <?php if($breadcrumb): ?>
+  <section class="breadcrumb">
+    <div class="row">
+      <div class="column">
+        <?php print $breadcrumb;  ?>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
   <!--.l-main -->
   <main role="main" class="l-main">
     <!-- .l-main region -->
     <div class="<?php print $main_grid; ?> main">
-
-      <div class="row">
-        <div class="column">
-          <?php if ($breadcrumb): print $breadcrumb; endif; ?>
-        </div>
-      </div>
-
       <?php if ($title): ?>
         <div class="row">
           <div class="column">
@@ -110,33 +113,37 @@
 
   <?php if (!empty($page['footer_firstcolumn']) || !empty($page['footer_secondcolumn']) || !empty($page['footer_thirdcolumn'])): ?>
     <!--.footer-columns -->
-    <section class="row l-footer-columns">
+    <section class="l-footer-columns">
+      <div class="row">
       <?php if (!empty($page['footer_firstcolumn'])): ?>
-        <div class="footer-first medium-3 columns">
+        <div class="footer-first medium-4 columns">
           <?php print render($page['footer_firstcolumn']); ?>
         </div>
       <?php endif; ?>
       <?php if (!empty($page['footer_secondcolumn'])): ?>
-        <div class="footer-second medium-3 columns">
+        <div class="footer-second medium-4 columns">
           <?php print render($page['footer_secondcolumn']); ?>
         </div>
       <?php endif; ?>
       <?php if (!empty($page['footer_thirdcolumn'])): ?>
-        <div class="footer-third medium-3 columns">
+        <div class="footer-third medium-4 columns">
           <?php print render($page['footer_thirdcolumn']); ?>
         </div>
       <?php endif; ?>
+      </div>
     </section>
     <!--/.footer-columns-->
   <?php endif; ?>
 
   <!--.l-footer -->
-  <footer class="l-footer panel row" role="contentinfo">
+  <footer class="l-footer" role="contentinfo">
+    <div class="row">
     <?php if (!empty($page['footer'])): ?>
       <div class="footer columns">
         <?php print render($page['footer']); ?>
       </div>
     <?php endif; ?>
+    </div>
   </footer>
   <!--/.l-footer -->
 

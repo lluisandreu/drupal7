@@ -18,6 +18,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['css_class'] = 'slideshow-carousel';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
@@ -25,24 +26,8 @@ $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'none';
 $handler->display->display_options['pager']['options']['offset'] = '0';
-$handler->display->display_options['style_plugin'] = 'slick';
-$handler->display->display_options['style_options']['slide_field_wrapper'] = 0;
-$handler->display->display_options['style_options']['asnavfor_auto'] = 0;
-$handler->display->display_options['style_options']['skin'] = 'fullwidth';
-$handler->display->display_options['style_options']['slide_caption'] = array(
-  'field_banner_image' => 0,
-);
-$handler->display->display_options['style_options']['slide_overlay'] = '';
-$handler->display->display_options['style_options']['grid'] = '1';
-$handler->display->display_options['style_options']['preserve_keys'] = 0;
-$handler->display->display_options['style_options']['override'] = 0;
-$handler->display->display_options['style_options']['overridables'] = array(
-  'arrows' => 0,
-  'autoplay' => 0,
-  'dots' => 0,
-  'draggable' => 0,
-);
-$handler->display->display_options['style_options']['cache'] = '';
+$handler->display->display_options['style_plugin'] = 'owlcarousel';
+$handler->display->display_options['style_options']['instance'] = 'owlcarousel_settings_slideshow';
 $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['row_options']['hide_empty'] = TRUE;
 $handler->display->display_options['row_options']['default_field_elements'] = FALSE;

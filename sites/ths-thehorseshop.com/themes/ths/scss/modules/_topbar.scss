@@ -1,0 +1,10 @@
+nav.top-bar {
+    #main-menu ul li a {
+        line-height: 2rem;
+    }
+
+    #main-menu a.active {
+        background: $smoke;
+        color: $oil;
+    }
+}

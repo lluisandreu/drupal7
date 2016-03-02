@@ -6,13 +6,18 @@
     <?php print $content['right']; ?>
   </div>
 </div>
-<div class="row">
-  <div class="columns layout-products-taxonomy">
-    <?php print $content['body']; ?>
+<hr>
+<div class="border-bottom">
+  <div class="row">
+    <div class="columns layout-products-taxonomy">
+      <?php print $content['body']; ?>
+    </div>
   </div>
 </div>
-<div class="row">
-  <div class="columns layout-extra">
-    <?php print $content['bottom']; ?>
+<div class="product-extra">
+  <div class="row">
+    <div class="columns">
+      <?php print $content['bottom']; ?>
+    </div>
   </div>
 </div>

@@ -132,19 +132,29 @@ $data = array(
       'default' => array(
         'label' => 'above',
         'type' => 'image',
+        'weight' => '1',
         'settings' => array(
-          'image_style' => '',
-          'image_link' => '',
+          'image_style' => 'product_image_thumb_desktop',
+          'image_link' => 'content',
         ),
         'module' => 'image',
-        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'type' => 'image',
         'weight' => '0',
         'settings' => array(
-          'image_style' => 'large',
+          'image_style' => 'product_image_thumb_desktop',
+          'image_link' => 'content',
+        ),
+        'module' => 'image',
+      ),
+      'full' => array(
+        'label' => 'above',
+        'type' => 'image',
+        'weight' => '1',
+        'settings' => array(
+          'image_style' => 'product_image_thumb_desktop',
           'image_link' => 'content',
         ),
         'module' => 'image',
@@ -161,7 +171,7 @@ $data = array(
 
 $dependencies = array(
   'content_type.producto' => 'content_type.producto',
-  'image_style.large' => 'image_style.large',
+  'image_style.product_image_thumb_desktop' => 'image_style.product_image_thumb_desktop',
 );
 
 $optional = array();

@@ -5,3 +5,8 @@
 // %font-FONTNAME   {}
 // %font-sans-serif { font-family: sans-serif; }
 // %font-serif      { font-family: serif; }
+
+.border-bottom {
+    border-bottom: 1px solid $hr-border-color;
+    padding-bottom: $hr-margin;
+}
