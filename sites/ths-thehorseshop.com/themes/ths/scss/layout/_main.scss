@@ -10,5 +10,29 @@ section.breadcrumb {
 }
 
 main.l-main {
-    padding: 20px 0 0 0;
+    padding: rem-calc(20 0);
+}
+
+//// Commerce pages using semantic grid
+
+.page-checkout {
+    .page-content {
+        @include grid-row;
+    }
+
+    .page-content > form {
+        @include grid-column(12);
+    }
+}
+
+.page-cart {
+    .page-content {
+        @include grid-row;
+
+        padding: rem-calc(20 0);
+    }
+
+    .page-content > div {
+        @include grid-column(12);
+    }
 }

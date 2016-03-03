@@ -4,14 +4,18 @@
  * Implements template_preprocess_html().
  */
 function ths_preprocess_html(&$variables) {
+  // Loads Roboto font
   drupal_add_css("//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700italic,700", array("type" => "external"));
+  // Loads Font
+  drupal_add_css("//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", array("type" => "external"));
 }
 
 
 /**
  * Implements template_preprocess_page.
  */
-function STARTER_preprocess_page(&$variables) {
+function ths_preprocess_page(&$variables) {
+ 
 }
 
 /**

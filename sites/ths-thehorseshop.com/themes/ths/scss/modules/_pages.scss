@@ -6,6 +6,10 @@
 }
 
 .page-product {
+    .page-content {
+        margin-top: rem-calc(20);
+    }
+
     .product-extra {
         background: $smoke;
         padding: $hr-margin 0;
@@ -15,7 +19,13 @@
         background: $smoke;
 
         .product-right-inner-padding {
-            padding: rem-calc(15 5);
+            padding: rem-calc(15 0);
+        }
+    }
+
+    .product-left {
+        .panel-separator {
+            margin: rem-calc(30 0);
         }
     }
 
@@ -46,6 +56,21 @@
         input:checked + label {
             background: $base;
             color: $white;
+        }
+    }
+}
+
+.page-search {
+    .search-left {
+        .facetapi-facetapi-checkbox-links {
+            li {
+                display: block;
+                margin: 0;
+            }
+
+            input[type=checkbox] {
+                margin: 0 10px 0 0;
+            }
         }
     }
 }
