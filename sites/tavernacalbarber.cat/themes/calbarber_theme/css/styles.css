@@ -3921,17 +3921,9 @@ body {
 /* line 130, ../sass/_basicstyling.scss */
 .main-nav.closed .menu li {
   font-family: "Chalk", "Just Me Again Down Here", cursive;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  text-rendering: optimizeLegibility;
+  font-size: 1.2rem;
   margin: 0;
   padding: 0;
-}
-@media (min-width: 1080px) {
-  /* line 130, ../sass/_basicstyling.scss */
-  .main-nav.closed .menu li {
-    font-size: 2rem;
-  }
 }
 /* line 137, ../sass/_basicstyling.scss */
 .main-nav.closed .menu li ul {
@@ -3951,12 +3943,27 @@ body {
 }
 @media (min-width: 1080px) {
   /* line 154, ../sass/_basicstyling.scss */
+  .main-nav.closed .menu li {
+    font-family: "Chalk", "Just Me Again Down Here", cursive;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-rendering: optimizeLegibility;
+  }
+}
+@media (min-width: 1080px) and (min-width: 1080px) {
+  /* line 154, ../sass/_basicstyling.scss */
+  .main-nav.closed .menu li {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1080px) {
+  /* line 158, ../sass/_basicstyling.scss */
   .main-nav.closed li.expanded:not(.active-trail) ul.menu {
     display: none;
   }
 }
 
-/* line 161, ../sass/_basicstyling.scss */
+/* line 165, ../sass/_basicstyling.scss */
 .nav-toggle {
   margin-top: 5px;
   font-size: 1rem;
@@ -3969,12 +3976,12 @@ body {
   text-decoration: none;
 }
 
-/* line 173, ../sass/_basicstyling.scss */
+/* line 177, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened {
   text-align: center;
   background: #375ec0;
 }
-/* line 177, ../sass/_basicstyling.scss */
+/* line 181, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened li {
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -3982,64 +3989,70 @@ nav.nav-collapse.opened li {
   padding: 0;
   font-size: 1rem;
 }
-/* line 185, ../sass/_basicstyling.scss */
+/* line 189, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened li ul {
   background: #466bca;
 }
-/* line 189, ../sass/_basicstyling.scss */
+/* line 193, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened a {
   color: #ffffff;
   padding: 10px 0;
   text-decoration: none;
   display: block;
 }
-/* line 195, ../sass/_basicstyling.scss */
+/* line 199, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
   background: #264184;
 }
 
-/* line 202, ../sass/_basicstyling.scss */
+/* line 206, ../sass/_basicstyling.scss */
 .site-social-icons li {
   font-size: 0.9rem;
   font-weight: 100;
 }
-/* line 207, ../sass/_basicstyling.scss */
+/* line 211, ../sass/_basicstyling.scss */
 .site-social-icons li a {
   padding: 5px 0 5px 20%;
   display: block;
   color: #FFF;
   text-decoration: none;
 }
-/* line 213, ../sass/_basicstyling.scss */
+/* line 217, ../sass/_basicstyling.scss */
 .site-social-icons li a:hover {
   color: #D46060;
 }
-/* line 218, ../sass/_basicstyling.scss */
+/* line 222, ../sass/_basicstyling.scss */
 .site-social-icons i {
   font-size: 1.7rem;
   margin-right: 5px;
 }
+@media (min-width: 650px) {
+  /* line 205, ../sass/_basicstyling.scss */
+  .site-social-icons {
+    margin-top: 20% !important;
+  }
+}
 @media (min-width: 1080px) {
-  /* line 201, ../sass/_basicstyling.scss */
+  /* line 205, ../sass/_basicstyling.scss */
   .site-social-icons {
     margin-top: 30% !important;
   }
 }
 
-/* line 231, ../sass/_basicstyling.scss */
+/* line 240, ../sass/_basicstyling.scss */
 .main-content-box {
   background: #3154AC;
   padding: 20px;
 }
 @media (min-width: 650px) {
-  /* line 231, ../sass/_basicstyling.scss */
+  /* line 240, ../sass/_basicstyling.scss */
   .main-content-box {
     margin: 80px;
     padding: 20px;
   }
 }
 @media (min-width: 1080px) {
-  /* line 231, ../sass/_basicstyling.scss */
+  /* line 240, ../sass/_basicstyling.scss */
   .main-content-box {
     margin: 100px 0 0 80px;
     height: 560px;
@@ -4049,89 +4062,130 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
   }
 }
 
-/* line 250, ../sass/_basicstyling.scss */
+/* line 259, ../sass/_basicstyling.scss */
 .main-content-box-inner {
   position: relative;
   width: 100%;
   height: 100%;
 }
 @media (min-width: 1080px) {
-  /* line 250, ../sass/_basicstyling.scss */
+  /* line 259, ../sass/_basicstyling.scss */
   .main-content-box-inner {
     overflow: auto;
   }
 }
 
-/* line 264, ../sass/_basicstyling.scss */
+/* line 273, ../sass/_basicstyling.scss */
 .node-type-page .node-content-left .field-name-body {
   padding-right: 40px;
 }
-/* line 267, ../sass/_basicstyling.scss */
+/* line 276, ../sass/_basicstyling.scss */
 .node-type-page .node-content-left .field-name-body a {
   color: #ffffff;
   text-decoration: underline;
 }
-/* line 271, ../sass/_basicstyling.scss */
+/* line 280, ../sass/_basicstyling.scss */
 .node-type-page .node-content-left .field-name-body a:hover {
   text-decoration: none;
 }
 @media (min-width: 1080px) {
-  /* line 264, ../sass/_basicstyling.scss */
+  /* line 273, ../sass/_basicstyling.scss */
   .node-type-page .node-content-left .field-name-body {
     overflow-y: auto;
   }
 }
-/* line 283, ../sass/_basicstyling.scss */
+/* line 292, ../sass/_basicstyling.scss */
 .node-type-page .node-content-right .field-name-field-page-images {
   margin-top: 20px;
 }
 @media (min-width: 1080px) {
-  /* line 283, ../sass/_basicstyling.scss */
+  /* line 292, ../sass/_basicstyling.scss */
   .node-type-page .node-content-right .field-name-field-page-images {
     margin-top: 0;
     overflow-y: auto;
   }
 }
+/* line 302, ../sass/_basicstyling.scss */
+.node-type-page .block {
+  clear: both;
+}
+/* line 305, ../sass/_basicstyling.scss */
+.node-type-page .block a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+/* line 309, ../sass/_basicstyling.scss */
+.node-type-page .block a:hover {
+  text-decoration: none;
+}
+
+/* line 320, ../sass/_basicstyling.scss */
+.node-content-right.no-body .field-name-field-page-images .field-item {
+  /*
+  @include desktop {
+      width: 33%;
+  } */
+}
+@media (min-width: 650px) {
+  /* line 320, ../sass/_basicstyling.scss */
+  .node-content-right.no-body .field-name-field-page-images .field-item {
+    width: 50%;
+    padding: 5px 5px 0 5px;
+    float: left;
+  }
+  /* line 326, ../sass/_basicstyling.scss */
+  .node-content-right.no-body .field-name-field-page-images .field-item.even {
+    clear: both;
+  }
+}
 
 @media (min-width: 650px) {
-  /* line 296, ../sass/_basicstyling.scss */
+  /* line 342, ../sass/_basicstyling.scss */
   #block-instagram-block-instagram-block, #block-instagram-block-instagram-block-tag {
     overflow-y: auto;
     max-height: 400px;
   }
 }
-/* line 303, ../sass/_basicstyling.scss */
+/* line 349, ../sass/_basicstyling.scss */
 #block-instagram-block-instagram-block .content img, #block-instagram-block-instagram-block-tag .content img {
   padding: 5px;
   max-width: 100%;
+  height: auto !important;
 }
-@media (max-width: 650px) {
-  /* line 303, ../sass/_basicstyling.scss */
+@media (min-width: 650px) {
+  /* line 349, ../sass/_basicstyling.scss */
   #block-instagram-block-instagram-block .content img, #block-instagram-block-instagram-block-tag .content img {
-    width: 100% !important;
-    height: auto !important;
+    width: 50% !important;
+    margin: 0 !important;
+  }
+}
+@media (min-width: 1080px) {
+  /* line 349, ../sass/_basicstyling.scss */
+  #block-instagram-block-instagram-block .content img, #block-instagram-block-instagram-block-tag .content img {
+    width: 33% !important;
+    margin: 0 !important;
   }
 }
 
-/* line 314, ../sass/_basicstyling.scss */
+/* line 367, ../sass/_basicstyling.scss */
 .small-print {
   text-align: right;
   width: 100%;
   margin-right: 10px;
   color: #3154AC;
 }
-/* line 320, ../sass/_basicstyling.scss */
+/* line 373, ../sass/_basicstyling.scss */
 .small-print small a {
   color: #3154AC;
   text-decoration: none;
   text-shadow: 1px 1px 1px #000;
 }
-/* line 325, ../sass/_basicstyling.scss */
+/* line 378, ../sass/_basicstyling.scss */
 .small-print small a:hover {
   color: #D46060;
 }
 @media (min-width: 650px) {
-  /* line 314, ../sass/_basicstyling.scss */
+  /* line 367, ../sass/_basicstyling.scss */
   .small-print {
     position: absolute;
     bottom: 10px;
@@ -4139,13 +4193,13 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
     text-align: right;
     color: #ffffff;
   }
-  /* line 338, ../sass/_basicstyling.scss */
+  /* line 391, ../sass/_basicstyling.scss */
   .small-print small a {
     color: #ffffff;
   }
 }
 
-/* line 347, ../sass/_basicstyling.scss */
+/* line 400, ../sass/_basicstyling.scss */
 .ui-icon, .ui-widget-content .ui-icon {
   background-image: url("../images/ui-icons_ffffff_256x240.png");
 }

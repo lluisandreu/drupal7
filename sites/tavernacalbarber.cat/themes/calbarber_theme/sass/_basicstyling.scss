@@ -128,8 +128,8 @@ strong {
     margin-top: 40px;
 
     .menu li {
-        @include font_handwritting;
-
+        font-family: $font_handwritting;
+        font-size: 1.2rem;
         margin: 0;
         padding: 0;
     }
@@ -151,6 +151,10 @@ strong {
     }
 
     @include desktop {
+        .menu li {
+            @include font_handwritting;
+        }
+
         li.expanded:not(.active-trail) ul.menu {
             display: none;
         }
@@ -219,6 +223,11 @@ nav.nav-collapse.opened {
         font-size: 1.7rem;
         margin-right: 5px;
     }
+
+    @include tablet {
+        margin-top: 20% !important;
+    }
+
 
     @include desktop {
         margin-top: 30% !important;
@@ -289,6 +298,43 @@ nav.nav-collapse.opened {
             }
         }
     }
+
+    .block {
+        clear: both;
+
+        a {
+            color: $white;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// Images in a grid
+
+.node-content-right.no-body {
+    .field-name-field-page-images {
+        .field-item {
+            @include tablet {
+                width: 50%;
+                padding: 5px 5px 0 5px;
+                float: left;
+
+                &.even {
+                    clear: both;
+                }
+            }
+
+
+            /*
+            @include desktop {
+                width: 33%;
+            } */
+        }
+    }
 }
 
 // Instagram Block
@@ -303,10 +349,17 @@ nav.nav-collapse.opened {
     .content img {
         padding: 5px;
         max-width: 100%;
+        height: auto !important;
 
-        @media (max-width: 650px) {
-            width: 100% !important;
-            height: auto !important;
+        @include tablet {
+            width: 50% !important;
+            margin: 0 !important;
+        }
+
+
+        @include desktop {
+            width: 33% !important;
+            margin: 0 !important;
         }
     }
 }
