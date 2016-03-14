@@ -1,10 +1,20 @@
 // Non-modular or client styles for .l-header region.
 
 .section-header {
+    background-image: url("../images/header_bg.jpg");
+    background-position: center center;
+    background-size: cover;
+
     .gradient {
         padding: 1.5rem 0;
 
         @include vertical-black-transparent-gradient;
+    }
+
+    .logo {
+        @media #{$small-only} {
+            text-align: center;
+        }
     }
 
     .header-right {
@@ -20,6 +30,10 @@
 
         .block:first-child, .block:nth-child(2) {
             float: right;
+        }
+
+        button {
+            margin-bottom: 0;
         }
     }
 }

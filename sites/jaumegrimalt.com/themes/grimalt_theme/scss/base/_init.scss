@@ -609,13 +609,15 @@ $crumb-border-size: 0;
 // $dropdown-button-pip-color-alt: $oil;
 
 // We use these to set the size of the pip in dropdown buttons
-// $button-pip-tny: rem-calc(6);
+$button-pip-tny: rem-calc(6);
+
 // $button-pip-sml: rem-calc(7);
 // $button-pip-med: rem-calc(9);
 // $button-pip-lrg: rem-calc(11);
 
 // We use these to style tiny dropdown buttons
-// $dropdown-button-padding-tny: $button-pip-tny * 7;
+$dropdown-button-padding-tny: $button-pip-tny * 9;
+
 // $dropdown-button-pip-size-tny: $button-pip-tny;
 // $dropdown-button-pip-opposite-tny: $button-pip-tny * 3;
 // $dropdown-button-pip-top-tny: (-$button-pip-tny / 2) + rem-calc(1);

@@ -4308,7 +4308,7 @@ button::-moz-focus-inner {
 }
 /* line 124, ../../zurb_foundation/scss/foundation/components/_dropdown-buttons.scss */
 .dropdown.button.tiny, button.dropdown.tiny {
-  padding-right: 2.625rem;
+  padding-right: 3.375rem;
 }
 /* line 78, ../../zurb_foundation/scss/foundation/components/_dropdown-buttons.scss */
 .dropdown.button.tiny:after, button.dropdown.tiny:after {
@@ -9527,7 +9527,13 @@ table {
   padding-bottom: 30px !important;
 }
 
-/* line 4, ../scss/layout/_header.scss */
+/* line 3, ../scss/layout/_header.scss */
+.section-header {
+  background-image: url("../images/header_bg.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+/* line 8, ../scss/layout/_header.scss */
 .section-header .gradient {
   padding: 1.5rem 0;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,7db9e8+96&1+0,0.01+58,0.01+100 */
@@ -9540,21 +9546,31 @@ table {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#037db9e8',GradientType=0 );
   /* IE6-9 */
 }
-/* line 10, ../scss/layout/_header.scss */
+@media only screen and (max-width: 40em) {
+  /* line 14, ../scss/layout/_header.scss */
+  .section-header .logo {
+    text-align: center;
+  }
+}
+/* line 20, ../scss/layout/_header.scss */
 .section-header .header-right {
   text-align: right;
 }
-/* line 13, ../scss/layout/_header.scss */
+/* line 23, ../scss/layout/_header.scss */
 .section-header .header-right .block-menu {
   clear: both;
 }
-/* line 17, ../scss/layout/_header.scss */
+/* line 27, ../scss/layout/_header.scss */
 .section-header .header-right .block:first-child {
   margin-left: 10px;
 }
-/* line 21, ../scss/layout/_header.scss */
+/* line 31, ../scss/layout/_header.scss */
 .section-header .header-right .block:first-child, .section-header .header-right .block:nth-child(2) {
   float: right;
+}
+/* line 35, ../scss/layout/_header.scss */
+.section-header .header-right button {
+  margin-bottom: 0;
 }
 
 /* line 3, ../scss/layout/_main.scss */
@@ -9609,11 +9625,17 @@ table {
   text-transform: uppercase;
   text-align: center;
 }
-/* line 15, ../scss/modules/_block.scss */
+@media only screen and (max-width: 40em) {
+  /* line 8, ../scss/modules/_block.scss */
+  .block-block-2 {
+    display: none;
+  }
+}
+/* line 19, ../scss/modules/_block.scss */
 .block-block-2 .block-inner {
   padding: 2rem;
 }
-/* line 18, ../scss/modules/_block.scss */
+/* line 22, ../scss/modules/_block.scss */
 .block-block-2 .block-inner h2 {
   font-size: 2rem;
   color: #FFFFFF;

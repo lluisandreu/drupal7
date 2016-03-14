@@ -6,6 +6,10 @@
 }
 
 .block-block-2 {
+    @media #{$small-only} {
+        display: none;
+    }
+
     margin: 2rem auto;
     background: $primary-color;
     max-width: 600px;
