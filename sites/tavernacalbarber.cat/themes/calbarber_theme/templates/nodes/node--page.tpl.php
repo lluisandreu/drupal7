@@ -16,7 +16,7 @@
   </div>
 <?php endif; ?>
   <?php if(isset($content['field_page_images']) || isset($content['field_page_right'])): ?>
-    <div class="node-content-right <?php print ($content['body'] ? "body" : "no-body"); ?>">
+    <div class="node-content-right <?php print (isset($content['body']) ? "body" : "no-body"); ?>">
       <?php if(!isset($content['body'])): ?>
           <h1><?php print $title; ?></h1>
       <?php endif; ?>
