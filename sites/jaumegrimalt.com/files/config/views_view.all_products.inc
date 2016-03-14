@@ -59,8 +59,12 @@ $handler->display->display_options['fields']['field_taxonomy_image']['label'] = 
 $handler->display->display_options['fields']['field_taxonomy_image']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_taxonomy_image']['element_default_classes'] = FALSE;
 $handler->display->display_options['fields']['field_taxonomy_image']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_taxonomy_image']['type'] = 'picture';
 $handler->display->display_options['fields']['field_taxonomy_image']['settings'] = array(
-  'image_style' => 'large',
+  'picture_mapping' => 'product_thumb',
+  'fallback_image_style' => 'product_image_thumb_desktop',
+  'lazyload' => 0,
+  'lazyload_aspect_ratio' => 0,
   'image_link' => 'content',
 );
 /* Field: Taxonomy term: Name */
