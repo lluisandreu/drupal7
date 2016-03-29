@@ -14,7 +14,7 @@ $data = array(
   'expanded' => '0',
   'options' => array(
     'attributes' => array(
-      'title' => 'Helper functions, pages, and blocks to assist Drupal developers. The devel blocks can be managed via the <a href="/es/admin/structure/block">block administration</a> page.',
+      'title' => 'Helper functions, pages, and blocks to assist Drupal developers. The devel blocks can be managed via the <a href="/en/admin/structure/block">block administration</a> page.',
     ),
   ),
   'router_path' => 'devel/settings',

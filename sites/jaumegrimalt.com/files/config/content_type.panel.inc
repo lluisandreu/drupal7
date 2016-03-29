@@ -10,9 +10,9 @@ $data = (object) array(
   'type' => 'panel',
   'name' => 'Panel',
   'description' => 'A panel layout broken up into rows and columns.',
-  'has_title' => 1,
+  'has_title' => '1',
   'title_label' => 'Title',
-  'base' => 'panels_node_hook',
+  'base' => 'node_content',
   'help' => '',
 );
 
@@ -27,5 +27,5 @@ $optional = array(
 );
 
 $modules = array(
-  0 => 'panels_node_hook',
+  0 => 'node',
 );

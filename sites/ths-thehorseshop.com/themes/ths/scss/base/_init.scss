@@ -122,7 +122,8 @@ $iron: #CCCCCC;
 
 $base: #AAAAAA;
 
-// $aluminum    : #999999;
+$aluminum: #999999;
+
 // $jumbo       : #888888;
 // $monsoon     : #777777;
 $steel: #666666;
@@ -135,7 +136,8 @@ $jet: #222222;
 // $black       : #000000;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: $steel;
+
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -143,7 +145,7 @@ $jet: #222222;
 // $info-color: #a0d3e8;
 
 // We use these to control various global styles
-// $body-bg: $white;
+$body-bg: $silver;
 $body-font-color: $oil;
 
 // $body-font-family: $font-family-sans-serif;
@@ -229,7 +231,7 @@ $header-bottom-margin: 0.5rem;
 // We use these to control header font sizes
 $h1-font-size: rem-calc(36);
 $h2-font-size: rem-calc(28);
-$h3-font-size: rem-calc(22);
+$h3-font-size: rem-calc(20);
 $h4-font-size: rem-calc(18);
 
 // $h5-font-size: rem-calc(18);
@@ -477,10 +479,10 @@ $button-font-weight: 100;
 // $button-function-factor: -20%;
 
 // We use these to control button border and hover styles.
-$button-border-width: 1px;
+$button-border-width: 0;
 
 // $button-border-style: solid;
-$button-bg-color: $white-smoke;
+$button-bg-color: $smoke;
 
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
@@ -1320,10 +1322,11 @@ $table-head-font-size: rem-calc(18);
 // $table-head-font-color: $jet;
 $table-head-font-weight: $font-weight-normal;
 
-$table-head-padding: rem-calc(15);
+$table-head-padding: rem-calc(20);
 
 // These control the row padding and font styles
-// $table-row-padding: rem-calc(9 10);
+$table-row-padding: rem-calc(12);
+
 // $table-row-font-size: rem-calc(14);
 // $table-row-font-color: $jet;
 // $table-line-height: rem-calc(18);
@@ -1426,10 +1429,10 @@ $topbar-dropdown-link-bg-hover: $smoke;
 // $topbar-dropdown-toggle-size: 5px;
 $topbar-dropdown-toggle-color: $oil;
 
-// $topbar-dropdown-toggle-alpha: 0.4;
+$topbar-dropdown-toggle-alpha: 0;
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: $oil;
+$topbar-link-color: $steel;
 $topbar-link-color-hover: $oil;
 
 // $topbar-link-color-active: $white;
@@ -1466,8 +1469,9 @@ $topbar-dropdown-label-font-size: rem-calc(10);
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: rem-calc(13);
 // $topbar-menu-link-weight: $font-weight-bold;
-// $topbar-menu-link-color: $white;
-// $topbar-menu-icon-color: $white;
+$topbar-menu-link-color: $steel;
+$topbar-menu-icon-color: $steel;
+
 // $topbar-menu-link-color-toggled: $jumbo;
 // $topbar-menu-icon-color-toggled: $jumbo;
 

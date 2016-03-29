@@ -6,7 +6,6 @@ sites.php
 # Ignore paths that contain user-generated content.
 
 sites/*/files/*
-!sites/*/files/config
 sites/*/private
 sites/*/themes/*/node_modules
 

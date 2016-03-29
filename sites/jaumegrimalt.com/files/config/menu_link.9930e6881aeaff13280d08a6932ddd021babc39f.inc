@@ -17,7 +17,7 @@ $data = array(
       'title' => 'Manage your site\'s background images',
     ),
   ),
-  'router_path' => 'admin/content/background-images',
+  'router_path' => 'admin/content',
   'parent_identifier' => 'c43a58aeada3d70ae9f892c266f3a54854394950',
 );
 

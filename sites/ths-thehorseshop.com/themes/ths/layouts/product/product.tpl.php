@@ -5,7 +5,7 @@
 </div>
 <div class="border-bottom">
   <div class="row">
-    <div class="medium-3 columns product-left">
+    <div class="medium-3 columns product-left show-for-medium-up">
       <?php print $content['left']; ?>
     </div>
     <div class="medium-6 columns product-body">

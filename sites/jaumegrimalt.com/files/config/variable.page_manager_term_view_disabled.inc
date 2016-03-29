@@ -8,7 +8,7 @@ $api = '2.0.0';
 
 $data = array(
   'name' => 'page_manager_term_view_disabled',
-  'content' => FALSE,
+  'content' => TRUE,
 );
 
 $dependencies = array();

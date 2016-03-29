@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Proveedores feature.
+ */
+
+include_once 'proveedores.features.inc';

@@ -10,7 +10,11 @@ section.breadcrumb {
 }
 
 main.l-main {
-    padding: rem-calc(20 0);
+    padding: rem-calc(20 0 0 0);
+}
+
+.not-front .page-content {
+    //padding: rem-calc(20 0);
 }
 
 //// Commerce pages using semantic grid
@@ -18,6 +22,8 @@ main.l-main {
 .page-checkout {
     .page-content {
         @include grid-row;
+
+        padding: rem-calc(20 0);
     }
 
     .page-content > form {
@@ -25,7 +31,7 @@ main.l-main {
     }
 }
 
-.page-cart {
+.page-cart, .page-user {
     .page-content {
         @include grid-row;
 
@@ -34,5 +40,17 @@ main.l-main {
 
     .page-content > div {
         @include grid-column(12);
+    }
+}
+
+.page-product {
+    button.form-submit {
+        background: $iron;
+    }
+}
+
+.page-contacto {
+    .page-content {
+        padding: rem-calc(20 0);
     }
 }

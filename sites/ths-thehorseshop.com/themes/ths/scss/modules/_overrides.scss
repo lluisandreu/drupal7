@@ -1,1 +1,18 @@
 /// Module overrides
+
+/// Cloud zoom
+
+.cloud-zoom-container {
+    #wrap {
+        max-width: 100%;
+    }
+
+    .cloud-zoom-gallery-thumbs {
+        float: none !important;
+
+        .cloud-zoom-gallery {
+            display: inline-block;
+            padding: rem-calc(10 10 10 0);
+        }
+    }
+}
