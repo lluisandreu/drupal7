@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Panels and layouts feature.
+ */
+
+include_once 'panels_and_layouts.features.inc';

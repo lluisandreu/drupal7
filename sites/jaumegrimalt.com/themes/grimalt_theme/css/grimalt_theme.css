@@ -547,7 +547,7 @@ body {
 
 /* line 416, ../../zurb_foundation/scss/foundation/components/_global.scss */
 body {
-  background: #fff;
+  background: #F6F6F6;
   color: #333333;
   padding: 0;
   margin: 0;
@@ -9690,6 +9690,16 @@ table {
 /* line 9, ../scss/modules/_views.scss */
 .views-exposed-form .views-exposed-widget .form-submit {
   margin: 0;
+}
+
+/* line 14, ../scss/modules/_views.scss */
+.pager--infinite-scroll {
+  margin: 0;
+}
+/* line 17, ../scss/modules/_views.scss */
+.pager--infinite-scroll li {
+  list-style: none;
+  text-align: center;
 }
 
 @media only screen and (min-width: 40.063em) {

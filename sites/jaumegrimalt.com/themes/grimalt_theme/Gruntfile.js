@@ -4,14 +4,14 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-svgmin');
     grunt.initConfig({
-        /*
+
         uglify: {
             my_target: {
                 files: {
-                    'js/script.js' : ['components/js/*.js']
+                    'js/script.js' : ['js/*.js']
                 } //files
             } //my_target
-        },//uglify*/
+        },//uglify
         compass: {
             dev: {
                 options: {
@@ -81,5 +81,5 @@ module.exports = function (grunt) {
 
     })//initConfig
     grunt.loadNpmTasks('grunt-postcss');
-    grunt.registerTask('default', 'watch');
+    grunt.registerTask('default', ['watch', 'postcss']);
 }//exports
