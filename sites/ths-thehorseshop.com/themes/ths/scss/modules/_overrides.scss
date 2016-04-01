@@ -16,3 +16,9 @@
         }
     }
 }
+
+/// Dropdown menu
+
+.top-bar-section .has-dropdown .dropdown li.has-dropdown > a::after {
+    margin-top: -12px;
+}

@@ -10,20 +10,6 @@ function ths_preprocess_html(&$variables) {
   drupal_add_css("//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", array("type" => "external"));
 }
 
-
-/**
- * Implements template_preprocess_page.
- */
-function ths_preprocess_page(&$variables) {
- 
-}
-
-/**
- * Implements template_preprocess_node.
- */
-function STARTER_preprocess_node(&$variables) {
-}
-
 /**
  * Implements hook_form_alter().
  */
@@ -52,9 +38,25 @@ function ths_form_alter(&$form, &$form_state, $form_id) {
 		$form['#prefix'] = "<div class='small-12 medium-10 small-centered column'>";
 		$form['#suffix'] = "</div>";
 		break;
-  	
-  	default:
+  
+    case 'commerce_checkout_form_review': 
+      dpm($form);
+      $form['commerce_payment']['payment_details']['#prefix'] = '<div id="payment-details"><div class="inner">';
+      $form['commerce_payment']['payment_details']['#suffix'] = '</div></div>';
+      if($form['commerce_payment']['payment_method']['#options']['commerce_cod|commerce_payment_commerce_cod']){
+        $form['commerce_payment']['payment_method']['#options']['commerce_cod|commerce_payment_commerce_cod'] = '<i class="fa fa-home"></i> ' . $form['commerce_payment']['payment_method']['#options']['commerce_cod|commerce_payment_commerce_cod'];
+      }
+      if($form['commerce_payment']['payment_method']['#options']['bank_transfer|commerce_payment_bank_transfer']) {
+        $form['commerce_payment']['payment_method']['#options']['bank_transfer|commerce_payment_bank_transfer'] = '<i class="fa fa-exchange"></i> ' . $form['commerce_payment']['payment_method']['#options']['bank_transfer|commerce_payment_bank_transfer'];
+      }
+      if($form['commerce_payment']['payment_method']['#options']['paypal_wps|commerce_payment_paypal_wps']) {
+        $form['commerce_payment']['payment_method']['#options']['paypal_wps|commerce_payment_paypal_wps'] = '<i class="fa fa-credit-card"></i> A través de Paypal. <i class="fa fa-paypal"></i>'; 
+      }  
+      $form['buttons']['continue']['#value'] = t('Terminar pedido');
+    break;
+    	default:
   		# code...
   		break;
   }
 }
+

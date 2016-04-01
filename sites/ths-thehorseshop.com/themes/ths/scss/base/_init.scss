@@ -105,7 +105,7 @@ $font-family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Roboto, Arial, s
 $font-family-headings: "GothamHTF-Book", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 
 // We use these to define default font weights
-$font-weight-normal: normal !default;
+$font-weight-normal: 200 !default;
 
 // $font-weight-bold: bold !default;
 
@@ -231,8 +231,8 @@ $header-bottom-margin: 0.5rem;
 // We use these to control header font sizes
 $h1-font-size: rem-calc(36);
 $h2-font-size: rem-calc(28);
-$h3-font-size: rem-calc(20);
-$h4-font-size: rem-calc(18);
+$h3-font-size: rem-calc(18);
+$h4-font-size: rem-calc(16);
 
 // $h5-font-size: rem-calc(18);
 // $h6-font-size: 1rem;
@@ -248,7 +248,8 @@ $h4-font-size: rem-calc(18);
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
 // $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
-// $subheader-font-weight: $font-weight-normal;
+$subheader-font-weight: $font-weight-normal;
+
 // $subheader-top-margin: .2rem;
 // $subheader-bottom-margin: .5rem;
 
@@ -482,7 +483,7 @@ $button-font-weight: 100;
 $button-border-width: 0;
 
 // $button-border-style: solid;
-$button-bg-color: $smoke;
+$button-bg-color: $white;
 
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
@@ -673,14 +674,16 @@ $button-radius: 3px;
 // $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 
 // We use these to style the fieldset border and spacing.
-// $fieldset-border-style: solid;
-// $fieldset-border-width: 1px;
+$fieldset-border-style: solid;
+$fieldset-border-width: 0;
+
 // $fieldset-border-color: $gainsboro;
 // $fieldset-padding: rem-calc(20);
 // $fieldset-margin: rem-calc(18 0);
 
 // We use these to style the legends when you use them
-// $legend-bg: $white;
+$legend-bg: transparent;
+
 // $legend-font-weight: $font-weight-bold;
 // $legend-padding: rem-calc(0 3);
 
@@ -1419,7 +1422,7 @@ $topbar-title-font-size: rem-calc(18);
 
 // Style the top bar dropdown elements
 $topbar-dropdown-bg: $white;
-$topbar-dropdown-link-color: $oil;
+$topbar-dropdown-link-color: $steel;
 
 $topbar-dropdown-link-bg: $white;
 
@@ -1427,9 +1430,9 @@ $topbar-dropdown-link-bg-hover: $smoke;
 
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
-$topbar-dropdown-toggle-color: $oil;
+$topbar-dropdown-toggle-color: $steel;
 
-$topbar-dropdown-toggle-alpha: 0;
+$topbar-dropdown-toggle-alpha: 1;
 
 // Set the link colors and styles for top-level nav
 $topbar-link-color: $steel;
