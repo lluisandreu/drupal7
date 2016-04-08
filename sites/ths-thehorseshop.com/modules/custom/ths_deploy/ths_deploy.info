@@ -1,0 +1,5 @@
+name = THS Deploy Module
+description = Hooks and Updates for THS
+version = 7.x-1.0
+package = Custom
+core = 7.x

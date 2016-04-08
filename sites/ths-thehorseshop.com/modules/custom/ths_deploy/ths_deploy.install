@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function ths_deploy_install() {
+
+}
+
+/**
+ * Creates new categories from name
+ */
+
+function ths_deploy_update_7030() {
+
+	$terms = taxonomy_get_tree(2);
+
+	if (!empty($terms)) {
+	  foreach ($terms as $term) {
+	    taxonomy_term_delete($term->tid);
+	  }
+	}
+
+	$thsTerms = array("equiline","veredus","prestige","kingsland","parlanti italia","hv polo","kep italia","dyon","racing tack","eskadron","euro star","roeckl","esperado","acavallo","cavallo","pikeur","petrie","königs","profesional choice","stübben","don rodrigo","pessoa","zaldi","hispano hipica","rambo");
+	foreach ($thsTerms as $term) {
+		$termName = ucwords($term);
+	    $new_term = (object) array(
+	      'name' => $termName,
+	      'description' => '',
+	      'vid' => 2,
+	    );
+	    $save = taxonomy_term_save($new_term);
+	  }
+}
+
