@@ -1,4 +1,12 @@
 nav.top-bar {
+    .title-area {
+        margin-right: 10px;
+
+        img {
+            max-height: 100%;
+        }
+    }
+
     #main-menu ul li a {
         line-height: 2rem;
     }
@@ -6,5 +14,23 @@ nav.top-bar {
     #main-menu a.active {
         background: $smoke;
         color: $oil;
+    }
+
+    #main-menu li:nth-child(3) .dropdown {
+        @media #{$medium-up} {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+        }
+
+        @media #{$large-up} {
+            -webkit-column-count: 4;
+            -moz-column-count: 4;
+            column-count: 4;
+        }
+
+        -webkit-column-gap: 0;
+        -moz-column-gap: 0;
+        column-gap: 0;
     }
 }
