@@ -12,8 +12,10 @@
       <nav class="top-bar" data-topbar <?php print $top_bar_options; ?>>
         <ul class="title-area"><li class="name">
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-            <img src="<?php print drupal_get_path('theme', 'ths'); ?>/logo.svg" alt="<?php print t('Home'); ?>" />
+            <img src="/<?php print drupal_get_path('theme', 'ths'); ?>/logo.svg" alt="<?php print t('Home'); ?>" />
           </a></li>
+          <li class="toggle-topbar menu-icon">
+            <a href="#"><span><?php print $top_bar_menu_text; ?></span></a></li>
         </ul>
         <section class="top-bar-section">
           <?php if ($top_bar_main_menu) : ?>

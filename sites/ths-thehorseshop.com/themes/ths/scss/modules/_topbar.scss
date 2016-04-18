@@ -2,6 +2,12 @@ nav.top-bar {
     .title-area {
         margin-right: 10px;
 
+        @media #{$small-only} {
+            .name {
+                padding-left: 10px;
+            }
+        }
+
         img {
             max-height: 100%;
         }
@@ -9,6 +15,10 @@ nav.top-bar {
 
     #main-menu ul li a {
         line-height: 2rem;
+    }
+
+    #main-menu li.first .active {
+        background: transparent;
     }
 
     #main-menu a.active {

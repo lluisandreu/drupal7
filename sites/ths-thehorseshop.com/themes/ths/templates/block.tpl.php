@@ -45,7 +45,7 @@
  */
 ?>
 <?php if ($block->delta != 'main'): ?>
-<div class="caca total <?php print $classes; ?>"<?php print $attributes; ?>>
+<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php endif; ?>
 
   <?php print render($title_prefix); ?>
