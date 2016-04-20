@@ -14,7 +14,6 @@ $plugin = array(
 		'main' => 'Site name & description',
 		'first_tryptic' => 'First tryptic',
 		'second_tryptic' => 'Second tryptic',
-		'third_tryptic' => 'Third tryptic',
 		'bottom' => 'Bottom' 
 	),
 );
