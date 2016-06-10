@@ -1,0 +1,34 @@
+//// Global Variables
+
+// Breakpoints
+$bp_desktop: 1080px;
+$bp_phablet: 650px;
+
+// Colors
+$color_primary: #333;
+$color_secondary: #888;
+$white: #ffffff;
+$black: #000000;
+$darkgrey: #333333;
+$lightgrey: #999999;
+$shade: #cccccc;
+
+// Typography
+
+$font_sanserif: "Helvetica", arial, sans-serif;
+$font_handwritting: "";
+$font_base_size: 1.2rem;
+$font_line_height: 1.5rem;
+$font_base_weight: 300;
+$font_bold: 700;
+
+// P element
+$p_size: $font_base_size;
+$p_weight: $font_base_weight;
+$p_vertical_margin: 0 0 1rem 0;
+$p_mobile_size: 1rem;
+
+// Headings
+$h1_size: $font_base_size;
+
+$h2_size: $font_base_size;

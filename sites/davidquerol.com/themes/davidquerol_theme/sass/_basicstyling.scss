@@ -1,0 +1,251 @@
+// Global Styling
+
+a {
+    color: $color_secondary;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font_sanserif;
+    font-size: $font_base_size;
+    font-weight: $font_base_weight;
+    line-height: $font_line_height;
+    color: $darkgrey;
+}
+
+h1 {
+    font-size: $h1_size;
+    margin: 1.5rem 0;
+}
+
+h2 {
+    margin: 0.8rem 0;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input[type=submit], button {
+    padding: 6px;
+    background: $color_secondary;
+    color: $white;
+    border: 1px solid lighten($color_secondary, 20%);
+    cursor: pointer;
+    font-size: $font_base_size;
+
+    &:hover {
+        background: darken($color_secondary, 10%);
+    }
+}
+
+input[type=text], input[type=email], input[type=password] {
+    padding: 8px;
+    border: none;
+    margin: 10px 0;
+    background: lighten($color_primary, 15%);
+    border-bottom: 1px solid $white;
+    font-size: $font_base_size;
+    font-family: $font_sanserif;
+    color: $white;
+    max-width: 100%;
+}
+
+label {
+    color: $white;
+    padding: 5px 0;
+}
+
+p {
+    font-size: $p_size;
+    font-weight: $p_weight;
+    margin: $p_vertical_margin;
+    color: lighten($color_primary, 50%);
+}
+
+small {
+    font-family: $font_sanserif;
+}
+
+strong {
+    font-weight: $font_bold;
+}
+
+// Scrollbar
+
+// Main Section
+
+.main-content {
+    padding-top: 20px;
+    margin-top: 40px;
+}
+
+// Aside
+.main-aside {
+    padding-top: 20px;
+    margin-top: 40px;
+
+    .site-name {
+        padding: 5px 0 5px 20%;
+
+        a {
+            color: $darkgrey;
+            text-decoration: none;
+            font-weight: $font_bold;
+        }
+    }
+}
+
+// Navidation
+
+.main-nav.closed {
+    margin-top: 20px;
+    padding-left: 20%;
+
+    .menu li {
+        text-transform: lowercase;
+    }
+
+    .menu > li {
+        font-size: $p_size;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 15px;
+        font-weight: 400;
+    }
+
+    .menu > li a {
+        color: $darkgrey;
+    }
+
+    .menu li ul {
+        li {
+            font-size: 1.1rem;
+        }
+
+        a {
+            color: $color_secondary;
+        }
+    }
+
+    .menu a {
+        display: block;
+        text-decoration: none;
+    }
+
+    @include desktop {
+        .menu li {}
+
+        li.expanded:not(.active-trail) ul.menu {
+            display: none;
+        }
+    }
+}
+
+// Toogle
+.nav-toggle {
+    margin-top: 5px;
+    font-size: $p_mobile_size;
+    text-align: center;
+    background: darken($color_primary, 10%);
+    color: $white;
+    padding: 8px 0;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+}
+
+nav.nav-collapse.opened {
+    text-align: center;
+    background: lighten($color_primary, 5%);
+
+    li {
+        text-align: center;
+        font-family: $font_sanserif;
+        margin: 0;
+        padding: 0;
+        font-size: $p_mobile_size;
+    }
+
+    li ul {
+        background: lighten($color_primary, 10%);
+    }
+
+    a {
+        color: $white;
+        padding: 10px 0;
+        text-decoration: none;
+        display: block;
+
+        &:hover, &:focus {
+            background: darken($color_primary, 10%);
+        }
+    }
+}
+
+// Main Content
+
+.field-name-body {
+    margin-bottom: 3rem;
+}
+
+/// Project display
+
+.project-media {
+    .project-media-horizontal {
+        .field-items {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+
+            .field-item {
+                flex: 0 0 auto;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .project-media-vertical {
+        .field-item {
+            margin-bottom: 10px;
+        }
+    }
+
+    .project-media-colorbox {
+        .field-items {
+            display: flex;
+            flex-wrap: wrap;
+
+            .field-item {
+                display: inline-block;
+                width: 100%;
+                padding-right: 12px;
+                padding-bottom: 12px;
+
+                img {
+                    display: block;
+                }
+
+                @include tablet {
+                    width: calc(50%);
+                }
+
+
+                @include desktop {
+                    width: calc(25%);
+                }
+            }
+        }
+    }
+}

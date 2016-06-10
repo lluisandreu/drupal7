@@ -1,0 +1,49 @@
+// Messages
+div.messages {
+    border: none;
+    color: $white;
+    background-image: none;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+div.status {
+    background: #64D06E;
+}
+
+div.info {
+    background: #FFFEBB;
+    color: $black;
+}
+
+div.error {
+    background: #FF7474;
+    color: $black;
+}
+
+// Tabs
+
+#tabs {
+    padding: 10px 0;
+
+    li {
+        font-size: 0.8rem;
+    }
+
+    li a {
+        padding: 6px;
+        background: lighten($color_primary, 10%);
+        color: lighten($color_primary, 40%);
+        border: 1px solid darken($color_primary, 5%);
+
+        &:hover {
+            background: lighten($color_primary, 15%);
+        }
+    }
+}
+
+// Forms
+
+form .form-item {
+    margin: 10px 0;
+}
