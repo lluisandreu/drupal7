@@ -1,9 +1,8 @@
 <?php 
-dpm($node); 
+
 ?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-<h1><?php print $node->title; ?></h1>
 
 <?php if(isset($content['body'])): ?>
   <?php print render($content['body']); ?>

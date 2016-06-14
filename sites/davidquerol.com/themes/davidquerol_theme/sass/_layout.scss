@@ -5,18 +5,25 @@
     flex-direction: row;
     align-items: stretch;
     min-height: 100%;
+    max-width: 1160px;
+    padding: 20px;
 
     @include tablet {
         flex-wrap: nowrap;
+        padding: 40px;
     }
 }
 
 .main-aside {
     width: 100%;
+    margin-top: 20px;
 
     @include tablet {
-        width: 30%;
+        margin-top: 40px;
+        width: 20%;
         max-width: 400px;
+        padding-right: 20px;
+        margin-left: 40px;
     }
 }
 
@@ -24,7 +31,7 @@
     width: 100%;
 
     @include tablet {
-        width: 70%;
+        width: 75%;
     }
 }
 
@@ -54,33 +61,3 @@
 }
 
 // Nodes
-
-.node-type-page {
-    .node-content {
-        display: flex;
-        flex-wrap: wrap;
-
-        @include desktop {
-            flex-wrap: nowrap;
-        }
-
-
-        .node-content-left {
-            width: 100%;
-
-            @include desktop {
-                width: 40%;
-            }
-        }
-
-        .node-content-right {
-            width: 100%;
-
-            &.body {
-                @include desktop {
-                    width: 60%;
-                }
-            }
-        }
-    }
-}

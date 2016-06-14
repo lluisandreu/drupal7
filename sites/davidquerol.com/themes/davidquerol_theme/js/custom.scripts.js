@@ -15,6 +15,7 @@
             open: function () {}, // Function: Open callback
             close: function () {} // Function: Close callback
         });
+
         $('.project-media-colorbox img').each(function (index, el) {
             $(this).colorbox({
                 rel: 'gal',
@@ -24,10 +25,29 @@
                 },
                 title: function () {
                     return $(this).attr('title');
-                }
+                },
+                current: "image {current} of {total}"
             });
         });
 
+        $('.project-media-slideshow .field-items').slick({
+            infinite: true,
+            arrows: false,
+            dots: true,
+        });
+
+        /// Accordion menu
+
+        var menu = $('#block-menu-block-1');
+        menu.find('.menu li').each(function (index, el) {
+            if ($(this).has('ul').length) {
+                $(this).children('a').on('click', function (event) {
+                    $(this).parent('li').toggleClass('collapsed');
+                    event.preventDefault();
+                    /* Act on the event */
+                });
+            }
+        });
     });
 
 }(jQuery));

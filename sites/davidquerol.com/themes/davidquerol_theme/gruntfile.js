@@ -4,14 +4,14 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-svgmin');
     grunt.initConfig({
-        /*
+
         uglify: {
             my_target: {
                 files: {
-                    'js/script.js' : ['components/js/*.js']
+                    'dist/js/script.min.js': ['js/*.js']
                 } //files
             } //my_target
-        },//uglify*/
+        }, //uglify
         compass: {
             dev: {
                 options: {
@@ -26,45 +26,50 @@ module.exports = function (grunt) {
                         config: 'config.rb'                        
                     } //options
             } //production*/
-        },//compass
-        
+        }, //compass
+
         svgmin: {
             options: {
-                    plugins: [
-                            { removeViewBox: false }, 
-                            //{ removeUselessStrokeAndFill: false }
-                    ]
+                plugins: [{
+                        removeViewBox: false
+                    },
+                    //{ removeUselessStrokeAndFill: false }
+                ]
             },
             dist: {
                 files: {
                     'images/*.svg': 'images/svg/*.svg'
                 }
             }
-        },//svgmin
+        }, //svgmin
         postcss: {
             options: {
-              map: true, // inline sourcemaps
+                map: true, // inline sourcemaps
 
-              // or
-              map: {
-                  inline: false, // save all sourcemaps as separate files...
-                  annotation: 'dist/css/maps/' // ...to the specified directory
-              },
+                // or
+                map: {
+                    inline: false, // save all sourcemaps as separate files...
+                    annotation: 'dist/css/maps/' // ...to the specified directory
+                },
 
-              processors: [
-                require('pixrem')(), // add fallbacks for rem units
-                require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
-                require('cssnext')(),
-                require('precss')(),
-                require('cssnano')() // minify the result
-              ]
+                processors: [
+                    require('pixrem')(), // add fallbacks for rem units
+                    require('autoprefixer')({
+                        browsers: 'last 2 versions'
+                    }), // add vendor prefixes
+                    require('cssnext')(),
+                    require('precss')(),
+                    require('cssnano')() // minify the result
+                ]
             },
             dist: {
-              src: 'css/*.css'
+                src: 'css/*.css'
             }
-          },
+        },
         watch: {
-            options: {livereload: true },
+            options: {
+                livereload: true
+            },
             svg: {
                 files: ['images/svg/*.svg'],
                 tasks: ['svgmin']
@@ -77,9 +82,9 @@ module.exports = function (grunt) {
                 files: ['sass/**/*.scss'],
                 tasks: ['compass']
             } //sass
-          } //watch
+        } //watch
 
-    })//initConfig
+    }) //initConfig
     grunt.loadNpmTasks('grunt-postcss');
     grunt.registerTask('default', 'watch');
-}//exports
+} //exports

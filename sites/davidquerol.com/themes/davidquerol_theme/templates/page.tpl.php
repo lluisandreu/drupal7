@@ -85,8 +85,11 @@
   <main class="main-content">
     <div class="main-content-box">
       <div class="main-content-box-inner">
+        <?php if(!$is_front): ?>
+          <h1><?php print $title; ?></h1>
+        <?php endif; ?>
+        <?php if (isset($tabs)): ?><div id="tabs"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print $messages; ?>
-        <?php if ($tabs): ?><div id="tabs"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print render($page['content']); ?>
       </div>
     </div>

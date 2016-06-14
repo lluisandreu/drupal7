@@ -4,7 +4,7 @@ div.messages {
     color: $white;
     background-image: none;
     padding: 10px;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
 }
 
 div.status {
@@ -24,21 +24,35 @@ div.error {
 // Tabs
 
 #tabs {
-    padding: 10px 0;
+    ul {
+        margin: 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
 
     li {
-        font-size: 0.8rem;
+        font-size: 1.5rem;
+        padding: 6px;
+        border: 1px solid #ccc;
+        background: #eee;
+        display: inline-block;
+        z-index: 100;
+        position: relative;
+        margin-bottom: -1px;
+
+        &:hover {
+            background: #ccc;
+        }
+
+        &.active {
+            background: #fff;
+            border-bottom: 1px solid #fff;
+        }
     }
 
     li a {
+        color: #666;
         padding: 6px;
-        background: lighten($color_primary, 10%);
-        color: lighten($color_primary, 40%);
-        border: 1px solid darken($color_primary, 5%);
-
-        &:hover {
-            background: lighten($color_primary, 15%);
-        }
+        background: none;
     }
 }
 
