@@ -149,6 +149,10 @@ strong {
         a {
             color: $color_secondary;
         }
+
+        li.active a, a:hover {
+            text-decoration: underline;
+        }
     }
 
     .menu li ul ul {
@@ -170,7 +174,7 @@ strong {
     }
 
     .collapsed {
-        ul {
+        & > ul {
             min-height: auto;
             height: auto;
             opacity: 1;
@@ -285,14 +289,25 @@ nav.nav-collapse.opened {
     }
 
     .project-media-slideshow {
+        @include desktop {
+            width: 80%;
+        }
+
+
         .slick-dots {
-            text-align: left;
+            //text-align: left;
 
             li {
                 top: 5px;
             }
         }
     }
+}
+
+/// Slick carousel
+
+.slick-prev:before, .slick-next:before {
+    color: #333 !important;
 }
 
 /// Helpers
