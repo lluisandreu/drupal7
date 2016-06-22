@@ -43,7 +43,7 @@
         var menu = $('#block-menu-block-1');
         menu.find('.menu li').each(function (index, el) {
             if ($(this).has('ul').length) {
-                $(this).children('a').on('click', function (event) {
+                $(this).children('a, span').on('click', function (event) {
                     $(this).parent('li').toggleClass('collapsed');
                     event.preventDefault();
                     /* Act on the event */

@@ -136,7 +136,7 @@ strong {
         font-weight: 400;
     }
 
-    .menu > li a {
+    .menu > li a, .menu span {
         color: $darkgrey;
     }
 
@@ -146,7 +146,8 @@ strong {
             margin-bottom: 0;
         }
 
-        a {
+        a, span {
+            cursor: pointer;
             color: $color_secondary;
         }
 
