@@ -83,7 +83,7 @@ p {
     font-size: $p_size;
     font-weight: $p_weight;
     margin: $p_vertical_margin;
-    color: lighten($color_primary, 50%);
+    color: lighten($color_primary, 30%);
 }
 
 small {
@@ -291,7 +291,7 @@ nav.nav-collapse.opened {
 
     .project-media-slideshow {
         @include desktop {
-            width: 80%;
+            width: 75%;
         }
 
 
@@ -309,6 +309,12 @@ nav.nav-collapse.opened {
 
 .slick-prev:before, .slick-next:before {
     color: #333 !important;
+}
+
+/// Colorbox
+
+#cboxLoadedContent, #cboxContent {
+    background: transparent;
 }
 
 /// Helpers

@@ -15,7 +15,7 @@ body {
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.5rem;
-  color: #333333;
+  color: #444;
 }
 
 /* line 20, ../sass/_basicstyling.scss */
@@ -49,7 +49,7 @@ img {
 input[type=submit], button {
   padding: 10px;
   background: #eee;
-  color: #333333;
+  color: #444;
   border: 1px solid #ccc;
   cursor: pointer;
   font-size: 1.2rem;
@@ -68,7 +68,7 @@ input[type=text], input[type=email], input[type=password] {
   border-bottom: 1px solid #888;
   font-size: 1.2rem;
   font-family: "Helvetica", arial, sans-serif;
-  color: #333333;
+  color: #444;
   max-width: 100%;
 }
 
@@ -79,12 +79,12 @@ textarea {
   max-width: 100%;
   font-size: 1.2rem;
   font-family: "Helvetica", arial, sans-serif;
-  color: #333333;
+  color: #444;
 }
 
 /* line 76, ../sass/_basicstyling.scss */
 label {
-  color: #333333;
+  color: #444;
   display: block;
   padding: 5px 0 !important;
 }
@@ -94,7 +94,7 @@ p {
   font-size: 1.2rem;
   font-weight: 300;
   margin: 0 0 1rem 0;
-  color: #b3b3b3;
+  color: gray;
 }
 
 /* line 89, ../sass/_basicstyling.scss */
@@ -118,7 +118,7 @@ strong {
 }
 /* line 110, ../sass/_basicstyling.scss */
 .main-aside .site-name a {
-  color: #333333;
+  color: #444;
   text-decoration: none;
   font-weight: 700;
 }
@@ -145,7 +145,7 @@ strong {
 }
 /* line 139, ../sass/_basicstyling.scss */
 .main-nav.closed .menu > li a, .main-nav.closed .menu span {
-  color: #333333;
+  color: #444;
 }
 /* line 144, ../sass/_basicstyling.scss */
 .main-nav.closed .menu li ul li {
@@ -288,7 +288,7 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
 @media (min-width: 1080px) {
   /* line 292, ../sass/_basicstyling.scss */
   .project-media .project-media-slideshow {
-    width: 80%;
+    width: 75%;
   }
 }
 /* line 301, ../sass/_basicstyling.scss */
@@ -302,11 +302,16 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
 }
 
 /* line 316, ../sass/_basicstyling.scss */
+#cboxLoadedContent, #cboxContent {
+  background: transparent;
+}
+
+/* line 322, ../sass/_basicstyling.scss */
 .hide-small {
   display: none;
 }
 @media (min-width: 650px) {
-  /* line 316, ../sass/_basicstyling.scss */
+  /* line 322, ../sass/_basicstyling.scss */
   .hide-small {
     display: block !important;
   }

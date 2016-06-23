@@ -36,15 +36,24 @@
             slidesToScroll: 1,
             arrows: true,
             dots: true,
+            adaptiveHeight: true,
         });
 
         /// Accordion menu
 
         var menu = $('#block-menu-block-1');
         menu.find('.menu li').each(function (index, el) {
-            if ($(this).has('ul').length) {
-                $(this).children('a, span').on('click', function (event) {
-                    $(this).parent('li').toggleClass('collapsed');
+            element = $(this);
+            if (element.has('ul').length) {
+                element.children('span').on('click', function (event) {
+                    $(this).closest('li').toggleClass('collapsed');
+                    event.preventDefault();
+                    /* Act on the event */
+                });
+            }
+            if (element.hasClass('expanded')) {
+                element.children('a').on('click', function (event) {
+                    $(this).closest('li').toggleClass('collapsed');
                     event.preventDefault();
                     /* Act on the event */
                 });
