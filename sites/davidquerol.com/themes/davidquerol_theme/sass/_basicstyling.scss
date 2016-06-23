@@ -190,6 +190,8 @@ strong {
         min-height: auto !important;
         height: auto !important;
         opacity: 1 !important;
+        position: relative;
+        z-index: -999999;
     }
 }
 

@@ -3918,9 +3918,11 @@ strong {
   min-height: auto !important;
   height: auto !important;
   opacity: 1 !important;
+  position: relative;
+  z-index: -999999;
 }
 
-/* line 197, ../sass/_basicstyling.scss */
+/* line 199, ../sass/_basicstyling.scss */
 .nav-toggle {
   margin-top: 5px;
   font-size: 1.6rem;
@@ -3933,12 +3935,12 @@ strong {
   text-decoration: none;
 }
 
-/* line 209, ../sass/_basicstyling.scss */
+/* line 211, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened {
   text-align: center;
   background: #404040;
 }
-/* line 213, ../sass/_basicstyling.scss */
+/* line 215, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened li {
   text-align: center;
   font-family: "Helvetica", arial, sans-serif;
@@ -3946,28 +3948,28 @@ nav.nav-collapse.opened li {
   padding: 0;
   font-size: 1.6rem;
 }
-/* line 221, ../sass/_basicstyling.scss */
+/* line 223, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened li ul {
   background: #4d4d4d;
 }
-/* line 225, ../sass/_basicstyling.scss */
+/* line 227, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened a {
   color: #ffffff;
   padding: 10px 0;
   text-decoration: none;
   display: block;
 }
-/* line 231, ../sass/_basicstyling.scss */
+/* line 233, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
   background: #1a1a1a;
 }
 
-/* line 239, ../sass/_basicstyling.scss */
+/* line 241, ../sass/_basicstyling.scss */
 .field-name-body {
   margin-bottom: 3rem;
 }
 
-/* line 247, ../sass/_basicstyling.scss */
+/* line 249, ../sass/_basicstyling.scss */
 .project-media .project-media-horizontal .field-items {
   display: flex;
   flex-wrap: nowrap;
@@ -3975,71 +3977,71 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
-/* line 254, ../sass/_basicstyling.scss */
+/* line 256, ../sass/_basicstyling.scss */
 .project-media .project-media-horizontal .field-items .field-item {
   flex: 0 0 auto;
   margin-right: 10px;
 }
-/* line 262, ../sass/_basicstyling.scss */
+/* line 264, ../sass/_basicstyling.scss */
 .project-media .project-media-vertical .field-item {
   margin-bottom: 10px;
 }
-/* line 268, ../sass/_basicstyling.scss */
+/* line 270, ../sass/_basicstyling.scss */
 .project-media .project-media-colorbox .field-items {
   display: flex;
   flex-wrap: wrap;
 }
-/* line 272, ../sass/_basicstyling.scss */
+/* line 274, ../sass/_basicstyling.scss */
 .project-media .project-media-colorbox .field-items .field-item {
   display: inline-block;
   width: 100%;
   padding-right: 12px;
   padding-bottom: 12px;
 }
-/* line 278, ../sass/_basicstyling.scss */
+/* line 280, ../sass/_basicstyling.scss */
 .project-media .project-media-colorbox .field-items .field-item img {
   display: block;
   cursor: pointer;
 }
 @media (min-width: 650px) {
-  /* line 272, ../sass/_basicstyling.scss */
+  /* line 274, ../sass/_basicstyling.scss */
   .project-media .project-media-colorbox .field-items .field-item {
     width: calc(50%);
   }
 }
 @media (min-width: 1080px) {
-  /* line 272, ../sass/_basicstyling.scss */
+  /* line 274, ../sass/_basicstyling.scss */
   .project-media .project-media-colorbox .field-items .field-item {
     width: calc(25%);
   }
 }
 @media (min-width: 1080px) {
-  /* line 295, ../sass/_basicstyling.scss */
+  /* line 297, ../sass/_basicstyling.scss */
   .project-media .project-media-slideshow {
     width: 75%;
   }
 }
-/* line 304, ../sass/_basicstyling.scss */
+/* line 306, ../sass/_basicstyling.scss */
 .project-media .project-media-slideshow .slick-dots li {
   top: 5px;
 }
 
-/* line 313, ../sass/_basicstyling.scss */
+/* line 315, ../sass/_basicstyling.scss */
 .slick-prev:before, .slick-next:before {
   color: #333 !important;
 }
 
-/* line 319, ../sass/_basicstyling.scss */
+/* line 321, ../sass/_basicstyling.scss */
 #cboxLoadedContent, #cboxContent {
   background: transparent;
 }
 
-/* line 325, ../sass/_basicstyling.scss */
+/* line 327, ../sass/_basicstyling.scss */
 .hide-small {
   display: none;
 }
 @media (min-width: 650px) {
-  /* line 325, ../sass/_basicstyling.scss */
+  /* line 327, ../sass/_basicstyling.scss */
   .hide-small {
     display: block !important;
   }
