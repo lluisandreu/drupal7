@@ -172,6 +172,8 @@ strong {
         height: 0;
         opacity: 0;
         transition: min-height 500ms ease-in-out;
+        position: relative;
+        z-index: -999999;
     }
 
     .collapsed {
@@ -180,6 +182,7 @@ strong {
             height: auto;
             opacity: 1;
             transition: opacity 500ms ease-in-out;
+            z-index: 0;
         }
     }
 
