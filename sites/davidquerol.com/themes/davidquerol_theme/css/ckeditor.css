@@ -186,18 +186,17 @@ strong {
   height: auto;
   opacity: 1;
   transition: opacity 500ms ease-in-out;
-  z-index: 0;
+  z-index: 0 !important;
 }
 /* line 189, ../sass/_basicstyling.scss */
 .main-nav .active-trail > ul {
   min-height: auto !important;
   height: auto !important;
   opacity: 1 !important;
-  position: relative;
-  z-index: -999999;
+  z-index: 0 !important;
 }
 
-/* line 199, ../sass/_basicstyling.scss */
+/* line 198, ../sass/_basicstyling.scss */
 .nav-toggle {
   margin-top: 5px;
   font-size: 1.6rem;
@@ -210,12 +209,12 @@ strong {
   text-decoration: none;
 }
 
-/* line 211, ../sass/_basicstyling.scss */
+/* line 210, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened {
   text-align: center;
   background: #404040;
 }
-/* line 215, ../sass/_basicstyling.scss */
+/* line 214, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened li {
   text-align: center;
   font-family: "Helvetica", arial, sans-serif;
@@ -223,28 +222,28 @@ nav.nav-collapse.opened li {
   padding: 0;
   font-size: 1.6rem;
 }
-/* line 223, ../sass/_basicstyling.scss */
+/* line 222, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened li ul {
   background: #4d4d4d;
 }
-/* line 227, ../sass/_basicstyling.scss */
+/* line 226, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened a {
   color: #ffffff;
   padding: 10px 0;
   text-decoration: none;
   display: block;
 }
-/* line 233, ../sass/_basicstyling.scss */
+/* line 232, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
   background: #1a1a1a;
 }
 
-/* line 241, ../sass/_basicstyling.scss */
+/* line 240, ../sass/_basicstyling.scss */
 .field-name-body {
   margin-bottom: 3rem;
 }
 
-/* line 249, ../sass/_basicstyling.scss */
+/* line 248, ../sass/_basicstyling.scss */
 .project-media .project-media-horizontal .field-items {
   display: flex;
   flex-wrap: nowrap;
@@ -252,71 +251,71 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
-/* line 256, ../sass/_basicstyling.scss */
+/* line 255, ../sass/_basicstyling.scss */
 .project-media .project-media-horizontal .field-items .field-item {
   flex: 0 0 auto;
   margin-right: 10px;
 }
-/* line 264, ../sass/_basicstyling.scss */
+/* line 263, ../sass/_basicstyling.scss */
 .project-media .project-media-vertical .field-item {
   margin-bottom: 10px;
 }
-/* line 270, ../sass/_basicstyling.scss */
+/* line 269, ../sass/_basicstyling.scss */
 .project-media .project-media-colorbox .field-items {
   display: flex;
   flex-wrap: wrap;
 }
-/* line 274, ../sass/_basicstyling.scss */
+/* line 273, ../sass/_basicstyling.scss */
 .project-media .project-media-colorbox .field-items .field-item {
   display: inline-block;
   width: 100%;
   padding-right: 12px;
   padding-bottom: 12px;
 }
-/* line 280, ../sass/_basicstyling.scss */
+/* line 279, ../sass/_basicstyling.scss */
 .project-media .project-media-colorbox .field-items .field-item img {
   display: block;
   cursor: pointer;
 }
 @media (min-width: 650px) {
-  /* line 274, ../sass/_basicstyling.scss */
+  /* line 273, ../sass/_basicstyling.scss */
   .project-media .project-media-colorbox .field-items .field-item {
     width: calc(50%);
   }
 }
 @media (min-width: 1080px) {
-  /* line 274, ../sass/_basicstyling.scss */
+  /* line 273, ../sass/_basicstyling.scss */
   .project-media .project-media-colorbox .field-items .field-item {
     width: calc(25%);
   }
 }
 @media (min-width: 1080px) {
-  /* line 297, ../sass/_basicstyling.scss */
+  /* line 296, ../sass/_basicstyling.scss */
   .project-media .project-media-slideshow {
     width: 75%;
   }
 }
-/* line 306, ../sass/_basicstyling.scss */
+/* line 305, ../sass/_basicstyling.scss */
 .project-media .project-media-slideshow .slick-dots li {
   top: 5px;
 }
 
-/* line 315, ../sass/_basicstyling.scss */
+/* line 314, ../sass/_basicstyling.scss */
 .slick-prev:before, .slick-next:before {
   color: #333 !important;
 }
 
-/* line 321, ../sass/_basicstyling.scss */
+/* line 320, ../sass/_basicstyling.scss */
 #cboxLoadedContent, #cboxContent {
   background: transparent;
 }
 
-/* line 327, ../sass/_basicstyling.scss */
+/* line 326, ../sass/_basicstyling.scss */
 .hide-small {
   display: none;
 }
 @media (min-width: 650px) {
-  /* line 327, ../sass/_basicstyling.scss */
+  /* line 326, ../sass/_basicstyling.scss */
   .hide-small {
     display: block !important;
   }
