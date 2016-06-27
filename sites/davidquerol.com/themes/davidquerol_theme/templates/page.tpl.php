@@ -88,9 +88,6 @@
         <?php if(!$is_front): ?>
           <h1><?php print $title; ?></h1>
         <?php endif; ?>
-        <?php if ($breadcrumb): ?>
-          <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-        <?php endif; ?>
         <?php if (isset($tabs)): ?><div id="tabs"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print $messages; ?>
         <?php print render($page['content']); ?>

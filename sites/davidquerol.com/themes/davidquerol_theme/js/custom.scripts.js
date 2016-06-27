@@ -42,23 +42,15 @@
         /// Accordion menu
 
         var menu = $('#block-menu-block-1');
-        menu.find('.menu li').each(function (index, el) {
-            element = $(this);
-            if (element.has('ul').length) {
-                element.children('span').on('click', function (event) {
-                    $(this).closest('li').toggleClass('collapsed');
-                    event.preventDefault();
-                    /* Act on the event */
-                });
-            }
-            if (element.hasClass('expanded')) {
-                element.children('a').on('click', function (event) {
-                    $(this).closest('li').toggleClass('collapsed');
-                    event.preventDefault();
-                    /* Act on the event */
-                });
-            }
+        menu.find('.nolink').on('click', function (event) {
+            event.preventDefault();
+            $(this).closest('li').toggleClass('collapsed');
         });
+        menu.find('.menu-block-1>ul>li>a').on('click', function (event) {
+            event.preventDefault();
+            $(this).closest('li').toggleClass('collapsed');
+        });
+
     });
 
 }(jQuery));
