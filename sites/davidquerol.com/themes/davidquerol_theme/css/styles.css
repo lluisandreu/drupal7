@@ -3883,7 +3883,7 @@ strong {
   color: #888;
 }
 /* line 154, ../sass/_basicstyling.scss */
-.main-nav.closed .menu li ul li.active a, .main-nav.closed .menu li ul a:hover {
+.main-nav.closed .menu li ul li.active a.active, .main-nav.closed .menu li ul a:hover {
   text-decoration: underline;
 }
 /* line 159, ../sass/_basicstyling.scss */
@@ -3952,14 +3952,14 @@ nav.nav-collapse.opened li ul {
   background: #4d4d4d;
 }
 /* line 226, ../sass/_basicstyling.scss */
-nav.nav-collapse.opened a {
+nav.nav-collapse.opened a, nav.nav-collapse.opened span {
   color: #ffffff;
   padding: 10px 0;
   text-decoration: none;
   display: block;
 }
 /* line 232, ../sass/_basicstyling.scss */
-nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
+nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus, nav.nav-collapse.opened span:hover, nav.nav-collapse.opened span:focus {
   background: #1a1a1a;
 }
 
@@ -3979,7 +3979,7 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus {
 /* line 255, ../sass/_basicstyling.scss */
 .project-media .project-media-horizontal .field-items .field-item {
   flex: 0 0 auto;
-  margin-right: 10px;
+  margin-right: 50px;
 }
 /* line 263, ../sass/_basicstyling.scss */
 .project-media .project-media-vertical .field-item {

@@ -151,7 +151,7 @@ strong {
             color: $color_secondary;
         }
 
-        li.active a, a:hover {
+        li.active a.active, a:hover {
             text-decoration: underline;
         }
     }
@@ -223,7 +223,7 @@ nav.nav-collapse.opened {
         background: lighten($color_primary, 10%);
     }
 
-    a {
+    a, span {
         color: $white;
         padding: 10px 0;
         text-decoration: none;
@@ -254,7 +254,7 @@ nav.nav-collapse.opened {
 
             .field-item {
                 flex: 0 0 auto;
-                margin-right: 10px;
+                margin-right: 50px;
             }
         }
     }
