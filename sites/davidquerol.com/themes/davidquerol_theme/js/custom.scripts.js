@@ -31,12 +31,12 @@
         });
 
         $('.project-media-slideshow .field-items').slick({
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            infinite: false,
             arrows: true,
             dots: true,
             adaptiveHeight: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
         });
 
         /// Accordion menu

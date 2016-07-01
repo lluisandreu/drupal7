@@ -1,0 +1,8 @@
+name = Boda Theme
+description = Custom theme for my wedding
+core = 7.x
+
+stylesheets[all][] = styles.css
+
+regions[header] = Header 
+regions[content] = Content 
