@@ -30,13 +30,27 @@
             });
         });
 
-        $('.project-media-slideshow .field-items').slick({
+        var $carr = $('.project-media-slideshow .field-items');
+        $carr.on('init', function (event, slick) {
+            var counter = $('<div class="slick-counter" />');
+            counter.text("1/" + slick.slideCount);
+            $carr.append(counter);
+            console.log(slick);
+        });
+
+        $carr.slick({
             infinite: false,
             arrows: true,
-            dots: true,
+            //dots: true,
             adaptiveHeight: true,
             slidesToShow: 1,
             slidesToScroll: 1,
+        });
+
+
+        $carr.on('afterChange', function (event, slick, currentSlide) {
+            $(this).find('.slick-counter').text((currentSlide + 1) + '/' + slick.slideCount);
+
         });
 
         /// Accordion menu

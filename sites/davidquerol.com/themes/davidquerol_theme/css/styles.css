@@ -4030,17 +4030,23 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus, nav.nav-collap
   color: #333 !important;
 }
 
-/* line 320, ../sass/_basicstyling.scss */
+/* line 318, ../sass/_basicstyling.scss */
+.slick-counter {
+  text-align: center;
+  padding-top: 12px;
+}
+
+/* line 325, ../sass/_basicstyling.scss */
 #cboxLoadedContent, #cboxContent {
   background: transparent;
 }
 
-/* line 326, ../sass/_basicstyling.scss */
+/* line 331, ../sass/_basicstyling.scss */
 .hide-small {
   display: none;
 }
 @media (min-width: 650px) {
-  /* line 326, ../sass/_basicstyling.scss */
+  /* line 331, ../sass/_basicstyling.scss */
   .hide-small {
     display: block !important;
   }
