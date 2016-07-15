@@ -39,7 +39,7 @@
         });
 
         $carr.slick({
-            infinite: false,
+            infinite: true,
             arrows: true,
             //dots: true,
             adaptiveHeight: true,
