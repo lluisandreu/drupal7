@@ -104,6 +104,12 @@ strong {
 
 // Aside
 .main-aside {
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     .site-name {
         padding: 5px 0 5px 0;
 
@@ -126,6 +132,12 @@ strong {
 
     .menu li {
         text-transform: lowercase;
+    }
+
+    .menu span {
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     .menu > li {
