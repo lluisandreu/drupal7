@@ -134,6 +134,12 @@ strong {
         text-transform: lowercase;
     }
 
+    .menu a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     .menu span {
         &:hover {
             text-decoration: underline;

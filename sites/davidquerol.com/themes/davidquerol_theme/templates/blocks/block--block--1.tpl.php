@@ -14,5 +14,5 @@
 		Developed by <a href="http://lluisandreu.com" target="_blank">lluisandreu.com</a><br>using <a href="http://drupal.org" target="_blank">Drupal</a>
 	</div>
 	<br>
-	<div class="fb-like" data-href="http://www.davidquerol.com/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+	<div class="fb-like" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
 </div>

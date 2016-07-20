@@ -3865,10 +3865,14 @@ strong {
   text-transform: lowercase;
 }
 /* line 138, ../sass/_basicstyling.scss */
+.main-nav.closed .menu a:hover {
+  text-decoration: underline;
+}
+/* line 144, ../sass/_basicstyling.scss */
 .main-nav.closed .menu span:hover {
   text-decoration: underline;
 }
-/* line 143, ../sass/_basicstyling.scss */
+/* line 149, ../sass/_basicstyling.scss */
 .main-nav.closed .menu > li {
   font-size: 1.2rem;
   margin: 0;
@@ -3876,35 +3880,35 @@ strong {
   margin-bottom: 15px;
   font-weight: 400;
 }
-/* line 151, ../sass/_basicstyling.scss */
+/* line 157, ../sass/_basicstyling.scss */
 .main-nav.closed .menu > li a, .main-nav.closed .menu span {
   color: #444;
 }
-/* line 156, ../sass/_basicstyling.scss */
+/* line 162, ../sass/_basicstyling.scss */
 .main-nav.closed .menu li ul li {
   font-size: 1.1rem;
   margin-bottom: 0;
 }
-/* line 161, ../sass/_basicstyling.scss */
+/* line 167, ../sass/_basicstyling.scss */
 .main-nav.closed .menu li ul a, .main-nav.closed .menu li ul span {
   cursor: pointer;
   color: #888;
 }
-/* line 166, ../sass/_basicstyling.scss */
+/* line 172, ../sass/_basicstyling.scss */
 .main-nav.closed .menu li ul li.active a.active, .main-nav.closed .menu li ul a:hover {
   text-decoration: underline;
 }
-/* line 171, ../sass/_basicstyling.scss */
+/* line 177, ../sass/_basicstyling.scss */
 .main-nav.closed .menu li ul ul {
   padding-left: 10px;
 }
-/* line 175, ../sass/_basicstyling.scss */
+/* line 181, ../sass/_basicstyling.scss */
 .main-nav.closed .menu a {
   display: block;
   text-decoration: none;
 }
 
-/* line 182, ../sass/_basicstyling.scss */
+/* line 188, ../sass/_basicstyling.scss */
 .main-nav ul ul {
   min-height: 0;
   height: 0;
@@ -3913,7 +3917,7 @@ strong {
   position: relative;
   z-index: -999999;
 }
-/* line 192, ../sass/_basicstyling.scss */
+/* line 198, ../sass/_basicstyling.scss */
 .main-nav .collapsed > ul {
   min-height: auto;
   height: auto;
@@ -3921,7 +3925,7 @@ strong {
   transition: opacity 500ms ease-in-out;
   z-index: 0 !important;
 }
-/* line 201, ../sass/_basicstyling.scss */
+/* line 207, ../sass/_basicstyling.scss */
 .main-nav .active-trail > ul {
   min-height: auto !important;
   height: auto !important;
@@ -3929,7 +3933,7 @@ strong {
   z-index: 0 !important;
 }
 
-/* line 210, ../sass/_basicstyling.scss */
+/* line 216, ../sass/_basicstyling.scss */
 .nav-toggle {
   margin-top: 5px;
   font-size: 1.6rem;
@@ -3942,12 +3946,12 @@ strong {
   text-decoration: none;
 }
 
-/* line 222, ../sass/_basicstyling.scss */
+/* line 228, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened {
   text-align: center;
   background: #404040;
 }
-/* line 226, ../sass/_basicstyling.scss */
+/* line 232, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened li {
   text-align: center;
   font-family: "Helvetica", arial, sans-serif;
@@ -3955,28 +3959,28 @@ nav.nav-collapse.opened li {
   padding: 0;
   font-size: 1.6rem;
 }
-/* line 234, ../sass/_basicstyling.scss */
+/* line 240, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened li ul {
   background: #4d4d4d;
 }
-/* line 238, ../sass/_basicstyling.scss */
+/* line 244, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened a, nav.nav-collapse.opened span {
   color: #ffffff;
   padding: 10px 0;
   text-decoration: none;
   display: block;
 }
-/* line 244, ../sass/_basicstyling.scss */
+/* line 250, ../sass/_basicstyling.scss */
 nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus, nav.nav-collapse.opened span:hover, nav.nav-collapse.opened span:focus {
   background: #1a1a1a;
 }
 
-/* line 252, ../sass/_basicstyling.scss */
+/* line 258, ../sass/_basicstyling.scss */
 .field-name-body {
   margin-bottom: 3rem;
 }
 
-/* line 260, ../sass/_basicstyling.scss */
+/* line 266, ../sass/_basicstyling.scss */
 .project-media .project-media-horizontal .field-items {
   display: flex;
   flex-wrap: nowrap;
@@ -3984,77 +3988,77 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus, nav.nav-collap
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
-/* line 267, ../sass/_basicstyling.scss */
+/* line 273, ../sass/_basicstyling.scss */
 .project-media .project-media-horizontal .field-items .field-item {
   flex: 0 0 auto;
   margin-right: 50px;
 }
-/* line 275, ../sass/_basicstyling.scss */
+/* line 281, ../sass/_basicstyling.scss */
 .project-media .project-media-vertical .field-item {
   margin-bottom: 10px;
 }
-/* line 281, ../sass/_basicstyling.scss */
+/* line 287, ../sass/_basicstyling.scss */
 .project-media .project-media-colorbox .field-items {
   display: flex;
   flex-wrap: wrap;
 }
-/* line 285, ../sass/_basicstyling.scss */
+/* line 291, ../sass/_basicstyling.scss */
 .project-media .project-media-colorbox .field-items .field-item {
   display: inline-block;
   width: 100%;
   padding-right: 12px;
   padding-bottom: 12px;
 }
-/* line 291, ../sass/_basicstyling.scss */
+/* line 297, ../sass/_basicstyling.scss */
 .project-media .project-media-colorbox .field-items .field-item img {
   display: block;
   cursor: pointer;
 }
 @media (min-width: 650px) {
-  /* line 285, ../sass/_basicstyling.scss */
+  /* line 291, ../sass/_basicstyling.scss */
   .project-media .project-media-colorbox .field-items .field-item {
     width: calc(50%);
   }
 }
 @media (min-width: 1080px) {
-  /* line 285, ../sass/_basicstyling.scss */
+  /* line 291, ../sass/_basicstyling.scss */
   .project-media .project-media-colorbox .field-items .field-item {
     width: calc(25%);
   }
 }
 @media (min-width: 1080px) {
-  /* line 308, ../sass/_basicstyling.scss */
+  /* line 314, ../sass/_basicstyling.scss */
   .project-media .project-media-slideshow {
     width: 75%;
   }
 }
-/* line 317, ../sass/_basicstyling.scss */
+/* line 323, ../sass/_basicstyling.scss */
 .project-media .project-media-slideshow .slick-dots li {
   top: 5px;
 }
 
-/* line 326, ../sass/_basicstyling.scss */
+/* line 332, ../sass/_basicstyling.scss */
 .slick-prev:before, .slick-next:before {
   color: #333 !important;
 }
 
-/* line 330, ../sass/_basicstyling.scss */
+/* line 336, ../sass/_basicstyling.scss */
 .slick-counter {
   text-align: center;
   padding-top: 12px;
 }
 
-/* line 337, ../sass/_basicstyling.scss */
+/* line 343, ../sass/_basicstyling.scss */
 #cboxLoadedContent, #cboxContent {
   background: transparent;
 }
 
-/* line 343, ../sass/_basicstyling.scss */
+/* line 349, ../sass/_basicstyling.scss */
 .hide-small {
   display: none;
 }
 @media (min-width: 650px) {
-  /* line 343, ../sass/_basicstyling.scss */
+  /* line 349, ../sass/_basicstyling.scss */
   .hide-small {
     display: block !important;
   }
