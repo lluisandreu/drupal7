@@ -237,6 +237,10 @@ strong {
     text-decoration: none;
 }
 
+.js .nav-collapse.opened {
+    max-height: inherit !important;
+}
+
 nav.nav-collapse.opened {
     text-align: center;
     background: lighten($color_primary, 5%);
@@ -251,6 +255,10 @@ nav.nav-collapse.opened {
 
     li ul {
         background: lighten($color_primary, 10%);
+    }
+
+    li ul ul {
+        background: lighten($color_primary, 20%);
     }
 
     a, span {

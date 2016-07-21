@@ -9,7 +9,7 @@ stylesheets[all][] = vendor/responsive-nav/responsive-nav.css
 stylesheets[all][] = vendor/slick/slick.css
 stylesheets[all][] = vendor/slick/slick-theme.css
 
-scripts[] = vendor/responsive-nav/responsive-nav.min.js
+scripts[] = vendor/responsive-nav/responsive-nav.js
 scripts[] = vendor/jquery-ui.min.js
 scripts[] = vendor/slick/slick.min.js
 scripts[] = dist/js/script.min.js
