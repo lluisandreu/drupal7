@@ -3663,6 +3663,7 @@ form .form-item {
   min-height: 100%;
   max-width: 1160px;
   padding: 20px;
+  margin: auto;
 }
 @media (min-width: 650px) {
   /* line 1, ../sass/_layout.scss */
@@ -3672,13 +3673,13 @@ form .form-item {
   }
 }
 
-/* line 17, ../sass/_layout.scss */
+/* line 18, ../sass/_layout.scss */
 .main-aside {
   width: 100%;
   margin-top: 20px;
 }
 @media (min-width: 650px) {
-  /* line 17, ../sass/_layout.scss */
+  /* line 18, ../sass/_layout.scss */
   .main-aside {
     margin-top: 40px;
     width: 20%;
@@ -3688,35 +3689,35 @@ form .form-item {
   }
 }
 
-/* line 30, ../sass/_layout.scss */
+/* line 31, ../sass/_layout.scss */
 .main-content {
   width: 100%;
 }
 @media (min-width: 650px) {
-  /* line 30, ../sass/_layout.scss */
+  /* line 31, ../sass/_layout.scss */
   .main-content {
     width: 75%;
   }
 }
 
-/* line 43, ../sass/_layout.scss */
+/* line 44, ../sass/_layout.scss */
 .no-flexbox .main-aside, .no-flexboxlegacy .main-aside, .no-flexwrap .main-aside {
   width: 100%;
 }
 @media (min-width: 650px) {
-  /* line 43, ../sass/_layout.scss */
+  /* line 44, ../sass/_layout.scss */
   .no-flexbox .main-aside, .no-flexboxlegacy .main-aside, .no-flexwrap .main-aside {
     width: 30%;
     max-width: 400px;
     float: left;
   }
 }
-/* line 53, ../sass/_layout.scss */
+/* line 54, ../sass/_layout.scss */
 .no-flexbox .main-content, .no-flexboxlegacy .main-content, .no-flexwrap .main-content {
   width: 100%;
 }
 @media (min-width: 650px) {
-  /* line 53, ../sass/_layout.scss */
+  /* line 54, ../sass/_layout.scss */
   .no-flexbox .main-content, .no-flexboxlegacy .main-content, .no-flexwrap .main-content {
     width: 70%;
     float: right;

@@ -27,12 +27,12 @@
       <header class="section-header">
         <div class="gradient">
         <div class="row">
-          <div class="logo medium-4 small-12 columns">
+          <div class="logo medium-3 small-12 columns">
             <a href="<?php print $front_page; ?>">
               <img src="/<?php print drupal_get_path("theme", "grimalt_theme") . '/logo.svg'?>" alt="<?php print $site_name; ?>">
             </a>
           </div>
-          <div class="header-right medium-8 columns show-for-medium-up">
+          <div class="header-right medium-9 columns show-for-medium-up">
             <?php if($page['header']): ?>
             <div class="header-right-content">
               <?php print render($page['header']); ?>

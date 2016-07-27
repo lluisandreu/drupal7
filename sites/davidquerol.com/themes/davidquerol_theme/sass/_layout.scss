@@ -7,6 +7,7 @@
     min-height: 100%;
     max-width: 1160px;
     padding: 20px;
+    margin: auto;
 
     @include tablet {
         flex-wrap: nowrap;
