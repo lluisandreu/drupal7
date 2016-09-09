@@ -58,6 +58,12 @@
     }
 }
 
+.not-front .section-header {
+    @media #{$medium-up} {
+        background-position: center 240px;
+    }
+}
+
 .header-slidehow {
     position: absolute;
     width: 100%;

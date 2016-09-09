@@ -9588,7 +9588,14 @@ table {
   margin-bottom: 0;
 }
 
-/* line 61, ../scss/layout/_header.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 61, ../scss/layout/_header.scss */
+  .not-front .section-header {
+    background-position: center 240px;
+  }
+}
+
+/* line 67, ../scss/layout/_header.scss */
 .header-slidehow {
   position: absolute;
   width: 100%;
@@ -9596,7 +9603,7 @@ table {
   top: 0;
   z-index: 1;
 }
-/* line 68, ../scss/layout/_header.scss */
+/* line 74, ../scss/layout/_header.scss */
 .header-slidehow .header-text-wrapper {
   position: absolute;
   top: 35%;
@@ -9605,12 +9612,12 @@ table {
   text-align: center;
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 68, ../scss/layout/_header.scss */
+  /* line 74, ../scss/layout/_header.scss */
   .header-slidehow .header-text-wrapper {
     top: 30%;
   }
 }
-/* line 80, ../scss/layout/_header.scss */
+/* line 86, ../scss/layout/_header.scss */
 .header-slidehow .header-text-block {
   margin: 2rem auto;
   background: #EA3D53;
@@ -9620,12 +9627,12 @@ table {
   padding: 2rem;
 }
 @media only screen and (max-width: 40em) {
-  /* line 80, ../scss/layout/_header.scss */
+  /* line 86, ../scss/layout/_header.scss */
   .header-slidehow .header-text-block {
     display: none;
   }
 }
-/* line 92, ../scss/layout/_header.scss */
+/* line 98, ../scss/layout/_header.scss */
 .header-slidehow .header-text-block h2 {
   font-size: 2rem;
   color: #FFFFFF;
@@ -9633,11 +9640,11 @@ table {
   line-height: 3rem;
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 80, ../scss/layout/_header.scss */
+  /* line 86, ../scss/layout/_header.scss */
   .header-slidehow .header-text-block {
     padding: 1.5rem;
   }
-  /* line 102, ../scss/layout/_header.scss */
+  /* line 108, ../scss/layout/_header.scss */
   .header-slidehow .header-text-block h2 {
     font-size: 1.5625rem;
     line-height: 2rem;

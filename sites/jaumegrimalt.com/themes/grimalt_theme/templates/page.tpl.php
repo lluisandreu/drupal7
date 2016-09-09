@@ -48,7 +48,7 @@
           </div>
         </nav>
         </div>
-        <?php if($page['header_slideshow']): ?>
+        <?php if($page['header_slideshow'] && $is_front): ?>
           <div class="header-slidehow hide-for-small-only">
               <?php print render($page['header_slideshow']); ?>
           </div>
