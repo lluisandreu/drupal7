@@ -1,0 +1,83 @@
+.main-section {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 100%;
+    max-width: 1160px;
+    padding: 20px;
+    margin: auto;
+
+    @include tablet {
+        flex-wrap: nowrap;
+        padding: 40px;
+    }
+}
+
+.main-aside {
+    width: 100%;
+    margin-top: 20px;
+
+    @include tablet {
+        margin-top: 40px;
+        width: 25%;
+        max-width: 400px;
+        padding-right: 20px;
+        margin-left: 40px;
+    }
+}
+
+.main-content {
+    width: 100%;
+
+    @include tablet {
+        width: 70%;
+    }
+}
+
+// Book display
+
+.book-display {
+    margin-bottom: 1rem;
+    display: block;
+
+    .book-display-cover {
+        padding-right: 1rem;
+        width: 120px;
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .book-display-information.with-cover {
+        display: table-cell;
+        vertical-align: top;
+    }
+}
+
+// Old shitty browsers
+
+.no-flexbox, .no-flexboxlegacy, .no-flexwrap {
+    .main-section {}
+
+    .main-aside {
+        width: 100%;
+
+        @include tablet {
+            width: 30%;
+            max-width: 400px;
+            float: left;
+        }
+    }
+
+    .main-content {
+        width: 100%;
+
+        @include tablet {
+            width: 70%;
+            float: right;
+        }
+    }
+}
+
+// Nodes

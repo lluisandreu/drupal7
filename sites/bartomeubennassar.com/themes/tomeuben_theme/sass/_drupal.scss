@@ -1,0 +1,63 @@
+// Messages
+div.messages {
+    border: none;
+    color: $white;
+    background-image: none;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+div.status {
+    background: #64D06E;
+}
+
+div.info {
+    background: #FFFEBB;
+    color: $black;
+}
+
+div.error {
+    background: #FF7474;
+    color: $black;
+}
+
+// Tabs
+
+#tabs {
+    ul {
+        margin: 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    li {
+        font-size: 1.5rem;
+        padding: 6px;
+        border: 1px solid #ccc;
+        background: #eee;
+        display: inline-block;
+        z-index: 100;
+        position: relative;
+        margin-bottom: -1px;
+
+        &:hover {
+            background: #ccc;
+        }
+
+        &.active {
+            background: #fff;
+            border-bottom: 1px solid #fff;
+        }
+    }
+
+    li a {
+        color: #666;
+        padding: 6px;
+        background: none;
+    }
+}
+
+// Forms
+
+form .form-item {
+    margin: 10px 0;
+}

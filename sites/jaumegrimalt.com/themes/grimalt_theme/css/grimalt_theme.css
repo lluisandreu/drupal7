@@ -7001,8 +7001,8 @@ table tr td {
 }
 /* line 112, ../../zurb_foundation/scss/foundation/components/_top-bar.scss */
 meta.foundation-mq-topbar {
-  font-family: "/only screen and (min-width:40.063em)/";
-  width: 40.063em;
+  font-family: "/only screen and (min-width:720px)/";
+  width: 720px;
 }
 
 /* Wrapped around .top-bar to contain to grid width */
@@ -7487,7 +7487,7 @@ meta.foundation-mq-topbar {
   display: block;
 }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 720px) {
   /* line 455, ../../zurb_foundation/scss/foundation/components/_top-bar.scss */
   .top-bar {
     background: #333333;
@@ -9527,50 +9527,121 @@ table {
   padding-bottom: 30px !important;
 }
 
-/* line 3, ../scss/layout/_header.scss */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 3, ../scss/layout/_header.scss */
+  .front .section-header {
+    height: 350px;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 3, ../scss/layout/_header.scss */
+  .front .section-header {
+    height: 500px;
+  }
+}
+
+/* line 13, ../scss/layout/_header.scss */
 .section-header {
   background-image: url("../images/header_bg.jpg");
   background-position: center center;
   background-size: cover;
-}
-/* line 8, ../scss/layout/_header.scss */
-.section-header .gradient {
-  padding: 1.5rem 0;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,7db9e8+96&1+0,0.01+58,0.01+100 */
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(76, 112, 140, 0.01) 58%, rgba(125, 185, 232, 0.01) 96%, rgba(125, 185, 232, 0.01) 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(76, 112, 140, 0.01) 58%, rgba(125, 185, 232, 0.01) 96%, rgba(125, 185, 232, 0.01) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(76, 112, 140, 0.01) 58%, rgba(125, 185, 232, 0.01) 96%, rgba(125, 185, 232, 0.01) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#037db9e8',GradientType=0 );
-  /* IE6-9 */
-}
-@media only screen and (max-width: 40em) {
-  /* line 14, ../scss/layout/_header.scss */
-  .section-header .logo {
-    text-align: center;
-  }
+  overflow: hidden;
+  position: relative;
 }
 /* line 20, ../scss/layout/_header.scss */
+.section-header .gradient {
+  z-index: 10;
+  padding: 1.5rem 0 0rem 0;
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+/* line 30, ../scss/layout/_header.scss */
+.section-header .logo {
+  z-index: 10;
+}
+@media only screen and (max-width: 40em) {
+  /* line 30, ../scss/layout/_header.scss */
+  .section-header .logo {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+}
+/* line 39, ../scss/layout/_header.scss */
 .section-header .header-right {
   text-align: right;
+  z-index: 10;
 }
-/* line 23, ../scss/layout/_header.scss */
+/* line 43, ../scss/layout/_header.scss */
 .section-header .header-right .block-menu {
   clear: both;
 }
-/* line 27, ../scss/layout/_header.scss */
+/* line 47, ../scss/layout/_header.scss */
 .section-header .header-right .block:first-child {
   margin-left: 10px;
 }
-/* line 31, ../scss/layout/_header.scss */
+/* line 51, ../scss/layout/_header.scss */
 .section-header .header-right .block:first-child, .section-header .header-right .block:nth-child(2) {
   float: right;
 }
-/* line 35, ../scss/layout/_header.scss */
+/* line 55, ../scss/layout/_header.scss */
 .section-header .header-right button {
   margin-bottom: 0;
+}
+
+/* line 61, ../scss/layout/_header.scss */
+.header-slidehow {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+/* line 68, ../scss/layout/_header.scss */
+.header-slidehow .header-text-wrapper {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 68, ../scss/layout/_header.scss */
+  .header-slidehow .header-text-wrapper {
+    top: 30%;
+  }
+}
+/* line 80, ../scss/layout/_header.scss */
+.header-slidehow .header-text-block {
+  margin: 2rem auto;
+  background: #EA3D53;
+  max-width: 600px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2rem;
+}
+@media only screen and (max-width: 40em) {
+  /* line 80, ../scss/layout/_header.scss */
+  .header-slidehow .header-text-block {
+    display: none;
+  }
+}
+/* line 92, ../scss/layout/_header.scss */
+.header-slidehow .header-text-block h2 {
+  font-size: 2rem;
+  color: #FFFFFF;
+  font-weight: 300;
+  line-height: 3rem;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 80, ../scss/layout/_header.scss */
+  .header-slidehow .header-text-block {
+    padding: 1.5rem;
+  }
+  /* line 102, ../scss/layout/_header.scss */
+  .header-slidehow .header-text-block h2 {
+    font-size: 1.5625rem;
+    line-height: 2rem;
+  }
 }
 
 /* line 3, ../scss/layout/_main.scss */
@@ -9615,32 +9686,6 @@ table {
 /* line 3, ../scss/modules/_block.scss */
 .block-block-1 h2 {
   color: #EA3D53;
-}
-
-/* line 8, ../scss/modules/_block.scss */
-.block-block-2 {
-  margin: 2rem auto;
-  background: #EA3D53;
-  max-width: 600px;
-  text-transform: uppercase;
-  text-align: center;
-}
-@media only screen and (max-width: 40em) {
-  /* line 8, ../scss/modules/_block.scss */
-  .block-block-2 {
-    display: none;
-  }
-}
-/* line 19, ../scss/modules/_block.scss */
-.block-block-2 .block-inner {
-  padding: 2rem;
-}
-/* line 22, ../scss/modules/_block.scss */
-.block-block-2 .block-inner h2 {
-  font-size: 2rem;
-  color: #FFFFFF;
-  font-weight: 300;
-  line-height: 3rem;
 }
 
 /* line 2, ../scss/modules/_menu_block.scss */
@@ -9720,4 +9765,37 @@ table {
 .node-type-producto .pane-node-field-product-price {
   font-size: 1.375rem;
   margin: 10px 0;
+}
+
+/* line 2, ../scss/modules/_owl.scss */
+.owl-carousel-header .owl-stage-outer, .owl-carousel-header .owl-item {
+  max-height: 600px;
+}
+/* line 6, ../scss/modules/_owl.scss */
+.owl-carousel-header .owl-dots {
+  position: absolute;
+  top: 85%;
+  width: 100%;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 6, ../scss/modules/_owl.scss */
+  .owl-carousel-header .owl-dots {
+    display: none;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 6, ../scss/modules/_owl.scss */
+  .owl-carousel-header .owl-dots {
+    top: 70%;
+  }
+}
+/* line 20, ../scss/modules/_owl.scss */
+.owl-carousel-header .owl-dots .owl-dot span {
+  background: #FFFFFF;
+  width: 15px;
+  height: 15px;
+}
+/* line 30, ../scss/modules/_owl.scss */
+.owl-carousel-header .owl-dots .owl-dot.active span, .owl-carousel-header .owl-dots .owl-dot:hover span {
+  background: #EA3D53;
 }

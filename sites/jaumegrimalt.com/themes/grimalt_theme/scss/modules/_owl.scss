@@ -1,0 +1,36 @@
+.owl-carousel-header {
+    .owl-stage-outer, .owl-item {
+        max-height: 600px;
+    }
+
+    .owl-dots {
+        @media #{$medium-only} {
+            display: none;
+        }
+
+        position: absolute;
+        top: 85%;
+        width: 100%;
+
+        @media #{$large-up} {
+            top: 70%;
+        }
+
+        .owl-dot {
+            span {
+                background: $white;
+                width: 15px;
+                height: 15px;
+
+                //border: 1px solid $primary-color;
+           
+            }
+
+            &.active, &:hover {
+                span {
+                    background: $primary-color;
+                }
+            }
+        }
+    }
+}

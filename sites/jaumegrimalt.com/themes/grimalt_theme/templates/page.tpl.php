@@ -27,12 +27,12 @@
       <header class="section-header">
         <div class="gradient">
         <div class="row">
-          <div class="logo medium-3 small-12 columns">
+          <div class="logo medium-6 small-12 columns">
             <a href="<?php print $front_page; ?>">
               <img src="/<?php print drupal_get_path("theme", "grimalt_theme") . '/logo.svg'?>" alt="<?php print $site_name; ?>">
             </a>
           </div>
-          <div class="header-right medium-9 columns show-for-medium-up">
+          <div class="header-right medium-6 columns show-for-medium-up">
             <?php if($page['header']): ?>
             <div class="header-right-content">
               <?php print render($page['header']); ?>
@@ -40,14 +40,19 @@
             <?php endif; ?>
           </div>
         </div>
-        <?php if($page['header_banner']): ?>
-        <div class="row header-notice">
-          <div class="column">
-            <?php print render($page['header_banner']); ?>
+        <nav class="main-navigation show-for-medium-up">
+          <div class="row">
+            <div class="column">
+              <?php print render($page['nav']); ?>
+            </div>
           </div>
+        </nav>
         </div>
+        <?php if($page['header_slideshow']): ?>
+          <div class="header-slidehow hide-for-small-only">
+              <?php print render($page['header_slideshow']); ?>
+          </div>
         <?php endif; ?>
-        </div>
       </header>
       <?php if($page['search']): ?>
       <section class="section-search">

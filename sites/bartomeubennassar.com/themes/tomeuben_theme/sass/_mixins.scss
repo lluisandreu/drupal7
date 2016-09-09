@@ -1,0 +1,13 @@
+// Breakpoints Mixin
+
+@mixin tablet {
+    @media (min-width: #{$bp_phablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$bp_desktop}) {
+        @content;
+    }
+}

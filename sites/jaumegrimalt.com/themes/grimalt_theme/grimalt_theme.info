@@ -27,13 +27,21 @@ base theme = zurb_foundation
 ; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
 
 ; For CSS users, load the STARTER.css file:
-stylesheets[all][] = css/grimalt_theme.css
-stylesheets[all][] = css/foundation-icons.css 
+
 
 ; Block loading of foundation.min.css from the base theme. This file should either
 ; not exist or be blank in your subtheme. See https://drupal.org/node/263967
 stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/foundation.min.css
+
+stylesheets[all][] = vendor/owl.carousel/assets/owl.carousel.min.css
+stylesheets[all][] = vendor/owl.carousel/assets/owl.theme.default.min.css
+stylesheets[all][] = css/grimalt_theme.css
+stylesheets[all][] = css/foundation-icons.css 
+
+; Vendor Scripts
+
+scripts[] = vendor/owl.carousel/owl.carousel.min.js
 
 ; Foundation JavaScript.
 
@@ -47,6 +55,7 @@ scripts[] = js/foundation.min.js
 ; Theme scripts (minified).
 ; Grunt will compress any custom theme scripts matching the _*.js naming convention
 ; into app.min.js.
+
 scripts[] = js/app.min.js
 
 ; This section lists the regions defined in the page.tpl.php. The name in
@@ -61,7 +70,8 @@ scripts[] = js/app.min.js
 ;   <?php print render($page['header']); ?>
 
 regions[header]              = Header right
-regions[header_banner]       = Header banner
+regions[nav] 				 = Navigation 
+regions[header_slideshow]    = Header slideshow
 regions[search]            	 = Search
 regions[content]             = Content
 regions[footer_first]  = Footer one
