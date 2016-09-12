@@ -15,7 +15,6 @@ body {
     font-weight: $font_light;
     line-height: $font_line_height;
     color: $font_base_color;
-    background-color: #f9f9f9;
 }
 
 body, html {
@@ -95,6 +94,7 @@ p {
 
 small {
     font-family: $font_sanserif;
+    font-size: $p_size * 0.7;
 }
 
 strong {
@@ -156,8 +156,8 @@ strong {
     }
 
     .menu a {
-        &:hover {
-            text-decoration: underline;
+        &:hover, &.active {
+            font-weight: bolder;
         }
     }
 
@@ -289,6 +289,14 @@ nav.nav-collapse.opened {
 }
 
 /// Project display
+
+/// Blocks
+
+#block-block-1 {
+    p {
+        margin-bottom: 0;
+    }
+}
 
 /// Views
 
