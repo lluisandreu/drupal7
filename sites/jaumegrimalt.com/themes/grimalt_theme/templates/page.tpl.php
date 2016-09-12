@@ -91,12 +91,12 @@
       <footer class="section-footer">
         <div class="row">
           <?php if($page['footer_first']): ?>
-            <div class="footer-first large-4 columns">
+            <div class="footer-first medium-4 columns">
               <?php print render($page['footer_first']); ?>
             </div>
           <?php endif; ?>
           <?php if($page['footer_second']): ?>
-            <div class="footer-last large-8 columns">
+            <div class="footer-last medium-8 columns">
               <?php print render($page['footer_second']); ?>
             </div>
           <?php endif; ?>
