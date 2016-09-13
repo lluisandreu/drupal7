@@ -76,7 +76,7 @@
 <section class="main-section clearfix">
   <aside class="main-aside">
     <div class="site-name">
-      <a href="<?php print $front_page; ?>">Bartomeu <br> Bennàssar</a>
+      <a href="<?php print $front_page; ?>">Bartomeu <br> Bennàssar <br> Vicens</a>
     </div>
     <nav class="main-nav nav-collapse">
       <?php print render($page['nav']); ?>

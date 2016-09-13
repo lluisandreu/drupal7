@@ -22,7 +22,7 @@ body, html {
 }
 
 h1, h2, h3 {
-    font-family: $font_sanserif;
+    font-family: $font_serif;
 }
 
 h1 {
@@ -131,11 +131,12 @@ strong {
 
     .site-name {
         padding: 5px 0 5px 0;
-        font-size: $h2_size;
+        font-size: 2rem;
         line-height: 1;
+        font-family: $font_sanserif;
 
         @include tablet {
-            font-size: 3.6rem;
+            font-size: 3rem;
         }
 
 
