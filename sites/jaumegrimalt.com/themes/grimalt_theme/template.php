@@ -9,14 +9,15 @@ function STARTER_preprocess_html(&$variables) {
 /**
  * Implements template_preprocess_page.
  */
-function STARTER_preprocess_page(&$variables) {
+function grimalt_theme_preprocess_page(&$variables) {
+	$variables['show_tabs'] = TRUE;
+	if(isset($variables['node'])) {
+		if(!$variables['logged_in']) {
+			$variables['show_tabs'] = FALSE;
+		}
+	}
 }
 
-/**
- * Implements template_preprocess_node.
- */
-function STARTER_preprocess_node(&$variables) {
-}
 
 function grimalt_theme_form_alter(&$form, &$form_state, $form_id) {
 	switch ($form_id) {

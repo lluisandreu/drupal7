@@ -9527,6 +9527,10 @@ table {
   padding-bottom: 30px !important;
 }
 
+/* line 3, ../scss/layout/_header.scss */
+.front .section-header {
+  overflow: hidden;
+}
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   /* line 3, ../scss/layout/_header.scss */
   .front .section-header {
@@ -9540,62 +9544,61 @@ table {
   }
 }
 
-/* line 13, ../scss/layout/_header.scss */
+/* line 15, ../scss/layout/_header.scss */
 .section-header {
   background-image: url("../images/header_bg.jpg");
   background-position: center center;
   background-size: cover;
-  overflow: hidden;
   position: relative;
 }
-/* line 20, ../scss/layout/_header.scss */
+/* line 21, ../scss/layout/_header.scss */
 .section-header .gradient {
   z-index: 10;
   padding: 1.5rem 0 0rem 0;
   background: rgba(0, 0, 0, 0.2);
   position: relative;
 }
-/* line 30, ../scss/layout/_header.scss */
+/* line 31, ../scss/layout/_header.scss */
 .section-header .logo {
   z-index: 10;
 }
 @media only screen and (max-width: 40em) {
-  /* line 30, ../scss/layout/_header.scss */
+  /* line 31, ../scss/layout/_header.scss */
   .section-header .logo {
     text-align: center;
     padding-bottom: 1rem;
   }
 }
-/* line 39, ../scss/layout/_header.scss */
+/* line 40, ../scss/layout/_header.scss */
 .section-header .header-right {
   text-align: right;
   z-index: 10;
 }
-/* line 43, ../scss/layout/_header.scss */
+/* line 44, ../scss/layout/_header.scss */
 .section-header .header-right .block-menu {
   clear: both;
 }
-/* line 47, ../scss/layout/_header.scss */
+/* line 48, ../scss/layout/_header.scss */
 .section-header .header-right .block:first-child {
   margin-left: 10px;
 }
-/* line 51, ../scss/layout/_header.scss */
+/* line 52, ../scss/layout/_header.scss */
 .section-header .header-right .block:first-child, .section-header .header-right .block:nth-child(2) {
   float: right;
 }
-/* line 55, ../scss/layout/_header.scss */
+/* line 56, ../scss/layout/_header.scss */
 .section-header .header-right button {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width: 40.063em) {
-  /* line 61, ../scss/layout/_header.scss */
+  /* line 62, ../scss/layout/_header.scss */
   .not-front .section-header {
     background-position: center 240px;
   }
 }
 
-/* line 67, ../scss/layout/_header.scss */
+/* line 68, ../scss/layout/_header.scss */
 .header-slidehow {
   position: absolute;
   width: 100%;
@@ -9603,7 +9606,7 @@ table {
   top: 0;
   z-index: 1;
 }
-/* line 74, ../scss/layout/_header.scss */
+/* line 75, ../scss/layout/_header.scss */
 .header-slidehow .header-text-wrapper {
   position: absolute;
   top: 35%;
@@ -9612,12 +9615,12 @@ table {
   text-align: center;
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 74, ../scss/layout/_header.scss */
+  /* line 75, ../scss/layout/_header.scss */
   .header-slidehow .header-text-wrapper {
     top: 30%;
   }
 }
-/* line 86, ../scss/layout/_header.scss */
+/* line 87, ../scss/layout/_header.scss */
 .header-slidehow .header-text-block {
   margin: 2rem auto;
   background: #EA3D53;
@@ -9627,12 +9630,12 @@ table {
   padding: 2rem;
 }
 @media only screen and (max-width: 40em) {
-  /* line 86, ../scss/layout/_header.scss */
+  /* line 87, ../scss/layout/_header.scss */
   .header-slidehow .header-text-block {
     display: none;
   }
 }
-/* line 98, ../scss/layout/_header.scss */
+/* line 99, ../scss/layout/_header.scss */
 .header-slidehow .header-text-block h2 {
   font-size: 2rem;
   color: #FFFFFF;
@@ -9640,11 +9643,11 @@ table {
   line-height: 3rem;
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 86, ../scss/layout/_header.scss */
+  /* line 87, ../scss/layout/_header.scss */
   .header-slidehow .header-text-block {
     padding: 1.5rem;
   }
-  /* line 108, ../scss/layout/_header.scss */
+  /* line 109, ../scss/layout/_header.scss */
   .header-slidehow .header-text-block h2 {
     font-size: 1.5625rem;
     line-height: 2rem;
