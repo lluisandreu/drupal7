@@ -9696,7 +9696,7 @@ table {
 }
 
 /* line 8, ../scss/modules/_block.scss */
-.block-block-7 {
+.block-block-6 {
   position: absolute;
   z-index: 10;
   right: 20px;
@@ -9705,7 +9705,7 @@ table {
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   /* line 8, ../scss/modules/_block.scss */
-  .block-block-7 {
+  .block-block-6 {
     display: none;
   }
 }
