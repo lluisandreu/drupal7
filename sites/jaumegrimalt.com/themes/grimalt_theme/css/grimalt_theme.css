@@ -9695,6 +9695,21 @@ table {
   color: #EA3D53;
 }
 
+/* line 8, ../scss/modules/_block.scss */
+.block-block-7 {
+  position: absolute;
+  z-index: 10;
+  right: 20px;
+  top: 160px;
+  opacity: .9;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 8, ../scss/modules/_block.scss */
+  .block-block-7 {
+    display: none;
+  }
+}
+
 /* line 2, ../scss/modules/_menu_block.scss */
 .block-system-main-menu ul.menu {
   float: right;

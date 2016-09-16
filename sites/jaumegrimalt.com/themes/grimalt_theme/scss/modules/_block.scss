@@ -4,3 +4,15 @@
         color: $primary-color;
     }
 }
+
+.block-block-7 {
+    position: absolute;
+    z-index: 10;
+    right: 20px;
+    top: 160px;
+    opacity: .9;
+
+    @media #{$medium-only} {
+        display: none;
+    }
+}
