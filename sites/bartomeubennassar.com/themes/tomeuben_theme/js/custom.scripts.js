@@ -16,55 +16,6 @@
             close: function () {} // Function: Close callback
         });
 
-        $('.project-media-colorbox img').each(function (index, el) {
-            $(this).colorbox({
-                rel: 'gal',
-                href: function () {
-                    var url = $(this).attr('src');
-                    return url;
-                },
-                title: function () {
-                    return $(this).attr('title');
-                },
-                current: "image {current} of {total}"
-            });
-        });
-
-        var $carr = $('.project-media-slideshow .field-items');
-        $carr.on('init', function (event, slick) {
-            var counter = $('<div class="slick-counter" />');
-            counter.text("1/" + slick.slideCount);
-            $carr.append(counter);
-            console.log(slick);
-        });
-
-        $carr.slick({
-            infinite: true,
-            arrows: true,
-            //dots: true,
-            adaptiveHeight: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-        });
-
-
-        $carr.on('afterChange', function (event, slick, currentSlide) {
-            $(this).find('.slick-counter').text((currentSlide + 1) + '/' + slick.slideCount);
-
-        });
-
-        /// Accordion menu
-
-        var menu = $('#block-menu-block-1');
-        menu.find('.nolink').on('click', function (event) {
-            event.preventDefault();
-            $(this).closest('li').toggleClass('collapsed');
-        });
-        menu.find('.menu-block-1>ul>li>a').on('click', function (event) {
-            event.preventDefault();
-            $(this).closest('li').toggleClass('collapsed');
-        });
-
         // Open external links in a new tab
         $('a').each(function () {
             var a = new RegExp('/' + window.location.host + '/');
@@ -75,6 +26,24 @@
                     window.open(this.href, '_blank');
                 });
             }
+        });
+
+        $('.language-selector a').on('click', function(event) {
+           event.preventDefault();
+           $('.language-selector a').removeClass('active');
+           if($(this).hasClass('cat')) {
+            $(this).addClass('active');
+            $('.field-name-body').show();
+            $('.field-name-field-body-es, .field-name-field-body-en').hide();
+           } else if($(this).hasClass('es')) {
+            $(this).addClass('active');
+            $('.field-name-field-body-es').show();
+            $('.field-name-body, .field-name-field-body-en').hide();
+           } else if($(this).hasClass('en')) {
+            $(this).addClass('active');
+            $('.field-name-field-body-en').show();
+            $('.field-name-field-body-es, .field-name-body').hide();
+           }
         });
 
     });

@@ -3,6 +3,10 @@
 a {
     color: $color_secondary;
     text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 html {
@@ -157,8 +161,12 @@ strong {
     }
 
     .menu a {
-        &:hover, &.active {
+        &.active {
             font-weight: bolder;
+        }
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 
@@ -289,6 +297,10 @@ nav.nav-collapse.opened {
     margin-bottom: 3rem;
 }
 
+.field-name-field-body-es, .field-name-field-body-en {
+    display: none;
+}
+
 /// Project display
 
 /// Blocks
@@ -296,6 +308,19 @@ nav.nav-collapse.opened {
 #block-block-1 {
     p {
         margin-bottom: 0;
+    }
+}
+
+.language-selector {
+    padding-bottom: 1rem;
+
+    a {
+        margin-right: 5px;
+        font-size: 1.4rem;
+
+        &.active {
+            color: $font_base_color;
+        }
     }
 }
 
