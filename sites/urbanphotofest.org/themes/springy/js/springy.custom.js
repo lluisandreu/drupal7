@@ -1,0 +1,69 @@
+(function() {
+
+    function init(){
+        iac();
+        filesNewTab();
+        svgFallback();
+        oneLinkBreadcrumb();
+    }
+
+    function iac() {
+
+        var container = document.querySelectorAll('.iac-container'),
+            buttons = document.querySelectorAll('.iac');
+
+        if (buttons.length != 0) {
+            for (var i = buttons.length - 1; i >= 0; i--) {
+                buttons[i].style.display = "none";
+            };
+
+            for (var i = container.length - 1; i >= 0; i--) {
+                container[i].onmouseover = function() {
+                    this.querySelectorAll('.iac')[0].style.display = "block";
+                    if(this.querySelectorAll('.iac')[1]) {
+                        this.querySelectorAll('.iac')[1].style.display = "block";
+                    }
+                }
+                container[i].onmouseout = function() {
+                    this.querySelectorAll('.iac')[0].style.display = "none";
+                    if(this.querySelectorAll('.iac')[1]) {
+                        this.querySelectorAll('.iac')[1].style.display = "none";
+                    }
+                }
+            };
+        }
+    }
+
+    function filesNewTab() {
+        var link = document.getElementsByClassName('.field-type-file');
+        for (var i = link.length - 1; i >= 0; i--) {
+            var a = link[i].getElementsByTagName('a');
+            a[0].setAttribute('target', '_blank');
+        };
+    }
+
+    function svgFallback() {
+        if (!Modernizr.svg) {
+            var imgs = document.getElementsByTagName('img');
+            var svgExtension = /.*\.svg$/
+            var l = imgs.length;
+            for (var i = 0; i < l; i++) {
+                if (imgs[i].src.match(svgExtension)) {
+                    imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
+                }
+            }
+        }
+    }
+
+    function oneLinkBreadcrumb() {
+        var breadcrumb = document.querySelector('.breadcrumb');
+        if(breadcrumb) {
+            var noLinks = breadcrumb.childNodes.length;
+        }
+        if(breadcrumb && noLinks && noLinks <= 1) {
+            breadcrumb.style.display = "none";
+        }
+        
+    }
+    init();
+})();

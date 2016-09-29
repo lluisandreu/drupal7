@@ -1,0 +1,30 @@
+// Common abstract classes to extend or parametrics are stored here.
+
+// Example parametrics.
+// ------------------------------------------------------
+// %font-FONTNAME   {}
+// %font-sans-serif { font-family: sans-serif; }
+// %font-serif      { font-family: serif; }
+
+.caption {
+    font-size: rem-calc(14);
+    text-align: right;
+    padding: .4rem 0;
+    color: $steel;
+}
+
+.not-front h1 {
+    border-left: 8px solid $green;
+    margin: 1.5rem 0;
+    padding: 0 0 0 1rem;
+    line-height: 1.2;
+}
+
+.read-more {
+    color: $green;
+    font-size: rem-calc(14);
+
+    &:hover {
+        color: darken($green, 15%);
+    }
+}
