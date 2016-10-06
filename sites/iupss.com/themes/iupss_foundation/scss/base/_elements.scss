@@ -10,9 +10,17 @@
 // h1, h2, h3,
 // h4, h5, h6 {}
 
+h2 {
+}
+
 // Anchors
 //-----------------------------------------------------------------------------
 // a {}
+
+a[name] {
+	color: initial;
+	cursor: initial;
+}
 
 // a:focus {}
 
@@ -56,6 +64,21 @@
 // }
 
 // select {}
+
+// Blockquote
+
+blockquote {
+	border: none;
+	padding-left: 2rem;
+    &:before {
+        font-family: FontAwesome; 
+        content: "";
+        position: absolute;
+	    left: 0;
+	    font-size: 20px;
+	    color: #ccc;
+    }
+}
 
 // time
 

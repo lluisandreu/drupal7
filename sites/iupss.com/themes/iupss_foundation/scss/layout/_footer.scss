@@ -1,1 +1,12 @@
 // Non-modular or client styles for .l-footer region.
+
+#footer {
+    padding: 3.5rem 0;
+    background: #EFEFEF;
+
+    .footer-logos {
+        img {
+            margin-left: 1rem;
+        }
+    }
+}

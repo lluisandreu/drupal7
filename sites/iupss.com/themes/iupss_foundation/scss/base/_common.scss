@@ -11,6 +11,7 @@
     text-align: right;
     padding: .4rem 0;
     color: $steel;
+    font-family: $font-family-serif;
 }
 
 .not-front h1 {
@@ -25,6 +26,24 @@
     font-size: rem-calc(14);
 
     &:hover {
-        color: darken($green, 15%);
+        color: darken($green, 15%); 
     }
 }
+
+// Lists
+.field-content {
+
+ul {
+	margin-left: 0; 
+}
+
+li {
+	padding-left: 1rem;
+	list-style: none; 
+	text-indent: -.7rem;
+	&:before {
+		content: '•';
+		color: $green;
+		margin-right: .5rem;
+	}
+}}

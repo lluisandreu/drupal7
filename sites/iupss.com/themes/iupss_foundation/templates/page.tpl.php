@@ -44,11 +44,22 @@
 					</aside>
 					<?php endif; ?>
 				</div>
+				<?php if(isset($page['bottom'])): ?>
+					<div class="row main-bottom">
+						<div class="column">
+							<?php print render($page['bottom']); ?>
+						</div>
+					</div>
+				<?php endif; ?>
 			</main>
-			<footer>
+			<footer id="footer">
 				<div class="row">
-					<div class="footer-left large-6 columns"></div>
-					<div class="footer-right large-6 columns"></div>
+					<div class="footer-left large-6 columns">
+						<?php print render($page['footer_firstcolumn']); ?>
+					</div>
+					<div class="footer-right large-6 columns">
+						<?php print render($page['footer_secondcolumn']); ?>
+					</div>
 				</div>
 			</footer>
 		</section>

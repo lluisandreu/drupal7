@@ -60,6 +60,7 @@ scripts[] = js/app.min.js
 ;   <?php print render($page['header']); ?>
 
 regions[content]             = Content
+regions[bottom] 			 = Bottom Content 
 regions[sidebar]       		 = Sidebar
 regions[footer_firstcolumn]  = Footer one
 regions[footer_secondcolumn] = Footer two

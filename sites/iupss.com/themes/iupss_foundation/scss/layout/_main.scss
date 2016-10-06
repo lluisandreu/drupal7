@@ -2,4 +2,20 @@
 
 #main {
     padding: 2.5rem 0;
+
+    .body, .main-aside {
+        h2, h3 {
+            color: $green;
+
+            a {
+                color: $green;
+            }
+        }
+    }
+
+    .main-aside {
+        p, li, div {
+            color: $monsoon;
+        }
+    }
 }
