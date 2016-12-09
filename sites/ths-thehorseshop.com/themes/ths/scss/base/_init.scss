@@ -98,7 +98,7 @@ $column-gutter: rem-calc(30);
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-$font-family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
@@ -1441,12 +1441,12 @@ $topbar-link-color-hover: $oil;
 // $topbar-link-color-active: $white;
 // $topbar-link-color-active-hover: $white;
 // $topbar-link-weight: $font-weight-normal;
-$topbar-link-font-size: rem-calc(16);
+$topbar-link-font-size: rem-calc(14);
 
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
-$topbar-link-bg-color-hover: $smoke;
-$topbar-link-bg-hover: $smoke;
+$topbar-link-bg-color-hover: transparent;
+$topbar-link-bg-hover: transparent;
 
 //$topbar-link-bg-active: $oil;
 
@@ -1481,7 +1481,9 @@ $topbar-menu-icon-color: $steel;
 // Transitions and breakpoint styles
 // $topbar-transition-speed: 300ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
-// $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
+$topbar-breakpoint: #{lower-bound($large-range:)};
+
+// Change to 9999px for always mobile layout
 // $topbar-media-query: $medium-up;
 
 // Divider Styles

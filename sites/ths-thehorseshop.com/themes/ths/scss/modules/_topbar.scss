@@ -8,6 +8,13 @@ nav.top-bar {
             }
         }
 
+        @media #{$large-up} {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -100px;
+        }
+
         img {
             max-height: 100%;
         }
@@ -21,8 +28,8 @@ nav.top-bar {
         background: transparent;
     }
 
-    #main-menu a.active {
-        background: $smoke;
+    #main-menu a.active, #main-menu a:hover {
+        text-decoration: underline;
         color: $oil;
     }
 

@@ -10,7 +10,8 @@
         <div class="<?php print $top_bar_classes; ?>">
       <?php endif; ?>
       <nav class="top-bar" data-topbar <?php print $top_bar_options; ?>>
-        <ul class="title-area"><li class="name">
+        <ul class="title-area">
+          <li class="name">
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
             <img src="/<?php print drupal_get_path('theme', 'ths'); ?>/logo.svg" alt="<?php print t('Home'); ?>" />
           </a></li>
@@ -22,11 +23,12 @@
             <?php print $top_bar_main_menu; ?>
           <?php endif; ?>
         </section>
-        <?php if (!empty($page['cart'])): ?>
         <section class="top-bar-section cart right">
+          <ul>
+            <li><a href="#">Contacto</a></li>
+          </ul>
           <?php print render($page['cart']); ?>
         </section>
-        <?php endif; ?>
       </nav>
       <?php if ($top_bar_classes): ?>
         </div>
