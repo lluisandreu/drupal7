@@ -58,7 +58,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="news" id="news">
+	<section class="prices" id="prices">
 		<div class="row">
 			<?php print render($page['front_news']); ?>
 		</div>

@@ -360,3 +360,83 @@ section img {
 .text-right {
     text-align: right;
 }
+
+//// Tarifes
+
+#prices {
+    background-image: url("../img/prices_bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+
+    h2, h3, p {
+        color: $white;
+    }
+}
+
+table.price-table {
+    border: none;
+    background: none;
+    opacity: .9;
+    display: table !important;
+    table-layout: fixed;
+    width: 100%;
+
+    @media screen and (min-width: 1024px) {
+        width: 48%;
+        float: left;
+        margin-right: 1%;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    thead {
+        background: none;
+
+        tr {
+            background: none;
+
+            th {
+                background: none;
+                color: $white;
+                text-shadow: -1px 1px 3px #000;
+                border-top: none;
+            }
+        }
+    }
+
+    caption {
+        color: $white;
+        font-family: $asap;
+        font-size: 22px;
+        font-style: italic;
+        text-shadow: -1px 1px 3px #000;
+    }
+
+    th, td {
+        font-size: 14px;
+    }
+
+    th {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    tr {
+        background: $white;
+        color: #333;
+    }
+
+    tr {
+        width: 100%;
+    }
+
+    h5 {
+        font-size: 12px;
+        text-align: center;
+        padding: 1rem .5rem;
+        font-weight: 400;
+    }
+}
