@@ -1,0 +1,13 @@
+// Non-modular or client styles for the .l-content region.
+
+.front {
+    #main {
+        .body {
+            padding-bottom: 20px;
+
+            p, a {
+                font-size: rem-calc(18);
+            }
+        }
+    }
+}

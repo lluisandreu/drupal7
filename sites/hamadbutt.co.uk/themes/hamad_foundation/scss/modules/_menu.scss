@@ -1,0 +1,56 @@
+#main-menu {
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+        text-transform: uppercase;
+        font-size: rem-calc(18);
+    }
+
+    a {
+        color: $primary-color;
+
+        &:hover, &.active {
+            color: lighten($primary-color, 15%);
+        }
+    }
+
+    & > ul {
+        float: right;
+    }
+
+    & > ul > li {
+        display: inline-block;
+        vertical-align: top;
+        padding: rem-calc(15) rem-calc(25);
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    .expanded {
+        & > .menu {
+            position: absolute;
+            top: 50px;
+            max-height: 1px;
+            overflow: hidden;
+            -moz-transition: all .5s ease-in-out .1s;
+            -webkit-transition: all .5s ease-in-out .1s;
+            transition: all .5s ease-in-out .1s;
+
+            li {
+                display: block;
+            }
+        }
+
+        &:hover {
+            & > .menu {
+                max-height: 100%;
+            }
+        }
+    }
+}
