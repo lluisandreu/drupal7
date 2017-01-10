@@ -117,7 +117,8 @@ $ghost: #FAFAFA;
 // $steel       : #666666;
 // $charcoal    : #555555; 
 // $tuatara     : #444444;
-// $oil         : #333333;
+$oil: #333333;
+
 // $jet         : #222222;
 // $black       : #000000;
 
@@ -133,7 +134,8 @@ $primary-color: #11366D;
 // We use these to control various global styles
 $body-bg: $ghost;
 
-// $body-font-color: $jet;
+$body-font-color: $oil;
+
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -224,7 +226,7 @@ $h3-font-size: rem-calc(18);
 // $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-$h1-font-reduction: rem-calc(18) !default;
+$h1-font-reduction: rem-calc(5) !default;
 $h2-font-reduction: rem-calc(16) !default;
 
 // $h3-font-reduction: rem-calc(5) !default;

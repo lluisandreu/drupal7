@@ -11,3 +11,13 @@
         }
     }
 }
+
+.not-front {
+    #main {
+        padding-top: 20px;
+
+        @media #{$large-up} {
+            padding-top: 40px;
+        }
+    }
+}

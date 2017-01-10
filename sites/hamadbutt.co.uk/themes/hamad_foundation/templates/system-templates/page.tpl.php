@@ -29,14 +29,36 @@
   <main id="main">
     <div class="row">
       <?php if(!$is_front): ?>
-        <h1><?php print $title; ?></h1>
+        <div class="column">
+          <h1><?php print $title; ?></h1>
+        </div>
       <?php endif; ?>
-      <?php print $messages; ?>
+      <div class="column">
+        <?php print $messages; ?>  
+      </div>
       <?php if ($tabs): ?>
         <div class="tabs column"><?php print render($tabs); ?></div>
       <?php endif; ?>
       <?php print render($page['content']); ?>
     </div>
   </main>
-  <footer></footer>
+  <footer id="footer">
+    <div class="row">
+      <div class="footer-menu column large-6">
+        <ul class="inline-list">
+          <li>Hamad Butt 2017 &copy;</li>
+          <li><a href="#">Cookies Policy</a></li>
+          <?php if(!$logged_in): ?>
+            <li><a href="<?php print url('user/login'); ?>">Login</li>
+          <?php else: ?>
+            <li><a href="<?php print url('user/logout'); ?>">Logout</li>
+          <?php endif; ?>
+          <li><a href="<?php print url('node/7'); ?>">Contact</a></li>
+        </ul>
+      </div>
+      <div class="large-6 column">
+        <p class="text-right"><small>Site designed and developed by <a target="_blank" href="http://www.lluisandreu.com">lluisandreu.com</a></small></p>
+      </div>
+    </div>
+  </footer>
 </div>

@@ -38,9 +38,9 @@
             top: 50px;
             max-height: 1px;
             overflow: hidden;
-            -moz-transition: all .5s ease-in-out .1s;
-            -webkit-transition: all .5s ease-in-out .1s;
-            transition: all .5s ease-in-out .1s;
+            -moz-transition: all .5s ease-in-out;
+            -webkit-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
 
             li {
                 display: block;
