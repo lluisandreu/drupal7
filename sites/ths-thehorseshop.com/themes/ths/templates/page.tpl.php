@@ -1,41 +1,36 @@
 <!--.page -->
 <div role="document" class="page">
-
   <!--.l-header -->
-  <header role="banner" class="l-header">
-
-    <?php if ($top_bar): ?>
-      <!--.top-bar -->
-      <?php if ($top_bar_classes): ?>
-        <div class="<?php print $top_bar_classes; ?>">
-      <?php endif; ?>
-      <nav class="top-bar" data-topbar <?php print $top_bar_options; ?>>
-        <ul class="title-area">
-          <li class="name">
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-            <img src="/<?php print drupal_get_path('theme', 'ths'); ?>/logo.svg" alt="<?php print t('Home'); ?>" />
-          </a></li>
-          <li class="toggle-topbar menu-icon">
-            <a href="#"><span><?php print $top_bar_menu_text; ?></span></a></li>
-        </ul>
-        <section class="top-bar-section">
-          <?php if ($top_bar_main_menu) : ?>
-            <?php print $top_bar_main_menu; ?>
+  <header id="header" role="banner" class="l-header clearfix">
+    <div class="small-6 large-2 logo-container columns">
+      <?php if ($linked_logo): print $linked_logo; endif; ?>
+    </div>
+    <div class="small-6 columns menu-toggle hide-for-large-up">
+      <a href="#" id="toggle-menu"><i class="fa fa-bars"></i></a>
+    </div>
+    <div class="small-12 large-6 columns no-relative">
+      <div id="main-menu">
+        <?php print render($main_menu); ?>
+      </div>
+    </div>
+    <div class="small-12 large-3 columns no-relative">
+      <div id="shop-menu">
+        <ul>
+          <?php if($cart): ?>
+            <li class="site-cart">
+              <i class="fa fa-shopping-bag"></i> <?php print $cart; ?>
+            </li>
           <?php endif; ?>
-        </section>
-        <section class="top-bar-section cart right">
-          <ul>
-            <li><a href="#">Contacto</a></li>
-          </ul>
-          <?php print render($page['cart']); ?>
-        </section>
-      </nav>
-      <?php if ($top_bar_classes): ?>
-        </div>
-      <?php endif; ?>
-      <!--/.top-bar -->
-    <?php endif; ?>
-
+          <li class="site-search">
+            <a href="<?php print url('busqueda/productos'); ?>"><i class="fa fa-search"></i></a>
+            <div class="search-block">
+              <?php print render($search); ?>
+            </div>
+          </li>
+          <li><a href="<?php print url('node/33'); ?>">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
   </header>
   <!--/.l-header -->
 
@@ -48,21 +43,23 @@
   <?php endif; ?>
 
   <?php if (!empty($page['search'])): ?>
+    <?php if($is_front): ?>
     <!--.l-featured -->
-    <section class="l-search">
-      <div class="row">
-        <div class="columns">
-          <?php print render($page['search']); ?>
+      <section class="l-search">
+        <div class="row">
+          <div class="columns">
+            <?php print render($page['search']); ?>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    <?php endif; ?>
     <!--/.l-featured -->
   <?php endif; ?>
 
   <?php if ($messages && !$zurb_foundation_messages_modal): ?>
     <!--.l-messages -->
-    <section class="l-messages row">
-      <div class="columns">
+    <section class="l-messages">
+      <div class="row">
         <?php if ($messages): print $messages; endif; ?>
       </div>
     </section>

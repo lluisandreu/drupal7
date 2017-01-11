@@ -3,9 +3,17 @@
 section.l-footer-columns {
     padding: 20px 0;
     background: $oil;
-    color: $vapor;
+    color: $iron;
 
-    p, h2, h3, a, li {
-        color: $vapor;
+    p, h2, h3, li {
+        color: $iron;
+    }
+
+    a {
+        color: $white;
+
+        &:hover {
+            color: $iron;
+        }
     }
 }

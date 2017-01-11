@@ -11,12 +11,12 @@
     }
 
     .product-extra {
-        background: $gainsboro;
+        background: $silver;
         padding: $hr-margin 0;
     }
 
     .product-right {
-        background: $gainsboro;
+        background: $silver;
 
         .product-right-inner-padding {
             padding: rem-calc(15 0);
@@ -41,6 +41,8 @@
                 color: $base;
                 font-size: rem-calc(13);
                 padding: rem-calc(3 15 3 15);
+                display: block;
+                line-height: rem-calc(24);
 
                 &:hover {
                     background: $base;
@@ -71,6 +73,13 @@
             input[type=checkbox] {
                 margin: 0 10px 0 0;
             }
+        }
+    }
+
+    .search-body {
+        .pane-views-exp-products-search-api-page-1 .small-centered {
+            float: left;
+            padding: 20px 0;
         }
     }
 }

@@ -10,3 +10,7 @@
     border-bottom: 1px solid $hr-border-color;
     padding-bottom: $hr-margin;
 }
+
+.no-relative {
+    position: inherit;
+}

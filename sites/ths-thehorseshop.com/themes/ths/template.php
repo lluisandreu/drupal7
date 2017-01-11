@@ -5,9 +5,23 @@
  */
 function ths_preprocess_html(&$variables) {
   // Loads Roboto font
-  drupal_add_css("//fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700", array("type" => "external"));
+  drupal_add_css("//fonts.googleapis.com/css?family=Nunito:400,600,700&amp;subset=latin-ext", array("type" => "external"));
   // Loads Font
   drupal_add_css("//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", array("type" => "external"));
+}
+
+function ths_preprocess_page(&$variables) {
+  $menu = menu_tree_output(menu_tree_all_data('main-menu', null, 2));
+  $variables['top_menu'] = $menu;
+  $variables['main_menu'] = $menu;
+
+  /// Render cart
+  $cart = views_embed_view("custom_cart", "block_1");
+  $variables['cart'] = $cart;
+
+  // Search bar
+  $search_form = module_invoke('views', 'block_view', '-exp-products_search_api-page_1');
+  $variables['search'] = $search_form;
 }
 
 /**

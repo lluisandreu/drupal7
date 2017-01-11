@@ -1,12 +1,5 @@
 @import "../../zurb_foundation/scss/foundation/functions";
 
-@font-face {
-    font-family: 'GothamHTF-Book';
-    font-style: normal;
-    font-weight: normal;
-    src: local("../fonts/GothamHTF-Book"), url("../fonts/GothamHTF-Book.woff") format("woff");
-}
-
 // Foundation by ZURB
 // foundation.zurb.com
 // Licensed under MIT Open Source
@@ -98,11 +91,11 @@ $column-gutter: rem-calc(30);
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-$font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-sans-serif: "Nunito", sans-serif;
 
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
-$font-family-headings: "GothamHTF-Book", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-headings: $font-family-sans-serif;
 
 // We use these to define default font weights
 $font-weight-normal: 200 !default;
@@ -124,7 +117,8 @@ $base: #AAAAAA;
 
 $aluminum: #999999;
 
-// $jumbo       : #888888;
+$jumbo: #888888;
+
 // $monsoon     : #777777;
 $steel: #666666;
 $charcoal: #555555;
@@ -146,7 +140,7 @@ $primary-color: $steel;
 
 // We use these to control various global styles
 $body-bg: $silver;
-$body-font-color: $oil;
+$body-font-color: $charcoal;
 
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
@@ -281,7 +275,8 @@ $subheader-font-weight: $font-weight-normal;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
+$anchor-font-color: $jumbo;
+
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
 // We use these to style the <hr> element
@@ -465,7 +460,7 @@ $button-margin-bottom: 0;
 // We use these to control button text styles.
 $button-font-family: $font-family-headings;
 
-// $button-font-color: $white;
+$button-font-color: $silver;
 $button-font-color-alt: $oil;
 
 // $button-font-tny: rem-calc(11);
@@ -483,7 +478,7 @@ $button-font-weight: 100;
 $button-border-width: 0;
 
 // $button-border-style: solid;
-$button-bg-color: $white;
+$button-bg-color: $vapor;
 
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
@@ -1481,7 +1476,7 @@ $topbar-menu-icon-color: $steel;
 // Transitions and breakpoint styles
 // $topbar-transition-speed: 300ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
-$topbar-breakpoint: #{lower-bound($large-range:)};
+//$topbar-breakpoint: #{lower-bound($large-range:)};
 
 // Change to 9999px for always mobile layout
 // $topbar-media-query: $medium-up;
