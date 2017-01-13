@@ -33,3 +33,8 @@ function ths_deploy_update_7030() {
 	  }
 }
 
+function ths_deploy_update_7031() {
+	$modules = array('hs_taxonomy', 'hierarchical_select');
+	module_enable($modules);
+}
+

@@ -27,7 +27,7 @@
               <?php print render($search); ?>
             </div>
           </li>
-          <li><a href="<?php print url('node/33'); ?>">Contacto</a></li>
+          <li><a href="<?php print url('contacto'); ?>">Contacto</a></li>
         </ul>
       </div>
     </div>

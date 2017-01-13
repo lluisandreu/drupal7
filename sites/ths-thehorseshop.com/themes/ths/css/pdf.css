@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600");
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+}
+
+.header {
+    clear: both;
+    width: 100%;
+}
+
+.header img {
+    width: auto;
+}
+
+.invoice-header, .invoice-header-date {
+    text-align: right;
+}
+
+.field-label {
+    font-weight: bolder;
+}
+
+.contextual-links-wrapper {
+    display: none;
+}
+
+.view-commerce-line-item-table table {
+    width: 100%;
+    line-height: 1.2em;
+    border-collapse: collapse;
+}
+
+.view-commerce-line-item-table thead {
+    border-bottom: 2px solid black;
+}
+
+.view-commerce-line-item-table th {
+    text-align: right;
+}
+
+.view-commerce-line-item-table td {
+    text-align: right;
+    height: 30px;
+}
+
+.view-commerce-line-item-table .views-field-commerce-total {
+    text-align: right;
+    padding-right: 5px;
+    width: 200px;
+}
+
+.view-commerce-line-item-table .views-field-line-item-title {
+    text-align: left;
+    width: 300px;
+}
+
+.invoice-canceled .order-total table {
+    border: 2px solid black;
+    margin-top: 100px;
+}
+
+.order-total table {
+    width: 100%;
+    border-top: 2px solid black;
+    font-weight: bold;
+}
+
+td.component-title {
+    text-align: right;
+}
+
+td.component-total {
+    text-align: right;
+    width: 200px;
+}
