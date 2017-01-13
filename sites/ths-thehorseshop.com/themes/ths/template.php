@@ -54,7 +54,7 @@ function ths_form_alter(&$form, &$form_state, $form_id) {
 		break;
   
     case 'commerce_checkout_form_review': 
-      dpm($form);
+      //dpm($form);
       $form['commerce_payment']['payment_details']['#prefix'] = '<div id="payment-details"><div class="inner">';
       $form['commerce_payment']['payment_details']['#suffix'] = '</div></div>';
       if($form['commerce_payment']['payment_method']['#options']['commerce_cod|commerce_payment_commerce_cod']){
