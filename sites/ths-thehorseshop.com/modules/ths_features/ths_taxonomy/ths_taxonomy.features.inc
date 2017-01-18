@@ -36,36 +36,13 @@ function ths_taxonomy_image_default_styles() {
   $styles['categories'] = array(
     'label' => 'Categories thumb',
     'effects' => array(
-      8 => array(
-        'name' => 'image_scale',
+      14 => array(
+        'name' => 'manualcrop_reuse',
         'data' => array(
-          'width' => 400,
-          'height' => '',
-          'upscale' => 0,
+          'reuse_crop_style' => 'product_image_thumb_desktop',
+          'apply_all_effects' => 1,
         ),
-        'weight' => -10,
-      ),
-      7 => array(
-        'name' => 'canvasactions_definecanvas',
-        'data' => array(
-          'RGB' => array(
-            'HEX' => '#ffffff',
-          ),
-          'under' => 1,
-          'exact' => array(
-            'width' => 450,
-            'height' => 450,
-            'xpos' => 'center',
-            'ypos' => 'center',
-          ),
-          'relative' => array(
-            'leftdiff' => '',
-            'rightdiff' => '',
-            'topdiff' => '',
-            'bottomdiff' => '',
-          ),
-        ),
-        'weight' => -9,
+        'weight' => 0,
       ),
     ),
   );

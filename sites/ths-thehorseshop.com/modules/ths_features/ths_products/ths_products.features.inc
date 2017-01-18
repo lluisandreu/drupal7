@@ -129,13 +129,17 @@ function ths_products_image_default_styles() {
   $styles['product_image_thumb_desktop'] = array(
     'label' => 'Product image thumb desktop',
     'effects' => array(
-      2 => array(
-        'name' => 'image_scale_and_crop',
+      13 => array(
+        'name' => 'manualcrop_crop_and_scale',
         'data' => array(
           'width' => 330,
           'height' => 210,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'product_image_thumb_desktop',
         ),
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
   );
@@ -144,13 +148,14 @@ function ths_products_image_default_styles() {
   $styles['product_page'] = array(
     'label' => 'Product page',
     'effects' => array(
-      3 => array(
-        'name' => 'image_scale_and_crop',
+      10 => array(
+        'name' => 'image_scale',
         'data' => array(
           'width' => 520,
-          'height' => 340,
+          'height' => '',
+          'upscale' => 0,
         ),
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
   );

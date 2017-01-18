@@ -82,7 +82,7 @@
         <div class="row">
           <div class="column">
             <?php print render($title_prefix); ?>
-            <h1 id="page-title" class="title"><?php print $title; ?></h1>
+            <h1 id="page-title" class="title"><?php print ucfirst(strtolower($title)); ?></h1>
             <?php print render($title_suffix); ?>
           </div>
         </div>

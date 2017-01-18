@@ -338,7 +338,7 @@ function ths_taxonomy_views_default_views() {
   $handler->display->display_options['arguments']['tid']['relationship'] = 'parent';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['title'] = 'Subcategorías de %1';
+  $handler->display->display_options['arguments']['tid']['title'] = 'Categorías en %1';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
@@ -374,7 +374,7 @@ function ths_taxonomy_views_default_views() {
     t('.'),
     t(','),
     t('All'),
-    t('Subcategorías de %1'),
+    t('Categorías en %1'),
     t('Category subterm menu'),
     t('View panes'),
   );
