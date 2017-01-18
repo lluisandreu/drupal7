@@ -1,0 +1,18 @@
+--- commerce_shipping.checkout_pane.inc
++++ commerce_shipping.checkout_pane.inc
+@@ -275,9 +275,12 @@
+         }
+ 
+         // Unset any cached addressfield data for this customer profile.
+-        foreach ($form_state['addressfield'] as $key => $value) {
+-          if (strpos($key, 'commerce_customer_profile|' . $type) === 0) {
+-            unset($form_state['addressfield'][$key]);
++        // Check if addressfield is set
++        if (isset($form_state['addressfield'])) {
++          foreach ($form_state['addressfield'] as $key => $value) {
++            if (strpos($key, 'commerce_customer_profile|' . $type) === 0) {
++              unset($form_state['addressfield'][$key]);
++            }
+           }
+         }
+       }

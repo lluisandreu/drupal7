@@ -115,12 +115,40 @@ function ths_shop_settings_field_default_field_bases() {
       'allowed_values' => array(
         'stock' => 'En stock',
         'pedido' => 'Envío en 7 días',
+        'consulta' => 'Consulta disponibilidad',
       ),
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_product_color'.
+  $field_bases['field_product_color'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_product_color',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'colores',
+          'parent' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
   );
 
   // Exported field_base: 'field_product_size'.

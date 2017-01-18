@@ -59,7 +59,7 @@ function ths_shop_settings_field_default_field_instances() {
     'entity_type' => 'commerce_customer_profile',
     'field_name' => 'commerce_customer_address',
     'label' => 'Address',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
@@ -399,6 +399,65 @@ function ths_shop_settings_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'commerce_product-product-field_product_color'.
+  $field_instances['commerce_product-product-field_product_color'] = array(
+    'bundle' => 'product',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 1,
+      'attribute_widget' => 'radios',
+      'attribute_widget_title' => 'Color',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Escribe un nuevo color o selecciona un existente',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_product_color',
+    'label' => 'Color del producto',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'commerce_product-product-field_product_size'.
   $field_instances['commerce_product-product-field_product_size'] = array(
     'bundle' => 'product',
@@ -461,8 +520,10 @@ function ths_shop_settings_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
+  t('Color del producto');
   t('Disponibilidad');
   t('En el caso que necesites una factura por favor introduce el NIF o CIF');
+  t('Escribe un nuevo color o selecciona un existente');
   t('NIF/CIF');
   t('Price');
   t('Selecciona una talla o simplemente crea una nueva. Empieza a escribir una talla para si saber si existe. Por ejemplo: L, M, S');

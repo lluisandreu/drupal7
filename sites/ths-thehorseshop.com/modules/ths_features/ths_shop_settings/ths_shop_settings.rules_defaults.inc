@@ -41,37 +41,6 @@ function ths_shop_settings_default_rules_configuration() {
       ]
     }
   }');
-  $items['commerce_payment_paypal_wps'] = entity_import('rules_config', '{ "commerce_payment_paypal_wps" : {
-      "LABEL" : "PayPal WPS",
-      "PLUGIN" : "reaction rule",
-      "OWNER" : "rules",
-      "TAGS" : [ "Commerce Payment" ],
-      "REQUIRES" : [ "commerce_payment" ],
-      "ON" : { "commerce_payment_methods" : [] },
-      "DO" : [
-        { "commerce_payment_enable_paypal_wps" : {
-            "commerce_order" : [ "commerce-order" ],
-            "payment_method" : { "value" : {
-                "method_id" : "paypal_wps",
-                "settings" : {
-                  "business" : "oliverobrador@gmail.com",
-                  "currency_code" : "EUR",
-                  "allow_supported_currencies" : 0,
-                  "language" : "ES",
-                  "server" : "sandbox",
-                  "payment_action" : "authorization",
-                  "ipn_logging" : "notification",
-                  "receiver_emails" : "Cash on Delivery ",
-                  "ipn_create_billing_profile" : 0,
-                  "show_payment_instructions" : 0
-                }
-              }
-            }
-          }
-        }
-      ]
-    }
-  }');
   $items['commerce_shipping_service_collect_in_store'] = entity_import('rules_config', '{ "commerce_shipping_service_collect_in_store" : {
       "LABEL" : "Rate Collect in store",
       "PLUGIN" : "rule",
