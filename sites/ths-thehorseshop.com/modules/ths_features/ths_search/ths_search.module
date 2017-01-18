@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the THS Search feature.
+ */
+
+include_once 'ths_search.features.inc';

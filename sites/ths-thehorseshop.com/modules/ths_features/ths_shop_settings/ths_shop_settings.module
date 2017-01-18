@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the THS Shop settings feature.
+ */
+
+include_once 'ths_shop_settings.features.inc';
