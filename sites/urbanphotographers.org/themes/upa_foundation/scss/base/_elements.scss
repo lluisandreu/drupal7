@@ -10,6 +10,21 @@
 // h1, h2, h3,
 // h4, h5, h6 {}
 
+h1, h2, h3, h4 {
+    a {
+        color: $body-font-color;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            border-bottom: 1px solid $jumbo;
+        }
+    }
+}
+
+h4 {
+    margin: 0;
+}
+
 // Anchors
 //-----------------------------------------------------------------------------
 // a {}
@@ -19,6 +34,11 @@
 // a.active,
 // a:active,
 // a:hover {}
+
+a {
+    transition: all .2s ease-in-out .1s;
+    -webkit-transition: all .2s ease-in-out .1s;
+}
 
 // Form Input
 //-----------------------------------------------------------------------------
@@ -56,3 +76,10 @@
 // }
 
 // select {}
+
+time {
+    font-size: rem-calc(14);
+    color: $jumbo;
+    display: block;
+    margin-bottom: 10px;
+}

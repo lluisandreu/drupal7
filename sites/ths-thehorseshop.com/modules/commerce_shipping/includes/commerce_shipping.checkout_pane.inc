@@ -5,6 +5,7 @@
  * Callback functions for the shipping module's checkout panes.
  */
 
+
 /**
  * Checkout pane callback: returns the shipping service pane's settings form.
  */
@@ -140,8 +141,7 @@ function commerce_shipping_pane_checkout_form($form, &$form_state, $checkout_pan
       $message = t('No valid shipping rates found for your order, and we require shipping service selection to complete checkout.') . '<br /><strong>' . t('Please verify you have supplied all required information or contact us to resolve the issue.') . '</strong>';
     }
     else {
-      // If live shipping rate recalculation is required, check if we can show
-      // shipping options.
+      // If live shipping rate recalculation is required, check if we can show shipping options.
       if (commerce_shipping_recalculate_services($form, NULL, TRUE) && empty($form_state['recalculate'])) {
         $message = t('Please supply all of the required information requested above to reveal your shipping options.');
       }
@@ -160,9 +160,7 @@ function commerce_shipping_pane_checkout_form($form, &$form_state, $checkout_pan
 }
 
 /**
- * Ajax callback.
- *
- * Returns the shipping details form elements that match the
+ * Ajax callback: Returns the shipping details form elements that match the
  * currently selected shipping service.
  */
 function commerce_shipping_pane_service_details_refresh($form, $form_state) {
@@ -180,6 +178,20 @@ function commerce_shipping_recalculate_services_refresh($form, $form_state) {
  * Validate callback for recalculating shipping services.
  */
 function commerce_shipping_recalculate_services_validate($form, &$form_state) {
+
+  // Load latest version of the order.
+  $order = commerce_order_load($form_state['order']->order_id);
+  // Check if the order is still on the same checkout step.
+  $checkout_page = $form_state['checkout_page'];
+  if ($form_state['order']->changed < $order->changed || !commerce_checkout_page_access($checkout_page, $order)) {
+    // Clear all errors.
+    form_clear_error();
+    watchdog('access denied', check_plain($_GET['q']), NULL, WATCHDOG_WARNING);
+    drupal_set_message(t('You are not authorized to access this command.'), 'error');
+    $form_state['rebuild'] = TRUE;
+    return FALSE;
+  }
+
   // Call all validation callbacks.
   $recalculate = commerce_shipping_recalculate_services($form, $form_state);
 
@@ -198,8 +210,7 @@ function commerce_shipping_recalculate_services_validate($form, &$form_state) {
     $form_state['rebuild'] = TRUE;
   }
 
-  // Store the validation result so that it can be examined
-  // in the submit handler.
+  // Store the validation result so that it can be examined in the submit handler.
   $form_state['recalculate'] = $recalculate;
 
   return TRUE;
@@ -228,8 +239,7 @@ function commerce_shipping_recalculate_services_submit($form, &$form_state) {
 
     // If this pane is actually present in the form...
     if (!empty($form[$pane_id])) {
-      // If the profile copy button has been checked for this
-      // customer profile...
+      // If the profile copy button has been checked for this customer profile...
       if (!empty($form_state['values'][$pane_id]['commerce_customer_profile_copy'])) {
         $source_id = 'customer_profile_' . variable_get('commerce_' . $pane_id . '_profile_copy_source', '');
         $info = array('commerce_customer_profile', $type, $pane_id);
@@ -251,8 +261,8 @@ function commerce_shipping_recalculate_services_submit($form, &$form_state) {
             $profile = $wrapper->{$source_field_name}->value();
           }
           elseif (!empty($form_state['order']->data['profiles'][$source_id])) {
-            // Otherwise fallback to the customer profile referenced
-            // in the order data array.
+            // Otherwise fallback to the customer profile referenced in the order
+            // data array.
             $profile = commerce_customer_profile_load($form_state['order']->data['profiles'][$source_id]);
           }
 
@@ -265,14 +275,9 @@ function commerce_shipping_recalculate_services_submit($form, &$form_state) {
         }
 
         // Unset any cached addressfield data for this customer profile.
-        foreach (field_read_fields(array('type' => 'addressfield')) as $field) {
-          if (isset($form_state['input']['customer_profile_' . $type][$field['field_name']])) {
-            foreach ($form_state['input']['customer_profile_' . $type][$field['field_name']][LANGUAGE_NONE][0] as $key => &$value) {
-              if ($key == 'country') {
-                continue;
-              }
-              $value = '';
-            }
+        foreach ($form_state['addressfield'] as $key => $value) {
+          if (strpos($key, 'commerce_customer_profile|' . $type) === 0) {
+            unset($form_state['addressfield'][$key]);
           }
         }
       }
@@ -292,12 +297,9 @@ function commerce_shipping_recalculate_services_submit($form, &$form_state) {
 
   // Save the order and rebuild the form to reflect the updated customer data.
   if ($rebuild) {
-    // Reset commerce_order entity cache so we can check "changed" properly.
-    entity_get_controller('commerce_order')->resetCache();
-
     // Avoid overwriting an already updated order.
     $stored_order = commerce_order_load($order->order_id);
-    if ($stored_order->changed < $order->changed) {
+    if ($stored_order->changed <= $order->changed) {
       commerce_order_save($order);
     }
     $form_state['rebuild'] = TRUE;
@@ -340,9 +342,9 @@ function commerce_shipping_pane_checkout_form_validate($form, &$form_state, $che
       if ($callback = commerce_shipping_service_callback($shipping_service, 'details_form_validate')) {
         $result = $callback($pane_form['service_details'], $pane_values['service_details'], $shipping_service, $order, array($checkout_pane['pane_id'], 'service_details'));
 
-        // To prevent payment method validation routines from having to return
-        // TRUE explicitly, only return FALSE if it was specifically returned.
-        // Otherwise default to TRUE.
+        // To prevent payment method validation routines from having to return TRUE
+        // explicitly, only return FALSE if it was specifically returned.  Otherwise
+        // default to TRUE.
         return $result === FALSE ? FALSE : TRUE;
       }
     }
@@ -404,9 +406,7 @@ function commerce_shipping_pane_checkout_form_submit($form, &$form_state, $check
 }
 
 /**
- * Checkout pane callback.
- *
- * Show the selected shipping service on the review pane.
+ * Checkout pane callback: show the selected shipping service on the review pane.
  */
 function commerce_shipping_pane_review($form, $form_state, $checkout_pane, $order) {
   $order_wrapper = entity_metadata_wrapper('commerce_order', $order);

@@ -5,3 +5,44 @@
 // %font-FONTNAME   {}
 // %font-sans-serif { font-family: sans-serif; }
 // %font-serif      { font-family: serif; }
+
+.inline-edit-container {
+    position: relative;
+    z-index: 1;
+
+    .inline-edit {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: -10;
+    }
+
+    &:hover .inline-edit {
+        z-index: 10;
+    }
+}
+
+.panel {
+    border-bottom: 2px solid $smoke;
+
+    p {
+        color: $jumbo;
+        margin-bottom: 10px;
+    }
+
+    a, strong {
+        color: $body-font-color;
+    }
+}
+
+.date-display-range {
+    display: inline;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}

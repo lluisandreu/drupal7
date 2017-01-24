@@ -1267,7 +1267,6 @@ function commerce_cart_order_session_delete($order_id = NULL, $completed = FALSE
  * @param $line_item
  *   An unsaved product line item to be added to the cart with the following data
  *   on the line item being used to determine how to add the product to the cart:
- *   - $line_item->commerce_unit_price: a non-NULL default unit price.
  *   - $line_item->commerce_product: reference to the product to add to the cart.
  *   - $line_item->quantity: quantity of this product to add to the cart.
  *   - $line_item->data: data array that is saved with the line item if the line
@@ -1342,8 +1341,7 @@ function commerce_cart_product_add($uid, $line_item, $combine = TRUE) {
 
     // Allow other modules to specify what properties should be compared when
     // determining whether or not to combine line items.
-    $line_item_clone = clone($line_item);
-    drupal_alter('commerce_cart_product_comparison_properties', $comparison_properties, $line_item_clone);
+    drupal_alter('commerce_cart_product_comparison_properties', $comparison_properties, clone($line_item));
 
     // Loop over each line item on the order.
     foreach ($order_wrapper->commerce_line_items as $delta => $matching_line_item_wrapper) {

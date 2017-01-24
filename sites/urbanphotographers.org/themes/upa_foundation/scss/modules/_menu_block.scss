@@ -1,0 +1,45 @@
+#main-nav {
+    ul.menu {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: rem-calc(20);
+
+            a {
+                padding: 10px;
+                display: block;
+                color: $body-font-color;
+                border-bottom: 1px solid $jet;
+            }
+        }
+    }
+}
+
+@media #{$large-up} {
+    #main-nav {
+        text-align: right;
+
+        ul.menu {
+            & > li {
+                display: inline-block;
+                list-style: none;
+                text-align: left;
+                font-size: rem-calc(16);
+
+                & > a {
+                    color: $body-font-color;
+                    border: none;
+
+                    &:hover, &.active {
+                        color: lighten($body-font-color, 30%);
+                    }
+                }
+            }
+        }
+    }
+}

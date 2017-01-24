@@ -6,15 +6,14 @@
  */
 
 class commerce_shipping_handler_relationship_shipping_line_item_representative extends views_handler_relationship {
-
-  public function label() {
+  function label() {
     if (!isset($this->options['label'])) {
       return $this->ui_name();
     }
     return $this->options['label'];
   }
 
-  public function query() {
+  function query() {
     // Get the JOIN type from the relationship settings.
     $join_type = empty($this->options['required']) ? 'LEFT' : 'INNER';
 
@@ -41,5 +40,4 @@ class commerce_shipping_handler_relationship_shipping_line_item_representative e
     $alias = 'commerce_order_shipping_line_item_representiative';
     $this->alias = $this->query->add_relationship($alias, $join, 'commerce_line_item', $this->relationship);
   }
-
 }

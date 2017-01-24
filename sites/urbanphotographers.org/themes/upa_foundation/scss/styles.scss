@@ -94,7 +94,8 @@
 
 // Styling for elements.
 // Optional.
-// @import "base/elements";
+@import "base/elements";
+@import "base/common";
 
 // Layout
 // Each section of the document has it's own partial seperated out to improve
@@ -105,8 +106,13 @@
 @import "layout/footer";
 
 // Modules
-// @import "modules/block";
+@import "modules/block";
+
 // @import "modules/button";
+@import "modules/menu_block";
+@import "modules/fields";
+@import "modules/views";
+@import "modules/pages";
 
 // States
 // @import "states/collapse";
