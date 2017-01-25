@@ -56,6 +56,7 @@ function upa_foundation_form_alter(&$form, &$form_state, $form_id) {
    * );
    *}
    */
+  //dpm($form_id);
   switch ($form_id) {
   	case 'views_exposed_form':
   		if($form['#id'] == 'views-exposed-form-members-block-1') {
@@ -63,7 +64,10 @@ function upa_foundation_form_alter(&$form, &$form_state, $form_id) {
   			//dpm($form);
   		}
   		break;
-  	
+  	case 'comment_node_forum_form':
+      //dpm($form);
+      $form['#attributes']['class'][] = 'panel white';
+      break;
   	default:
   		# code...
   		break;

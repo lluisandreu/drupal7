@@ -35,7 +35,7 @@
     }
 }
 
-.date-display-range {
+.date-display-range, .field-type-datetime {
     display: inline;
 }
 
@@ -45,4 +45,12 @@
 
 .float-right {
     float: right;
+}
+
+.red {
+    color: $red;
+}
+
+.panel.white {
+    background: $white;
 }
