@@ -6,6 +6,8 @@
             // Code to be run on page load, and
             // on ajax load added here
             jQuery(document).ready(function ($) {
+                menuToggle();
+
                 if ($('.owl-carousel').size()) {
                     $('.owl-carousel').owlCarousel({
                         items: 1,
@@ -13,13 +15,17 @@
                         dots: true,
                     });
                 }
-                $('.masonry-grid').masonry({
-                    itemSelector: '.grid-item',
-                    //fitWidth: true,
-                    //columnWidth: 330,
-                    percentPosition: true
-                });
             });
+
+            function menuToggle() {
+                var toggler = $('#menu-toggler');
+                var nav = $('#main-nav');
+                toggler.on('click', function (event) {
+                    event.preventDefault();
+                    nav.toggleClass('expanded');
+                });
+            }
+
         }
     };
 }(jQuery));

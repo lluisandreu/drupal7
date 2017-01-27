@@ -40,6 +40,20 @@ function upa_foundation_preprocess_node(&$variables) {
 
   $block_events = views_embed_view('events', 'block_1');
   $variables['block_events'] = $block_events;
+
+  $block_webform = module_invoke('webform', 'block_view', 'client-block-221');
+  $variables['block_webform'] = $block_webform;
+
+  $block_last_blog = views_embed_view('member', 'block_1');
+  $variables['block_last_blog'] = $block_last_blog;
+}
+
+function upa_foundation_preprocess_user_profile(&$variables) {
+    $block_last_blog = views_embed_view('member', 'block_1');
+    $variables['block_last_blog'] = $block_last_blog;
+
+    $block_last_forum = views_embed_view('member', 'block_2');
+    $variables['block_last_forum'] = $block_last_forum;
 }
 
 /**

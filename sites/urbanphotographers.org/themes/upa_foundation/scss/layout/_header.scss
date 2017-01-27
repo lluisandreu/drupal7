@@ -11,6 +11,7 @@
 
     .sitename h1 {
         font-size: rem-calc(16);
+        margin: 10px 0;
 
         a {
             color: $body-font-color;
@@ -35,6 +36,7 @@
         a {
             color: $body-font-color;
             padding: 10px 0 10px 40px;
+            display: block;
         }
     }
 }

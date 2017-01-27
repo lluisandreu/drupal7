@@ -10,8 +10,25 @@
     }
 }
 
-.field-name-field-images {
+.field-name-field-images, .field-name-field-cover-image {
     img {
         margin-bottom: 20px;
+
+        @media #{$large-up} {
+            text-align: right;
+            display: block;
+            margin-left: auto;
+        }
+    }
+}
+
+.field-name-field-file-image-title-text {
+    font-size: rem-calc(12);
+    color: $jumbo;
+    margin-top: -15px;
+    margin-bottom: 15px;
+
+    @media #{$large-up} {
+        text-align: right;
     }
 }
