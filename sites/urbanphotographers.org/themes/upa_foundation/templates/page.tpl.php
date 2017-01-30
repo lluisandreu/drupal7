@@ -9,6 +9,12 @@
       </div>
       <nav id="main-nav" class="large-8 small-12 columns">
         <?php print render($menu); ?>
+        <?php if($logged_in): ?>
+          <button class="secondary small dropdown editor-menu-button" data-dropdown="editor-menu" aria-controls="editor-menu" aria-expanded="false"><i class="fa fa-gear"></i></button>
+          <div id="editor-menu" data-dropdown-content class="f-dropdown" aria-hidden="true">
+            <?php print render($editor_menu); ?>
+          </div>
+        <?php endif; ?>
       </nav>
     </div>
   </header>
@@ -23,7 +29,13 @@
         <?php print $messages; ?>
         <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
       </div>
+      <?php if(!isset($node)): ?>
+        <div class="column">
+      <?php endif; ?>
       <?php print render($page['content']); ?>
+      <?php if(!isset($node)): ?>
+        </div>
+      <?php endif; ?>
     </div>
   </main>
   <footer id="footer">
@@ -36,6 +48,11 @@
       <?php if($page['footer_secondcolumn']): ?>
         <div class="medium-4 columns footer-second">
           <?php print render($page['footer_secondcolumn']); ?>
+        </div>
+      <?php endif; ?>
+      <?php if($page['footer_thirdcolumn']): ?>
+        <div class="medium-4 columns footer-third">
+          <?php print render($page['footer_thirdcolumn']); ?>
         </div>
       <?php endif; ?>
     </div>

@@ -7,6 +7,15 @@
 
     @media #{$large-up} {
         padding: 40px 0;
+
+        .editor-menu-button {
+            position: absolute;
+            bottom: -128px;
+            right: 0;
+            margin-right: 20px;
+            margin-bottom: 0;
+            z-index: 999;
+        }
     }
 
     .sitename h1 {

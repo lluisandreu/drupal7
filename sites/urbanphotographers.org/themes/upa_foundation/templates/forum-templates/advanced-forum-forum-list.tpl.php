@@ -44,8 +44,8 @@
  */
 ?>
 
-<a href="<?php print url('node/add/forum', array('query' => array('destination' => 'forum'))); ?>" class="button secondary"><i class="fa fa-plus"></i> Add a new topic</a>
-<a href="<?php print url('admin/structure/forum/add/forum', array('query' => array('destination' => 'forum'))); ?>" class="button secondary"><i class="fa fa-plus"></i> Add a new forum category</a>
+<a href="<?php print url('node/add/forum', array('query' => array('destination' => 'forum'))); ?>" class="button tiny secondary"><i class="fa fa-plus"></i> Add a new topic</a>
+<a href="<?php print url('admin/structure/forum/add/forum', array('query' => array('destination' => 'forum'))); ?>" class="button tiny secondary"><i class="fa fa-plus"></i> Add a new forum category</a>
 
 <?php foreach ($tables as $table_id => $table): ?>
   <?php $table_info = $table['table_info']; ?>

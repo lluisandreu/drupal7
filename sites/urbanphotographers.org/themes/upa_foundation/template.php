@@ -23,6 +23,9 @@ function upa_foundation_preprocess_html(&$variables) {
 function upa_foundation_preprocess_page(&$variables) {
 	$main_menu = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
 	$variables['menu'] = $main_menu;
+
+  $editor_menu = menu_tree(variable_get('menu_main_links_source', 'menu-editor-menu'));
+  $variables['editor_menu'] = $editor_menu;
 }
 
 /**

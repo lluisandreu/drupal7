@@ -18,18 +18,11 @@ div.forum-post.top-post {
 }
 
 @media #{$large-up} {
-    .forum-post-number {
-        position: absolute;
-        top: 38px;
-        right: 20px;
-        z-index: 100;
-    }
-
     .forum-post-content {
         padding-right: 20px;
     }
 
-    .forum-post-panel-main {
+    .node-type-forum .forum-post-panel-main {
         min-height: auto;
         position: relative;
 

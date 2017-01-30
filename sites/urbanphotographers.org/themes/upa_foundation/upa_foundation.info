@@ -115,6 +115,9 @@ settings[zurb_foundation_pager_center] = 1
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Breakpoints
 ;;;;;;;;;;;;;;;;;;;;;
-breakpoints[small] = (max-width: 640px)
-breakpoints[medium] = (min-width: 1024px)
-breakpoints[large] = (max-width: 1440px)
+
+breakpoints[large] = (min-width: 1024px)
+breakpoints[medium] = (min-width: 640px)
+breakpoints[small] = (min-width: 0px)
+
+

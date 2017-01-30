@@ -34,11 +34,13 @@
  * @ingroup themeable
  */
 ?>
-<div class="profile column"<?php print $attributes; ?>>
+<div class="profile"<?php print $attributes; ?>>
   <?php print render($user_profile); ?>
   <?php if(!empty($block_last_blog)): ?>
 	  <h2>Latest block entries by <?php print $user->name; ?></h2>
 	  <?php print $block_last_blog; ?>
+	  <br>
+	  <a href="<?php print url('node/add/blog-entry'); ?>" class="button secondary tiny">Add a blog entry</a>
 	  <hr>
   <?php endif; ?>
   <?php if(!empty($block_last_forum)): ?>
