@@ -205,7 +205,8 @@ strong {
         opacity: 0;
         transition: min-height 500ms ease-in-out;
         position: relative;
-        z-index: -999999;
+        z-index: -999;
+        overflow: hidden;
     }
 
     .collapsed {
@@ -215,6 +216,7 @@ strong {
             opacity: 1;
             transition: opacity 500ms ease-in-out;
             z-index: 0 !important;
+            overflow: auto;
         }
     }
 
