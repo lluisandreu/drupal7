@@ -25,17 +25,21 @@
   <div class="inner-wrap">
     <div class="main-content">
       <header class="section-header">
-        <div class="gradient">
         <div class="row">
-          <div class="logo medium-6 small-12 columns">
+          <div class="logo medium-4 small-12 columns">
             <a href="<?php print $front_page; ?>">
               <img src="/<?php print drupal_get_path("theme", "grimalt_theme") . '/logo.svg'?>" alt="<?php print $site_name; ?>">
             </a>
           </div>
-          <div class="header-right medium-6 columns show-for-medium-up">
+          <div class="header-right medium-8 columns show-for-medium-up">
             <?php if($page['header']): ?>
             <div class="header-right-content">
-              <?php print render($page['header']); ?>
+              <div class="row collapse">
+                <?php print render($page['nav']); ?>
+              </div>
+              <div class="row collapse">
+                <?php print render($page['header']); ?>
+              </div>
             </div>
             <?php endif; ?>
           </div>
@@ -43,11 +47,10 @@
         <nav class="main-navigation show-for-medium-up">
           <div class="row">
             <div class="column">
-              <?php print render($page['nav']); ?>
+              
             </div>
           </div>
         </nav>
-        </div>
         <?php if($page['header_slideshow'] && $is_front): ?>
           <div class="header-slidehow hide-for-small-only">
               <?php print render($page['header_slideshow']); ?>

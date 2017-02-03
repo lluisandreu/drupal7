@@ -17,16 +17,7 @@
     background-position: center center;
     background-size: cover;
     position: relative;
-
-    .gradient {
-        z-index: 10;
-        padding: 1.5rem 0 0rem 0;
-        background: transparentize($black, 0.8);
-
-        //@include vertical-black-transparent-gradient;
-
-        position: relative;
-    }
+    padding: 1.5rem 0 0rem 0;
 
     .logo {
         z-index: 10;

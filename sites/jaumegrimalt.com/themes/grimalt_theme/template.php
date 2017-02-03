@@ -3,7 +3,8 @@
 /**
  * Implements template_preprocess_html().
  */
-function STARTER_preprocess_html(&$variables) {
+function grimalt_theme_preprocess_html(&$variables) {
+	drupal_add_css('//fonts.googleapis.com/css?family=Oxygen:300,400,700', array('type' => 'external'));
 }
 
 /**

@@ -39,7 +39,13 @@
       <?php if ($tabs): ?>
         <div class="tabs column"><?php print render($tabs); ?></div>
       <?php endif; ?>
+      <?php if(!isset($node)): ?>
+        <div class="column">
+      <?php endif; ?>
       <?php print render($page['content']); ?>
+      <?php if(!isset($node)): ?>
+        </div>
+      <?php endif; ?>
     </div>
   </main>
   <footer id="footer">

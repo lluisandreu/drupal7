@@ -108,3 +108,11 @@ settings[zurb_foundation_disable_core_css] = 0
 settings[zurb_foundation_html_tags] = 1
 settings[zurb_foundation_messages_modal] = 0
 settings[zurb_foundation_pager_center] = 1
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Breakpoints
+;;;;;;;;;;;;;;;;;;;;;
+
+breakpoints[large] = (min-width: 1024px)
+breakpoints[medium] = (min-width: 765px)
+breakpoints[small] = (min-width: 0px)

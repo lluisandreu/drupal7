@@ -91,7 +91,7 @@ $row-width: rem-calc(1060);
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-$font-family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-sans-serif: "Oxygen", sans-serif;
 
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
@@ -102,7 +102,7 @@ $font-family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Roboto, Arial, s
 
 $white: #FFFFFF;
 
-// $ghost       : #FAFAFA;
+$ghost: #FAFAFA;
 $snow: #F9F9F9;
 
 $vapor: #F6F6F6;
@@ -120,7 +120,8 @@ $base: #AAAAAA;
 // $jumbo       : #888888;
 // $monsoon     : #777777;
 // $steel       : #666666;
-// $charcoal    : #555555;
+$charcoal: #555555;
+
 // $tuatara     : #444444;
 $oil: #333333;
 
@@ -128,7 +129,7 @@ $oil: #333333;
 // $black       : #000000;
 
 // We use these as default colors throughout
-$primary-color: #EA3D53;
+$primary-color: #FF7C8D;
 
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
@@ -137,8 +138,8 @@ $primary-color: #EA3D53;
 // $info-color: #a0d3e8;
 
 // We use these to control various global styles
-$body-bg: $vapor;
-$body-font-color: $oil;
+$body-bg: $white;
+$body-font-color: $charcoal;
 
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
@@ -450,7 +451,8 @@ $crumb-border-size: 0;
 // $crumb-font-color: $primary-color;
 // $crumb-font-color-current: $oil;
 // $crumb-font-color-unavailable: $aluminum;
-// $crumb-font-transform: uppercase;
+$crumb-font-transform: initial;
+
 // $crumb-link-decor: underline;
 
 // We use these to control the slash between breadcrumbs

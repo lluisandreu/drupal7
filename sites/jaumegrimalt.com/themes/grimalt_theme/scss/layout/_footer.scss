@@ -1,13 +1,12 @@
 // Non-modular or client styles for .l-footer region.
 
 .section-footer {
-    background: $tuatara;
+    background: $vapor;
     padding: 1.5rem 0;
-    color: $white;
-    border-bottom: 5px solid $primary-color;
+    color: $body-font-color;
 
     h2, h3 {
-        color: $white;
+        color: $body-font-color;
     }
 
     iframe {
@@ -15,7 +14,7 @@
     }
 
     a {
-        color: $white;
+        color: $body-font-color;
 
         &:hover {
             text-decoration: underline;
