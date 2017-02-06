@@ -92,6 +92,7 @@ $row-width: rem-calc(1060);
 
 // We use these to define default font stacks
 $font-family-sans-serif: "Oxygen", sans-serif;
+$font-family-condensed: "Roboto Condensed", sans-serif;
 
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
@@ -129,7 +130,7 @@ $oil: #333333;
 // $black       : #000000;
 
 // We use these as default colors throughout
-$primary-color: #FF7C8D;
+$primary-color: #e57373;
 
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
@@ -226,10 +227,11 @@ $screen: "only screen";
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
+$header-font-family: $font-family-condensed;
+
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
-$header-font-color: $oil;
+$header-font-color: $charcoal;
 
 $header-line-height: 1.6;
 

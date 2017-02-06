@@ -4,7 +4,7 @@
  * Implements template_preprocess_html().
  */
 function grimalt_theme_preprocess_html(&$variables) {
-	drupal_add_css('//fonts.googleapis.com/css?family=Oxygen:300,400,700', array('type' => 'external'));
+	drupal_add_css('//fonts.googleapis.com/css?family=Oxygen:300,400,700|Roboto+Condensed:300,400,700', array('type' => 'external'));
 }
 
 /**

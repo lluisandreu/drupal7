@@ -1,3 +1,43 @@
+.view-featured-products {
+    .view-mode-taxonomy_front {
+        position: relative;
+
+        &:hover img {
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+        }
+
+        img {
+            transition: filter .3s ease-in-out;
+            -webkit-filter: grayscale(50%);
+            filter: grayscale(50%);
+        }
+
+        .field-name-title {
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            text-align: center;
+            width: 100%;
+            margin-top: -45px;
+            vertical-align: middle;
+
+            h3 {
+                font-size: rem-calc(36);
+                font-weight: 100;
+            }
+
+            a {
+                padding: 20px;
+                display: inline-block;
+                color: $white;
+                text-shadow: 1px 1px 4px black;
+                line-height: normal;
+            }
+        }
+    }
+}
+
 .views-exposed-widgets {
     margin: 0;
 }
