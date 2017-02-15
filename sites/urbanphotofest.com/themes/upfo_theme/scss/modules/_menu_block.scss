@@ -1,0 +1,113 @@
+#main-nav {
+    transition: opacity 1s ease-in-out;
+    margin-top: -999px;
+    opacity: 0;
+
+    &.expanded {
+        margin: 0;
+        opacity: 1;
+    }
+
+    ul.menu {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: rem-calc(16);
+
+            a {
+                padding: 10px;
+                display: block;
+                color: $body-font-color;
+            }
+        }
+
+        ul {
+            li {}
+        }
+    }
+}
+
+@media #{$large-up} {
+    #main-nav {
+        display: block;
+        opacity: 1;
+        margin: auto;
+        text-align: right;
+
+        & > ul.menu {
+            & > li {
+                display: inline-block;
+                list-style: none;
+                text-align: left;
+                font-size: rem-calc(18);
+                padding: 0 10px;
+
+                &.expanded {
+                    position: relative;
+                }
+
+                &:hover {
+                    & > a {
+                        border-top: 5px solid $primary-color;
+                    }
+                }
+
+                & > a {
+                    color: $body-font-color;
+                    padding: 40px 0 20px 0;
+                    border-top: 5px solid $white;
+
+                    &.active {
+                        border-top: 5px solid $primary-color;
+                    }
+                }
+            }
+
+            ul.menu {
+                display: none;
+                z-index: 100;
+                position: absolute;
+                background: $white;
+                border-bottom: 5px solid $primary-color;
+                left: -10px;
+                min-width: 350px;
+                padding-bottom: 15px;
+
+                li {
+                    font-size: rem-calc(18);
+                    padding: 0;
+                    text-align: left;
+                    display: block;
+
+                    a {
+                        padding: 5px 20px;
+
+                        &:hover, &.active {
+                            background: $snow;
+                        }
+                    }
+                }
+            }
+        }
+
+        .expanded:hover {
+            ul.menu {
+                display: block;
+            }
+        }
+    }
+}
+
+#main-nav {
+    ul.menu li a.enter-button {
+        color: $white;
+        padding: 10px;
+        border: none;
+        font-size: rem-calc(16);
+    }
+}
