@@ -41,7 +41,9 @@ var DnDUpload = function ($droppable) {
 
       /**
        * Add handler for Browse button.
+       * Clear previously declared handlers because it gets applied twice with ajax updates.
        */
+      $(settings.browseButton).unbind('click');
       $(settings.browseButton).bind('click', me.eventsList.browseButtonClick.bind(me));
 
       var $uploadButton = $('#' + settings.uploadButton);
@@ -65,7 +67,7 @@ var DnDUpload = function ($droppable) {
       // IE 10 does not support 'change' event on input file elements,
       // use 'input' event additionally.
       changeEvent += ' input';
-      $('input[name="' + settings.name + '"]').unbind(changeEvent)
+      $('input[id="' + settings.id + '"]').unbind(changeEvent)
         .bind(changeEvent, me.eventsList.inputFileChange.bind(me));
 
       me.parent().attachEvents.call(me, $droppables);
@@ -83,7 +85,7 @@ var DnDUpload = function ($droppable) {
       me.parent().detachEvents.call(me, $droppables);
       $('#' + settings.uploadButton).unbind('mousedown');
       $(settings.browseButton).unbind('click');
-      $('input[name="' + settings.name + '"]').unbind('change');
+      $('input[id="' + settings.id + '"]').unbind('change');
     },
 
     /**
@@ -221,7 +223,7 @@ var DnDUpload = function ($droppable) {
 
           var $element = $(settings.selector).parent();
           $('>.messages.error', $element).remove();
-          $element.prepend('<div class="messages error file-upload-js-error">' + messages.join('<br/>') + '</div>');
+          $element.prepend('<div class="messages error">' + messages.join('<br/>') + '</div>');
         },
 
         'dnd:send:complete, dnd:removeFile:empty': function () {
@@ -311,7 +313,7 @@ var DnDUpload = function ($droppable) {
         event.preventDefault();
 
         this.dnd.$activeDroppable = this.$droppable;
-        $('input[name="' + this.dnd.settings.name + '"]').click();
+        $('input[id="' + this.dnd.settings.id + '"]').click();
 
         return false;
       },

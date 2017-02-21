@@ -6,7 +6,7 @@
 (function ($) {
   Drupal.behaviors.dragndropUploadVideo = {
     attach: function (context, settings) {
-      if (!settings.dragndropUploadVideo) {
+      if (!settings.dragndropUploadVideo || navigator.userAgent.match(/MSIE\s(?!10.0)/)) {
         return;
       }
 

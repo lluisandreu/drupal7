@@ -121,11 +121,13 @@ function dragndrop_upload_element_element_process($element, &$form_state, $form)
     );
   $element['droppable_area'] = array(
     '#theme' => 'dnd_upload_droppable_area',
-    '#text' => $element['#droppable_area_text'],
+    '#text' => t('@text', array('@text' => $element['#droppable_area_text'])),
+    '#id' => $element['#id'],
     '#name' => $element['#name'],
     '#dnd_id' => $dnd_id,
     '#standard_upload' => $element['#standard_upload'],
     '#weight' => -10,
+    '#type' => 'container',
   );
 
   return $element;
@@ -143,6 +145,7 @@ function dragndrop_upload_element_element_pre_render($element) {
   $element['#attached']['dragndrop_upload'][] = array(
     'selector' => $selector,
     'settings' => array(
+      'id' => $element['upload']['#id'],
       'name' => $element['upload']['#name'],
       'multiupload' => $element['#multiupload'],
       'cardinality' => $element['#multiupload'] ? $element['#cardinality'] : 1,

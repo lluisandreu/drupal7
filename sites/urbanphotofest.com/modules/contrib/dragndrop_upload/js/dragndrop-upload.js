@@ -10,6 +10,11 @@
         return;
       }
 
+      if (navigator.userAgent.match(/MSIE\s(?!10.0)/)) {
+        $('html').addClass('not-supported-dnd');
+        return;
+      }
+
       $.each(settings.dragndropUpload, function (selector, settings) {
         $(selector, context).once('dnd-upload', function () {
           var $droppable = $(this);
@@ -106,7 +111,7 @@
       processData: false,
       beforeSend: function (xmlhttprequest, options) {
         options.data = drupalAjaxOptions.data;
-        
+
         // Call standard Drupal ajax methods.
         drupalAjaxOptions.beforeSerialize(me.$droppables, options);
         drupalAjaxOptions.beforeSend(xmlhttprequest, options);

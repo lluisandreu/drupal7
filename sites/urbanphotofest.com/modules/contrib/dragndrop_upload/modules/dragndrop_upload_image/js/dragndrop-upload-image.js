@@ -6,7 +6,7 @@
 (function ($) {
   Drupal.behaviors.dragndropUploadImage = {
     attach: function (context, settings) {
-      if (!settings.dragndropUploadImage) {
+      if (!settings.dragndropUploadImage || navigator.userAgent.match(/MSIE\s(?!10.0)/)) {
         return;
       }
 

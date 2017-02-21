@@ -184,7 +184,7 @@ function dragndrop_upload_cache_get($id) {
  * Get available errors types.
  *
  * Return array with available error types and human-readable messages for them.
- * Types can be altered by hook_dragndrop_upload_element_errors_info_alter().
+ * Types can be altered by hook_dragndrop_upload_errors_info_alter().
  *
  * @return array
  *   Available error messages.

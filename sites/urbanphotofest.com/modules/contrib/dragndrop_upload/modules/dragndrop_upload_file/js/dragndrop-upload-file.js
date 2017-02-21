@@ -8,7 +8,7 @@
 (function ($) {
   Drupal.behaviors.dragndropUploadFile = {
     attach: function (context, settings) {
-      if (!settings.dragndropUploadFile) {
+      if (!settings.dragndropUploadFile || navigator.userAgent.match(/MSIE\s(?!10.0)/)) {
         return;
       }
 

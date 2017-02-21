@@ -30,7 +30,7 @@ function dragndrop_upload_media_field_widget_info_alter(&$info) {
 /**
  * Implements hook_field_widget_settings_form().
  */
-function dragndrop_upload_media_dnd_upload_widget_settings_form_alter(&$form, $field, $instance) { 
+function dragndrop_upload_media_dnd_upload_widget_settings_form_alter(&$form, $field, $instance) {
   $widget = $instance['widget'];
   $settings = $widget['settings'];
 
@@ -79,7 +79,7 @@ function dragndrop_upload_media_pre_render($element) {
   if (isset($element['droppable_area']['#access']) && !$element['droppable_area']['#access']) {
     return $element;
   }
-  
+
   // Create name template for hidden inputs that will contain fids.
   $parents = $element['#parents'];
   array_pop($parents);
@@ -117,11 +117,13 @@ function dragndrop_upload_media_pre_render($element) {
 
 /**
  * Custom process callback for widget.
- * 
+ *
  * Allows saving of multiple fids at once.
  */
 function dragndrop_upload_media_process_multiple($element, &$form_state, $form) {
-  if (isset($form_state['input'][$element['#field_name']][$element['#language']])) {
+  if (isset($form_state['input']['files']) &&
+    isset($form_state['input'][$element['#field_name']][$element['#language']])
+  ) {
     $count = count(
       $form_state['input'][$element['#field_name']][$element['#language']]
     );

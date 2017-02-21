@@ -84,6 +84,7 @@ function upa_foundation_form_alter(&$form, &$form_state, $form_id) {
   	case 'comment_node_forum_form':
       //dpm($form);
       $form['#attributes']['class'][] = 'panel white';
+      $form['actions']['submit']['#value'] = "Post";
       break;
   	default:
   		# code...

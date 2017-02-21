@@ -74,6 +74,26 @@ function upfo_theme_form_alter(&$form, &$form_state, $form_id) {
       }
       //dpm($form);
       break;
+    case 'user_login':
+      $form['title'] = array(
+        '#type' => 'item',
+        '#markup' => "<h2>Login to your account</h2>",
+        '#weight' => -50,
+      );
+      $form['#attributes']['class'][] = "panel large-8 large-centered column";
+      unset($form['actions']['submit']['#attributes']['class'][0]);
+      $form['actions']['submit']['#attributes']['class'][] = "success";
+      break;
+    case 'user_register_form':
+      $form['title'] = array(
+          '#type' => 'item',
+          '#markup' => "<h2>Create a new account</h2>",
+          '#weight' => -50,
+      );
+      unset($form['actions']['submit']['#attributes']['class'][0]);
+      $form['#attributes']['class'][] = "panel large-8 large-centered column";
+      $form['actions']['submit']['#attributes']['class'][] = "success";
+      break;
   }
 
 }

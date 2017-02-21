@@ -47,12 +47,19 @@
         display: none;
     }
 
+    #login-links {
+        margin-bottom: 20px;
+
+        a {
+            display: inline-block;
+        }
+    }
+
     .login-link {
         background: $secondary-color !important;
         color: $black;
         font-size: rem-calc(16);
         border: none !important;
-        padding: 15px !important;
     }
 
     .login-link.lt-active {
@@ -61,6 +68,14 @@
 
     .login-forgot {
         text-align: right;
+    }
+
+    .confirm-parent, .password-parent {
+        width: 100%;
+    }
+
+    .mollom-privacy {
+        margin: 20px 0;
     }
 }
 
@@ -92,10 +107,7 @@
 
     label {
         font-size: 28px;
-    }
-
-    .form-type-radio {
-        display: inline-block;
+        display: block;
     }
 
     input[type="radio"] {
@@ -118,5 +130,15 @@
     input[type="radio"]:checked + label {
         background: $secondary-color;
         color: $body-font-color;
+    }
+}
+
+.button.success {
+    color: $white;
+}
+
+.field-type-list-boolean {
+    input[type=checkbox] {
+        margin-bottom: 0;
     }
 }
