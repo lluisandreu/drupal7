@@ -1,5 +1,12 @@
 /// Module overrides
 
+.alert-box.success {
+    a {
+        color: $white;
+        text-decoration: underline;
+    }
+}
+
 /// Cloud zoom
 
 .cloud-zoom-container {
