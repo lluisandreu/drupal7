@@ -1,5 +1,33 @@
 @import "../../zurb_foundation/scss/foundation/functions";
 
+@font-face {
+    font-family: 'HKGrotesk';
+    src: url("../fonts/HKGrotesk/HKGrotesk-Medium.eot");
+    src: url("../fonts/HKGrotesk/HKGrotesk-Medium.eot") format("embedded-opentype"), url("../fonts/HKGrotesk/HKGrotesk-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'HKGrotesk';
+    src: url("../fonts/HKGrotesk/HKGrotesk-MediumItalic.eot");
+    src: url("../fonts/HKGrotesk/HKGrotesk-MediumItalic.eot") format("embedded-opentype"), url("../fonts/HKGrotesk/HKGrotesk-MediumItalic.woff") format("woff");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HKGrotesk';
+    src: url("../fonts/HKGrotesk/HKGrotesk-SemiBold.eot");
+    src: url("../fonts/HKGrotesk/HKGrotesk-SemiBold.eot") format("embedded-opentype"), url("../fonts/HKGrotesk/HKGrotesk-SemiBold.woff") format("woff");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'HKGrotesk';
+    src: url("../fonts/HKGrotesk/HKGrotesk-SemiBoldItalic.eot");
+    src: url("../fonts/HKGrotesk/HKGrotesk-SemiBoldItalic.eot") format("embedded-opentype"), url("../fonts/HKGrotesk/HKGrotesk-SemiBoldItalic.woff") format("woff");
+    font-style: italic;
+    font-weight: bold;
+}
+
 // Foundation by ZURB
 // foundation.zurb.com
 // Licensed under MIT Open Source
@@ -91,7 +119,7 @@ $row-width: rem-calc(1080);
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-$font-family-sans-serif: "Nunito", sans-serif, Arial;
+$font-family-sans-serif: "HKGrotesk", sans-serif, Arial;
 
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
@@ -129,7 +157,7 @@ $tuatara: #444444;
 $red: #f00;
 
 // We use these as default colors throughout
-$primary-color: $jumbo;
+$primary-color: #2d2df5;
 
 // $secondary-color: $jumbo;
 // $alert-color: #f04124;
@@ -214,7 +242,7 @@ $body-font-family: $font-family-sans-serif;
 $header-font-weight: bold;
 
 // $header-font-style: normal;
-$header-font-color: $body-font-color;
+$header-font-color: $primary-color;
 
 // $header-line-height: 1.4;
 $header-top-margin: 0.5rem;
@@ -279,7 +307,7 @@ $small-font-size: 80%;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-$anchor-font-color: lighten($body-font-color, 30%);
+$anchor-font-color: $primary-color;
 
 $anchor-font-color-hover: $body-font-color;
 

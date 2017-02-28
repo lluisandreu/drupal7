@@ -37,7 +37,7 @@
 <div class="profile"<?php print $attributes; ?>>
   <?php print render($user_profile); ?>
   <?php if(!empty($block_last_blog)): ?>
-	  <h2>Latest block entries by <?php print $user->name; ?></h2>
+	  <h2>Latest blog entries by <?php print $user->name; ?></h2>
 	  <?php print $block_last_blog; ?>
 	  <br>
 	  <a href="<?php print url('node/add/blog-entry'); ?>" class="button secondary tiny">Add a blog entry</a>
@@ -46,5 +46,12 @@
   <?php if(!empty($block_last_forum)): ?>
 	  <h2>Latest forum entries by <?php print $user->name; ?></h2>
 	  <?php print $block_last_forum; ?>
+	  <hr>
+  <?php endif; ?>
+  <?php if(!empty($block_last_projects)): ?>
+	  <h2>All projects by <?php print $user->name; ?></h2>
+	  <?php print $block_last_projects; ?>
+	  <br>
+	  <a href="<?php print url('node/add/project'); ?>" class="button secondary tiny">Add a project</a>
   <?php endif; ?>
 </div>

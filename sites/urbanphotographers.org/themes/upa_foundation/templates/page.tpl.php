@@ -10,8 +10,7 @@
       <nav id="main-nav" class="large-8 small-12 columns">
         <?php print render($menu); ?>
         <?php if($logged_in): ?>
-          <button class="secondary small dropdown editor-menu-button" data-dropdown="editor-menu" aria-controls="editor-menu" aria-expanded="false"><i class="fa fa-gear"></i></button>
-          <div id="editor-menu" data-dropdown-content class="f-dropdown" aria-hidden="true">
+          <div class="editor-menu">
             <?php print render($editor_menu); ?>
           </div>
         <?php endif; ?>
@@ -51,7 +50,7 @@
         </div>
       <?php endif; ?>
       <?php if($page['footer_thirdcolumn']): ?>
-        <div class="medium-4 columns footer-third">
+        <div class="medium-4 columns footer-third text-right">
           <?php print render($page['footer_thirdcolumn']); ?>
         </div>
       <?php endif; ?>

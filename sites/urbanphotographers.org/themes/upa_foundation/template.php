@@ -49,6 +49,10 @@ function upa_foundation_preprocess_node(&$variables) {
 
   $block_last_blog = views_embed_view('member', 'block_1');
   $variables['block_last_blog'] = $block_last_blog;
+
+  $theuser = user_load($variables['node']->uid);
+  $variables['author_name'] = $theuser->name;
+  $variables['author_profile'] = 'user/' . $theuser->uid;
 }
 
 function upa_foundation_preprocess_user_profile(&$variables) {
@@ -57,6 +61,9 @@ function upa_foundation_preprocess_user_profile(&$variables) {
 
     $block_last_forum = views_embed_view('member', 'block_2');
     $variables['block_last_forum'] = $block_last_forum;
+
+    $block_last_projects = views_embed_view('member', 'block_3');
+    $variables['block_last_projects'] = $block_last_projects;
 }
 
 /**

@@ -27,9 +27,27 @@
             }
         }
     }
+
+    .editor-menu {
+        ul.menu {
+            li {
+                background: #fafafa;
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    background: darken(#fafafa, 10%);
+                }
+            }
+
+            a {
+                color: lighten($body-font-color, 20%);
+            }
+        }
+    }
 }
 
 @media #{$large-up} {
+
     #main-nav {
         display: block;
         opacity: 1;
@@ -52,16 +70,6 @@
                     }
                 }
             }
-        }
-    }
-}
-
-#editor-menu {
-    .menu {
-        text-align: left;
-
-        li {
-            width: 100%;
         }
     }
 }

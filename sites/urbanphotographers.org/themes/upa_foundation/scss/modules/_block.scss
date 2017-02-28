@@ -2,6 +2,11 @@
     a {
         margin-right: 5px;
 
+        &:hover {
+            color: lighten($steel, 10%);
+            border: none;
+        }
+
         i {
             font-size: rem-calc(20);
         }

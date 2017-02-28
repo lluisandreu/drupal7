@@ -28,11 +28,12 @@
 
             &:hover {
                 color: lighten($body-font-color, 30%);
+                border: none;
             }
         }
 
         @media #{$medium-up} {
-            font-size: rem-calc(18);
+            font-size: rem-calc(20);
         }
 
         white-space: nowrap;
