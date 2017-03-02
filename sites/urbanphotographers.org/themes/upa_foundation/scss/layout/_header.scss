@@ -20,11 +20,13 @@
 
     .sitename h1 {
         font-size: rem-calc(16);
-        margin: 10px 0;
+        margin: 4px 0;
 
         a {
-            color: $body-font-color;
+            color: $primary-color;
             padding: 10px 0;
+            border: none;
+            line-height: 2.6;
 
             &:hover {
                 color: lighten($body-font-color, 30%);
@@ -33,7 +35,11 @@
         }
 
         @media #{$medium-up} {
-            font-size: rem-calc(20);
+            font-size: rem-calc(24);
+
+            a {
+                line-height: 1.6;
+            }
         }
 
         white-space: nowrap;

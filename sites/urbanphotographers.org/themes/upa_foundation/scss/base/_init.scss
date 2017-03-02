@@ -1,33 +1,5 @@
 @import "../../zurb_foundation/scss/foundation/functions";
 
-@font-face {
-    font-family: 'HKGrotesk';
-    src: url("../fonts/HKGrotesk/HKGrotesk-Medium.eot");
-    src: url("../fonts/HKGrotesk/HKGrotesk-Medium.eot") format("embedded-opentype"), url("../fonts/HKGrotesk/HKGrotesk-Medium.woff") format("woff");
-}
-
-@font-face {
-    font-family: 'HKGrotesk';
-    src: url("../fonts/HKGrotesk/HKGrotesk-MediumItalic.eot");
-    src: url("../fonts/HKGrotesk/HKGrotesk-MediumItalic.eot") format("embedded-opentype"), url("../fonts/HKGrotesk/HKGrotesk-MediumItalic.woff") format("woff");
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'HKGrotesk';
-    src: url("../fonts/HKGrotesk/HKGrotesk-SemiBold.eot");
-    src: url("../fonts/HKGrotesk/HKGrotesk-SemiBold.eot") format("embedded-opentype"), url("../fonts/HKGrotesk/HKGrotesk-SemiBold.woff") format("woff");
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: 'HKGrotesk';
-    src: url("../fonts/HKGrotesk/HKGrotesk-SemiBoldItalic.eot");
-    src: url("../fonts/HKGrotesk/HKGrotesk-SemiBoldItalic.eot") format("embedded-opentype"), url("../fonts/HKGrotesk/HKGrotesk-SemiBoldItalic.woff") format("woff");
-    font-style: italic;
-    font-weight: bold;
-}
-
 // Foundation by ZURB
 // foundation.zurb.com
 // Licensed under MIT Open Source
@@ -157,7 +129,7 @@ $tuatara: #444444;
 $red: #f00;
 
 // We use these as default colors throughout
-$primary-color: #2d2df5;
+$primary-color: #506aff;
 
 // $secondary-color: $jumbo;
 // $alert-color: #f04124;
@@ -242,7 +214,7 @@ $body-font-family: $font-family-sans-serif;
 $header-font-weight: bold;
 
 // $header-font-style: normal;
-$header-font-color: $primary-color;
+$header-font-color: $body-font-color;
 
 // $header-line-height: 1.4;
 $header-top-margin: 0.5rem;
@@ -251,9 +223,9 @@ $header-bottom-margin: 1rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(26);
-$h2-font-size: rem-calc(22);
-$h3-font-size: rem-calc(20);
+$h1-font-size: rem-calc(22);
+$h2-font-size: rem-calc(20);
+$h3-font-size: rem-calc(18);
 
 $h4-font-size: rem-calc(16);
 
@@ -307,7 +279,7 @@ $small-font-size: 80%;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-$anchor-font-color: $primary-color;
+$anchor-font-color: lighten($body-font-color, 20%);
 
 $anchor-font-color-hover: $body-font-color;
 
