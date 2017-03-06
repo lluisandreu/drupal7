@@ -1,6 +1,6 @@
 #main-nav {
     transition: opacity 1s ease-in-out;
-    margin-top: -999px;
+    margin-top: -9999px;
     opacity: 0;
 
     &.expanded {
@@ -17,22 +17,26 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            font-size: rem-calc(16);
+            font-size: rem-calc(20);
+            display: block;
 
             a {
                 padding: 10px;
-                display: block;
+                display: inline-block;
                 color: $body-font-color;
             }
         }
 
-        ul {
-            li {}
+        ul.menu {
+            li a {
+                display: block;
+            }
         }
     }
 }
 
 @media #{$large-up} {
+
     #main-nav {
         display: block;
         opacity: 1;
@@ -93,6 +97,10 @@
                     }
                 }
             }
+
+            .submenu-toggler {
+                display: none;
+            }
         }
 
         .expanded:hover {
@@ -109,5 +117,57 @@
         padding: 10px;
         border: none;
         font-size: rem-calc(16);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #main-nav {
+        ul.menu .expanded {
+            margin-right: 10px;
+            position: relative;
+
+            .submenu-toggler {
+                display: inline-block;
+                padding: 10px 30px 10px 10px;
+                font-size: 24px;
+                margin-right: -65px;
+                font-weight: bolder;
+                -moz-transition: transform .5s;
+                -webkit-transition: transform .5s;
+                transition: transform .5s;
+                cursor: pointer;
+
+                &.open {
+                    position: absolute;
+                    top: 50px;
+                    right: 10px;
+                    margin-right: 0;
+                    font-size: 30px;
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+
+            ul.menu {
+                display: none;
+                background: lighten($primary-color, 50%);
+            }
+
+            ul.menu.open {
+                display: block;
+            }
+        }
+    }
+}
+
+#main-nav .admin-menu {
+    ul li {
+        background: $secondary-color;
+        font-size: rem-calc(14);
+
+        @media #{$large-up} {
+            display: inline-block;
+        }
     }
 }

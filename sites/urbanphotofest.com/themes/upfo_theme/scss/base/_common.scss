@@ -42,43 +42,6 @@
     }
 }
 
-.toboggan-unified {
-    #login-message {
-        display: none;
-    }
-
-    #login-links {
-        margin-bottom: 20px;
-
-        a {
-            display: inline-block;
-        }
-    }
-
-    .login-link {
-        background: $secondary-color !important;
-        color: $black;
-        font-size: rem-calc(16);
-        border: none !important;
-    }
-
-    .login-link.lt-active {
-        background: scale-color($secondary-color, $lightness: -6%) !important;
-    }
-
-    .login-forgot {
-        text-align: right;
-    }
-
-    .confirm-parent, .password-parent {
-        width: 100%;
-    }
-
-    .mollom-privacy {
-        margin: 20px 0;
-    }
-}
-
 .page-checkout {
     .checkout-review, .views-table {
         width: 100%;
@@ -125,6 +88,10 @@
         padding: 12px;
         font-size: rem-calc(16);
         width: 100%;
+
+        &:hover {
+            background: lighten($primary-color, 10%);
+        }
     }
 
     input[type="radio"]:checked + label {
@@ -133,12 +100,15 @@
     }
 }
 
-.button.success {
-    color: $white;
-}
-
 .field-type-list-boolean {
     input[type=checkbox] {
         margin-bottom: 0;
     }
+}
+
+// Mollom
+
+.description.mollom-privacy {
+    margin-bottom: 20px;
+    font-size: rem-calc(14);
 }

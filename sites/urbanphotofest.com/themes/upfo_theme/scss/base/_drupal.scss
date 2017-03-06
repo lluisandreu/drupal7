@@ -38,3 +38,13 @@
 .more-link {
     text-align: left;
 }
+
+.not-logged-in.page-user {
+    .tabs {
+        text-align: center;
+
+        li a {
+            font-size: rem-calc(18);
+        }
+    }
+}

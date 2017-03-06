@@ -78,6 +78,7 @@
 <article id="node-<?php print $node->nid; ?>" class="column <?php print $classes; ?>"<?php print $attributes; ?>>
     <div class="row">
       <div class="large-9 columns">
+      	<p>Posted on <?php print format_date($node->created, "upfo_long"); ?></p>
         <?php print render($content); ?>
       </div>
     </div>

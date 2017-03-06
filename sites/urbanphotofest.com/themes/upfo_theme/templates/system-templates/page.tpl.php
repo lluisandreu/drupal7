@@ -11,6 +11,11 @@
 				<?php if($main_nav): ?>
 					<?php print render($main_nav); ?>
 				<?php endif; ?>
+				<?php if($admin_menu && $is_admin || in_array("administrator", $user->roles)): ?>
+					<div class="admin-menu">
+					<?php print render($admin_menu); ?>
+					</div>
+				<?php endif; ?>
 			</nav>
 		</div>
 	</header>

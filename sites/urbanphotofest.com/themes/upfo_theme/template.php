@@ -26,6 +26,9 @@ function upfo_theme_preprocess_page(&$variables) {
 	$main_nav = menu_tree_output(menu_tree_all_data('main-menu'), 2);
 	$variables['main_nav'] = $main_nav;
 
+  $admin_menu = menu_tree_output(menu_tree_all_data('menu-administrator-menu'), 1);
+  $variables['admin_menu'] = $admin_menu;
+
 	 if ($account = menu_get_object('user')) {
       $variables['title'] = t('My account');
       unset($variables['tabs']);
@@ -80,9 +83,16 @@ function upfo_theme_form_alter(&$form, &$form_state, $form_id) {
         '#markup' => "<h2>Login to your account</h2>",
         '#weight' => -50,
       );
+      $form['register_text'] = array(
+        '#type' => 'item',
+        '#markup' => "<h4 class='text-center'>Or create a <a href='/user/register'>new account</a></h4>",
+        '#weight' => 120,
+      ); 
+
       $form['#attributes']['class'][] = "panel large-8 large-centered column";
       unset($form['actions']['submit']['#attributes']['class'][0]);
       $form['actions']['submit']['#attributes']['class'][] = "success";
+
       break;
     case 'user_register_form':
       $form['title'] = array(
@@ -93,6 +103,14 @@ function upfo_theme_form_alter(&$form, &$form_state, $form_id) {
       unset($form['actions']['submit']['#attributes']['class'][0]);
       $form['#attributes']['class'][] = "panel large-8 large-centered column";
       $form['actions']['submit']['#attributes']['class'][] = "success";
+      break;
+    case 'user_pass':
+      $form['title'] = array(
+          '#type' => 'item',
+          '#markup' => "<h2>Request new password</h2>",
+          '#weight' => -50,
+      );
+      $form['#attributes']['class'][] = "panel large-8 large-centered column";
       break;
   }
 

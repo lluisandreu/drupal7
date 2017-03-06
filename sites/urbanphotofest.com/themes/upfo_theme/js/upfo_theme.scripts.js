@@ -9,7 +9,10 @@
             // on ajax load added here
             jQuery(document).ready(function ($) {
                 menuToggle();
-                frontCarousel();
+                menuChildToggle();
+                if ($('.front-carousel').size() > 0) {
+                    frontCarousel();
+                }
             });
 
             function frontCarousel() {
@@ -28,12 +31,27 @@
                 });
             }
 
+
             function menuToggle() {
                 var toggler = $('#menu-toggler');
                 var nav = $('#main-nav');
                 toggler.on('click', function (event) {
                     event.preventDefault();
                     nav.toggleClass('expanded');
+                });
+            }
+
+            function menuChildToggle() {
+                var expanded = $('#main-nav').find('.expanded');
+                expanded.each(function (index, el) {
+                    $(el).append('<span class="submenu-toggler">+</span>');
+                });
+
+                $('.submenu-toggler').on('click', function (event) {
+                    $(this).toggleClass('open')
+                        .siblings('ul')
+                        .toggleClass('open');
+
                 });
             }
 
