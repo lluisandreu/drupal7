@@ -275,9 +275,11 @@ $h4-font-size: rem-calc(18);
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
 // We use these to style the <hr> element
-// $hr-border-width: 1px;
+$hr-border-width: 1px;
+
 // $hr-border-style: solid;
-// $hr-border-color: $gainsboro;
+$hr-border-color: $primary-color;
+
 // $hr-margin: rem-calc(20);
 
 // We use these to style lists

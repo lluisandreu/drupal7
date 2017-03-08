@@ -55,6 +55,8 @@
 		<div class="row">
 			<div class="medium-5 columns footer-first">
 				<?php print render($page['footer_firstcolumn']); ?>
+				<br>
+				<small>Website designed and developed by <a href="http://www.lluisandreu.com/" target="_blank">lluisandreu.com</a></small>
 			</div>
 			<div class="medium-7 columns footer-first">
 				<?php print render($page['footer_secondcolumn']); ?>

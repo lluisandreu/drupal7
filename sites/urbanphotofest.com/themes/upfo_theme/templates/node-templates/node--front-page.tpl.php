@@ -13,9 +13,16 @@
 			<?php endif; ?>
 		</div>
 	</div>
+	<?php if($content['field_front_abstract']): ?>
+		<div class="row">
+			<div class="columns large-9 front-abstract">
+				<?php print render($content['field_front_abstract']); ?>
+			</div>
+		</div>
+	<?php endif; ?>
 	<?php if($content['body']): ?>
 		<div class="row">
-			<div class="large-9 columns front-abstract">
+			<div class="column">
 				<?php print render($content['body']); ?>
 			</div>
 		</div>
@@ -23,17 +30,14 @@
 </section>
 <section id="front-features">
 	<div class="row">
-		<div class="medium-3 small-6 columns">
+		<div class="medium-4 small-12 columns">
 			<?php print block_render('block', 1); ?>
 		</div>
-		<div class="medium-3 small-6 columns">
+		<div class="medium-4 small-12 columns">
 			<?php print block_render('block', 2); ?>
 		</div>
-		<div class="medium-3 small-6 columns">
+		<div class="medium-4 small-12 columns">
 			<?php print block_render('block', 3); ?>
-		</div>
-		<div class="medium-3 small-6 columns">
-			<?php print block_render('block', 4); ?>
 		</div>
 	</div>
 </section>
@@ -45,5 +49,16 @@
 		<div class="medium-7 columns front-latest-blog">
 			<?php print block_render('views', "featured_blog-block"); ?>
 		</div>
+	</div>
+</section>
+<hr>
+<section id="front-judges">
+	<div class="row">
+		<div class="column">
+			<h2>Meet our judges</h2>
+		</div>
+	</div>
+	<div class="row">
+		<?php print block_render('views', 'judges-block_2'); ?> 
 	</div>
 </section>
