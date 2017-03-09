@@ -46,8 +46,9 @@
 		<div class="medium-5 columns front-latest-news">
 			<?php print block_render('block', 5); ?>
 		</div>
-		<div class="medium-7 columns front-latest-blog">
-			<?php print block_render('views', "featured_blog-block"); ?>
+		<div class="medium-7 columns front-latest-entries">
+			<h2>Latest two entries</h2>
+			<?php print block_render('views', "competition_categories-block_1"); ?>
 		</div>
 	</div>
 </section>

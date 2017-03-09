@@ -1,11 +1,7 @@
-.view-taxonomy-term {
-    padding: 20px 0;
+.entry-row {
+    position: relative;
 
-    .entry-row {
-        position: relative;
-    }
-
-    .entry-row:hover .entry-overlay {
+    &:hover .entry-overlay {
         opacity: 1;
         transform: translateY(0);
     }
@@ -26,6 +22,12 @@
         padding: 14px;
         font-size: rem-calc(16);
     }
+}
+
+.view-taxonomy-term {
+    padding: 20px 0;
+
+    @extend ".entry-row";
 
     .pager-load-more {
         margin: 20px auto 0 auto;
@@ -67,6 +69,10 @@
     }
 
     @media #{$medium-only} {}
+}
+
+.view-competition-categories {
+    @extend ".entry-row";
 }
 
 .view-featured-blog {
