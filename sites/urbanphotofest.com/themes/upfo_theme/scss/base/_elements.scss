@@ -20,6 +20,10 @@
 // a:active,
 // a:hover {}
 
+a {
+    transition: all .3s ease-in-out;
+}
+
 // Form Input
 //-----------------------------------------------------------------------------
 // input[type="text"],

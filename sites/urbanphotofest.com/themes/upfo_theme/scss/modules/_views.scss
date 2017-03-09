@@ -73,6 +73,10 @@
 
 .view-competition-categories {
     @extend ".entry-row";
+
+    .entry-row:hover .entry-overlay {
+        transform: translateY(-20px);
+    }
 }
 
 .view-featured-blog {

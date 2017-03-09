@@ -47,7 +47,11 @@
 			<?php print block_render('block', 5); ?>
 		</div>
 		<div class="medium-7 columns front-latest-entries">
-			<h2>Latest two entries</h2>
+			<div class="row">
+				<div class="column">
+					<h2>Latest two entries</h2>
+				</div>
+			</div>
 			<?php print block_render('views', "competition_categories-block_1"); ?>
 		</div>
 	</div>
