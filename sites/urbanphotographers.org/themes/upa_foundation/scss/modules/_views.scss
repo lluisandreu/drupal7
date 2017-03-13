@@ -62,6 +62,10 @@
 .view-events {
     h3 {
         margin-left: 50px;
+
+        &:not(:first-child) {
+            margin-top: 50px;
+        }
     }
 
     .list-item {

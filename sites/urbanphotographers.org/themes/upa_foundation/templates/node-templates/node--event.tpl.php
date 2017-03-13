@@ -17,9 +17,12 @@
 			<input type="hidden" name="currency" value="GBP">
 			<input type="submit" class="button default" value="Pay">
 		</form>	
+		<?php if($content['field_terms_and_conditions']): ?>
+			<p><small><?php print render($content['field_terms_and_conditions']); ?></small></p>
+		<?php endif; ?>
 	</div>
 	<?php if(isset($content['field_cover_image'])): ?>
-		<aside class="large-6 column">
+		<aside id="main-aside" class="large-6 column">
 			<?php print render($content['field_cover_image']); ?>
 		</aside>
 	<?php endif; ?>

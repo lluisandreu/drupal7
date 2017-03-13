@@ -23,13 +23,13 @@
         margin: 4px 0;
 
         a {
-            color: $primary-color;
+            color: lighten($black, 10%);
             padding: 10px 0;
             border: none;
             line-height: 2.6;
 
             &:hover {
-                color: lighten($body-font-color, 30%);
+                color: lighten($black, 30%);
                 border: none;
             }
         }

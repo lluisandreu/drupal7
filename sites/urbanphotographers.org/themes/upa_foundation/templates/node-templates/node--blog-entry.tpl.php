@@ -6,7 +6,7 @@
 		<?php print render($content['body']); ?>
 	</div>
 	<?php if(isset($content['field_cover_image'])): ?>
-		<aside class="large-6 column">
+		<aside id="main-aside" class="large-6 column">
 			<?php print render($content['field_cover_image']); ?>
 		</aside>
 	<?php endif; ?>
