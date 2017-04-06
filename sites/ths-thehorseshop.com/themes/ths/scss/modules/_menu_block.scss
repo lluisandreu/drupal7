@@ -71,20 +71,27 @@
                 position: absolute;
                 width: 100%;
                 padding: rem-calc(40);
-                top: 126px;
+                top: 97px;
                 left: 0;
                 z-index: -99;
                 max-height: 1px;
                 overflow: hidden;
-                background-color: $white;
-                -moz-transition: all .5s ease-in-out;
-                -webkit-transition: all .5s ease-in-out;
-                transition: all .5s ease-in-out;
-                opacity: .95;
+                background-color: #333;
+                -moz-transition: all .2s ease-in-out;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
 
                 li {
                     display: inline-block;
                     padding: 5px;
+
+                    a {
+                        color: $white;
+
+                        &:hover {
+                            color: #ccc;
+                        }
+                    }
                 }
             }
 
@@ -92,7 +99,7 @@
                 & > .menu {
                     max-height: 100%;
                     overflow: visible;
-                    z-index: 999;
+                    z-index: 9999;
                 }
             }
         }
@@ -162,30 +169,29 @@
                 position: absolute;
                 width: 100%;
                 left: 0;
-                top: 126px;
-                background-color: $white;
+                top: 97px;
+                background-color: #333;
                 padding: 20px;
                 overflow: visible;
+                opacity: 0;
                 z-index: -99;
-                opacity: .95;
                 max-height: 1px;
                 overflow: hidden;
-                -moz-transition: all .5s ease-in-out;
-                -webkit-transition: all .5s ease-in-out;
-                transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out .5;
+                -webkit-transition: all .5s ease-in-out .5;
+                transition: all .5s ease-in-out .5;
 
                 #search-block-form {
                     width: 1080px;
                     margin: auto;
                     max-width: 100%;
                 }
-            }
 
-            &:hover {
-                .search-block {
+                &.expanded {
                     max-height: 100%;
                     overflow: visible;
                     z-index: 999;
+                    opacity: 1;
 
                     input[type=text] {
                         margin: 0;

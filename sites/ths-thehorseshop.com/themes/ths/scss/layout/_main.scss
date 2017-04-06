@@ -49,8 +49,8 @@ section.l-messages {
         padding: rem-calc(20 0);
     }
 
-    .page-content > div {
-        @include grid-column(12);
+    .page-content > div, .page-content form {
+        @include grid-column;
     }
 }
 
