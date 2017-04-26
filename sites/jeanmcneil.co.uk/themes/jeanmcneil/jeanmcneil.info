@@ -1,0 +1,19 @@
+name = Jean McNeil Theme
+description = Custom theme for Jean Mc Neil site, designed by lluisandreu.com and uep-design.com
+core = 7.x
+version = 1.x
+
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/nice_menus_jean.css
+
+scripts[] = vendor/instafeed.min.js
+scripts[] = js/jeanmcneil.js
+scripts[] = js/jean.iac.js
+
+regions[header]         = Header
+regions[aside]          = Aside
+regions[content]        = Content
+
+
+features[] = logo
+features[] = favicon

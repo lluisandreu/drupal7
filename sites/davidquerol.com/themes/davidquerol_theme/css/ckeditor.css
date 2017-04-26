@@ -350,12 +350,53 @@ nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus, nav.nav-collap
   background: transparent;
 }
 
+/* Countdown */
 /* line 373, ../sass/_basicstyling.scss */
+ul#countdown {
+  list-style: none;
+  margin: 50px 0;
+  padding: 0;
+  display: block;
+  color: #888;
+}
+
+/* line 381, ../sass/_basicstyling.scss */
+ul#countdown li {
+  display: inline-block;
+}
+
+/* line 385, ../sass/_basicstyling.scss */
+ul#countdown li span {
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 80px;
+}
+
+/* line 391, ../sass/_basicstyling.scss */
+ul#countdown p {
+  width: auto !important;
+}
+
+/* line 395, ../sass/_basicstyling.scss */
+ul#countdown li.seperator {
+  font-size: 64px;
+  line-height: 70px;
+  vertical-align: top;
+}
+
+/* line 401, ../sass/_basicstyling.scss */
+ul#countdown li p {
+  color: #777;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* line 409, ../sass/_basicstyling.scss */
 .hide-small {
   display: none;
 }
 @media (min-width: 650px) {
-  /* line 373, ../sass/_basicstyling.scss */
+  /* line 409, ../sass/_basicstyling.scss */
   .hide-small {
     display: block !important;
   }

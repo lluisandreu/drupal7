@@ -368,6 +368,42 @@ nav.nav-collapse.opened {
     background: transparent;
 }
 
+/* Countdown */
+
+ul#countdown {
+    list-style: none;
+    margin: 50px 0;
+    padding: 0;
+    display: block;
+    color: #888;
+}
+
+ul#countdown li {
+    display: inline-block;
+}
+
+ul#countdown li span {
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 80px;
+}
+
+ul#countdown p {
+    width: auto !important;
+}
+
+ul#countdown li.seperator {
+    font-size: 64px;
+    line-height: 70px;
+    vertical-align: top;
+}
+
+ul#countdown li p {
+    color: #777;
+    font-size: 18px;
+    text-align: center;
+}
+
 /// Helpers
 
 .hide-small {
