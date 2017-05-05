@@ -1,1 +1,18 @@
 // Non-modular or client styles for the .l-content region.
+
+#main {
+    padding: rem-calc(20) 0;
+    background-color: $white-smoke;
+
+    @media #{$medium-up} {
+        padding: rem-calc(40) 0;
+    }
+
+    .front-featured {}
+
+    .node-page {
+        .field-name-field-image-page {
+            margin-bottom: rem-calc(10);
+        }
+    }
+}

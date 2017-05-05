@@ -24,6 +24,8 @@ base theme = zurb_foundation
 ; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
 
 ; For CSS users, load the STARTER.css file:
+stylesheets[all][] = vendor/owl.carousel/dist/assets/owl.carousel.min.css
+stylesheets[all][] = vendor/owl.carousel/dist/assets/owl.theme.default.min.css
 stylesheets[all][] = css/jean_foundation.css
 
 ; Block loading of foundation.min.css from the base theme. This file should either
@@ -43,6 +45,8 @@ scripts[] = js/foundation.min.js
 ; Theme scripts (minified).
 ; Grunt will compress any custom theme scripts matching the _*.js naming convention
 ; into app.min.js.
+scripts[] = vendor/owl.carousel/dist/owl.carousel.min.js
+scripts[] = js/jean_foundation.js
 scripts[] = js/app.min.js
 
 ; This section lists the regions defined in the page.tpl.php. The name in

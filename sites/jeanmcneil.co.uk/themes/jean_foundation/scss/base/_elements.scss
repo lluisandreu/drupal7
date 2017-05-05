@@ -14,6 +14,12 @@
 //-----------------------------------------------------------------------------
 // a {}
 
+a {
+    transition: color .5s ease-in-out;
+    -webkit-transition: color .5s ease-in-out;
+    -moz-transition: color .5s ease-in-out;
+}
+
 // a:focus {}
 
 // a.active,

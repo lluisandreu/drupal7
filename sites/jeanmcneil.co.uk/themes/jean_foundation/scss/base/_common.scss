@@ -5,3 +5,11 @@
 // %font-FONTNAME   {}
 // %font-sans-serif { font-family: sans-serif; }
 // %font-serif      { font-family: serif; }
+
+.gray-link {
+    color: lighten($body-font-color, 30%);
+}
+
+.article-padding {
+    padding-bottom: rem-calc(20);
+}

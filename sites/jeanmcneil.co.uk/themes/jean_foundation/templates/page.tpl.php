@@ -1,7 +1,7 @@
 <div class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
-    <nav class="tab-bar">
-      <div class="right-small">
+    <nav class="tab-bar show-for-small-only">
+      <div class="left-small">
         <a role="button" aria-expanded="false" aria-controls="idOfRightMenu" class="left-off-canvas-toggle menu-icon" ><span></span></a>
       </div>
     </nav>
@@ -14,7 +14,7 @@
       <header id="header">
         <div class="row">
           <div class="column text-left">
-            <div class="site-name">Jean McNeil</div>
+            <div class="site-name"><a href="<?php print url('<front>'); ?>">Jean McNeil</a></div>
           </div>
         </div>
       </header>
@@ -26,6 +26,11 @@
             </div>
           <?php endif; ?>
         </div>
+        <?php if ($breadcrumb && !$is_front): ?>
+          <div class="row">
+            <div id="breadcrumb" class="column"><?php print $breadcrumb; ?></div>
+          </div>
+        <?php endif; ?>
         <div class="row">
           <div class="column">
             <?php print $messages; ?>
@@ -39,22 +44,40 @@
         </div>
         <?php endif; ?>
         <div class="row">
-          <div class="medium-9 columns">
+          <div class="medium-8 columns">
             <?php print render($page['content']); ?>
           </div>
-          <nav class="medium-3 columns">
+          <nav id="main-nav" class="medium-3 columns hide-for-small">
             <?php print render($page['nav']); ?>
           </nav>
         </div>
         <?php if($is_front): ?>
           <div class="row front-featured">
-            <div class="column">
-              
+            <div class="medium-4 columns">
+              <?php print render_block_content('views', "latest_on_homepage-block_1"); ?>
+            </div>
+            <div class="medium-4 columns">
+              <?php print render_block_content('views', "latest_on_homepage-block_2"); ?>
+            </div>
+            <div class="medium-4 columns">
+              <?php print render_block_content('views', "latest_on_homepage-block_3"); ?>
             </div>
           </div>
         <?php endif; ?>
       </main>
-      <footer></footer>
+      <footer id="footer">
+        <div class="row">
+          <div class="medium-6 columns">
+            <p>Jean McNeil &copy; 2017</p>
+          </div>
+          <div class="medium-6 columns">
+            <p class="text-right">
+              <a href="https://twitter.com/jeanmcneilwrite" target="_blank">Twitter&nbsp;</a>
+              <a href="https://www.instagram.com/jean_mcneil08/" target="_blank"> Instagram</a>
+            </p>
+          </div>
+        </div>
+      </footer>
     </section>
   <a class="exit-off-canvas"></a>
   </div>

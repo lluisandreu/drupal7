@@ -103,27 +103,40 @@ $font-family-serif: "Lora", serif;
 
 // $white       : #FFFFFF;
 // $ghost       : #FAFAFA;
-// $snow        : #F9F9F9;
-// $vapor       : #F6F6F6;
-// $white-smoke : #F5F5F5;
-// $silver      : #EFEFEF;
-// $smoke       : #EEEEEE;
-// $gainsboro   : #DDDDDD;
+$snow: #F9F9F9;
+
+$vapor: #F6F6F6;
+
+$white-smoke: #F5F5F5;
+
+$silver: #EFEFEF;
+
+$smoke: #EEEEEE;
+
+$gainsboro: #DDDDDD;
+
 // $iron        : #CCCCCC;
-// $base        : #AAAAAA;
+
+$base: #AAAAAA;
+
 // $aluminum    : #999999;
-// $jumbo       : #888888;
-// $monsoon     : #777777;
+$jumbo: #888888;
+
+$monsoon: #777777;
+
 // $steel       : #666666;
 // $charcoal    : #555555;
-// $tuatara     : #444444;
-// $oil         : #333333;
+$tuatara: #444444;
+$oil: #333333;
+
 // $jet         : #222222;
 // $black       : #000000;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
+$primary-color: $jumbo;
+
+$secondary-color: $gainsboro;
+
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
@@ -131,8 +144,10 @@ $font-family-serif: "Lora", serif;
 
 // We use these to control various global styles
 // $body-bg: $white;
-// $body-font-color: $jet;
-// $body-font-family: $font-family-sans-serif;
+$body-font-color: $tuatara;
+
+$body-font-family: $font-family-serif;
+
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -213,16 +228,18 @@ $header-font-family: $font-family-sans-serif;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
+$h1-font-size: rem-calc(28);
+$h2-font-size: rem-calc(22);
+$h3-font-size: rem-calc(20);
+
 // $h4-font-size: rem-calc(23);
 // $h5-font-size: rem-calc(18);
 // $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-// $h1-font-reduction: rem-calc(10) !default;
-// $h2-font-reduction: rem-calc(10) !default;
+$h1-font-reduction: rem-calc(5) !default;
+$h2-font-reduction: rem-calc(5) !default;
+
 // $h3-font-reduction: rem-calc(5) !default;
 // $h4-font-reduction: rem-calc(5) !default;
 // $h5-font-reduction: 0 !default;
@@ -263,8 +280,8 @@ $header-font-family: $font-family-sans-serif;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
+$anchor-font-color: $body-font-color;
+$anchor-font-color-hover: lighten($body-font-color, 30%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -398,25 +415,28 @@ $header-font-family: $font-family-sans-serif;
 // $include-html-nav-classes: $include-html-classes;
 
 // We use this to set the background color for the breadcrumb container.
-// $crumb-bg: scale-color($secondary-color, $lightness: 55%);
+$crumb-bg: transparent;
 
 // We use these to set the padding around the breadcrumbs.
-// $crumb-padding: rem-calc(9 14 9);
+$crumb-padding: rem-calc(9 0);
+
 // $crumb-side-padding: rem-calc(12);
 
 // We use these to control border styles.
 // $crumb-function-factor: -10%;
-// $crumb-border-size: 1px;
+$crumb-border-size: 0;
+
 // $crumb-border-style: solid;
 // $crumb-border-color: scale-color($crumb-bg, $lightness: $crumb-function-factor);
-// $crumb-radius: $global-radius;
+$crumb-radius: 0;
 
 // We use these to set various text styles for breadcrumbs.
 // $crumb-font-size: rem-calc(11);
 // $crumb-font-color: $primary-color;
 // $crumb-font-color-current: $oil;
 // $crumb-font-color-unavailable: $aluminum;
-// $crumb-font-transform: uppercase;
+$crumb-font-transform: inherit;
+
 // $crumb-link-decor: underline;
 
 // We use these to control the slash between breadcrumbs
@@ -812,16 +832,18 @@ $header-font-family: $font-family-sans-serif;
 
 // $include-html-off-canvas-classes: $include-html-classes;
 
-// $tabbar-bg: $oil;
+$tabbar-bg: $silver;
+
 // $tabbar-height: rem-calc(45);
 // $tabbar-icon-width: $tabbar-height;
 // $tabbar-line-height: $tabbar-height;
-// $tabbar-color: $white;
+$tabbar-color: $oil;
+
 // $tabbar-middle-padding: 0 rem-calc(10);
 
 // Off Canvas Divider Styles
 // $tabbar-right-section-border: solid 1px scale-color($tabbar-bg, $lightness: 13%);
-// $tabbar-left-section-border: solid 1px scale-color($tabbar-bg, $lightness: -50%);
+$tabbar-left-section-border: solid 1px scale-color($tabbar-bg, $lightness: -50%);
 
 // Off Canvas Tab Bar Headers
 // $tabbar-header-color: $white;
@@ -831,12 +853,13 @@ $header-font-family: $font-family-sans-serif;
 
 // Off Canvas Menu Variables
 // $off-canvas-width: rem-calc(250);
-// $off-canvas-bg: $oil;
-// $off-canvas-bg-hover: scale-color($tabbar-bg, $lightness: -30%);
+$off-canvas-bg: $silver;
+$off-canvas-bg-hover: scale-color($tabbar-bg, $lightness: -30%);
 
 // Off Canvas Menu List Variables
 // $off-canvas-label-padding: 0.3rem rem-calc(15);
-// $off-canvas-label-color: $aluminum;
+$off-canvas-label-color: #fff;
+
 // $off-canvas-label-text-transform: uppercase;
 // $off-canvas-label-font-size: rem-calc(12);
 // $off-canvas-label-font-weight: $font-weight-bold;
@@ -845,9 +868,11 @@ $header-font-family: $font-family-sans-serif;
 // $off-canvas-label-border-bottom: none;
 // $off-canvas-label-margin:0;
 // $off-canvas-link-padding: rem-calc(10, 15);
-// $off-canvas-link-color: rgba($white, 0.7);
+$off-canvas-link-color: $oil;
+
 // $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -25%);
-// $off-canvas-back-bg: $tuatara;
+$off-canvas-back-bg: $tuatara;
+
 // $off-canvas-back-border-top: $off-canvas-label-border-top;
 // $off-canvas-back-border-bottom: $off-canvas-label-border-bottom;
 // $off-canvas-back-hover-bg: scale-color($off-canvas-back-bg, $lightness: -30%);
@@ -855,7 +880,8 @@ $header-font-family: $font-family-sans-serif;
 // $off-canvas-back-hover-border-bottom: none;
 
 // Off Canvas Menu Icon Variables
-// $tabbar-menu-icon-color: $white;
+$tabbar-menu-icon-color: $oil;
+
 // $tabbar-menu-icon-hover: scale-color($tabbar-menu-icon-color, $lightness: -30%);
 
 // $tabbar-menu-icon-text-indent: rem-calc(35);
@@ -1371,8 +1397,9 @@ $header-font-family: $font-family-sans-serif;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: $oil;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg-color: $silver;
+
+$topbar-bg: $silver;
 
 // Height and margin
 // $topbar-height: rem-calc(45);
