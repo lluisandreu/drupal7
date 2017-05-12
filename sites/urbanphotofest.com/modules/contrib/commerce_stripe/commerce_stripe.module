@@ -579,8 +579,14 @@ function commerce_stripe_submit_form_submit($payment_method, $pane_form, $pane_v
       array(':error' => $e->getMessage())), 'error');
     watchdog('commerce_stripe', 'Following error received when processing card @stripe_error.',
       array('@stripe_error' => $e->getMessage()), WATCHDOG_NOTICE);
-    $transaction->remote_id = $e->getHttpStatus();
-    $transaction->payload[REQUEST_TIME] = $e->jsonBody;
+    if (is_a($e, 'Stripe\Error\Base')) {
+      $transaction->remote_id = $e->getHttpStatus();
+      $transaction->payload[REQUEST_TIME] = $e->jsonBody;
+    }
+    else {
+      $transaction->remote_id = $e->getCode();
+      $transaction->payload = $e->getTraceAsString();
+    }
     $transaction->message = t('Card processing error: @stripe_error', array('@stripe_error' => $e->getMessage()));
     $transaction->status = COMMERCE_PAYMENT_STATUS_FAILURE;
     _commerce_stripe_commerce_payment_transaction_save($transaction);
@@ -669,6 +675,9 @@ function _commerce_stripe_create_card($stripe_token, $account, $payment_method, 
     catch (Exception $e) {
       drupal_set_message(t('We received the following error processing your card: %error. Please enter your information again or try a different card.', array('%error' => $e->getMessage())), 'error');
       watchdog('commerce_stripe', 'Following error received when adding a card to customer: @stripe_error.', array('@stripe_error' => $e->getMessage()), WATCHDOG_NOTICE);
+      if ($throw_exceptions) {
+        throw $e;
+      }
       return FALSE;
     }
   }
@@ -790,20 +799,13 @@ function commerce_stripe_cardonfile_charge($payment_method, $card_data, $order, 
   // Fetch the customer id and card id from $card_data->remote_id
   list($customer_id, $card_id) = explode('|', $card_data->remote_id);
 
-  if(isset($charge['currency_code'])){
-    $currency_code = $charge['currency_code'];
-  }
-  else {
-    $currency_code = $payment_method['settings']['stripe_currency'];
-  }
-
   // Assemble charge parameters.
   _commerce_stripe_set_api_key($payment_method);
 
   // Build a default description and offer modules the possibility to alter it.
   $description = t('Order Number: @order_number', array('@order_number' => $order->order_number));
 
-  if(isset($charge['currency_code'])){
+  if (isset($charge['currency_code'])) {
     $currency_code = $charge['currency_code'];
   }
   else {
@@ -852,8 +854,14 @@ function commerce_stripe_cardonfile_charge($payment_method, $card_data, $order, 
     drupal_set_message(t('We received the following error processing your card. Please enter your information again or try a different card.'), 'error');
     drupal_set_message(check_plain($e->getMessage()), 'error');
     watchdog('commerce_stripe', 'Following error received when processing card @stripe_error.', array('@stripe_error' => $e->getMessage()), WATCHDOG_NOTICE);
-    $transaction->remote_id = $e->getHttpStatus();
-    $transaction->payload[REQUEST_TIME] = $e->jsonBody;
+    if (is_a($e, 'Stripe\Error\Base')) {
+      $transaction->remote_id = $e->getHttpStatus();
+      $transaction->payload[REQUEST_TIME] = $e->jsonBody;
+    }
+    else {
+      $transaction->remote_id = $e->getCode();
+      $transaction->payload = $e->getTraceAsString();
+    }
     $transaction->message = t('Card processing error: @stripe_error', array('@stripe_error' => $e->getMessage()));
     $transaction->status = COMMERCE_PAYMENT_STATUS_FAILURE;
     _commerce_stripe_commerce_payment_transaction_save($transaction);
@@ -1151,7 +1159,7 @@ function commerce_stripe_cardonfile_update_form($form, &$form_state, $op, $card_
   }
 
   // Load the billing profile associated with this card and populate the address form.
-  if ($wrapper->__isset('commerce_cardonfile_profile') && !empty($wrapper->commerce_cardonfile_profile->value())) {
+  if ($wrapper->__isset('commerce_cardonfile_profile') && !empty($wrapper->commerce_cardonfile_profile)) {
     $profile = $wrapper->commerce_cardonfile_profile->value();
   }
   else {
