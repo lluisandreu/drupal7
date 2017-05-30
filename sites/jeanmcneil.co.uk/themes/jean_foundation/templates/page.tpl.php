@@ -69,6 +69,7 @@
         <div class="row">
           <div class="medium-6 columns">
             <p>Jean McNeil &copy; 2017</p>
+            <small>Site designed and developed by <a href="http://lluisandreu.com/" target="_blank">lluisandreu.com</a></small>
           </div>
           <div class="medium-6 columns">
             <p class="text-right">

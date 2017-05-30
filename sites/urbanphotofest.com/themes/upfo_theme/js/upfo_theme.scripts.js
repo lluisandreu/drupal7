@@ -10,13 +10,19 @@
             jQuery(document).ready(function ($) {
                 menuToggle();
                 menuChildToggle();
-                if ($('.front-carousel').size() > 0) {
+
+            });
+
+            $(window).load(function () {
+                if ($('.front-carousel').size()) {
                     frontCarousel();
                 }
             });
 
             function frontCarousel() {
-                $('.front-carousel').owlCarousel({
+                var frontCarosel = $('.front-carousel');
+                frontCarosel.css('visibility', 'visible');
+                frontCarosel.owlCarousel({
                     margin: 10,
                     items: 1,
                     loop: true,
@@ -26,7 +32,16 @@
                             autoWidth: true,
                             items: 3,
                             center: true,
+                        },
+                        640: {
+                            items: 2,
+                            center: true,
+                        },
+                        0: {
+                            items: 1,
+                            autoHeight: true,
                         }
+
                     }
                 });
             }

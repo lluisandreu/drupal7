@@ -35,6 +35,8 @@ stylesheets[all][] = css/foundation.min.css
 
 ; Foundation JavaScript.
 
+scripts[] = vendor/instafeed/instafeed.min.js
+
 ; External libraries used by Foundation (minified). Add more via Gruntfile.js.
 scripts[] = js/libs.min.js
 

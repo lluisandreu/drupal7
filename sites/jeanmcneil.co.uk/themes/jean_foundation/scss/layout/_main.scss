@@ -8,11 +8,14 @@
         padding: rem-calc(40) 0;
     }
 
-    .front-featured {}
-
-    .node-page {
-        .field-name-field-image-page {
-            margin-bottom: rem-calc(10);
+    .node {
+        .field-type-image {
+            margin-bottom: rem-calc(20);
         }
+    }
+
+    .node-type-tracking-project .field-name-field-section-title {
+        font-weight: bolder;
+        margin-bottom: rem-calc(10);
     }
 }
