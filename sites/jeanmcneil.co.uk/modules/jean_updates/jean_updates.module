@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Jean Updates feature.
- */
-
-include_once 'jean_updates.features.inc';

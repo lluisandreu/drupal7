@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the THS Taxonomy feature.
- */
-
-include_once 'ths_taxonomy.features.inc';
