@@ -277,6 +277,22 @@ nav.nav-collapse.opened {
     }
 }
 
+.social-icons {
+    li {
+        display: inline-block !important;
+        width: auto !important;
+    }
+
+    i.fa {
+        font-size: 16px;
+        margin-right: 5px;
+    }
+
+    a:hover {
+        color: #333;
+    }
+}
+
 // Main Content
 
 .field-name-body {
