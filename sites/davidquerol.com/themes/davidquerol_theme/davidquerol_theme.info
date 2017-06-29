@@ -1,0 +1,19 @@
+name = David Querol Theme
+description = Drupal Custom theme for David Querol
+core = 7.x
+version = 7.x-1.0
+
+stylesheets[all][] = vendor/jquery-ui.min.css 
+stylesheets[all][] = stylesheets/styles.css
+stylesheets[all][] = vendor/responsive-nav/responsive-nav.css
+stylesheets[all][] = vendor/slick/slick.css
+stylesheets[all][] = vendor/slick/slick-theme.css
+
+scripts[] = vendor/responsive-nav/responsive-nav.js
+scripts[] = vendor/countdown/dist/countdown.min.js
+scripts[] = vendor/jquery-ui.min.js
+scripts[] = vendor/slick/slick.min.js
+scripts[] = dist/js/script.min.js
+
+regions[nav] =	Navigation
+regions[content] = Content
