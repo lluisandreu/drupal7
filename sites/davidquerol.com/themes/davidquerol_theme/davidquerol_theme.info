@@ -4,7 +4,7 @@ core = 7.x
 version = 7.x-1.0
 
 stylesheets[all][] = vendor/jquery-ui.min.css 
-stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/stylesheets.css
 stylesheets[all][] = vendor/responsive-nav/responsive-nav.css
 stylesheets[all][] = vendor/slick/slick.css
 stylesheets[all][] = vendor/slick/slick-theme.css
