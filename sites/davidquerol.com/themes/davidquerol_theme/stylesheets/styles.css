@@ -1,0 +1,786 @@
+/**
+ * Reset CSS styles.
+ *
+ * Based on Eric Meyer's "Reset CSS 1.0" tool from
+ * http://meyerweb.com/eric/tools/css/reset
+ */
+/* line 8, ../sass/_reset.scss */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+input,
+select,
+textarea,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+td.menu-disabled,
+ul.links,
+ul.links.inline,
+ul.links li,
+.block ul,
+div.admin,
+tr.even,
+tr.odd,
+tr.drag,
+tbody,
+tbody th,
+thead th,
+.breadcrumb,
+.item-list .icon,
+.item-list .title,
+.item-list ul,
+.item-list ul li,
+ol.task-list li.active,
+.form-item,
+tr.odd .form-item,
+tr.even .form-item,
+.form-item .description,
+.form-item label,
+.form-item label.option,
+.form-checkboxes,
+.form-radios,
+.form-checkboxes .form-item,
+.form-radios .form-item,
+.marker,
+.form-required,
+.more-link,
+.more-help-link,
+.item-list .pager,
+.item-list .pager li,
+.pager-current,
+.tips,
+ul.primary,
+ul.primary li,
+ul.primary li a,
+ul.primary li.active a,
+ul.primary li a:hover,
+ul.secondary,
+ul.secondary li,
+ul.secondary a,
+ul.secondary a.active,
+.resizable-textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* Drupal: system-menus.css */
+/* line 127, ../sass/_reset.scss */
+ul.links,
+ul.links.inline,
+ul.links li,
+.block ul,
+ol,
+ul,
+.item-list ul,
+.item-list ul li {
+  list-style: none;
+}
+
+/* line 138, ../sass/_reset.scss */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* line 143, ../sass/_reset.scss */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* Remember to highlight inserts somehow! */
+/* line 152, ../sass/_reset.scss */
+ins {
+  text-decoration: none;
+}
+
+/* line 156, ../sass/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+/* line 161, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * Font reset.
+ *
+ * Specifically targets form elements which browsers often times give
+ * special treatment.
+ */
+/* line 172, ../sass/_reset.scss */
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 178, ../sass/_reset.scss */
+textarea {
+  font-size: 1em;
+  line-height: 1.538em;
+}
+
+/**
+ * Markup free clearing.
+ *
+ * Consider adding your own selectors to this instead of finding ways
+ * to sneak the clearfix class into Drupal's markup.
+ * From http://perishablepress.com/press/2009/12/06/new-clearfix-hack
+ */
+/* line 190, ../sass/_reset.scss */
+ul.links:after,
+div.admin-panel .body:after,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Exclude inline links from clearfix behavior */
+/* line 201, ../sass/_reset.scss */
+ul.inline:after {
+  content: "";
+  display: none;
+  clear: none;
+}
+
+/* IE6 */
+/* line 208, ../sass/_reset.scss */
+* html .form-item,
+* html ul.links,
+* html div.admin-panel .body,
+* html .clearfix {
+  height: 1%;
+}
+
+/* IE7 */
+/* line 216, ../sass/_reset.scss */
+*:first-child + html .form-item,
+*:first-child + html ul.links,
+*:first-child + html div.admin-panel .body,
+*:first-child + html .clearfix {
+  min-height: 1%;
+}
+
+/* line 2, ../sass/_drupal.scss */
+div.messages {
+  border: none;
+  color: #ffffff;
+  background-image: none;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+/* line 10, ../sass/_drupal.scss */
+div.status {
+  background: #64D06E;
+}
+
+/* line 14, ../sass/_drupal.scss */
+div.info {
+  background: #FFFEBB;
+  color: #000000;
+}
+
+/* line 19, ../sass/_drupal.scss */
+div.error {
+  background: #FF7474;
+  color: #000000;
+}
+
+/* line 27, ../sass/_drupal.scss */
+#tabs ul {
+  margin: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+/* line 32, ../sass/_drupal.scss */
+#tabs li {
+  font-size: 1.5rem;
+  padding: 6px;
+  border: 1px solid #ccc;
+  background: #eee;
+  display: inline-block;
+  z-index: 100;
+  position: relative;
+  margin-bottom: -1px;
+}
+/* line 42, ../sass/_drupal.scss */
+#tabs li:hover {
+  background: #ccc;
+}
+/* line 46, ../sass/_drupal.scss */
+#tabs li.active {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+/* line 52, ../sass/_drupal.scss */
+#tabs li a {
+  color: #666;
+  padding: 6px;
+  background: none;
+}
+
+/* line 61, ../sass/_drupal.scss */
+form .form-item {
+  margin: 10px 0;
+}
+
+/* line 1, ../sass/_layout.scss */
+.main-section {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 100%;
+  max-width: 1160px;
+  padding: 20px;
+  margin: auto;
+}
+@media (min-width: 650px) {
+  /* line 1, ../sass/_layout.scss */
+  .main-section {
+    flex-wrap: nowrap;
+    padding: 40px;
+  }
+}
+
+/* line 18, ../sass/_layout.scss */
+.main-aside {
+  width: 100%;
+  margin-top: 20px;
+}
+@media (min-width: 650px) {
+  /* line 18, ../sass/_layout.scss */
+  .main-aside {
+    margin-top: 40px;
+    width: 20%;
+    max-width: 400px;
+    padding-right: 20px;
+    margin-left: 40px;
+  }
+}
+
+/* line 31, ../sass/_layout.scss */
+.main-content {
+  width: 100%;
+}
+@media (min-width: 650px) {
+  /* line 31, ../sass/_layout.scss */
+  .main-content {
+    width: 75%;
+  }
+}
+
+/* line 44, ../sass/_layout.scss */
+.no-flexbox .main-aside, .no-flexboxlegacy .main-aside, .no-flexwrap .main-aside {
+  width: 100%;
+}
+@media (min-width: 650px) {
+  /* line 44, ../sass/_layout.scss */
+  .no-flexbox .main-aside, .no-flexboxlegacy .main-aside, .no-flexwrap .main-aside {
+    width: 30%;
+    max-width: 400px;
+    float: left;
+  }
+}
+/* line 54, ../sass/_layout.scss */
+.no-flexbox .main-content, .no-flexboxlegacy .main-content, .no-flexwrap .main-content {
+  width: 100%;
+}
+@media (min-width: 650px) {
+  /* line 54, ../sass/_layout.scss */
+  .no-flexbox .main-content, .no-flexboxlegacy .main-content, .no-flexwrap .main-content {
+    width: 70%;
+    float: right;
+  }
+}
+
+/* line 3, ../sass/_basicstyling.scss */
+a {
+  color: #888;
+  text-decoration: none;
+}
+
+/* line 8, ../sass/_basicstyling.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 12, ../sass/_basicstyling.scss */
+body {
+  font-family: "Helvetica", arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  color: #444;
+}
+
+/* line 20, ../sass/_basicstyling.scss */
+body, html {
+  box-sizing: border-box;
+}
+
+/* line 24, ../sass/_basicstyling.scss */
+h1 {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+/* line 29, ../sass/_basicstyling.scss */
+h2 {
+  margin: 0.8rem 0;
+}
+
+/* line 33, ../sass/_basicstyling.scss */
+iframe {
+  max-width: 100%;
+}
+
+/* line 37, ../sass/_basicstyling.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 42, ../sass/_basicstyling.scss */
+input[type=submit], button {
+  padding: 10px;
+  background: #eee;
+  color: #444;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+/* line 50, ../sass/_basicstyling.scss */
+input[type=submit]:hover, button:hover {
+  background: #d5d5d5;
+}
+
+/* line 55, ../sass/_basicstyling.scss */
+input[type=text], input[type=email], input[type=password] {
+  padding: 8px;
+  border: none;
+  margin: 10px 0;
+  background: #f5f5f5;
+  border-bottom: 1px solid #888;
+  font-size: 1.2rem;
+  font-family: "Helvetica", arial, sans-serif;
+  color: #444;
+  max-width: 100%;
+}
+
+/* line 67, ../sass/_basicstyling.scss */
+textarea {
+  background: #f5f5f5;
+  margin: 10px 0;
+  max-width: 100%;
+  font-size: 1.2rem;
+  font-family: "Helvetica", arial, sans-serif;
+  color: #444;
+}
+
+/* line 76, ../sass/_basicstyling.scss */
+label {
+  color: #444;
+  display: block;
+  padding: 5px 0 !important;
+}
+
+/* line 82, ../sass/_basicstyling.scss */
+p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0 0 1rem 0;
+  color: gray;
+}
+
+/* line 89, ../sass/_basicstyling.scss */
+small {
+  font-family: "Helvetica", arial, sans-serif;
+}
+
+/* line 93, ../sass/_basicstyling.scss */
+strong {
+  font-weight: 700;
+}
+
+/* line 101, ../sass/_basicstyling.scss */
+.main-content {
+  padding-top: 30px;
+}
+/* line 106, ../sass/_basicstyling.scss */
+.main-content .node a:hover {
+  text-decoration: underline;
+}
+
+/* line 114, ../sass/_basicstyling.scss */
+.main-content-box-inner {
+  padding-top: 40px;
+}
+
+/* line 120, ../sass/_basicstyling.scss */
+.main-aside a:hover {
+  text-decoration: underline;
+}
+/* line 125, ../sass/_basicstyling.scss */
+.main-aside .site-name {
+  padding: 5px 0 5px 0;
+}
+/* line 128, ../sass/_basicstyling.scss */
+.main-aside .site-name a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 700;
+}
+/* line 135, ../sass/_basicstyling.scss */
+.main-aside .sidebar-info {
+  font-size: 1.1rem;
+}
+
+/* line 142, ../sass/_basicstyling.scss */
+.main-nav.closed {
+  margin-top: 20px;
+}
+/* line 145, ../sass/_basicstyling.scss */
+.main-nav.closed .menu li {
+  text-transform: lowercase;
+}
+/* line 150, ../sass/_basicstyling.scss */
+.main-nav.closed .menu a:hover {
+  text-decoration: underline;
+}
+/* line 156, ../sass/_basicstyling.scss */
+.main-nav.closed .menu span:hover {
+  text-decoration: underline;
+}
+/* line 161, ../sass/_basicstyling.scss */
+.main-nav.closed .menu > li {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  font-weight: 400;
+  z-index: 10;
+  position: relative;
+}
+/* line 171, ../sass/_basicstyling.scss */
+.main-nav.closed .menu > li a, .main-nav.closed .menu span {
+  color: #444;
+}
+/* line 176, ../sass/_basicstyling.scss */
+.main-nav.closed .menu li ul li {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+/* line 181, ../sass/_basicstyling.scss */
+.main-nav.closed .menu li ul a, .main-nav.closed .menu li ul span {
+  cursor: pointer;
+  color: #888;
+}
+/* line 186, ../sass/_basicstyling.scss */
+.main-nav.closed .menu li ul li.active a.active, .main-nav.closed .menu li ul a:hover {
+  text-decoration: underline;
+}
+/* line 191, ../sass/_basicstyling.scss */
+.main-nav.closed .menu li ul ul {
+  padding-left: 10px;
+}
+/* line 195, ../sass/_basicstyling.scss */
+.main-nav.closed .menu a {
+  display: block;
+  text-decoration: none;
+}
+
+/* line 202, ../sass/_basicstyling.scss */
+.main-nav ul ul {
+  min-height: 0;
+  height: 0;
+  opacity: 0;
+  transition: min-height 500ms ease-in-out;
+  position: relative;
+  z-index: -999;
+  overflow: hidden;
+}
+/* line 213, ../sass/_basicstyling.scss */
+.main-nav .collapsed > ul {
+  min-height: auto;
+  height: auto;
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+  z-index: 0 !important;
+  overflow: auto;
+}
+/* line 223, ../sass/_basicstyling.scss */
+.main-nav .active-trail > ul {
+  min-height: auto !important;
+  height: auto !important;
+  opacity: 1 !important;
+  z-index: 0 !important;
+}
+
+/* line 232, ../sass/_basicstyling.scss */
+.nav-toggle {
+  margin-top: 5px;
+  font-size: 1.6rem;
+  text-align: center;
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 8px 0;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+}
+
+/* line 244, ../sass/_basicstyling.scss */
+.js .nav-collapse.opened {
+  max-height: inherit !important;
+}
+
+/* line 248, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened {
+  text-align: center;
+  background: #404040;
+}
+/* line 252, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened li {
+  text-align: center;
+  font-family: "Helvetica", arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+}
+/* line 260, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened li ul {
+  background: #4d4d4d;
+}
+/* line 264, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened li ul ul {
+  background: #666666;
+}
+/* line 268, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened a, nav.nav-collapse.opened span {
+  color: #ffffff;
+  padding: 10px 0;
+  text-decoration: none;
+  display: block;
+}
+/* line 274, ../sass/_basicstyling.scss */
+nav.nav-collapse.opened a:hover, nav.nav-collapse.opened a:focus, nav.nav-collapse.opened span:hover, nav.nav-collapse.opened span:focus {
+  background: #1a1a1a;
+}
+
+/* line 281, ../sass/_basicstyling.scss */
+.social-icons li {
+  display: inline-block !important;
+  width: auto !important;
+}
+/* line 286, ../sass/_basicstyling.scss */
+.social-icons i.fa {
+  font-size: 16px;
+  margin-right: 5px;
+}
+/* line 291, ../sass/_basicstyling.scss */
+.social-icons a:hover {
+  color: #333;
+}
+
+/* line 298, ../sass/_basicstyling.scss */
+.field-name-body {
+  margin-bottom: 3rem;
+}
+
+/* line 306, ../sass/_basicstyling.scss */
+.project-media .project-media-horizontal .field-items {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+/* line 313, ../sass/_basicstyling.scss */
+.project-media .project-media-horizontal .field-items .field-item {
+  flex: 0 0 auto;
+  margin-right: 50px;
+}
+/* line 321, ../sass/_basicstyling.scss */
+.project-media .project-media-vertical .field-item {
+  margin-bottom: 10px;
+}
+/* line 327, ../sass/_basicstyling.scss */
+.project-media .project-media-colorbox .field-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* line 331, ../sass/_basicstyling.scss */
+.project-media .project-media-colorbox .field-items .field-item {
+  display: inline-block;
+  width: 100%;
+  padding-right: 12px;
+  padding-bottom: 12px;
+}
+/* line 337, ../sass/_basicstyling.scss */
+.project-media .project-media-colorbox .field-items .field-item img {
+  display: block;
+  cursor: pointer;
+}
+@media (min-width: 650px) {
+  /* line 331, ../sass/_basicstyling.scss */
+  .project-media .project-media-colorbox .field-items .field-item {
+    width: calc(50%);
+  }
+}
+@media (min-width: 1080px) {
+  /* line 331, ../sass/_basicstyling.scss */
+  .project-media .project-media-colorbox .field-items .field-item {
+    width: calc(25%);
+  }
+}
+@media (min-width: 1080px) {
+  /* line 354, ../sass/_basicstyling.scss */
+  .project-media .project-media-slideshow {
+    width: 75%;
+  }
+}
+/* line 363, ../sass/_basicstyling.scss */
+.project-media .project-media-slideshow .slick-dots li {
+  top: 5px;
+}
+
+/* line 372, ../sass/_basicstyling.scss */
+.slick-prev:before, .slick-next:before {
+  color: #333 !important;
+}
+
+/* line 376, ../sass/_basicstyling.scss */
+.slick-counter {
+  text-align: center;
+  padding-top: 12px;
+}
+
+/* line 383, ../sass/_basicstyling.scss */
+#cboxLoadedContent, #cboxContent {
+  background: transparent;
+}
+
+/* Countdown */
+/* line 389, ../sass/_basicstyling.scss */
+ul#countdown {
+  list-style: none;
+  margin: 50px 0;
+  padding: 0;
+  display: block;
+  color: #888;
+}
+
+/* line 397, ../sass/_basicstyling.scss */
+ul#countdown li {
+  display: inline-block;
+}
+
+/* line 401, ../sass/_basicstyling.scss */
+ul#countdown li span {
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 80px;
+}
+
+/* line 407, ../sass/_basicstyling.scss */
+ul#countdown p {
+  width: auto !important;
+}
+
+/* line 411, ../sass/_basicstyling.scss */
+ul#countdown li.seperator {
+  font-size: 64px;
+  line-height: 70px;
+  vertical-align: top;
+}
+
+/* line 417, ../sass/_basicstyling.scss */
+ul#countdown li p {
+  color: #777;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* line 425, ../sass/_basicstyling.scss */
+.hide-small {
+  display: none;
+}
+@media (min-width: 650px) {
+  /* line 425, ../sass/_basicstyling.scss */
+  .hide-small {
+    display: block !important;
+  }
+}
