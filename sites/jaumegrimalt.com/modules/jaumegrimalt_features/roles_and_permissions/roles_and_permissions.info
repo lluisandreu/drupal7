@@ -1,7 +1,0 @@
-name = Roles and Permissions
-description = Roles and Permissions
-core = 7.x
-package = JaumeGrimalt
-version = 7.x-1.0
-features[features_api][] = api:2
-project path = sites/jaumegrimalt.com/modules/jaumegrimalt_features

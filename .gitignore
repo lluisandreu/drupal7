@@ -1,3 +1,18 @@
+# Ignore sites
+
+sites/bartomeubennassar.com
+sites/davidquerol.com
+sites/hamadbutt.co.uk
+sites/iupss.com
+sites/jaumegrimalt.com
+sites/jeanmcneil.co.uk
+sites/relleuski.cat
+sites/sandbox
+sites/tavernacalbarber.cat
+sites/ths-thehorseshop.com
+sites/urbanphotofest.org
+sites/urbanphotographers.org
+
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings.php
 install.php
