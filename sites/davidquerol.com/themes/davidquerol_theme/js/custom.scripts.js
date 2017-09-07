@@ -1,14 +1,14 @@
 (function ($) {
     jQuery(document).ready(function ($) {
+
         var nav = responsiveNav(".nav-collapse", { // Selector
-            animate: false, // Boolean: Use CSS3 transitions, true or false
-            transition: 50, // Integer: Speed of the transition, in milliseconds
-            label: "Menu", // String: Label for the navigation toggle
-            insert: "before", // String: Insert the toggle before or after the navigation
-            customToggle: "", // Selector: Specify the ID of a custom toggle
+            //animate: true, // Boolean: Use CSS3 transitions, true or false
+            transition: 0, // Integer: Speed of the transition, in milliseconds
+            //insert: "before", // String: Insert the toggle before or after the navigation
+            customToggle: "#nav-toggle", // Selector: Specify the ID of a custom toggle
             closeOnNavClick: false, // Boolean: Close the navigation when one of the links are clicked
             openPos: "relative", // String: Position of the opened nav, relative or static
-            navClass: "nav-collapse", // String: Default CSS class. If changed, you need to edit the CSS too!
+            navClass: "opened", // String: Default CSS class. If changed, you need to edit the CSS too!
             navActiveClass: "js-nav-active", // String: Class that is added to  element when nav is active
             jsClass: "js", // String: 'JS enabled' class which is added to  element
             init: function () {}, // Function: Init callback
@@ -30,7 +30,8 @@
             });
         });
 
-        var $carr = $('.project-media-slideshow .field-items');
+        // Slick carrousel
+        var $carr = $('.project-media-slideshow .field-items, .project-media-slideshow .view-content');
         $carr.on('init', function (event, slick) {
             var counter = $('<div class="slick-counter" />');
             counter.text("1/" + slick.slideCount);
@@ -47,10 +48,8 @@
             slidesToScroll: 1,
         });
 
-
         $carr.on('afterChange', function (event, slick, currentSlide) {
             $(this).find('.slick-counter').text((currentSlide + 1) + '/' + slick.slideCount);
-
         });
 
         /// Accordion menu

@@ -1,5 +1,13 @@
 <?php
 
+function davidquerol_theme_preprocess_html($variables) {
+	$fontawesome = "https://use.fontawesome.com/88826c71d5.js";
+
+	drupal_add_js($fontawesome, array('type' => 'external'));
+	drupal_add_js("//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54734cc76e9f99b6", array('type' => 'external'));
+}
+
+
 function davidquerol_theme_breadcrumb($variables) {
  $breadcrumb = $variables['breadcrumb'];
 

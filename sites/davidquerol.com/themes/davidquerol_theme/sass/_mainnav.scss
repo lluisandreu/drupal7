@@ -1,0 +1,88 @@
+.main-nav.closed {
+    margin-top: 20px;
+
+    .menu li {
+        text-transform: lowercase;
+    }
+
+    .menu a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .menu span {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .menu > li {
+        font-size: $p_size;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 15px;
+        font-weight: 400;
+        z-index: 10;
+        position: relative;
+    }
+
+    .menu > li a, .menu span {
+        color: $darkgrey;
+    }
+
+    .menu li ul {
+        li {
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+
+        a, span {
+            cursor: pointer;
+            color: $color_secondary;
+        }
+
+        li.active a.active, a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .menu li ul ul {
+        padding-left: 10px;
+    }
+
+    .menu a {
+        display: block;
+        text-decoration: none;
+    }
+}
+
+.main-nav {
+    ul ul {
+        min-height: 0;
+        height: 0;
+        opacity: 0;
+        transition: min-height 500ms ease-in-out;
+        position: relative;
+        z-index: -999;
+        overflow: hidden;
+    }
+
+    .collapsed {
+        & > ul {
+            min-height: auto;
+            height: auto;
+            opacity: 1;
+            transition: opacity 500ms ease-in-out;
+            z-index: 0 !important;
+            overflow: auto;
+        }
+    }
+
+    .active-trail > ul {
+        min-height: auto !important;
+        height: auto !important;
+        opacity: 1 !important;
+        z-index: 0 !important;
+    }
+}

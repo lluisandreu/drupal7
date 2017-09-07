@@ -74,9 +74,12 @@
 ?>
 
 <section class="main-section clearfix">
-  <aside class="main-aside">
+  <aside class="main-aside clearfix">
     <div class="site-name">
       <a href="<?php print $front_page; ?>">david querol</a>
+    </div>
+    <div class="show-for-mobile nav-toggle">
+      <a href="#" id="nav-toggle"><i class="fa fa-bars"></i></a>
     </div>
     <nav class="main-nav nav-collapse">
       <?php print render($page['nav']); ?>

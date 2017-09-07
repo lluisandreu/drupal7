@@ -99,7 +99,12 @@ strong {
 // Main Section
 
 .main-content {
-    padding-top: 30px;
+    padding-top: 20px;
+
+    @include tablet {
+        padding-top: 30px;
+    }
+
 
     .node {
         a {
@@ -112,7 +117,11 @@ strong {
 
 // Aside
 .main-content-box-inner {
-    padding-top: 40px;
+    padding-top: 20px;
+
+    @include tablet {
+        padding-top: 40px;
+    }
 }
 
 .main-aside {
@@ -123,7 +132,13 @@ strong {
     }
 
     .site-name {
+        float: left;
         padding: 5px 0 5px 0;
+
+        @include desktop {
+            float: none;
+        }
+
 
         a {
             color: $darkgrey;
@@ -139,7 +154,94 @@ strong {
 
 // Navidation
 
+.nav-toggle {
+    float: right;
+
+    a {
+        font-size: 24px;
+    }
+}
+
+@include desktop {
+    .nav-toggle {
+        display: none;
+    }
+}
+
+
+.main-nav {
+    clear: both;
+    padding-top: 10px;
+
+    .menu-block-1 .menu {
+        overflow: hidden;
+
+        li {
+            font-size: 1.2rem;
+            padding-right: 0;
+            position: relative;
+
+            &.expanded > a:after, &.expanded > span:after {
+                content: "\f0da";
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: inherit;
+                position: absolute;
+                right: 0;
+                top: 10px;
+                font-size: 20px;
+                text-decoration: none !important;
+            }
+
+            &.expanded.active-trail > a:after, &.collapsed > a:after, &.expanded.active-trail > span:after, &.collapsed > span:after {
+                content: "\f0d7";
+            }
+        }
+
+        li li {
+            margin: 0;
+            padding-left: 10px;
+        }
+
+        a, span {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+            display: block;
+        }
+    }
+
+    .menu-block-1 > ul > li {
+        padding-left: 0;
+        margin-left: 0;
+    }
+}
+
+@include tablet {
+    .main-nav {
+        position: relative !important;
+        padding-top: 0;
+
+        .menu-block-1 .menu {
+            li li {
+                padding: 0;
+            }
+
+            a, span {
+                border: none;
+                padding: 0;
+            }
+
+            a:after, span:after {
+                display: none !important;
+            }
+        }
+    }
+}
+
+
 .main-nav.closed {
+    position: relative;
     margin-top: 20px;
 
     .menu li {
@@ -158,15 +260,7 @@ strong {
         }
     }
 
-    .menu > li {
-        font-size: $p_size;
-        margin: 0;
-        padding: 0;
-        margin-bottom: 15px;
-        font-weight: 400;
-        z-index: 10;
-        position: relative;
-    }
+    .menu > li {}
 
     .menu > li a, .menu span {
         color: $darkgrey;
@@ -174,7 +268,6 @@ strong {
 
     .menu li ul {
         li {
-            font-size: 1.1rem;
             margin-bottom: 0;
         }
 
@@ -216,7 +309,6 @@ strong {
             opacity: 1;
             transition: opacity 500ms ease-in-out;
             z-index: 0 !important;
-            overflow: auto;
         }
     }
 
@@ -225,56 +317,12 @@ strong {
         height: auto !important;
         opacity: 1 !important;
         z-index: 0 !important;
+        overflow: hidden;
     }
-}
-
-// Toogle
-.nav-toggle {
-    margin-top: 5px;
-    font-size: 1.6rem;
-    text-align: center;
-    background: darken($color_primary, 10%);
-    color: $white;
-    padding: 8px 0;
-    width: 100%;
-    display: block;
-    text-decoration: none;
 }
 
 .js .nav-collapse.opened {
     max-height: inherit !important;
-}
-
-nav.nav-collapse.opened {
-    text-align: center;
-    background: lighten($color_primary, 5%);
-
-    li {
-        text-align: center;
-        font-family: $font_sanserif;
-        margin: 0;
-        padding: 0;
-        font-size: 1.6rem;
-    }
-
-    li ul {
-        background: lighten($color_primary, 10%);
-    }
-
-    li ul ul {
-        background: lighten($color_primary, 20%);
-    }
-
-    a, span {
-        color: $white;
-        padding: 10px 0;
-        text-decoration: none;
-        display: block;
-
-        &:hover, &:focus {
-            background: darken($color_primary, 10%);
-        }
-    }
 }
 
 .social-icons {
