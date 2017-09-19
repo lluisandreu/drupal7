@@ -191,6 +191,13 @@ strong {
                 padding: 10px;
             }
 
+            @include tablet {
+                .arrow-toggle {
+                    display: none;
+                }
+            }
+
+
             /*
             &.expanded > a:after, &.expanded > span:after {
                 
