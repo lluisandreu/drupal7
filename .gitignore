@@ -8,6 +8,7 @@ sites.php
 sites/*/files/*
 sites/*/private
 sites/*/themes/*/node_modules
+sites/sandbox
 
 sites/*/themes/*/.sass-cache
 

@@ -27,8 +27,8 @@
         <?php print render($content['field_images']); ?>
       </div>
     <?php elseif($did == 4): ?>
-      <div class="project-media-slideshow">
-        <?php print views_embed_view('random_slideshow', 'block_1'); ?>
+      <div class="project-media-slideshow auto">
+        <?php print render($content['field_images']); ?>
       </div>
     <?php endif; ?>
   <?php endif; ?>

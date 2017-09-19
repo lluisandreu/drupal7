@@ -181,22 +181,24 @@ strong {
             padding-right: 0;
             position: relative;
 
-            &.expanded > a:after, &.expanded > span:after {
-                content: "\f0da";
-                font-family: FontAwesome;
-                font-style: normal;
-                font-weight: normal;
-                text-decoration: inherit;
+            .arrow-toggle {
                 position: absolute;
                 right: 0;
-                top: 10px;
-                font-size: 20px;
+                top: 0;
+                font-size: 15px;
                 text-decoration: none !important;
+                border: none;
+                padding: 10px;
+            }
+
+            /*
+            &.expanded > a:after, &.expanded > span:after {
+                
             }
 
             &.expanded.active-trail > a:after, &.collapsed > a:after, &.expanded.active-trail > span:after, &.collapsed > span:after {
                 content: "\f0d7";
-            }
+            }*/
         }
 
         li li {
