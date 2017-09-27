@@ -335,18 +335,29 @@ strong {
 }
 
 .social-icons {
+    margin-top: 20px;
+
     li {
         display: inline-block !important;
         width: auto !important;
     }
 
     i.fa {
-        font-size: 16px;
-        margin-right: 5px;
+        font-size: 20px;
+        margin-right: 8px;
     }
 
     a:hover {
         color: #333;
+    }
+
+    @include tablet {
+        margin-top: 0;
+
+        i.fa {
+            font-size: 16px;
+            margin-right: 5px;
+        }
     }
 }
 
