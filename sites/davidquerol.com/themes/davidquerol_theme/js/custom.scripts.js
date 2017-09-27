@@ -51,6 +51,8 @@
 
         if (container.hasClass('auto')) {
             $carr.slick("slickSetOption", "autoplay", true);
+            $carr.slick("slickSetOption", "draggable", false);
+            $('.slick-arrow').hide();
             $carr.slick("slickPlay");
         }
 
