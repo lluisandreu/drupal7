@@ -17,6 +17,15 @@
 			</div>
 			<div class="eight columns header-content">
 				<?php print render($page['header']); ?>
+				<?php if($cart['quantity']): ?>
+					<div class="upf-basket">
+						<a href="<?php print url('cart'); ?>" title="View cart">
+							<i class="icon-basket"></i>
+							<?php print $cart['total']; ?>
+							(<?php print $cart['quantity']; ?>)
+						</a>
+					</div>
+				<?php endif; ?>
 			</div>
 		</div>
 	</header>
@@ -48,6 +57,7 @@
 				<div class="main-content-left six columns">
 					<?php if($is_front): ?>
 						<h1><?php print $title; ?></h1>
+					<?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
 					<?php endif; ?>
 					<?php print $messages; ?>
 					<?php print render($page['content']); ?>
@@ -60,6 +70,7 @@
 			<div class="row">
 				<div class="main-content-full">
 					<h1><?php print $title; ?></h1>
+					<?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
 					<?php print $messages; ?>
 					<?php print render($page['content']); ?>
 				</div>

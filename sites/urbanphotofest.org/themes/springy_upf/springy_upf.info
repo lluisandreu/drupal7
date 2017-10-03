@@ -9,6 +9,8 @@ stylesheets[all][] = stylesheets/gumby.css
 
 features[] = logo
 features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
 
 regions[mobile] 		=	   Mobile Bar 
 regions[header]         =      Header
