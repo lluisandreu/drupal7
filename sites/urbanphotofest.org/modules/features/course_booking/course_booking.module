@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Course booking feature.
+ */
+
+include_once 'course_booking.features.inc';
