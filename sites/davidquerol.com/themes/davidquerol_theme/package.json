@@ -9,13 +9,15 @@
     "matchdep": "~0.3.0"
   },
   "devDependencies": {
-    "grunt-svgmin": "^2.0.0",
     "autoprefixer": "~6.3.1",
-    "cssnext": "~1.8.4",
-    "precss": "~1.4.0",
-    "pixrem": "~3.0.1",
     "cssnano": "~3.7.0",
+    "cssnext": "~1.8.4",
     "grunt-postcss": "~0.8.0",
+    "grunt-svgmin": "^2.0.0",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "pixrem": "~3.0.1",
+    "precss": "~1.4.0",
     "uglify": "~0.1.5"
   }
 }

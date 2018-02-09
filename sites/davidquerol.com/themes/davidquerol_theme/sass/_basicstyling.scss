@@ -135,7 +135,7 @@ strong {
         float: left;
         padding: 5px 0 5px 0;
 
-        @include desktop {
+        @include tablet {
             float: none;
         }
 
