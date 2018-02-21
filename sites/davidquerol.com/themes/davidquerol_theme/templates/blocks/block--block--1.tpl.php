@@ -2,7 +2,9 @@
 
 <?php 
 $cart = commerce_cart_order_load($variables['user']->uid);
-$quantity = count($cart->commerce_line_items);
+if($cart){
+	$quantity = count($cart->commerce_line_items);
+}
 ?>
 
 <?php if($cart): ?>
