@@ -94,6 +94,19 @@ strong {
     font-weight: $font_bold;
 }
 
+table {
+    width: 100%;
+
+    tr.even, tr.odd {
+        background-color: transparent;
+        border-bottom: 1px solid #ccc;
+    }
+
+    td, th {
+        padding: 10px;
+    }
+}
+
 // Scrollbar
 
 // Main Section

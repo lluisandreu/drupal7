@@ -1,0 +1,41 @@
+.view-shop {
+    .product-teaser-item {
+        margin-bottom: 40px;
+        text-align: center;
+
+        img {
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin-bottom: 5px;
+        }
+
+        .product-teaser-price {}
+    }
+}
+
+.node-product {
+    h4 {
+        margin-bottom: 10px;
+    }
+
+    .product-images {
+        margin-bottom: 20px;
+
+        .cloud-zoom-gallery-thumbs {
+            margin-top: 10px;
+        }
+    }
+
+    .product-price {
+        font-size: 18px;
+        margin: 10px 0 10px 0;
+    }
+}
+
+#views-form-commerce-cart-form-default {
+    table {
+        width: 100%;
+    }
+}

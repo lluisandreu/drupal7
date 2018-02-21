@@ -75,6 +75,14 @@ small {
 strong {
   font-weight: 700; }
 
+table {
+  width: 100%; }
+  table tr.even, table tr.odd {
+    background-color: transparent;
+    border-bottom: 1px solid #ccc; }
+  table td, table th {
+    padding: 10px; }
+
 .main-content {
   padding-top: 20px; }
   @media (min-width: 650px) {

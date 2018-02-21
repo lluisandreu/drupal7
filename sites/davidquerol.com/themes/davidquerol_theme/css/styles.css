@@ -264,6 +264,29 @@ ul.inline:after {
 .menu-mlid-388 {
   margin-top: 25px !important; }
 
+.view-shop .product-teaser-item {
+  margin-bottom: 40px;
+  text-align: center; }
+  .view-shop .product-teaser-item img {
+    margin-bottom: 10px; }
+  .view-shop .product-teaser-item h3 {
+    margin-bottom: 5px; }
+
+.node-product h4 {
+  margin-bottom: 10px; }
+
+.node-product .product-images {
+  margin-bottom: 20px; }
+  .node-product .product-images .cloud-zoom-gallery-thumbs {
+    margin-top: 10px; }
+
+.node-product .product-price {
+  font-size: 18px;
+  margin: 10px 0 10px 0; }
+
+#views-form-commerce-cart-form-default table {
+  width: 100%; }
+
 div.messages {
   border: none;
   color: #ffffff;
@@ -432,6 +455,14 @@ small {
 
 strong {
   font-weight: 700; }
+
+table {
+  width: 100%; }
+  table tr.even, table tr.odd {
+    background-color: transparent;
+    border-bottom: 1px solid #ccc; }
+  table td, table th {
+    padding: 10px; }
 
 .main-content {
   padding-top: 20px; }

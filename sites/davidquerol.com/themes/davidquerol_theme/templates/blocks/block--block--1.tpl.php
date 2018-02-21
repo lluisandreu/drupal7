@@ -1,4 +1,16 @@
 <?php global $user; ?>
+
+<?php 
+$cart = commerce_cart_order_load($variables['user']->uid);
+$quantity = count($cart->commerce_line_items);
+?>
+
+<?php if($cart): ?>
+<div class="cart-block">
+	<p><a href="<?php print url('cart'); ?>" class="cart"><i class="fa fa-shopping-basket"></i> cart (<?php print $quantity; ?>)</a></p>
+</div>
+<?php endif; ?>
+
 <div class="sidebar-info">
 	<div class="social-icons">
       <ul>

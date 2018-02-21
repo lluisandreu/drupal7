@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DQ Shop feature.
+ */
+
+include_once 'dq_shop.features.inc';
