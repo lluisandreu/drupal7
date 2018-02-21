@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * dq_shop.views_default.inc
+ * david_shop.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function dq_shop_views_default_views() {
+function david_shop_views_default_views() {
   $export = array();
 
   $view = new view();

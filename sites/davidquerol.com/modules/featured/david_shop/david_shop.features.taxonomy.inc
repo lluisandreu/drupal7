@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * dq_shop.features.taxonomy.inc
+ * david_shop.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function dq_shop_taxonomy_default_vocabularies() {
+function david_shop_taxonomy_default_vocabularies() {
   return array(
     'dimensions' => array(
       'name' => 'Dimensions',
