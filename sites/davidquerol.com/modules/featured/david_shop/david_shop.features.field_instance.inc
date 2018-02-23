@@ -183,6 +183,51 @@ function david_shop_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-product-field_product_quality_paper'.
+  $field_instances['node-product-field_product_quality_paper'] = array(
+    'bundle' => 'product',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_product_quality_paper',
+    'label' => 'Quality paper',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-product-field_product_variants'.
   $field_instances['node-product-field_product_variants'] = array(
     'bundle' => 'product',
@@ -292,6 +337,7 @@ function david_shop_field_default_field_instances() {
   t('Body');
   t('Edition');
   t('Images');
+  t('Quality paper');
   t('Variants');
   t('Year');
 
