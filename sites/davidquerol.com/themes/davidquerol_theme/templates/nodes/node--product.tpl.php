@@ -8,9 +8,9 @@
       <?php print render($content['body']); ?>
     </div>
     <div class="col-12 col-md-4">
-      <h2><?php print $node->title; ?></h2>
       <?php print render($content['field_product_year']); ?>
       <?php print render($content['field_product_edition']); ?>
+      <?php print render($content['field_product_quality_paper']); ?>
       <div class="product-price">
         <?php print render($content['product:commerce_price']); ?>
       </div>

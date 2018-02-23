@@ -284,6 +284,16 @@ ul.inline:after {
   font-size: 18px;
   margin: 10px 0 10px 0; }
 
+.node-product .field-name-field-product-year, .node-product .field-name-field-product-edition, .node-product .field-name-field-product-quality-paper {
+  margin-bottom: 10px; }
+
+.node-product .cloud-zoom-gallery-thumbs .cloud-zoom-gallery {
+  display: inline-block;
+  margin-right: 10px; }
+
+.node-product .cloud-zoom-gallery-thumbs .cloud-zoom-gallery:first-child:last-child {
+  display: none; }
+
 #views-form-commerce-cart-form-default table {
   width: 100%; }
 

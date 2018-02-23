@@ -5,22 +5,6 @@
  */
 
 /**
- * Implements hook_commerce_product_default_types().
- */
-function david_shop_commerce_product_default_types() {
-  $items = array(
-    'product' => array(
-      'type' => 'product',
-      'name' => 'Product',
-      'description' => 'A basic product type.',
-      'help' => '',
-      'revision' => 1,
-    ),
-  );
-  return $items;
-}
-
-/**
  * Implements hook_views_api().
  */
 function david_shop_views_api($module = NULL, $api = NULL) {
@@ -48,23 +32,37 @@ function david_shop_image_default_styles() {
     ),
   );
 
-  return $styles;
-}
-
-/**
- * Implements hook_node_info().
- */
-function david_shop_node_info() {
-  $items = array(
-    'product' => array(
-      'name' => t('Product'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
+  // Exported image style: zoom_image.
+  $styles['zoom_image'] = array(
+    'label' => 'Zoom image',
+    'effects' => array(
+      5 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 530,
+          'height' => 350,
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
     ),
   );
-  drupal_alter('node_info', $items);
-  return $items;
+
+  // Exported image style: zoom_large.
+  $styles['zoom_large'] = array(
+    'label' => 'Zoom large',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 1500,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
 }

@@ -32,6 +32,21 @@
         font-size: 18px;
         margin: 10px 0 10px 0;
     }
+
+    .field-name-field-product-year, .field-name-field-product-edition, .field-name-field-product-quality-paper {
+        margin-bottom: 10px;
+    }
+
+    .cloud-zoom-gallery-thumbs {
+        .cloud-zoom-gallery {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .cloud-zoom-gallery:first-child:last-child {
+            display: none;
+        }
+    }
 }
 
 #views-form-commerce-cart-form-default {
