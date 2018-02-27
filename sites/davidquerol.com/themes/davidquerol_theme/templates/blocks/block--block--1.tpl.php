@@ -9,7 +9,7 @@ if($cart){
 
 <?php if($cart): ?>
 <div class="cart-block">
-	<p><a href="<?php print url('cart'); ?>" class="cart"><i class="fa fa-shopping-basket"></i> cart (<?php print $quantity; ?>)</a></p>
+	<p><a href="<?php print url('cart'); ?>" class="cart"><i class="fa fa-shopping-cart"></i> (<?php print $quantity; ?>)</a></p>
 </div>
 <?php endif; ?>
 
