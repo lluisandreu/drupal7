@@ -271,6 +271,8 @@ ul.inline:after {
     margin-bottom: 10px; }
   .view-shop .product-teaser-item h3 {
     margin-bottom: 5px; }
+  .view-shop .product-teaser-item .product-teaser-price {
+    color: #888; }
 
 .node-product h4 {
   margin-bottom: 10px; }

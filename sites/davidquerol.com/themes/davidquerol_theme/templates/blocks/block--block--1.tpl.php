@@ -7,12 +7,6 @@ if($cart){
 }
 ?>
 
-<?php if($cart): ?>
-<div class="cart-block">
-	<p><a href="<?php print url('cart'); ?>" class="cart"><i class="fa fa-shopping-cart"></i> (<?php print $quantity; ?>)</a></p>
-</div>
-<?php endif; ?>
-
 <div class="sidebar-info">
 	<div class="social-icons">
       <ul>
@@ -35,6 +29,12 @@ if($cart){
 			Developed by <a href="http://lluisandreu.com" target="_blank">lluisandreu.com</a><br>using <a href="http://drupal.org" target="_blank">Drupal</a>
 		</div>
 		<br>
-		<div class="fb-like " data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+		<div class="fb-like " data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false" style="display:block;"></div>
+		<br>
+		<?php if($cart): ?>
+		<div class="cart-block">
+			<p><a href="<?php print url('cart'); ?>" class="cart"><i class="fa fa-shopping-cart"></i> (<?php print $quantity; ?>)</a></p>
+		</div>
+		<?php endif; ?>
 	</div>
 </div>
