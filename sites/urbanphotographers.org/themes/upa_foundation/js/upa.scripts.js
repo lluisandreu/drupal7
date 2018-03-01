@@ -11,7 +11,7 @@
                 if ($('.owl-carousel').size()) {
                     $('.owl-carousel').owlCarousel({
                         items: 1,
-                        align-items: center,
+                        center: true,
                         animateOut: 'fadeOut',
                         dots: true,
                     });
