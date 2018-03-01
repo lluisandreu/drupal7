@@ -14,7 +14,6 @@
                         center: true,
                         animateOut: 'fadeOut',
                         dots: true,
-                        autoWidth: true,
                     });
                 }
 

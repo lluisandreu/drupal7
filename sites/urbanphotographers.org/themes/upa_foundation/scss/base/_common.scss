@@ -62,3 +62,17 @@
 .owl-carousel .owl-item img {
     width: auto !important;
 }
+
+.owl-stage {
+    display: block !important;
+}
+
+.owl-item {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+}
+
+.item {
+    text-align: center;
+}
