@@ -21,9 +21,16 @@ body, html {
     box-sizing: border-box;
 }
 
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ececec;
+    padding: 20px;
+}
+
 h1 {
     font-size: $h1_size;
     margin: 1.5rem 0;
+    text-transform: lowercase;
 }
 
 h2 {
@@ -79,7 +86,7 @@ label {
     padding: 5px 0 !important;
 }
 
-p {
+p, span {
     font-size: $p_size;
     font-weight: $p_weight;
     margin: $p_vertical_margin;
@@ -96,6 +103,17 @@ strong {
 
 table {
     width: 100%;
+    margin-bottom: 10px;
+
+    th, td {
+        color: lighten($color_primary, 30%);
+    }
+
+    thead tr:first-child, tbody tr:first-child {
+        td:first-child, th:first-child {
+            padding-left: 0;
+        }
+    }
 
     tr.even, tr.odd {
         background-color: transparent;

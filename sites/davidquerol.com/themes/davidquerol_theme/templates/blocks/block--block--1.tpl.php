@@ -3,8 +3,17 @@
 <?php 
 $cart = commerce_cart_order_load($variables['user']->uid);
 if($cart){
-	$quantity = count($cart->commerce_line_items);
+	$order_wrapper = entity_metadata_wrapper('commerce_order', $cart);
+	$quantity_count = 0; // Initialize quantity.
+	foreach ($order_wrapper->commerce_line_items as $delta => $line_item_wrapper) {
+	    // If line item is a commerce product type
+	    if (in_array($line_item_wrapper->type->value(), commerce_product_line_item_types())) {
+	      // Get quantity from the Line items.
+	      $quantity_count += $line_item_wrapper->quantity->value();    
+	    }
+	}
 }
+
 ?>
 
 <div class="sidebar-info">
@@ -33,7 +42,7 @@ if($cart){
 		<br>
 		<?php if($cart): ?>
 		<div class="cart-block">
-			<p><a href="<?php print url('cart'); ?>" class="cart"><i class="fa fa-shopping-cart"></i> (<?php print $quantity; ?>)</a></p>
+			<p><a href="<?php print url('cart'); ?>" class="cart"><i class="fa fa-shopping-cart"></i> (<?php print $quantity_count; ?>)</a></p>
 		</div>
 		<?php endif; ?>
 	</div>
