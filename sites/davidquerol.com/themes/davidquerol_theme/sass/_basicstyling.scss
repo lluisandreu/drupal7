@@ -109,7 +109,7 @@ table {
         color: lighten($color_primary, 30%);
     }
 
-    thead tr:first-child, tbody tr:first-child {
+    tr {
         td:first-child, th:first-child {
             padding-left: 0;
         }
