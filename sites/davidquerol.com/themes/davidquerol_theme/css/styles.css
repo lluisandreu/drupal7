@@ -212,8 +212,11 @@ ul.inline:after {
     text-transform: lowercase; }
   .main-nav.closed .menu a:hover {
     text-decoration: underline; }
-  .main-nav.closed .menu span:hover {
-    text-decoration: underline; }
+  .main-nav.closed .menu span {
+    margin: 0;
+    font-size: 1.1rem; }
+    .main-nav.closed .menu span:hover {
+      text-decoration: underline; }
   .main-nav.closed .menu > li {
     font-size: 1.2rem;
     margin: 0;
