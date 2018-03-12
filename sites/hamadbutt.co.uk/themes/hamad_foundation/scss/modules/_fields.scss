@@ -5,6 +5,10 @@
 }
 
 .field-exhibiton-images {
+    img {
+        margin-bottom: 20px;
+    }
+
     li {
         position: relative;
         overflow: hidden;
@@ -41,5 +45,11 @@
                 -webkit-filter: brightness(50%);
             }
         }
+    }
+}
+
+.field-name-field-front-image {
+    img {
+        width: 100%;
     }
 }

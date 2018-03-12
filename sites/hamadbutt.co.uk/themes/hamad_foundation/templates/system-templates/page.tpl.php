@@ -27,26 +27,32 @@
     </div>
   </header>
   <main id="main">
-    <div class="row">
-      <?php if(!$is_front): ?>
+    <?php if(!$is_front): ?>
+      <div class="row">
         <div class="column">
           <h1><?php print $title; ?></h1>
         </div>
-      <?php endif; ?>
+      </div>
+    <?php endif; ?>
+    <div class="row">
       <div class="column">
         <?php print $messages; ?>  
       </div>
-      <?php if ($tabs): ?>
-        <div class="tabs column"><?php print render($tabs); ?></div>
-      <?php endif; ?>
-      <?php if(!isset($node)): ?>
-        <div class="column">
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-      <?php if(!isset($node)): ?>
-        </div>
-      <?php endif; ?>
     </div>
+    <?php if ($tabs): ?>
+      <div class="row">
+        <div class="tabs column"><?php print render($tabs); ?></div>
+      </div>
+    <?php endif; ?>
+    <?php if(!isset($node)): ?>
+      <div class="row">
+        <div class="column">
+    <?php endif; ?>
+    <?php print render($page['content']); ?>
+    <?php if(!isset($node)): ?>
+        </div>
+      </div>
+    <?php endif; ?>
   </main>
   <footer id="footer">
     <div class="row">
@@ -63,7 +69,7 @@
         </ul>
       </div>
       <div class="large-6 column">
-        <p class="text-right"><small>Site designed and developed by <a target="_blank" href="http://www.lluisandreu.com">lluisandreu.com</a></small></p>
+        <p class="text-right"><small>Site designed and developed by <a target="_blank" href="http://www.mopisweb.com">mopisweb.com</a></small></p>
       </div>
     </div>
   </footer>
