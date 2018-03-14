@@ -65,7 +65,7 @@
           <?php else: ?>
             <li><a href="<?php print url('user/logout'); ?>">Logout</li>
           <?php endif; ?>
-          <li><a href="<?php print url('node/7'); ?>">Contact</a></li>
+          <li><a href="<?php print url('node/5'); ?>">Contact</a></li>
         </ul>
       </div>
       <div class="large-6 column">
