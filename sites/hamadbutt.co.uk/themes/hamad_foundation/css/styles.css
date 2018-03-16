@@ -5338,7 +5338,7 @@ h1 {
   font-size: 1.3125rem; }
 
 h2 {
-  font-size: 0.25rem; }
+  font-size: 0.125rem; }
 
 h3 {
   font-size: 0.6875rem; }
@@ -5356,7 +5356,7 @@ h6 {
   line-height: 1.4;
   color: #6f6f6f;
   font-weight: normal;
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
   margin-bottom: 0.5rem; }
 
 hr {
@@ -5513,7 +5513,7 @@ blockquote p {
   h1 {
     font-size: 1.625rem; }
   h2 {
-    font-size: 1.25rem; }
+    font-size: 1.125rem; }
   h3 {
     font-size: 1rem; }
   h4 {

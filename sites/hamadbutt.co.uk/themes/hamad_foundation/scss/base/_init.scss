@@ -218,7 +218,7 @@ $medium-range: 765px, 64em;
 // We use these to control header font sizes
 $h1-font-size: rem-calc(26);
 
-$h2-font-size: rem-calc(20);
+$h2-font-size: rem-calc(18);
 $h3-font-size: rem-calc(16);
 
 // $h4-font-size: rem-calc(23);
@@ -238,7 +238,8 @@ $h2-font-reduction: rem-calc(16) !default;
 // $subheader-line-height: 1.4;
 // $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
 // $subheader-font-weight: $font-weight-normal;
-// $subheader-top-margin: .2rem;
+$subheader-top-margin: 0.3rem;
+
 // $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
