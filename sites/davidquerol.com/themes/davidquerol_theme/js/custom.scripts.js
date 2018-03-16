@@ -98,6 +98,14 @@
             }
         });
 
+        // Language switcher
+        $('.language-switcher a').on('click', function(event) {
+            event.preventDefault();
+            $('.language-description').removeClass('selected');
+            var lang = $(this).attr('href').split('#')[1];
+            $('.language-description[data-language="' + lang + '"]').addClass('selected');
+        });
+
     });
 
 }(jQuery));

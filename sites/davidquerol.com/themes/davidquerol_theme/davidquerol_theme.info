@@ -13,7 +13,7 @@ scripts[] = vendor/responsive-nav/responsive-nav.js
 scripts[] = vendor/countdown/dist/countdown.min.js
 scripts[] = vendor/jquery-ui.min.js
 scripts[] = vendor/slick/slick.min.js
-scripts[] = dist/js/script.min.js
+scripts[] = js/custom.scripts.js
 
 regions[nav] =	Navigation
 regions[content] = Content

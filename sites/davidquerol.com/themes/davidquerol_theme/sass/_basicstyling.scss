@@ -14,7 +14,7 @@ body {
     font-size: $font_base_size;
     font-weight: $font_base_weight;
     line-height: $font_line_height;
-    color: $darkgrey;
+    color: lighten($color_primary, 30%);
 }
 
 body, html {
@@ -31,6 +31,7 @@ h1 {
     font-size: $h1_size;
     margin: 1.5rem 0;
     text-transform: lowercase;
+    color: $darkgrey;
 }
 
 h2 {

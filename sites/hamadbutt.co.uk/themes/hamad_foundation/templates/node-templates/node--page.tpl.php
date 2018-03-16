@@ -7,7 +7,7 @@
 				<?php print render($block['content']); ?>
 			<?php endif; ?>
 		</div>
-		<div class="large-5 columns">
+		<div class="large-4 columns">
 			<?php print render($content['field_front_image']); ?>
 		</div>
 	</div>

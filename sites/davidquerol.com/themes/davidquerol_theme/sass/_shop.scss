@@ -35,6 +35,37 @@
         margin: 15px 0 10px 0;
     }
 
+    .print-small-print {
+        margin-top: 5px;
+        font-size: 11px;
+    }
+
+    .language-switcher {
+        text-align: right;
+        margin-bottom: 10px;
+
+        a {
+            font-weight: bolder;
+            padding: 5px;
+        }
+    }
+
+    .language-description-wrapper {
+        position: relative;
+    }
+
+    .language-description {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+
+        &.selected {
+            opacity: 1;
+        }
+    }
+
     .field-name-field-product-year, .field-name-field-product-edition, .field-name-field-product-quality-paper {
         margin-bottom: 10px;
     }

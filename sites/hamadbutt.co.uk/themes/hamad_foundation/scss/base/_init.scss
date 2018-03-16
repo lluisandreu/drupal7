@@ -218,8 +218,8 @@ $medium-range: 765px, 64em;
 // We use these to control header font sizes
 $h1-font-size: rem-calc(26);
 
-$h2-font-size: rem-calc(22);
-$h3-font-size: rem-calc(18);
+$h2-font-size: rem-calc(20);
+$h3-font-size: rem-calc(16);
 
 // $h4-font-size: rem-calc(23);
 // $h5-font-size: rem-calc(18);
@@ -248,7 +248,8 @@ $h2-font-reduction: rem-calc(16) !default;
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
-// $paragraph-font-size: 1rem;
+$paragraph-font-size: rem-calc(14);
+
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
@@ -450,7 +451,8 @@ $h2-font-reduction: rem-calc(16) !default;
 // $button-font-color-alt: $oil;
 // $button-font-tny: rem-calc(11);
 // $button-font-sml: rem-calc(13);
-// $button-font-med: rem-calc(16);
+$button-font-med: rem-calc(14);
+
 // $button-font-lrg: rem-calc(20);
 // $button-font-weight: $font-weight-normal;
 // $button-font-align: center;

@@ -10,7 +10,7 @@ body {
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.5rem;
-  color: #444; }
+  color: gray; }
 
 body, html {
   box-sizing: border-box; }
@@ -23,7 +23,8 @@ fieldset {
 h1 {
   font-size: 1.2rem;
   margin: 1.5rem 0;
-  text-transform: lowercase; }
+  text-transform: lowercase;
+  color: #444; }
 
 h2 {
   margin: 0.8rem 0; }
