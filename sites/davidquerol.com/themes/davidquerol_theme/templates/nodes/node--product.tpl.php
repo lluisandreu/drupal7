@@ -4,17 +4,15 @@
       <div class="product-images clearfix">
         <?php print render($content['field_images']); ?>
       </div>
-      <h4>Description</h4>
       <div class="language-switcher">
-        <a href="#en" class="eng">Eng</a>
+        <a href="#en" class="eng">ENG</a>
         <?php if(isset($node->field_body_spanish) && !empty($node->field_body_spanish)): ?>
-          <a href="#es" class="es">Esp</a>
+          <a href="#es" class="es">ESP</a>
         <?php endif; ?>
         <?php if(isset($node->field_body_catala) && !empty($node->field_body_catala)): ?>
-          <a href="#cat" class="cat">Cat</a>
+          <a href="#cat" class="cat">CAT</a>
         <?php endif; ?>
       </div>
-      <?php dpm($node->field_body_spanish); ?>
       <div class="language-description-wrapper">
         <div class="language-description selected" data-language="en">
           <?php print render($content['body']); ?>

@@ -41,12 +41,15 @@
     }
 
     .language-switcher {
-        text-align: right;
         margin-bottom: 10px;
 
         a {
             font-weight: bolder;
             padding: 5px;
+
+        }
+        a:first-child {
+            padding-left: 0;
         }
     }
 

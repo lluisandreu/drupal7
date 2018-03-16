@@ -294,11 +294,12 @@ ul.inline:after {
   font-size: 11px; }
 
 .node-product .language-switcher {
-  text-align: right;
   margin-bottom: 10px; }
   .node-product .language-switcher a {
     font-weight: bolder;
     padding: 5px; }
+  .node-product .language-switcher a:first-child {
+    padding-left: 0; }
 
 .node-product .language-description-wrapper {
   position: relative; }
