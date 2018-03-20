@@ -46,10 +46,13 @@
         a {
             font-weight: bolder;
             padding: 5px;
+            background: #ececec;
+            border: 1px solid #dadada;
 
-        }
-        a:first-child {
-            padding-left: 0;
+            &:hover, &.active {
+                background: $white;
+            }
+
         }
     }
 

@@ -297,9 +297,11 @@ ul.inline:after {
   margin-bottom: 10px; }
   .node-product .language-switcher a {
     font-weight: bolder;
-    padding: 5px; }
-  .node-product .language-switcher a:first-child {
-    padding-left: 0; }
+    padding: 5px;
+    background: #ececec;
+    border: 1px solid #dadada; }
+    .node-product .language-switcher a:hover, .node-product .language-switcher a.active {
+      background: #ffffff; }
 
 .node-product .language-description-wrapper {
   position: relative; }
