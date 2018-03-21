@@ -14,7 +14,9 @@ abstract class OAuth
      */
     public static function authorizeUrl($params = null, $opts = null)
     {
-        $params = $params ?: [];
+        if (!$params) {
+            $params = array();
+        }
 
         $base = ($opts && array_key_exists('connect_base', $opts)) ? $opts['connect_base'] : Stripe::$connectBase;
 
@@ -59,7 +61,10 @@ abstract class OAuth
      */
     public static function deauthorize($params = null, $opts = null)
     {
-        $params = $params ?: [];
+        if (!$params) {
+            $params = array();
+        }
+
         $base = ($opts && array_key_exists('connect_base', $opts)) ? $opts['connect_base'] : Stripe::$connectBase;
         $requestor = new ApiRequestor(null, $base);
         $params['client_id'] = self::_getClientId($params);

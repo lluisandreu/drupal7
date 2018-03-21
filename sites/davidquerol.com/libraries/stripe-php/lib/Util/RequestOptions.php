@@ -6,18 +6,10 @@ use Stripe\Error;
 
 class RequestOptions
 {
-    /**
-     * @var array A list of headers that should be persisted across requests.
-     */
-    public static $HEADERS_TO_PERSIST = [
-        'Stripe-Account',
-        'Stripe-Version',
-    ];
-
     public $headers;
     public $apiKey;
 
-    public function __construct($key = null, $headers = [])
+    public function __construct($key = null, $headers = array())
     {
         $this->apiKey = $key;
         $this->headers = $headers;
@@ -41,18 +33,6 @@ class RequestOptions
     }
 
     /**
-     * Discards all headers that we don't want to persist across requests.
-     */
-    public function discardNonPersistentHeaders()
-    {
-        foreach ($this->headers as $k => $v) {
-            if (!in_array($k, self::$HEADERS_TO_PERSIST)) {
-                unset($this->headers[$k]);
-            }
-        }
-    }
-
-    /**
      * Unpacks an options array into an RequestOptions object
      * @param array|string|null $options a key => value array
      *
@@ -65,15 +45,15 @@ class RequestOptions
         }
 
         if (is_null($options)) {
-            return new RequestOptions(null, []);
+            return new RequestOptions(null, array());
         }
 
         if (is_string($options)) {
-            return new RequestOptions($options, []);
+            return new RequestOptions($options, array());
         }
 
         if (is_array($options)) {
-            $headers = [];
+            $headers = array();
             $key = null;
             if (array_key_exists('api_key', $options)) {
                 $key = $options['api_key'];

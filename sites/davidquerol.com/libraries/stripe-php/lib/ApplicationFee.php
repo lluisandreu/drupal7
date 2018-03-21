@@ -5,29 +5,10 @@ namespace Stripe;
 /**
  * Class ApplicationFee
  *
- * @property string $id
- * @property string $object
- * @property string $account
- * @property int $amount
- * @property int $amount_refunded
- * @property string $application
- * @property string $balance_transaction
- * @property string $charge
- * @property int $created
- * @property string $currency
- * @property bool $livemode
- * @property string $originating_transaction
- * @property bool $refunded
- * @property Collection $refunds
- *
  * @package Stripe
  */
 class ApplicationFee extends ApiResource
 {
-    use ApiOperations\All;
-    use ApiOperations\NestedResource;
-    use ApiOperations\Retrieve;
-
     const PATH_REFUNDS = '/refunds';
 
     /**
@@ -39,6 +20,41 @@ class ApplicationFee extends ApiResource
     public static function className()
     {
         return 'application_fee';
+    }
+
+    /**
+     * @param array|string $id The ID of the application fee to retrieve, or an
+     *     options array containing an `id` key.
+     * @param array|string|null $opts
+     *
+     * @return ApplicationFee
+     */
+    public static function retrieve($id, $opts = null)
+    {
+        return self::_retrieve($id, $opts);
+    }
+
+    /**
+     * @param string $id The ID of the application fee to update.
+     * @param array|null $params
+     * @param array|string|null $options
+     *
+     * @return ApplicationFee The updated application fee.
+     */
+    public static function update($id, $params = null, $options = null)
+    {
+        return self::_update($id, $params, $options);
+    }
+
+    /**
+     * @param array|null $params
+     * @param array|string|null $opts
+     *
+     * @return Collection of ApplicationFees
+     */
+    public static function all($params = null, $opts = null)
+    {
+        return self::_all($params, $opts);
     }
 
     /**
