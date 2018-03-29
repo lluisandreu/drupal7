@@ -52,3 +52,21 @@ function davidquerol_theme_preprocess_block($variables) {
     
   }
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function davidquerol_theme_form_alter(&$form, &$form_state, $form_id) {
+  //dpm($form_id);
+  switch ($form_id) {
+    case 'views_form_commerce_cart_form_default':
+      $form['actions']['checkout']['#value'] = "Continue";
+      break;
+    case 'commerce_checkout_form_checkout':
+      $form['buttons']['continue']['#value'] = "Continue";
+      break;
+    case 'commerce_checkout_form_review':
+      $form['buttons']['continue']['#value'] = "Place order";
+      break;
+  }
+}
