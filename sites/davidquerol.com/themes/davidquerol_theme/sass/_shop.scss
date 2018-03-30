@@ -40,38 +40,6 @@
         font-size: 11px;
     }
 
-    .language-switcher {
-        margin-bottom: 10px;
-
-        a {
-            font-weight: bolder;
-            padding: 5px;
-            background: #ececec;
-            border: 1px solid #dadada;
-
-            &:hover, &.active {
-                background: $white;
-            }
-
-        }
-    }
-
-    .language-description-wrapper {
-        position: relative;
-    }
-
-    .language-description {
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity .5s ease-in-out;
-
-        &.selected {
-            opacity: 1;
-        }
-    }
-
     .field-name-field-product-year, .field-name-field-product-edition, .field-name-field-product-quality-paper {
         margin-bottom: 10px;
     }

@@ -293,28 +293,6 @@ ul.inline:after {
   margin-top: 5px;
   font-size: 11px; }
 
-.node-product .language-switcher {
-  margin-bottom: 10px; }
-  .node-product .language-switcher a {
-    font-weight: bolder;
-    padding: 5px;
-    background: #ececec;
-    border: 1px solid #dadada; }
-    .node-product .language-switcher a:hover, .node-product .language-switcher a.active {
-      background: #ffffff; }
-
-.node-product .language-description-wrapper {
-  position: relative; }
-
-.node-product .language-description {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity .5s ease-in-out; }
-  .node-product .language-description.selected {
-    opacity: 1; }
-
 .node-product .field-name-field-product-year, .node-product .field-name-field-product-edition, .node-product .field-name-field-product-quality-paper {
   margin-bottom: 10px; }
 
