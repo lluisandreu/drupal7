@@ -72,6 +72,28 @@ input[type=text], input[type=email], input[type=password] {
     max-width: 100%;
 }
 
+select {
+    margin: 10px 0;
+    max-width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-bottom: 1px solid #888;
+    padding: 7px;
+    background: #f5f5f5;
+    font-size: $font_base_size;
+    font-family: $font_sanserif;
+    color: $darkgrey;
+    max-width: 100%;
+    background-origin: content-box;
+    background-position: right -1rem center;
+    background-repeat: no-repeat;
+    background-size: 9px 6px;
+    padding-right: 1.5rem;
+    border-radius: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%2810, 10, 10%29'></polygon></svg>");
+}
+
 textarea {
     background: #f5f5f5;
     margin: 10px 0;
@@ -82,7 +104,7 @@ textarea {
 }
 
 label {
-    color: $darkgrey;
+    color: $color_secondary;
     display: block;
     padding: 5px 0 !important;
 }

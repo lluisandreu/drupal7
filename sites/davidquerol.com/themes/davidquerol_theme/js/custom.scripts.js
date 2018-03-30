@@ -69,8 +69,12 @@
             $(this).closest('li').toggleClass('collapsed');
         });
         menu.find('.menu-block-1>ul>li>a').on('click', function (event) {
-            event.preventDefault();
-            $(this).closest('li').toggleClass('collapsed');
+            console.log($(this).siblings('.menu').length);
+            if($(this).siblings('.menu').length) {
+                event.preventDefault();
+                $(this).closest('li').toggleClass('collapsed');
+            }
+            
         });
         menu.find('li.expanded').each(function (index, el) {
             $(this).append('<a href="#" class="arrow-toggle"><i class="fa fa-caret-right"></i></a>');
