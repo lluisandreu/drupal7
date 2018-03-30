@@ -333,6 +333,28 @@ ul#countdown li p {
   font-size: 18px;
   text-align: center; }
 
+.language-switcher {
+  margin-bottom: 10px; }
+  .language-switcher a {
+    font-weight: bolder;
+    padding: 5px;
+    background: #ececec;
+    border: 1px solid #dadada; }
+    .language-switcher a:hover, .language-switcher a.active {
+      background: #ffffff; }
+
+.language-description-wrapper {
+  position: relative; }
+
+.language-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s ease-in-out; }
+  .language-description.selected {
+    opacity: 1; }
+
 .hide-small {
   display: none; }
   @media (min-width: 650px) {
