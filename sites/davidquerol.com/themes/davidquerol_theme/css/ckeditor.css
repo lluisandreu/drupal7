@@ -360,12 +360,20 @@ ul#countdown li p {
     font-weight: bolder;
     padding: 5px;
     background: #ececec;
-    border: 1px solid #dadada; }
+    border: 1px solid #dadada;
+    display: inline-block; }
     .language-switcher a:hover, .language-switcher a.active {
       background: #ffffff; }
 
 .language-description-wrapper {
-  position: relative; }
+  position: relative;
+  min-height: 500px;
+  overflow-y: auto;
+  margin-bottom: 21px; }
+  @media (min-width: 1080px) {
+    .language-description-wrapper {
+      min-height: 100%;
+      overflow: inherit; } }
 
 .language-description {
   position: absolute;

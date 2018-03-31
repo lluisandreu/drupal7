@@ -267,6 +267,9 @@ ul.inline:after {
 .menu-mlid-388 {
   margin-top: 25px !important; }
 
+.view-shop .views-exposed-form .views-exposed-widget {
+  padding-top: 0; }
+
 .view-shop .product-teaser-item {
   margin-bottom: 20px;
   text-align: center; }
@@ -765,12 +768,20 @@ ul#countdown li p {
     font-weight: bolder;
     padding: 5px;
     background: #ececec;
-    border: 1px solid #dadada; }
+    border: 1px solid #dadada;
+    display: inline-block; }
     .language-switcher a:hover, .language-switcher a.active {
       background: #ffffff; }
 
 .language-description-wrapper {
-  position: relative; }
+  position: relative;
+  min-height: 500px;
+  overflow-y: auto;
+  margin-bottom: 21px; }
+  @media (min-width: 1080px) {
+    .language-description-wrapper {
+      min-height: 100%;
+      overflow: inherit; } }
 
 .language-description {
   position: absolute;

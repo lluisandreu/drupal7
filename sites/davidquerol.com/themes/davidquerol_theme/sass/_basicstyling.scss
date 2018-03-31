@@ -552,6 +552,7 @@ ul#countdown li p {
         padding: 5px;
         background: #ececec;
         border: 1px solid #dadada;
+        display: inline-block;
 
         &:hover, &.active {
             background: $white;
@@ -561,6 +562,14 @@ ul#countdown li p {
 
 .language-description-wrapper {
     position: relative;
+    min-height: 500px;
+    overflow-y: auto;
+    margin-bottom: 21px;
+
+    @include desktop {
+        min-height: 100%;
+        overflow: inherit;
+    }
 }
 
 .language-description {
