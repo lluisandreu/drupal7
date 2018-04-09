@@ -725,7 +725,7 @@ table {
 
 @media (min-width: 1080px) {
   .project-media .project-media-slideshow {
-    max-width: 500px; }
+    max-width: 550px; }
     .project-media .project-media-slideshow .slick-slide img {
       width: 100%;
       height: auto; } }
