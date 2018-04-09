@@ -18,63 +18,154 @@
  *
  * @ingroup views_templates
  */
-?>
-<?php if (!empty($q)): ?>
-  <?php
-    // This ensures that, if clean URLs are off, the 'q' is added first so that
-    // it shows up first in the URL.
-    print $q;
+if (!empty($q)) {
   ?>
-<?php endif; ?>
+  <?php
+
+
+  // This ensures that, if clean URLs are off, the 'q' is added first so that
+  // it shows up first in the URL.
+  print $q;
+}
+?>
 <div class="views-exposed-form">
   <div class="views-exposed-widgets clearfix">
-    <?php if (!empty($sort_by)): ?>
+    <?php
+
+foreach ($widgets as $id => $widget) {
+  ?>
+      
+  <?php
+
+if (!empty($sort_by)) {
+  ?>
       <div class="views-exposed-widget views-widget-sort-by">
-        <?php print $sort_by; ?>
+        <?php
+
+  print $sort_by;
+  ?>
       </div>
       <div class="views-exposed-widget views-widget-sort-order">
-        <?php print $sort_order; ?>
+        <?php
+
+  print $sort_order;
+  ?>
       </div>
-    <?php endif; ?>
-    <?php foreach ($widgets as $id => $widget): ?>
-      <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
-        <?php if (!empty($widget->label)): ?>
-          <label for="<?php print $widget->id; ?>">
-            <?php print $widget->label; ?>
+    <?php
+
+}
+?>
+
+      <div id="<?php
+
+  print $widget->id;
+  ?>-wrapper" class="views-exposed-widget views-widget-<?php
+
+  print $id;
+  ?>">
+        <?php
+
+  if (!empty($widget->label)) {
+    ?>
+          <label for="<?php
+
+    print $widget->id;
+    ?>">
+            <?php
+
+    print $widget->label;
+    ?>
           </label>
-        <?php endif; ?>
-        <?php if (!empty($widget->operator)): ?>
+        <?php
+
+  }
+  ?>
+        <?php
+
+  if (!empty($widget->operator)) {
+    ?>
           <div class="views-operator">
-            <?php print $widget->operator; ?>
+            <?php
+
+    print $widget->operator;
+    ?>
           </div>
-        <?php endif; ?>
+        <?php
+
+  }
+  ?>
         <div class="views-widget">
-          <?php print $widget->widget; ?>
+          <?php
+
+  print $widget->widget;
+  ?>
         </div>
-        <?php if (!empty($widget->description)): ?>
+        <?php
+
+  if (!empty($widget->description)) {
+    ?>
           <div class="description">
-            <?php print $widget->description; ?>
+            <?php
+
+    print $widget->description;
+    ?>
           </div>
-        <?php endif; ?>
+        <?php
+
+  }
+  ?>
       </div>
-    <?php endforeach; ?>
-    <?php if (!empty($items_per_page)): ?>
+    <?php
+
+}
+?>
+    <?php
+
+if (!empty($items_per_page)) {
+  ?>
       <div class="views-exposed-widget views-widget-per-page">
-        <?php print $items_per_page; ?>
+        <?php
+
+  print $items_per_page;
+  ?>
       </div>
-    <?php endif; ?>
-    <?php if (!empty($offset)): ?>
+    <?php
+
+}
+?>
+    <?php
+
+if (!empty($offset)) {
+  ?>
       <div class="views-exposed-widget views-widget-offset">
-        <?php print $offset; ?>
+        <?php
+
+  print $offset;
+  ?>
       </div>
-    <?php endif; ?>
+    <?php
+
+}
+?>
     <div class="views-exposed-widget views-submit-button">
-      <?php print $button; ?>
+      <?php
+
+print $button;
+?>
     </div>
-    <?php if (!empty($reset_button)): ?>
+    <?php
+
+if (!empty($reset_button)) {
+  ?>
       <div class="views-exposed-widget views-reset-button">
-        <?php print $reset_button; ?>
+        <?php
+
+  print $reset_button;
+  ?>
       </div>
-    <?php endif; ?>
+    <?php
+
+}
+?>
   </div>
 </div>

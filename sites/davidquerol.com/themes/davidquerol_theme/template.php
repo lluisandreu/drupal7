@@ -68,5 +68,8 @@ function davidquerol_theme_form_alter(&$form, &$form_state, $form_id) {
     case 'commerce_checkout_form_review':
       $form['buttons']['continue']['#value'] = "Place order";
       break;
+    case 'views_exposed_form':
+    
+      break;
   }
 }
