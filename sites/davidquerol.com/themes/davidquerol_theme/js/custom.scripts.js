@@ -46,6 +46,7 @@
             adaptiveHeight: true,
             slidesToShow: 1,
             slidesToScroll: 1,
+            cssEase: "linear"
         });
 
 
@@ -59,7 +60,6 @@
         if (container.hasClass('fade')) {
             $carr.slick("slickSetOption", "autoplay", true);
             $carr.slick("slickSetOption", "draggable", false);
-            $carr.slick("cssEase", "linear");
             $('.slick-arrow, .slick-counter').hide();
             $carr.slick("slickPlay");
         }
