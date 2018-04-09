@@ -475,7 +475,12 @@ table {
 
     .project-media-slideshow {
         @include desktop {
-            width: 75%;
+            max-width: 500px;
+
+            .slick-slide img {
+                width: 100%;
+                height: auto;
+            }
         }
 
 
