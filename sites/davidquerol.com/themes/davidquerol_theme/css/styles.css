@@ -270,6 +270,10 @@ ul.inline:after {
 .view-shop .views-exposed-form .views-exposed-widget {
   padding-top: 0; }
 
+.view-shop #edit-submit-shop {
+  margin-top: 35px;
+  padding: 8px; }
+
 .view-shop .product-teaser-item {
   margin-bottom: 20px;
   text-align: center; }

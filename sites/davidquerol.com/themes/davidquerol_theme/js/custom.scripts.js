@@ -56,6 +56,14 @@
             $carr.slick("slickPlay");
         }
 
+        if (container.hasClass('fade')) {
+            $carr.slick("slickSetOption", "autoplay", true);
+            $carr.slick("slickSetOption", "draggable", false);
+            $carr.slick("cssEase", "linear");
+            $('.slick-arrow, .slick-counter').hide();
+            $carr.slick("slickPlay");
+        }
+
 
         $carr.on('afterChange', function (event, slick, currentSlide) {
             $(this).find('.slick-counter').text((currentSlide + 1) + '/' + slick.slideCount);
