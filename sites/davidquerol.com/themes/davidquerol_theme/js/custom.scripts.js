@@ -60,6 +60,7 @@
         if (container.hasClass('fade')) {
             $carr.slick("slickSetOption", "autoplay", true);
             $carr.slick("slickSetOption", "draggable", false);
+             $carr.slick("slickSetOption", "fade", true);
             $('.slick-arrow, .slick-counter').hide();
             $carr.slick("slickPlay");
         }
