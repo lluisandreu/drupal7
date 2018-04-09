@@ -31,7 +31,6 @@
       <div class="project-media-slideshow auto">
         <?php print views_embed_view('random_slideshow', 'block_1'); ?>
       </div>
-    <?php endif; ?>
     <?php elseif($did == 5): ?>
       <div class="project-media-slideshow fade">
         <?php print views_embed_view('random_slideshow', 'block_1'); ?>
