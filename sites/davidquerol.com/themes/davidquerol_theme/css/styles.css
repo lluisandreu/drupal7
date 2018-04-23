@@ -727,7 +727,8 @@ table {
   .project-media .project-media-slideshow {
     max-width: 550px; }
     .project-media .project-media-slideshow .slick-slide img {
-      height: auto; } }
+      height: auto;
+      margin: auto; } }
 
 .project-media .project-media-slideshow .slick-dots li {
   top: 5px; }
@@ -806,3 +807,6 @@ ul#countdown li p {
   @media (min-width: 650px) {
     .hide-small {
       display: block !important; } }
+
+.nojs {
+  display: none; }

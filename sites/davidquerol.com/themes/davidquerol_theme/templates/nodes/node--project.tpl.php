@@ -45,15 +45,15 @@
         <?php print render($content['field_images']); ?>
       </div>
     <?php elseif($did == 3): ?>
-      <div class="project-media-slideshow">
+      <div class="project-media-slideshow nojs">
         <?php print render($content['field_images']); ?>
       </div>
     <?php elseif($did == 4): ?>
-      <div class="project-media-slideshow auto">
+      <div class="project-media-slideshow auto nojs">
         <?php print views_embed_view('random_slideshow', 'block_1'); ?>
       </div>
     <?php elseif($did == 5): ?>
-      <div class="project-media-slideshow fade">
+      <div class="project-media-slideshow fade nojs">
         <?php print views_embed_view('random_slideshow', 'block_1'); ?>
       </div>
     <?php endif; ?>
