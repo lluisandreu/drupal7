@@ -120,6 +120,11 @@
             var lang = $(this).attr('href').split('#')[1];
             $('.language-description[data-language="' + lang + '"]').addClass('selected');
         });
+        
+        $(window).on('load', function(event) {
+            var height = $('.language-description-wrapper').find('.language-description.selected').height();
+            $('.language-description-wrapper').css('height', height + 'px');
+        });
 
     });
 
