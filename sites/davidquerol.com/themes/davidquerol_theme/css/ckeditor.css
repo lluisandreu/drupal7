@@ -394,7 +394,8 @@ ul#countdown li p {
       display: block !important; } }
 
 .nojs {
-  display: none; }
+  opacity: 0;
+  transition: opacity .5s ease-in-out; }
 
 body {
   padding: 15px; }

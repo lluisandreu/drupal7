@@ -122,7 +122,7 @@
         });
         
         $(window).on('load', function(event) {
-            $('.nojs').css('display', 'block');
+            $('.nojs').css('opacity', '1');
             var height = $('.language-description-wrapper').find('.language-description.selected').height();
             $('.language-description-wrapper').css('height', height + 'px');
         });
