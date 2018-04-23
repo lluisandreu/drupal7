@@ -727,7 +727,6 @@ table {
   .project-media .project-media-slideshow {
     max-width: 550px; }
     .project-media .project-media-slideshow .slick-slide img {
-      width: 100%;
       height: auto; } }
 
 .project-media .project-media-slideshow .slick-dots li {
