@@ -697,46 +697,44 @@ table {
 .field-name-field-video-iframe {
   margin-bottom: 10px; }
 
-.project-media .project-media-horizontal .field-items {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar; }
-  .project-media .project-media-horizontal .field-items .field-item {
-    flex: 0 0 auto;
-    margin-right: 50px; }
-
-.project-media .project-media-vertical .field-item {
+.project-media {
   margin-bottom: 10px; }
-
-.project-media .project-media-colorbox .field-items {
-  display: flex;
-  flex-wrap: wrap; }
-  .project-media .project-media-colorbox .field-items .field-item {
-    display: inline-block;
-    width: 100%;
-    padding-right: 12px;
-    padding-bottom: 12px; }
-    .project-media .project-media-colorbox .field-items .field-item img {
-      display: block;
-      cursor: pointer; }
-    @media (min-width: 650px) {
-      .project-media .project-media-colorbox .field-items .field-item {
-        width: calc(50%); } }
-    @media (min-width: 1080px) {
-      .project-media .project-media-colorbox .field-items .field-item {
-        width: calc(25%); } }
-
-@media (min-width: 1080px) {
-  .project-media .project-media-slideshow {
-    max-width: 570px; }
-    .project-media .project-media-slideshow .slick-slide img {
-      height: auto;
-      margin: auto; } }
-
-.project-media .project-media-slideshow .slick-dots li {
-  top: 5px; }
+  .project-media .project-media-horizontal .field-items {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar; }
+    .project-media .project-media-horizontal .field-items .field-item {
+      flex: 0 0 auto;
+      margin-right: 50px; }
+  .project-media .project-media-vertical .field-item {
+    margin-bottom: 10px; }
+  .project-media .project-media-colorbox .field-items {
+    display: flex;
+    flex-wrap: wrap; }
+    .project-media .project-media-colorbox .field-items .field-item {
+      display: inline-block;
+      width: 100%;
+      padding-right: 12px;
+      padding-bottom: 12px; }
+      .project-media .project-media-colorbox .field-items .field-item img {
+        display: block;
+        cursor: pointer; }
+      @media (min-width: 650px) {
+        .project-media .project-media-colorbox .field-items .field-item {
+          width: calc(50%); } }
+      @media (min-width: 1080px) {
+        .project-media .project-media-colorbox .field-items .field-item {
+          width: calc(25%); } }
+  @media (min-width: 1080px) {
+    .project-media .project-media-slideshow {
+      max-width: 570px; }
+      .project-media .project-media-slideshow .slick-slide img {
+        height: auto;
+        margin: auto; } }
+  .project-media .project-media-slideshow .slick-dots li {
+    top: 5px; }
 
 .slick-prev:before, .slick-next:before {
   color: #333 !important; }
