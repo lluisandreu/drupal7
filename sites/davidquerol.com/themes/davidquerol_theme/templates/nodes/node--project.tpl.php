@@ -36,6 +36,8 @@
 
 </div>
 
+<?php print render($content['field_video_iframe']); ?>
+
 <?php if(isset($content['body'])): ?>
   <div class="language-switcher">
     <?php if(isset($node->field_body_spanish) && !empty($node->field_body_spanish) || isset($node->field_body_catala) && !empty($node->field_body_catala)): ?>
@@ -60,7 +62,5 @@
       </div>
     </div>
 <?php endif; ?>
-
-<?php print render($content['field_video_iframe']); ?>
 
 </div>
