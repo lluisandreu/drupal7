@@ -277,6 +277,9 @@ table {
 .field-name-body {
   margin-bottom: 3rem; }
 
+.field-name-field-video-iframe {
+  margin-bottom: 10px; }
+
 .project-media .project-media-horizontal .field-items {
   display: flex;
   flex-wrap: nowrap;
@@ -317,9 +320,6 @@ table {
 
 .project-media .project-media-slideshow .slick-dots li {
   top: 5px; }
-
-.project-media .field-name-field-video-iframe {
-  margin-bottom: 10px; }
 
 .slick-prev:before, .slick-next:before {
   color: #333 !important; }
