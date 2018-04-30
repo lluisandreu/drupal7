@@ -267,6 +267,9 @@ ul.inline:after {
 .menu-mlid-388 {
   margin-top: 25px !important; }
 
+.view-shop .views-exposed-form {
+  margin-top: -8px; }
+
 .view-shop .views-exposed-form .views-exposed-widget {
   padding-top: 0; }
   .view-shop .views-exposed-form .views-exposed-widget label {
