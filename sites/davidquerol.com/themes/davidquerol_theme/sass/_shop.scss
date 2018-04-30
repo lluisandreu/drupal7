@@ -1,14 +1,14 @@
 .view-shop {
     .views-exposed-form .views-exposed-widget {
         padding-top: 0;
-    }
 
-    .views-widget-filter-title {
-        margin-top: 25px;
+        label {
+            display: none;
+        }
     }
 
     #edit-submit-shop {
-        margin-top: 35px;
+        margin-top: 10px;
         padding: 8px;
     }
 

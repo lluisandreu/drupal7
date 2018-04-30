@@ -269,12 +269,11 @@ ul.inline:after {
 
 .view-shop .views-exposed-form .views-exposed-widget {
   padding-top: 0; }
-
-.view-shop .views-widget-filter-title {
-  margin-top: 25px; }
+  .view-shop .views-exposed-form .views-exposed-widget label {
+    display: none; }
 
 .view-shop #edit-submit-shop {
-  margin-top: 35px;
+  margin-top: 10px;
   padding: 8px; }
 
 .view-shop .product-teaser-item {
@@ -725,7 +724,7 @@ table {
 
 @media (min-width: 1080px) {
   .project-media .project-media-slideshow {
-    max-width: 550px; }
+    max-width: 570px; }
     .project-media .project-media-slideshow .slick-slide img {
       height: auto;
       margin: auto; } }

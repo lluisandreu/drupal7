@@ -65,23 +65,6 @@ if (!empty($sort_by)) {
   ?>">
         <?php
 
-  if (!empty($widget->label)) {
-    ?>
-          <label for="<?php
-
-    print $widget->id;
-    ?>">
-            <?php
-
-    print $widget->label;
-    ?>
-          </label>
-        <?php
-
-  }
-  ?>
-        <?php
-
   if (!empty($widget->operator)) {
     ?>
           <div class="views-operator">
