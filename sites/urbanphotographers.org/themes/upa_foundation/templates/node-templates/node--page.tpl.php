@@ -9,12 +9,6 @@
 			<?php print $block_blog; ?>
 		<?php elseif($node->nid == '177'): ?>
 			<?php print $block_events; ?>
-		<?php elseif($node->nid == '48'): ?>
-			<div class="row">
-				<div class="column large-8">
-					<?php print render($block_webform['content']); ?>
-				</div>
-			</div>
 		<?php endif; ?>
 	</div>
 	<?php if(isset($content['field_images'])): ?>

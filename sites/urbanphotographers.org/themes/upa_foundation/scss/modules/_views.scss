@@ -11,7 +11,7 @@
 .view-members {
     .grid-item {
         &:hover h3 a {
-            border-bottom: 1px solid $jumbo;
+            color: lighten($body-font-color, 0.2);
         }
     }
 
@@ -54,7 +54,7 @@
         border-bottom: 1px solid $white;
 
         &:hover h3 a {
-            border-bottom: 1px solid $jumbo;
+            color: lighten($body-font-color, 0.2);
         }
     }
 }
