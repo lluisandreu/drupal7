@@ -4,8 +4,8 @@
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
+<?php if(isset($content['field_images'])): ?>
 <div class="project-media">
-  <?php if(isset($node->field_project_display)): ?>
     <?php $did = $node->field_project_display['und'][0]['value']; ?>
     <?php if($did == 0): ?> 
      <div class="project-media-vertical">
@@ -32,9 +32,8 @@
         <?php print views_embed_view('random_slideshow', 'block_1'); ?>
       </div>
     <?php endif; ?>
-  <?php endif; ?>
-
 </div>
+<?php endif; ?>
 
 <?php print render($content['field_video_iframe']); ?>
 
