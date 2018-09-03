@@ -74,3 +74,19 @@ function ths_form_alter(&$form, &$form_state, $form_id) {
   }
 }
 
+function ths_preprocess_field(&$variables, $hook) {
+  
+  if($variables['element']['#field_name'] == 'commerce_price') {
+    $variables['onsale'] = FALSE;
+    $entity = $variables['element']['#object'];
+    
+    if(isset($entity->field_commerce_saleprice_on_sale['und'])) {
+      if($entity->field_commerce_saleprice_on_sale['und'][0]['value'] == '1') {
+        $variables['onsale'] = TRUE;
+        $variables['original_price'] = commerce_currency_format($entity->commerce_price['und'][0]['original']['amount'], 'EUR');
+      }
+    }
+    //dpm($variables);
+  }
+}
+
