@@ -23,13 +23,32 @@ function commerce_email_default_rules_configuration() {
   
   $rule
     ->event('commerce_checkout_complete')
-    ->action('commerce_email_order_email', array(
-      'commerce_order:select' => 'commerce-order', 
+    ->action('variable_email_mail', array(
+      'to:select' => 'commerce-order:mail',
+      'variable' => 'commerce_email_order_[mail_part]',
+      'language' => 'default',
     ));
     
-  $rule->weight = 9;
+  $rule->weight = 4;
 
   $rules['commerce_checkout_order_email_html'] = $rule;
+  
+  $rule = rules_reaction_rule();
+
+  $rule->label = t('Send an order notification e-mail to administrator (HTML)');
+  $rule->active = TRUE;
+  
+  $rule
+    ->event('commerce_checkout_complete')
+    ->action('variable_email_mail', array(
+      'to:select' => 'site:mail',
+      'variable' => 'commerce_email_admin_order_[mail_part]',
+      'language' => 'default',
+    ));
+    
+  $rule->weight = 4;
+  
+  $rules['commerce_checkout_admin_order_email_html'] = $rule;
   
   /**
    * Add rule for sending html email for account
@@ -84,16 +103,18 @@ function commerce_email_default_rules_configuration() {
   // order and customer profile uids with the uid from the fetched user account.
   $loop = rules_loop(array(
     'list:select' => 'account-fetched',
-    'item:var' => 'list_item',
+    'item:var' => 'user',
     'item:label' => t('Current list item'),
     'item:type' => 'user',
   ))
-    ->action('commerce_email_account_email', array(
-      'account:select' => 'list-item'
+    ->action('variable_email_mail', array(
+      'to:select' => 'user:mail',
+      'variable' => 'commerce_email_account_[mail_part]',
+      'language' => 'default',
     ))
     ->action('data_set', array(
       'data:select' => 'commerce-order:uid',
-      'value:select' => 'list-item:uid',
+      'value:select' => 'user:uid',
     ));
 
   // Accommodate any profile types referenced by the order.
@@ -101,7 +122,7 @@ function commerce_email_default_rules_configuration() {
     $loop
       ->action('data_set', array(
         'data:select' => 'commerce-order:' . strtr('commerce-customer-' . $type, '_', '-') . ':uid',
-        'value:select' => 'list-item:uid',
+        'value:select' => 'user:uid',
       ));
   }
 
@@ -112,7 +133,7 @@ function commerce_email_default_rules_configuration() {
   // existing user account.
   $rule->weight = 2;
 
-  $rules['commerce_email_new_account'] = $rule;  
+  $rules['commerce_email_new_account'] = $rule;
 
   return $rules;
 }
