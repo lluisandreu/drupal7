@@ -18,8 +18,7 @@ function ths_preprocess_page(&$variables) {
   $variables['mobile_menu'] = $menu;
 
   // TB Megamenu
-  $main_menu = block_load('tb_megamenu', 'main-menu');
-  $main_menu = render(_block_get_renderable_array(_block_render_blocks(array($main_menu))));
+  $main_menu = block_render('tb_megamenu', 'main-menu');
   $variables['main_menu'] = $main_menu;
 
   /// Render cart
@@ -95,5 +94,13 @@ function ths_preprocess_field(&$variables, $hook) {
     }
     //dpm($variables);
   }
+}
+
+function block_render($module, $block_id) {
+  $block = block_load($module, $block_id);
+  $block_content = _block_render_blocks(array($block));
+  $build = _block_get_renderable_array($block_content);
+  $block_rendered = drupal_render($build);
+  return $block_rendered;
 }
 
