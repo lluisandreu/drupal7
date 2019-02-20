@@ -9,8 +9,11 @@
       <a href="#" id="toggle-menu"><i class="fa fa-bars"></i></a>
     </div>
     <div class="small-12 large-6 columns no-relative">
-      <div id="main-menu">
+      <div id="menu">
         <?php print render($main_menu); ?>
+      </div>
+      <div id="main-menu">
+        <?php print render($mobile_menu); ?>
       </div>
     </div>
     <div class="small-12 large-3 columns no-relative">

@@ -6,6 +6,8 @@
 function ths_preprocess_html(&$variables) {
   // Loads Roboto font
   drupal_add_css("//fonts.googleapis.com/css?family=Nunito:400,600,700&amp;subset=latin-ext", array("type" => "external"));
+
+  drupal_add_css("//fonts.googleapis.com/css?family=Lobster", array("type" => "external"));
   // Loads Font
   drupal_add_css("//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", array("type" => "external"));
 }
@@ -13,7 +15,12 @@ function ths_preprocess_html(&$variables) {
 function ths_preprocess_page(&$variables) {
   $menu = menu_tree_output(menu_tree_all_data('main-menu', null, 2));
   $variables['top_menu'] = $menu;
-  $variables['main_menu'] = $menu;
+  $variables['mobile_menu'] = $menu;
+
+  // TB Megamenu
+  $main_menu = block_load('tb_megamenu', 'main-menu');
+  $main_menu = render(_block_get_renderable_array(_block_render_blocks(array($main_menu))));
+  $variables['main_menu'] = $main_menu;
 
   /// Render cart
   $cart = views_embed_view("custom_cart", "block_1");
