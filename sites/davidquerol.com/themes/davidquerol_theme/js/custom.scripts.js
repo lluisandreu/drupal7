@@ -41,8 +41,8 @@
 
         $carr.slick({
             infinite: true,
-            arrows: false,
-            dots: true,
+            arrows: true,
+            dots: false,
             adaptiveHeight: true,
             slidesToShow: 1,
             slidesToScroll: 1,
