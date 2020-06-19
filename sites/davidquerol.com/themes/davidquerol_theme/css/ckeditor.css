@@ -384,9 +384,11 @@ ul#countdown li p {
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity .5s ease-in-out; }
+  transition: opacity .5s ease-in-out;
+  z-index: 0; }
   .language-description.selected {
-    opacity: 1; }
+    opacity: 1;
+    z-index: 100; }
 
 .hide-small {
   display: none; }
