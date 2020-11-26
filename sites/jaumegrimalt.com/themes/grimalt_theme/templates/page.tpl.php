@@ -75,8 +75,8 @@
         <!--/.l-messages -->
       <?php endif; ?>
 
-        <div class="row">
-          <div class="column">
+        <div class="<?php if(!$is_front): ?>row<?php endif; ?>">
+          <div class="<?php if(!$is_front): ?>column<?php endif; ?>">
           <?php if ($breadcrumb): print $breadcrumb; endif; ?>
           <?php if ($title): ?>
             <?php print render($title_prefix); ?>
